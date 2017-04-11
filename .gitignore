@@ -18,8 +18,8 @@ nbproject/
 .bin/node_modules/
 /node_modules/
 src/node_modules/
-/npm-debug.log.*
-/npm-debug.log
+src/npm-debug.log.*
+npm-debug.log
 /npm-debug.log*
 /dist/
 /src/client.config.json
