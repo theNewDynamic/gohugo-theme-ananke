@@ -1,6 +1,10 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-<main class="cf pa5 pa4-l f4 tc center measure-wide lh-copy gray">
-  <h1>Page not found</h1>
-  {{ .Content }}
-</main>
+{{ $currentPageUrl := .URL }}
+{{ $currentSection := where .Site.Pages "Section" .Section }}
+    <article class="center cf pv5 measure-wide-l">
+      <h1>
+        This is not the page you were looking for
+      </h1>
+    </article>
 {{ end }}

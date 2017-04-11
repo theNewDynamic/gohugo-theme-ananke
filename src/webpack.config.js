@@ -2,7 +2,6 @@ var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require("webpack");
 module.exports = {
-	// context: path.resolve(__dirname, './src'),
 	entry: {
 		app: './js/main.js'
 	},
@@ -14,13 +13,6 @@ module.exports = {
 					fallback: "style-loader",
 					use: 'css-loader?importLoaders=1!postcss-loader'
 				})
-			},
-			{
-				test: /\.(jpe?g|png|gif|svg)$/i,
-				use: [
-					'url-loader?limit=10000',
-					'img-loader'
-				]
 			}
 		]
 	},

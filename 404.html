@@ -1,5 +1,6 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
+<<<<<<< Updated upstream
 {{ $currentPageUrl := .URL }}
 {{ $currentSection := where .Site.Pages "Section" .Section }}
     <article class="center cf pv5 measure-wide-l">
@@ -7,4 +8,10 @@
         This is not the page you were looking for
       </h1>
     </article>
+=======
+
+404 page hee
+{{ .Content }}
+
+>>>>>>> Stashed changes
 {{ end }}
