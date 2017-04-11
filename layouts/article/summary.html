@@ -1,6 +1,6 @@
-<div class="relative flex-auto w-100 w-40-ns mr4 mb4 bg-white nested-copy-line-height">
+<div class="relative flex-auto w-100 w-40-ns mr4-l mb4 bg-white nested-copy-line-height">
 
-  <div class="bg-white mb3 ph4 pv3 gray">
+  <div class="bg-white mb3 ph4 pv3 gray overflow-hidden">
     {{ if .Date }}
       <date class="f6">
         {{ .Date.Format "January 2, 2006" }}
@@ -8,7 +8,7 @@
     {{ end }}
 
     <h1 class="f3 near-black">
-      <a href="{{ .URL }}" class="link dim">
+      <a href="{{ .URL }}" class="link black dim">
         {{ .Title }}
       </a>
     </h1>
