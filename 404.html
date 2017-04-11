@@ -1,6 +1,10 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-<!-- TODO: Juice up the 404 page -->
-404 page hee
-{{ .Content }}
-
+{{ $currentPageUrl := .URL }}
+{{ $currentSection := where .Site.Pages "Section" .Section }}
+    <article class="center cf pv5 measure-wide-l">
+      <h1>
+        This is not the page you were looking for
+      </h1>
+    </article>
 {{ end }}
