@@ -1,13 +1,23 @@
 {{ define "main" }}
-{{ $section := where .Data.Pages "Section" "article" }}
+
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc center measure-wide lh-copy mid-gray">
     {{ .Content }}
   </main>
   <div class="pa3 pa4-ns">
+    {{ $section := where .Data.Pages "Section" "article" }}
+
     <section class="flex-ns flex-wrap justify-around">
-      {{ range sort $section "Date" "desc"  }}
+      {{ range sort (first 1 $section) "Date" "desc"  }}
         {{ .Render "summary" }}
         {{ end }}
-      </section>
+    </section>
+
+    <section class="flex-ns flex-wrap justify-around">
+      {{ range sort (first 2 (after 1 $section)) "Date" "desc"  }}
+        {{ .Render "summary" }}
+        {{ end }}
+    </section>
+
+
     </div>
 {{ end }}
