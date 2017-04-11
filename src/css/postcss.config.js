@@ -1,5 +1,4 @@
 module.exports = {
-  output: './../static/css/mainyo.min.css',
   plugins: {
    'postcss-import': {},
    'postcss-cssnext': {
