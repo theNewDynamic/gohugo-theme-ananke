@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+  <article class="cf pa3 pa4-m pa4-l nested-copy-line-height nested-img">
+    <h1>
+      {{ .Title }}
+    </h1>
+    <div class="{{ .Site.Params.copyClass }}">
+      {{ .Content }}
+    </div>
+  </article>
+  <!-- w-100 w-40-ns -->
+{{ end }}

@@ -1,0 +1,43 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+{{ $currentPageUrl := .URL }}
+
+  <article class="center cf pv5 measure-wide-l">
+
+    <h4 class="f6">
+      {{ humanize .Section | upper  }}
+    </h4>
+    <h1>
+      {{ .Title }}
+    </h1>
+    <div class="nested-copy-line-height nested-links nested-img mid-gray measure-wide-l">
+        {{ .Content | markdownify }}
+    </div>
+
+    {{ if .Params.tags }}
+      <div class="mt5 f6 gray nested-lh-copy bg-light-gray ph3 pv2 measure-wide-l">
+          {{ $name := index .Params.tags 0 }}
+          {{ $name := $name | urlize }}
+          {{ $tags := index .Site.Taxonomies.tags $name }}
+
+            <ul class="list dib nested-links ml0 pl0">
+              <li class="dib mb2 mr2">Related:</li>
+              {{ range $tags.Pages }}
+                {{ if ne .URL $currentPageUrl }}
+                  <li class="mb2 mr3">
+    	               <a href="{{ .URL }}" class="link">
+                       {{ .LinkTitle }}
+                     </a>
+                   </li>
+                {{ end }}
+              {{end}}
+            </ul>
+          </div>
+        {{end}}
+
+      <div class="gray f6 mv6">
+        Last Update: {{ .Lastmod.Format "January 2, 2006" }}
+      </div>
+
+  </article>
+{{ end }}

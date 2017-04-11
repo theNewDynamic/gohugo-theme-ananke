@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ $section := where .Data.Pages "Section" .Section }}
+  <article class="cf pa3 pa4-m pa4-l nested-copy-line-height nested-img">
+    <h1>
+      {{ .Title }}
+    </h1>
+    <div class="{{ .Site.Params.copyClass }}">
+      {{ .Content }}
+    </div>
+    <section class="flex-ns flex-wrap justify-between w-100 mt5 v-top">
+      {{ range sort $section "Date" "desc"  }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </section>
+  </article>
+{{ end }}

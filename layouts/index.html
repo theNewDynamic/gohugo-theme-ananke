@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ $section := where .Data.Pages "Section" "article" }}
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc center measure-wide lh-copy gray">
+    {{ .Content }}
+  </main>
+
+  <section class="flex-ns flex-wrap justify-between w-100 mt5 v-top">
+    {{ range sort $section "Date" "desc"  }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </section>
+{{ end }}

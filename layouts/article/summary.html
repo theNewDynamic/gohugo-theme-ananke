@@ -1,0 +1,24 @@
+<div class="relative flex-auto w-100 w-40-ns mr4 mb4 bg-white nested-copy-line-height">
+
+  <div class="bg-white mb3 ph4 pv3 gray">
+    {{ if .Date }}
+      <date class="f6">
+        {{ .Date.Format "January 2, 2006" }}
+      </date>
+    {{ end }}
+
+    <h1 class="f3 near-black">
+      <a href="{{ .URL }}" class="link dim">
+        {{ .Title }}
+      </a>
+    </h1>
+
+    <div class="nested-links f5 nested-copy-line-height">
+      <p>
+        {{ .Summary  }}
+      </p>
+    </div>
+
+
+  </div>
+</div>

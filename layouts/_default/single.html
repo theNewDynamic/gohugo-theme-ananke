@@ -1,0 +1,32 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+{{ $currentPageUrl := .URL }}
+{{ $currentSection := where .Site.Pages "Section" .Section }}
+
+<div class="flex flex-wrap">
+  <aside class="w-20 pa4 bg-light-silver">
+    <ul>
+      {{ range  $currentSection }}
+      <li>
+        <a href="{{ .URL }}" class="link">
+            {{ .Title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </aside>
+
+  <article class="center cf pv5 measure-wide-l">
+
+    <h4 class="f6">
+      {{ humanize .Section | upper  }}
+    </h4>
+    <h1>
+      {{ .Title }}
+    </h1>
+    <div class="nested-copy-line-height nested-links nested-img mid-gray measure-wide-l">
+        {{ .Content | markdownify }}
+    </div>
+  </article>
+</div>
+{{ end }}

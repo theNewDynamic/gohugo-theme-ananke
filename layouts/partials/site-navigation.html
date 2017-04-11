@@ -1,0 +1,16 @@
+<nav class="w-100 flex-ns justify-between items-center pv3" role="navigation">
+  <a href="/" class="f3 fw8 hover-white no-underline white-90 dib pv2 ph3">
+    {{ .Site.Title }}
+  </a>
+  <div>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li class="list f5 f4-ns fw4 dib">
+        <a class="hover-white no-underline white-70 pv2 ph3" href="{{ .URL }}" >
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>
