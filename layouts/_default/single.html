@@ -1,14 +1,17 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
 {{ $currentPageUrl := .URL }}
-{{ $currentSection := where .Site.Pages "Section" .Section }}
+{{ $currentSection := (where .Site.Pages "Section" .Section)  }}
 
 <div class="flex flex-wrap">
-  <aside class="w-20 pa4 bg-light-silver">
+  <aside class="w-2f0 bg-light-gray">
     <ul>
+      <li class="list b mb3">
+        More {{ .Section }}
+      </li>
       {{ range  $currentSection }}
-      <li>
-        <a href="{{ .URL }}" class="link">
+      <li class="list f5 w-100 hover-bg-white nl1">
+        <a href="{{ .URL }}" class="link black ph2 pv2 db">
             {{ .Title }}
         </a>
       </li>
@@ -22,11 +25,21 @@
       {{ humanize .Section | upper  }}
     </h4>
     <h1>
-      {{ .Title }} 
+      {{ .Title }}
     </h1>
-    <div class="nested-copy-line-height nested-links nested-img mid-gray measure-wide-l">
-        {{ .Content | markdownify }}
+    <div class="nested-copy-line-height f4 nested-linkfs nested-img mid-gray measure-wide-l">
+        {{ .Content  }}
     </div>
   </article>
 </div>
+
+357edd
+<style media="screen">
+  p a {
+    color: #2F6FC4;
+
+          /*#357edd*/
+  }
+</style>
+
 {{ end }}
