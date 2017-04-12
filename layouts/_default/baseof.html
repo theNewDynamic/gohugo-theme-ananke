@@ -17,7 +17,7 @@
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       {{ end }}
 
-     <link href='/dist/main.css' rel='stylesheet' type="text/css" />
+     <link href='{{ "/dist/main.css" | absURL }}' rel='stylesheet' type="text/css" />
 
       {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
       {{- template "_internal/opengraph.html" . -}}
@@ -29,7 +29,7 @@
         {{ template "_internal/google_analytics_async.html" . }}
       {{ end }}
   </head>
-  <body class="ma0 sans-serifTK avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white">
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
