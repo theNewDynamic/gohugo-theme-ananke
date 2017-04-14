@@ -2,8 +2,6 @@
 
 A base theme for Hugo sites. Though it looks like a theme, the intent is to provide a solid starting place for Hugo sites and include best practices for performance, A11y, and rapid development.
 
-It's subject to change quite a bit at this point.
-
 
 Features
 
@@ -27,4 +25,5 @@ includes examples of
 - len
 - ge (greater than or equal to)
 
-accessible
+
+This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](http://tachyons.io/).
