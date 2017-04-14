@@ -1,0 +1,15 @@
+{{ $currentSection := (where .Site.Pages "Section" .Section)  }}
+<aside class="bg-light-gray pr4">
+  <ul>
+    <li class="list b mb3">
+      More {{ .Section }}
+    </li>
+    {{ range  $currentSection }}
+      <li class="list f5 w-100 hover-bg-white nl1">
+        <a href="{{ .URL }}" class="link black ph2 pv2 db">
+          {{ .Title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</aside>

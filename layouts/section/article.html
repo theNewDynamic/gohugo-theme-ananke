@@ -1,13 +1,11 @@
 {{ define "main" }}
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-
     <div class="{{ .Site.Params.copyClass }}">
       {{ .Content }}
     </div>
-
     {{ $section := .Paginate (where .Data.Pages "Section" .Section) }}
     <section class="flex-ns flex-wrap justify-around mt5">
-      {{ range sort $section.Pages "Date" "desc"  }}
+      {{ range  $section.Pages }}
         {{ .Render "summary" }}
       {{ end }}
     </section>

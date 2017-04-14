@@ -1,17 +1,16 @@
 {{ define "main" }}
-
-  <article class="cf pa3 pa4-m pa4-l nested-copy-line-height center measure-wide-l nested-img">
-    <div class="nested-copy-line-height nested-links nested-img mid-gray ">
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center nested-copy-line-height nested-links nested-img mid-gray ">
       {{ .Content }}
     </div>
   </article>
-
-  {{ $section := .Paginate (where .Data.Pages "Section" .Section) }}
-  <section class="flex-ns flex-wrap justify-around mt5">
-    {{ range sort $section.Pages "Date" "desc"  }}
-    {{ partial "summary.html" . }}
-    {{ end }}
-  </section>
+  <div class="measure-wide-l center">
+    {{ $section := where .Data.Pages "Section" .Section }}
+    <section class="flex-ns flex-wrap justify-around mt5">
+      {{ range  $section }}
+        {{ partial "summary.html" . }}
+      {{ end }}
+    </section>
   {{ template "_internal/pagination.html" . }}
-
+  </div>
 {{ end }}
