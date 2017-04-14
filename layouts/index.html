@@ -8,9 +8,23 @@
   <div class="flex pa3 pa4-ns w-70 center">
     {{ $section := where .Data.Pages "Section" "article" }}
 
-    <section class="w-60 bg-white">
+    <section class="w-60 pa4 bg-white">
       {{ range sort (first 1 $section) "Date" "desc"  }}
-        <h1>{{ .Title }}</h1>
+      {{ if .Date }}
+        <date class="f6">
+          {{ .Date.Format "January 2, 2006" }}
+        </date>
+      {{ end }}
+      <h1 class="f3 near-black">
+        <a href="{{ .URL }}" class="link black dim">
+          {{ .Title }}
+        </a>
+      </h1>
+      <div class="nested-links f5 nested-copy-line-height">
+        <p>
+          {{ .Summary  }}
+        </p>
+      </div>
       {{ end }}
     </section>
 
