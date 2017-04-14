@@ -24,5 +24,7 @@ includes examples of
 - partials
 - template layouts (type "article" uses a special list template, single template,  and a content view)
 - tags
+- len
+- ge (greater than or equal to)
 
 accessible
