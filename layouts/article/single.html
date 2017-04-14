@@ -1,10 +1,11 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
+<div class="flex mt5 mw8 center">
   <article class="center cf pv5 mw7">
     <p class="f6 fw8">
       {{ humanize .Section | upper  }}
     </p>
-    <h1 class="f1">
+    <h1 class="f1 athelas">
       {{ .Title }}
     </h1>
       {{/* TODO: Add Hugo author  */}}
@@ -16,4 +17,8 @@
     </section>
     {{ partial "tags.html" . }}
   </article>
+  <div class="ph4 mt6">
+    {{ partial "menu-contextual.html" . }}
+  </div>
+  </div>
 {{ end }}

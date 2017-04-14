@@ -1,0 +1,21 @@
+<!-- TODO: Add follow intents where available TODO: Revisit color and hover color -->
+{{ with .Site.Params.facebook }}
+  <a href="{{ . }}" class="link-transition facebook link dib z-999 pt3 pt0-l mr2">
+    {{ partial "svg/facebook.svg" (dict "size" "32px") }}
+  </a>
+{{ end }}
+{{ with .Site.Params.twitter }}
+  <a href="{{ . }}" class="link-transition twitter link dib z-999 pt3 pt0-l mr2">
+    {{ partial "svg/twitter.svg" (dict "size" "32px") }}
+  </a>
+{{ end }}
+{{ with .Site.Params.instagram }}
+  <a href="{{ . }}" class="link-transition instagram link dib z-999 pt3 pt0-l mr2">
+    {{ partial "svg/instagram.svg" (dict "size" "32px") }}
+  </a>
+{{ end }}
+{{ with .Site.Params.youtube }}
+  <a href="{{ . }}" class="link-transition youtube link dib z-999 pt3 pt0-l mr3">
+    {{ partial "svg/youtube.svg" (dict "size" "32px") }}
+  </a>
+{{ end }}

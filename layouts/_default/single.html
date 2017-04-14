@@ -1,7 +1,7 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
   {{ $currentPageUrl := .URL }}
-  <div class="flex">
+  <div class="flex mt5 mw8 center">
     <article class="pv5">
       <h4 class="f6">
         {{ humanize .Section | upper  }}
@@ -13,6 +13,8 @@
         {{ .Content  }}
       </div>
     </article>
-    {{ partial "menu-contextual.html" . }}
+    <div class="ph4 mt6">
+      {{ partial "menu-contextual.html" . }}
+    </div>
   </div>
 {{ end }}

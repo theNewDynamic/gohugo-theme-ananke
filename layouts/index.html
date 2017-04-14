@@ -2,10 +2,15 @@
 
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc center measure-wide lh-copy mid-gray">
     {{ .Content }}
+
   </main>
 
 
-  <div class="flex pa3 pa4-ns w-70 center">
+  <div class="pa3 pa4-ns w-70 center">
+
+  <h1 class="flex-none db">Recent Articles</h1>
+
+  <div class="flex">
     {{ $section := where .Data.Pages "Section" "article" }}
 
     <section class="w-60 pa4 bg-white">
@@ -15,11 +20,11 @@
           {{ .Date.Format "January 2, 2006" }}
         </date>
       {{ end }}
-      <h1 class="f3 near-black">
+      <h2 class="f3 near-black">
         <a href="{{ .URL }}" class="link black dim">
           {{ .Title }}
         </a>
-      </h1>
+      </h2>
       <div class="nested-links f5 nested-copy-line-height">
         <p>
           {{ .Summary  }}
@@ -29,12 +34,17 @@
     </section>
 
     <section class="w-30 ph4">
-      {{ range sort (first 2 (after 1 $section)) "Date" "desc"  }}
-        <h2 class="f4">{{ .Title }}</h2>
-        {{ end }}
+      {{ range sort (first 4 (after 1 $section)) "Date" "desc"  }}
+        <h2 class="f5 fw4 mb4">
+        <a href="{{ .URL }}" class="link black dim">
+          {{ .Title }}
+        </a>
+        </h2>
+      {{ end }}
     </section>
 
 
+    </div>
     </div>
 
 
