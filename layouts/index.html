@@ -2,17 +2,17 @@
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
     {{ .Content }}
   </main>
+  {{/* Create a variable to use the same section twice. Note that we've included the date here. */}}
+  {{ $section := where .Data.Pages.ByDate.Reverse "Section" "post" }}
+  {{ if $section }}
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
 
-  <div class="pa3 pa4-ns w-100 w-70-ns center">
-    <h1 class="flex-none">
-      Recent Articles
-    </h1>
+      <h1 class="flex-none">
+        Recent Articles
+      </h1>
 
-
-      {{/* Create a variable to use the same section twice. Note that we've included the date here. */}}
-    {{ $section := where .Data.Pages.ByDate.Reverse "Section" "article" }}
       <section class="w-100 mw8">
-        {{ range (first 3 $section)   }}
+        {{ range (first 3 $section) }}
           <div class="relative w-100 mb4">
             {{ .Render "summary-with-image" }}
           </div>
@@ -20,7 +20,7 @@
       </section>
 
       <section class="w-100">
-        <h1 class="f3">More posts</h1>
+        <h1 class="f3">More Posts</h1>
         {{/* Nest the requirements, "after" then "first" on the outside */}}
         {{ range (first 4 (after 1 $section))  }}
           <h2 class="f5 fw4 mb4 dib mr3">
@@ -33,4 +33,5 @@
       </section>
 
     </div>
+  {{ end }}
 {{ end }}
