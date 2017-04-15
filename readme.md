@@ -40,5 +40,5 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 TODO:
 - ADD INSTRUCTIONS
-- small dummy copyright notice with a formatted date could be added
 - fix hard-coded link to section https://github.com/budparr/gohugo-default-theme/blob/master/layouts/index.html#L32
+- move SRC files to separate branch
