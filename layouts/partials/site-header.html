@@ -6,9 +6,9 @@
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
-        {{ if .Params.description  }}
+        {{ with .Params.description }}
           <h2 class="fw1 f5 f3-l white-80 mt3">
-            {{ .Params.description  }}
+            {{ . }}
           </h2>
         {{ end }}
       </div>
@@ -22,9 +22,9 @@
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
-        {{ if .Params.description  }}
+        {{ with .Params.description }}
           <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-            {{ .Params.description  }}
+            {{ . }}
           </h2>
         {{ end }}
       </div>
