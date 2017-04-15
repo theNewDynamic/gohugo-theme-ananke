@@ -1,4 +1,4 @@
-### A Base theme for [Hugo](http://gohugo.io/), a framework for building websites.
+### Ananke, A theme for [Hugo](http://gohugo.io/), a framework for building websites.
 
 ![screenshot](/images/screenshot.png)
 
