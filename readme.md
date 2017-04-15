@@ -1,6 +1,6 @@
 ### A Base theme for [Hugo](http://gohugo.io/), a framework for building websites.
 
-!(screenshote)[/images/screenshot.png]
+![screenshot](/images/screenshot.png)
 
 [DEMO](http://gohugo-theme-example.netlify.com/)
 
