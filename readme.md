@@ -31,7 +31,7 @@ Includes examples of
 - `where`
 - Content Views
 - Partials
-- Template layouts (type "article" uses a special list template, single template,  and a content view)
+- Template layouts (type "post" uses a special list template, single template,  and a content view)
 - Tags
 - `len`
 - Conditionals
