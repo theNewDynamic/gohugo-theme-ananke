@@ -7,7 +7,7 @@
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    
+
     <meta name="viewport" content="width=device-width,minimum-scale=1">
      {{ .Hugo.Generator }}
       {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
@@ -16,7 +16,7 @@
       {{ else }}
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
       {{ end }}
-
+        {{/* By formatting your URL with absURL you will get the full URL of your site  */}}
      <link href='{{ "dist/main.css" | absURL }}' rel='stylesheet' type="text/css" />
 
       {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
