@@ -2,7 +2,7 @@
 
 ![screenshot](/images/screenshot.png)
 
-[DEMO](http://gohugo-theme-example.netlify.com/)
+[DEMO](https://gohugo-ananke-theme-demo.netlify.com/)
 
 The intent of this theme is to provide a solid starting place for Hugo sites and include best practices for performance, accessibility, and rapid development.
 
