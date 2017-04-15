@@ -1,0 +1,43 @@
+{{/* <form class="black-80" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST">
+  <div class="measure">
+    <label for="name" class="f6 b db mb2">Name <span class="normal black-60">(optional)</span></label>
+    <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
+    <small id="name-desc" class="f6 black-60 db mb2">Helper text for the form control.</small>
+
+    <label for="email" class="f6 b db mb2">Email Address</label>
+    <input id="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="email-desc">
+    <small id="email-desc" class="f6 black-60 db mb2">Helper text for the form control.</small>
+
+    <label for="email" class="f6 b db mb2">Name <span class="normal black-60">(optional)</span></label>
+    <input id="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text" aria-describedby="name-desc">
+    <small id="name-desc" class="f6 black-60 db mb2">Helper text for the form control.</small>
+  </div>
+</form> */}}
+{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif mid-gray" }}
+{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-light-gray bn" }}
+
+<form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST">
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="first_name">Your Name</label>
+    <input type="text" id="first_name" name="first_name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
+
+
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="last_name">Organization Name</label>
+    <input type="text" id="last_name" name="last_name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
+
+
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">Email Address</label>
+    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
+    <div class="requirements f6 gray glow i ph3 overflow-hidden TK">
+      Must be a valid email address.
+    </div>
+
+
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Message</label>
+    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-describedby="comment-desc"></textarea>
+
+    <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-blck bg-animate bg-black" type="submit" value="Send" />
+
+</form>

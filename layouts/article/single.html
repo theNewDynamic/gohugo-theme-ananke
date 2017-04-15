@@ -1,8 +1,8 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-  <div class="flex-l mt5 mw8 center">
-    <article class="center cf pv5 ph3 mw7">
-      <p class="f6 fw8">
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <p class="f6 b helvetica tracked">
         {{ humanize .Section | upper  }}
       </p>
       <h1 class="f1 athelas">
@@ -10,14 +10,14 @@
       </h1>
         {{/* TODO: Add Hugo author  */}}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          {{ .Date.Format "January 2, 2006" }}
+        {{ .Date.Format "January 2, 2006" }}
       </time>
-      <section class="nested-copy-line-height lh-copy serif f4 measure-wide-l nested-links nested-img mid-gray">
-          {{ .Content | markdownify }}
+      <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+        {{ .Content | markdownify }}
       </section>
       {{ partial "tags.html" . }}
     </article>
-    <div class="ph4 mt6">
+    <div class="ph3 mt2 mt6-ns">
       {{ partial "menu-contextual.html" . }}
     </div>
   </div>

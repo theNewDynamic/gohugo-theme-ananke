@@ -1,53 +1,36 @@
 {{ define "main" }}
-
-  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc center measure-wide lh-copy mid-gray">
+  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
     {{ .Content }}
-
   </main>
 
+  <div class="pa3 pa4-ns w-100 w-70-ns center">
+    <h1 class="flex-none">
+      Recent Articles
+    </h1>
 
-  <div class="pa3 pa4-ns w-70 center">
 
-  <h1 class="flex-none db">Recent Articles</h1>
+      {{/* Create a variable to use the same section twice. Note that we've included the date here. */}}
+    {{ $section := where .Data.Pages.ByDate.Reverse "Section" "article" }}
+      <section class="w-100 mw8">
+        {{ range (first 3 $section)   }}
+          <div class="relative w-100 mb4">
+            {{ .Render "summary-with-image" }}
+          </div>
+        {{ end }}
+      </section>
 
-  <div class="flex">
-    {{ $section := where .Data.Pages "Section" "article" }}
-
-    <section class="w-60 pa4 bg-white">
-      {{ range sort (first 1 $section) "Date" "desc"  }}
-      {{ if .Date }}
-        <date class="f6">
-          {{ .Date.Format "January 2, 2006" }}
-        </date>
-      {{ end }}
-      <h2 class="f3 near-black">
-        <a href="{{ .URL }}" class="link black dim">
-          {{ .Title }}
-        </a>
-      </h2>
-      <div class="nested-links f5 nested-copy-line-height">
-        <p>
-          {{ .Summary  }}
-        </p>
-      </div>
-      {{ end }}
-    </section>
-
-    <section class="w-30 ph4">
-      {{ range sort (first 4 (after 1 $section)) "Date" "desc"  }}
-        <h2 class="f5 fw4 mb4">
-        <a href="{{ .URL }}" class="link black dim">
-          {{ .Title }}
-        </a>
-        </h2>
-      {{ end }}
-    </section>
-
+      <section class="w-100">
+        <h1 class="f3">More posts</h1>
+        {{/* Nest the requirements, "after" then "first" on the outside */}}
+        {{ range (first 4 (after 1 $section))  }}
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="{{ .URL }}" class="link black dim">
+              {{ .Title }}
+            </a>
+          </h2>
+        {{ end }}
+        <a href="/article/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Posts</a>
+      </section>
 
     </div>
-    </div>
-
-
-
-
 {{ end }}
