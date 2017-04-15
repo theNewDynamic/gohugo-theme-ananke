@@ -10,10 +10,12 @@ The demo sites contains a section called "Unit Tests," which are a work in progr
 
 
 Features
+
 - Responsive
 - Accessible
 
 Includes examples of
+
 - Custom Robots.txt (changes values based on environment)
 - Internal templates for meta data and google analytics
 - Pagination (internal template)
@@ -39,6 +41,7 @@ Includes examples of
 This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](http://tachyons.io/).
 
 TODO:
+
 - ADD INSTRUCTIONS
 - fix hard-coded link to section https://github.com/budparr/gohugo-default-theme/blob/master/layouts/index.html#L32
 - move SRC files to separate branch
