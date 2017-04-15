@@ -4,22 +4,12 @@
 name = "Gohugo Default Theme"
 license = "MIT"
 licenselink = "https://github.com/budparr/gohugo-default-theme/blob/master/LICENSE.md"
-description = ""
+description = "A Base theme for building full featured Hugo sites"
 homepage = "https://github.com/budparr/gohugo-default-theme"
 tags = ["website", "starter"]
-features = ["", ""]
-min_version = 0.19
+features = ["posts", ""]
+min_version = 0.18
 
 [author]
   name = "Bud Parr"
   homepage = "https://github.com/budparr"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
-
-  [params]
-
-    hero_copy = "Some great copy here"

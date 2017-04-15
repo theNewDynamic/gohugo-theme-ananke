@@ -1,6 +1,9 @@
+HUGO Default theme readme
+
+
 ### [wip] A Base theme for [Hugo](http://gohugo.io/), a framework for building websites.
 
-A base theme for Hugo sites. Though it looks like a theme, the intent is to provide a solid starting place for Hugo sites and include best practices for performance, A11y, and rapid development.
+The intent of this theme is to provide a solid starting place for Hugo sites and include best practices for performance, accessibility, and rapid development.
 
 
 Features
@@ -23,6 +26,7 @@ includes examples of
 - template layouts (type "article" uses a special list template, single template,  and a content view)
 - tags
 - len
+- conditionals
 - ge (greater than or equal to)
 
 
