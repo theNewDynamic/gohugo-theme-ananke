@@ -29,7 +29,9 @@
         {{ template "_internal/google_analytics_async.html" . }}
       {{ end }}
   </head>
-  <body class="ma0 avenir bg-near-white">
+
+  <body class="ma0 avenir bg-near-white{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
