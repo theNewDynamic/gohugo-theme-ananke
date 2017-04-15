@@ -1,0 +1,23 @@
+title = "Notre-Dame de Paris"
+baseURL = "http://gohugo-default-theme.surge.sh"
+languageCode = "en-us"
+theme = "gohugo-default-theme"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  description = "The last theme you'll ever need. Maybe."
+  faceboook = ""
+  twitter = "https://twitter.com/GoHugoIO"
+  instagram = ""
+  youtube = ""
