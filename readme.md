@@ -4,6 +4,8 @@
 
 The intent of this theme is to provide a solid starting place for Hugo sites and include best practices for performance, accessibility, and rapid development.
 
+The demo sites contains a section called "Unit Tests," which are a work in progress, but eventually will allow theme developers to test against various edge cases that a theme's users might publish.
+
 
 Features
 - Responsive
