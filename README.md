@@ -53,7 +53,7 @@ For more information read the official [setup guide](//gohugo.io/overview/instal
 
 ## Getting started
 
-After installing the Agency Theme successfully it requires a just a few more steps to get your site running.
+After installing the theme successfully it requires a just a few more steps to get your site running.
 
 
 ### The config file
@@ -85,20 +85,20 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 In order to see your site in action, run Hugo's built-in local server.
 
+    ```
     $ hugo server
+    ```
 
 Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
 
 
 ## Contributing
 
-Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/budparr/gohugo-theme-ananke/issues) to let me know.
+If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/budparr/gohugo-theme-ananke/issues) to let me know.
 
 
 
 
 TODO:
 
-- ADD INSTRUCTIONS
-- fix hard-coded link to section https://github.com/budparr/gohugo-default-theme/blob/master/layouts/index.html#L32
-- move SRC files to separate branch
+- fix hard-coded link to [section](https://github.com/budparr/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
