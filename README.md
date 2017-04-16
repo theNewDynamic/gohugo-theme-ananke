@@ -17,6 +17,7 @@ Features
 Also includes examples of Hugo Features or Functions:
 
 - Pagination (internal template)
+- Taxonomies
 - Archetypes
 - Custom shortcode
 - Hugo built-in menu
