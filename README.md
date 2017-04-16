@@ -77,7 +77,6 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 ```
 {{< form-contact action="http://formspree.io/your@email.com" >}}
-
 ```
 
 
@@ -85,9 +84,7 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 In order to see your site in action, run Hugo's built-in local server.
 
-    ```
-    $ hugo server
-    ```
+`$ hugo server`
 
 Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
 
