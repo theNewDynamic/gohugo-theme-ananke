@@ -2,7 +2,7 @@
 
 The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
 
-![screenshot](/images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/budparr/gohugo-theme-ananke/master/images/screenshot.png)
 
 [DEMO](https://gohugo-ananke-theme-demo.netlify.com/)
 
