@@ -24,7 +24,7 @@
       <section class="w-100">
         <h1 class="f3">More Posts</h1>
         {{/* Nest the requirements, "after" then "first" on the outside */}}
-        {{ range (first 4 (after 1 $section))  }}
+        {{ range (first 4 (after 3 $section))  }}
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="{{ .URL }}" class="link black dim">
               {{ .Title }}
