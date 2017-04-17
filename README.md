@@ -13,6 +13,7 @@ Features
 - Contact form
 - Custom Robots.txt (changes values based on environment)
 - Internal templates for meta data and google analytics
+- RSS Discovery
 
 Also includes examples of Hugo Features or Functions:
 
