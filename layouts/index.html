@@ -16,7 +16,7 @@
       <section class="w-100 mw8">
         {{ range (first 3 $section) }}
           <div class="relative w-100 mb4">
-            {{ partial "summary-with-image.html" }}
+            {{ partial "summary-with-image.html" . }}
           </div>
         {{ end }}
       </section>
