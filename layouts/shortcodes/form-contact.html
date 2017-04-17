@@ -3,17 +3,17 @@
 
 <form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST">
 
-    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="first_name">Your Name</label>
-    <input type="text" id="first_name" name="first_name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
+    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">Your Name</label>
+    <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
 
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">Email Address</label>
-    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" " />
-    <div class="requirements f6 gray glow i ph3 overflow-hidden TK">
+    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
+    <div class="requirements f6 gray glow i ph3 overflow-hidden">
       Must be a valid email address.
     </div>
 
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Message</label>
-    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-describedby="comment-desc"></textarea>
+    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
 
     <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-blck bg-animate bg-black" type="submit" value="Send" />
 
