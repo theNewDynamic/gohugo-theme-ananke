@@ -1,0 +1,18 @@
+.facebook, .twitter, .instagram, .youtube {
+  fill: #BABABA;
+}
+.facebook:hover {
+  fill: #3b5998;
+}
+
+.twitter:hover {
+  fill: #55acee;
+}
+
+.instagram:hover {
+  fill: #e95950;
+}
+
+.youtube:hover {
+  fill: #bb0000;
+}
