@@ -9,7 +9,6 @@
   "scripts": {
     "build:production": "rm -rf ../static/dist && webpack -p",
     "build": "webpack --progress --colors --watch",
-    "css:copy-tachyons": "rm -rf 'css/tachyons' && copyfiles -f 'node_modules/tachyons/src/*.css' 'css/tachyons/'",
     "start": "npm run build"
   },
   "devDependencies": {

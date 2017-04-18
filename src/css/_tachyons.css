@@ -25,70 +25,70 @@
 
 
 /* External Library Includes */
-@import 'tachyons/_normalize';
+@import 'tachyons/src/_normalize';
 
 
 /* Modules */
-@import 'tachyons/_box-sizing';
-@import 'tachyons/_aspect-ratios';
-@import 'tachyons/_images';
-@import 'tachyons/_background-size';
-@import 'tachyons/_background-position';
-@import 'tachyons/_outlines';
-@import 'tachyons/_borders';
-@import 'tachyons/_border-colors';
-@import 'tachyons/_border-radius';
-@import 'tachyons/_border-style';
-@import 'tachyons/_border-widths';
-@import 'tachyons/_box-shadow';
-@import 'tachyons/_code';
-@import 'tachyons/_coordinates';
-@import 'tachyons/_clears';
-@import 'tachyons/_display';
-@import 'tachyons/_flexbox';
-@import 'tachyons/_floats';
-@import 'tachyons/_font-family';
-@import 'tachyons/_font-style';
-@import 'tachyons/_font-weight';
-@import 'tachyons/_forms';
-@import 'tachyons/_heights';
-@import 'tachyons/_letter-spacing';
-@import 'tachyons/_line-height';
-@import 'tachyons/_links';
-@import 'tachyons/_lists';
-@import 'tachyons/_max-widths';
-@import 'tachyons/_widths';
-@import 'tachyons/_overflow';
-@import 'tachyons/_position';
-@import 'tachyons/_opacity';
-@import 'tachyons/_rotations';
-@import 'tachyons/_skins';
-@import 'tachyons/_skins-pseudo';
-@import 'tachyons/_spacing';
-@import 'tachyons/_negative-margins';
-@import 'tachyons/_tables';
-@import 'tachyons/_text-decoration';
-@import 'tachyons/_text-align';
-@import 'tachyons/_text-transform';
-@import 'tachyons/_type-scale';
-@import 'tachyons/_typography';
-@import 'tachyons/_utilities';
-@import 'tachyons/_visibility';
-@import 'tachyons/_white-space';
-@import 'tachyons/_vertical-align';
-@import 'tachyons/_hovers';
-@import 'tachyons/_z-index';
-@import 'tachyons/_nested';
-@import 'tachyons/_styles';
+@import 'tachyons/src/_box-sizing';
+@import 'tachyons/src/_aspect-ratios';
+@import 'tachyons/src/_images';
+@import 'tachyons/src/_background-size';
+@import 'tachyons/src/_background-position';
+@import 'tachyons/src/_outlines';
+@import 'tachyons/src/_borders';
+@import 'tachyons/src/_border-colors';
+@import 'tachyons/src/_border-radius';
+@import 'tachyons/src/_border-style';
+@import 'tachyons/src/_border-widths';
+@import 'tachyons/src/_box-shadow';
+@import 'tachyons/src/_code';
+@import 'tachyons/src/_coordinates';
+@import 'tachyons/src/_clears';
+@import 'tachyons/src/_display';
+@import 'tachyons/src/_flexbox';
+@import 'tachyons/src/_floats';
+@import 'tachyons/src/_font-family';
+@import 'tachyons/src/_font-style';
+@import 'tachyons/src/_font-weight';
+@import 'tachyons/src/_forms';
+@import 'tachyons/src/_heights';
+@import 'tachyons/src/_letter-spacing';
+@import 'tachyons/src/_line-height';
+@import 'tachyons/src/_links';
+@import 'tachyons/src/_lists';
+@import 'tachyons/src/_max-widths';
+@import 'tachyons/src/_widths';
+@import 'tachyons/src/_overflow';
+@import 'tachyons/src/_position';
+@import 'tachyons/src/_opacity';
+@import 'tachyons/src/_rotations';
+@import 'tachyons/src/_skins';
+@import 'tachyons/src/_skins-pseudo';
+@import 'tachyons/src/_spacing';
+@import 'tachyons/src/_negative-margins';
+@import 'tachyons/src/_tables';
+@import 'tachyons/src/_text-decoration';
+@import 'tachyons/src/_text-align';
+@import 'tachyons/src/_text-transform';
+@import 'tachyons/src/_type-scale';
+@import 'tachyons/src/_typography';
+@import 'tachyons/src/_utilities';
+@import 'tachyons/src/_visibility';
+@import 'tachyons/src/_white-space';
+@import 'tachyons/src/_vertical-align';
+@import 'tachyons/src/_hovers';
+@import 'tachyons/src/_z-index';
+@import 'tachyons/src/_nested';
+@import 'tachyons/src/_styles';
 
 /* Variables */
 /* Importing here will allow you to override any variables in the modules */
-@import 'tachyons/_colors';
-@import 'tachyons/_media-queries';
+@import 'tachyons/src/_colors';
+@import 'tachyons/src/_media-queries';
 
 /* Debugging */
-/*@import 'tachyons/_debug-children';
-@import 'tachyons/_debug-grid';*/
+/*@import 'tachyons/src/_debug-children';
+@import 'tachyons/src/_debug-grid';*/
 
 /* Uncomment out the line below to help debug layout issues */
-/* @import 'tachyons/_debug'; */
+/* @import 'tachyons/src/_debug'; */
