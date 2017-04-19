@@ -3,7 +3,8 @@
     <div class="flex flex-column flex-row-ns">
       {{ if .Params.featured_image }}
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <img src="{{ .Params.featured_image }}" class="db" alt="image from {{ .Title }}">
+          {{ $imgURL := (trim .Params.featured_image "/") | absURL }}
+          <img src="{{ $imgURL }}" class="db" alt="image from {{ .Title }}">
         </div>
       {{ end }}
       <div class="w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
