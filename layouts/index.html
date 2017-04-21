@@ -8,18 +8,16 @@
   {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
   {{/* Check to see if the section is defined for ranging through it */}}
   {{ if $section }}
-
-    {{/* Derive the section name by creating a string from the initial section definition */}}
-    {{ $section_name := printf "%s" (delimit ($mainSections) " ") }}
+    {{/* Derive the section name  */}}
+    {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
     <div class="pa3 pa4-ns w-100 w-70-ns center">
-
       {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
-      {{ with .Site.GetPage "section" $section_name }}
-        <h1 class="flex-none">
-          Recent {{ .Title }}
-        </h1>
-      {{ end }}
+       {{ with .Site.GetPage "section" $section_name }}
+          <h1 class="flex-none">
+            Recent {{ .Title }}
+          </h1>
+        {{ end }}
 
       <section class="w-100 mw8">
         {{/* Range through the first three items of the section */}}
@@ -31,9 +29,7 @@
       </section>
 
       <section class="w-100">
-
         <h1 class="f3">More</h1>
-
         {{/* Now, range through the next four after the initial 3 items. Nest the requirements, "after" then "first" on the outside */}}
         {{ range (first 4 (after 3 $section))  }}
           <h2 class="f5 fw4 mb4 dib mr3">
@@ -47,9 +43,7 @@
         {{ with .Site.GetPage "section" $section_name }}
           <a href="{{ .URL }}" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All {{.Title }}</a>
         {{ end }}
-
         </section>
-
       </div>
   {{ end }}
 {{ end }}
