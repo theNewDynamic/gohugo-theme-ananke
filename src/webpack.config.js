@@ -8,6 +8,17 @@ module.exports = {
 	module: {
 		rules: [
 			{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['env']
+          // plugins: [require('babel-plugin-transform-object-rest-spread')]
+        }
+      }
+    },
+			{
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: "style-loader",
