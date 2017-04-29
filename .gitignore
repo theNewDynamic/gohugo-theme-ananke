@@ -13,7 +13,6 @@ nbproject/
 
 # Vagrant
 .vagrant/
-src
 
 # FE Setup
 .bin/node_modules/
