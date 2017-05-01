@@ -22,4 +22,18 @@ This theme uses the [Tachyons CSS Library](http://tachyons.io/). It's about 15kb
 
 ## How to Use
 
-You'll find the commands to run in `src/package.json`. For development, cd into `src` and run `npm start` which will run webpack, processing both the postcss and scripts. For production, run `npm run build:production,` which will output minified versions of your files.
+You'll find the commands to run in `src/package.json`.
+
+For development, you'll need Node and Yarn installed:
+
+```
+$ cd themes/gohugo-theme-ananke/src/
+
+$ yarn install
+
+$ npm start
+
+```
+This will process both the postcss and scripts.
+
+For production, instead of `npm start`, run `npm run build:production,` which will output minified versions of your files.
