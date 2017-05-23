@@ -7,7 +7,8 @@
   {{/* Create a variable with that section to use in multiple places. */}}
   {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
   {{/* Check to see if the section is defined for ranging through it */}}
-  {{ if $section }}
+  {{ $section_count := len $section }}
+  {{ if ge $section_count 1 }}
     {{/* Derive the section name  */}}
     {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
@@ -28,6 +29,7 @@
         {{ end }}
       </section>
 
+    {{ if ge $section_count 4 }}
       <section class="w-100">
         <h1 class="f3">More</h1>
         {{/* Now, range through the next four after the initial 3 items. Nest the requirements, "after" then "first" on the outside */}}
@@ -44,6 +46,8 @@
           <a href="{{ .URL }}" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All {{.Title }}</a>
         {{ end }}
         </section>
+      {{ end }}
+
       </div>
   {{ end }}
 {{ end }}
