@@ -4,5 +4,6 @@
     &copy; {{ now.Format "2006" }} {{ .Site.Title }}
   </a>
   {{ partial "social-follow.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
   </div>
 </footer>
