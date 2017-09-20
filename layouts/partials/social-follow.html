@@ -20,3 +20,8 @@
     {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
   </a>
 {{ end }}
+{{ with .Site.Params.github }}
+  <a href="{{ . }}" class="link-transition github link dib z-999 pt3 pt0-l mr3" title="Github link">
+    {{ partial "svg/github.svg" (dict "size" $icon_size) }}
+  </a>
+{{ end }}
