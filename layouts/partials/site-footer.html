@@ -1,8 +1,21 @@
 <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
-    &copy; {{ now.Format "2006" }} {{ .Site.Title }}
-  </a>
-  {{ partial "social-follow.html" . }}
+    <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL | relLangURL }}" >
+      &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+    </a>
+    <div class="flex-l">
+      <a class="f4 fw4 no-underline white-90 dn dib-ns pv2 ph3" href="{{ .Permalink }}">
+        {{ .Site.Params.languageName | default .Lang }}
+      </a>
+      {{ if .IsTranslated }}
+        {{ range .Translations }}
+        <a class="f4 fw4 hover-white no-underline white-40 dn dib-ns pv2 ph3" href="{{ .Permalink }}">
+          {{ .Site.Params.languageName | default .Lang }}
+        </a>
+        {{ end}}
+      {{ end }}
+
+      {{ partial "social-follow.html" . }}
+    </div>
   </div>
 </footer>
