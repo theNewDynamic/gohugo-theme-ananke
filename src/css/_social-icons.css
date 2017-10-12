@@ -6,17 +6,21 @@
 }
 
 .twitter:hover {
-  fill: #55acee;
+  fill: #1da1f2;
 }
 
 .instagram:hover {
-  fill: #e95950;
+  fill: #e1306c;
 }
 
 .youtube:hover {
-  fill: #bb0000;
+  fill: #cd201f;
 }
 
 .github:hover {
-  fill: #FFFFFF;
+  fill: #6cc644;
+}
+
+.linkedin:hover {
+  fill: #0077b5
 }
