@@ -86,16 +86,25 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 ### Update font or body classes
 
-The theme is set by default to use a near-white background color and the "Avenir" or serif typeface. You can change these in your config file with the `body_classes` paramter, like this:
+The theme is set, by default, to use a near-white background color and the "Avenir" or serif typeface. You can change these in your config file with the `body_classes` parameter, like this:
 
 ```
 [params]
   body_classes = "avenir bg-near-white"
 ```
 
+which will give you a body class like this:
+
+```
+<body class="avenir bg-near-white">
+```
+
 You can find a list of available typefaces [here](https://github.com/tachyons-css/tachyons/blob/v4.7.0/src/_font-family.css).
 
-_n.b. in future versions we will likely separate the typeface and other body classes.
+And a list of background colors [here](https://github.com/tachyons-css/tachyons/blob/v4.7.0/src/_skins.css#L96).
+
+
+_n.b. in future versions we will likely separate the typeface and other body classes._
 
 
 ### Nearly finished
