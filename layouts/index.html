@@ -20,20 +20,22 @@
           </h1>
         {{ end }}
 
+      {{ $n_posts := .Site.Params.recent_posts_number | default 3 }}
+
       <section class="w-100 mw8">
-        {{/* Range through the first three items of the section */}}
-        {{ range (first 3 $section) }}
+        {{/* Range through the first $n_posts items of the section */}}
+        {{ range (first $n_posts $section) }}
           <div class="relative w-100 mb4">
             {{ partial "summary-with-image.html" . }}
           </div>
         {{ end }}
       </section>
 
-    {{ if ge $section_count 4 }}
+      {{ if ge $section_count (add $n_posts 1) }}
       <section class="w-100">
         <h1 class="f3">More</h1>
-        {{/* Now, range through the next four after the initial 3 items. Nest the requirements, "after" then "first" on the outside */}}
-        {{ range (first 4 (after 3 $section))  }}
+        {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
+        {{ range (first 4 (after $n_posts $section))  }}
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="{{ .URL }}" class="link black dim">
               {{ .Title }}
