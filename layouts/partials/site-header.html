@@ -1,4 +1,5 @@
 {{ $featured_image := .Param.featured_image | default "images/gohugo-default-sample-hero-image.jpg" }}
+{{ $description := .Param.description | default "" }}
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image := (trim $featured_image "/") | absURL }}
@@ -9,7 +10,7 @@
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
-        {{ with .Param.description }}
+        {{ with $description }}
           <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
             {{ . }}
           </h2>
@@ -25,7 +26,7 @@
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
-        {{ with .Param.description }}
+        {{ with $description }}
           <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
             {{ . }}
           </h2>
