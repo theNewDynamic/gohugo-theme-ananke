@@ -26,6 +26,9 @@
     <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
         {{- .Content -}}
       {{- partial "tags.html" . -}}
+      <div class="mt6">
+        {{ template "_internal/disqus.html" . }}
+      </div>
     </main>
 
     <aside class="w-third-l">
