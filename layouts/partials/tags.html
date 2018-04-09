@@ -1,25 +1,9 @@
-{{ $currentPageUrl := .URL }}
-{{ if .Params.tags }}
-  {{ $name := index .Params.tags 0 }}
-  {{ $name := $name | urlize }}
-  {{ $tags := index .Site.Taxonomies.tags $name }}
-  {{ $i := $tags | len }}
-  {{ if ge $i 2 }}
-    <div class="mt5 f6 gray nested-lh-copy bg-light-gray ph3 pv2 measure-wide-l">
-      <ul class="list dib ml0 pl0">
-        <li class="black dib mb2 mr2">
-          Related:
-        </li>
-        {{ range $tags.Pages }}
-          {{ if ne .URL $currentPageUrl }}
-            <li class="mb2 mr3">
-              <a href="{{ .URL }}" class="link mid-gray dim">
-                 {{ .LinkTitle }}
-              </a>
-            </li>
-          {{ end }}
-        {{end}}
-      </ul>
-    </div>
+<ul class="pa0">
+  {{ range .Params.tags }}
+   <li class="list">
+     <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">
+       {{- . -}}
+     </a>
+   </li>
   {{ end }}
-{{end}}
+</ul>

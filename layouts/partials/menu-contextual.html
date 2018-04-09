@@ -1,24 +1,33 @@
-{{/* Get the current page's URL so we can compare it to the list below */}}
-{{ $currentPageUrl := .URL }}
-{{/* Get a list of this section's other pages. "RegularPages" excludes the list page    */}}
-{{ $currentSection := (where .Site.RegularPages "Section" .Section) }}
-{{/* Get the number of entries of  $currentSection and subtract 1 */}}
-{{ $i := sub ($currentSection | len) 1 }}
-{{/* So we can only show this menu if there are one or more other entries  */}}
-{{ if ge $i 1 }}
-  <div class="bg-light-gray pa3">
-    <ul>
-      <li class="list b mb3">{{/* Return the section name, make it readable (humanize) and if there are 2 or more entries, make the section name plural (pluralize).  */}}
-        {{ $i }} More {{ if ge $i 2 }}{{ .Section | humanize | pluralize }}{{ else }}{{ .Section | humanize }}{{end}}
-      </li>
-      {{ range $currentSection }}
-        <li class="list f5 w-100 hover-bg-white nl1">
-          {{/* If the URL returned is the same as the current URL dim it so we know that that's the page we're on. NOTE: Should probably use a more accessible way of displaying this. */}}
-          <a href="{{ .URL }}" class="link ph2 pv2 db black{{ if eq $currentPageUrl .URL }} o-50{{end}}">
-            {{ .Title }}
+{{/*
+  Use Hugo's native Table of contents feature. You must set `toc: true` in your parameters for this to show.
+  https://gohugo.io/content-management/toc/
+*/}}
+
+{{- if .Params.toc -}}
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What's in this {{ humanize .Type }}</p>
+      {{ .TableOfContents }}
+  </div>
+{{- end -}}
+
+{{/*
+  Use Hugo's native related content feature to pull in content that may have similar parameters, like tags. etc.
+  https://gohugo.io/content-management/related/
+*/}}
+
+{{ $related := .Site.RegularPages.Related . | first 15 }}
+
+{{ with $related }}
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   {{ range . }}
+	     <li  class="mb2">
+          <a href="{{ .RelPermalink }}">
+            {{- .Title -}}
           </a>
         </li>
-      {{ end }}
+	    {{ end }}
     </ul>
-  </div>
+</div>
 {{ end }}

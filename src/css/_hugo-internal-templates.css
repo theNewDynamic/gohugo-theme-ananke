@@ -25,3 +25,7 @@
 .pagination li.active a:visited {
   background-color: #ddd;
 }
+
+#TableOfContents ul li {
+  margin-bottom: 1em;
+}

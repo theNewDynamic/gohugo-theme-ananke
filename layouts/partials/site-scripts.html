@@ -1,1 +1,6 @@
-<script src="{{ "dist/app.bundle.js" | absURL }}" async></script>
+{{ $css_path := $.Param "dev.js_path" | default "themes/gohugo-theme-ananke/static/dist/js" }}
+{{ with $css_path }}
+  {{ range readDir . }}
+    <link href='/dist/js/{{ .Name }}' rel='stylesheet' type="text/css" data-turbolinks-track="reload" />
+  {{ end }}
+{{ end }}

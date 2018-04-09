@@ -17,7 +17,13 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
 
-    <link href='{{ "dist/main.css" | absURL }}' rel='stylesheet' type="text/css" />
+    {{ $css_path := $.Param "dev.css_path" | default "themes/gohugo-theme-ananke/static/dist/css" }}
+    {{ with $css_path }}
+      {{ range readDir . }}
+        <link href='/dist/css/{{ .Name }}' rel='stylesheet' type="text/css" data-turbolinks-track="reload" />
+      {{ end }}
+    {{ end }}
+
     {{ block "favicon" . }}
       {{ partial "site-favicon.html" . }}
     {{ end }}
