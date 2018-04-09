@@ -4,28 +4,28 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="flex-l flex-wrap mt2 mw8 center">
+  <article class="flex-l flex-wrap justify-between mw8 center">
 
-    <main class="center cf pv5 ph3 ph4-ns mw7 w-two-thirds-l">
+    <header class="mt4 w-100">
       <p class="f6 b helvetica tracked">
         {{/* Humanize removes hyphens and capitalizes the first word */}}
         {{ humanize .Section | upper  }}
       </p>
-      <h1 class="f1 athelas">
+      <h1 class="f1 athelas mb1">
         {{ .Title }}
       </h1>
-        {{/* TODO: Add Hugo author  */}}
-        {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{ .Date.Format "January 2, 2006" }}
       </time>
-      <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
         {{ .Content }}
-      </section>
       {{ partial "tags.html" . }}
     </main>
 
-    <aside class="ph3 mt2 mt6-ns w-third-l">
+    <aside class="w-third-l">
       {{ partial "menu-contextual.html" . }}
     </aside>
 
