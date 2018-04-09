@@ -4,9 +4,9 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="flex-l flex-wrap mt2 mw8 center">
+  <article class="flex-l flex-wrap mt2 mw8 center">
 
-    <article class="center cf pv5 ph3 ph4-ns mw7 w-two-thirds-l">
+    <main class="center cf pv5 ph3 ph4-ns mw7 w-two-thirds-l">
       <p class="f6 b helvetica tracked">
         {{/* Humanize removes hyphens and capitalizes the first word */}}
         {{ humanize .Section | upper  }}
@@ -23,11 +23,11 @@
         {{ .Content }}
       </section>
       {{ partial "tags.html" . }}
-    </article>
+    </main>
 
-    <div class="ph3 mt2 mt6-ns w-third-l">
+    <aside class="ph3 mt2 mt6-ns w-third-l">
       {{ partial "menu-contextual.html" . }}
-    </div>
+    </aside>
 
-  </div>
+  </article>
 {{ end }}
