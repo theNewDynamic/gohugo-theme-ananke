@@ -30,7 +30,7 @@ module.exports = {
 
 	output: {
 		path: path.join(__dirname, './../static/dist'),
-		filename: '[name].[chunkhash].js'
+		filename: 'js/[name].[chunkhash].js'
 	},
 
 	resolve: {
@@ -40,7 +40,7 @@ module.exports = {
 	plugins: [
 		new ExtractTextPlugin({
 			filename: getPath => {
-				return getPath('[name].[contenthash].css');
+				return getPath('css/[name].[contenthash].css');
 			},
 			allChunks: true
 		})
