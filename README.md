@@ -10,10 +10,11 @@ Features
 
 - Responsive
 - Accessible
-- Contact form
+- Contact form 
 - Custom Robots.txt (changes values based on environment)
-- Internal templates for meta data and google analytics
+- Internal templates for meta data, google analytics, and DISQUS comments
 - RSS Discovery
+- Table of Contents (must declare `toc: true` in post parameter)
 
 Also includes examples of Hugo Features or Functions:
 
@@ -21,6 +22,7 @@ Also includes examples of Hugo Features or Functions:
 - Taxonomies
 - Archetypes
 - Custom shortcode
+- Related content
 - Hugo built-in menu
 - `with`
 - `HUGO_ENV`
@@ -64,6 +66,12 @@ After installing the theme successfully it requires a just a few more steps to g
 Take a look inside the [`exampleSite`](https://github.com/budparr/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
 You may need to delete the line: `themesDir = "../.."`
+
+
+### Add comments
+
+To enable DISQUS comments, add `disqusShortname = YOURSHORTNAME` to your config file.
+
 
 
 ### Change the hero background
