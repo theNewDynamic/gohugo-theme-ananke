@@ -4,10 +4,9 @@
       <p>Below you will find pages that utilize the taxonomy term “{{ .Title }}”</p>
     </div>
   </article>
-  <div class="mw8 center">
-    {{ $section := .Data.Pages }}
+  <div class="mw8 center">    
     <section class="flex-ns flex-wrap justify-around mt5">
-      {{ range  $section }}
+      {{ range  .Pages }}
         <div class="relative w-100  mb4 bg-white">
           {{ partial "summary.html" . }}
         </div>
