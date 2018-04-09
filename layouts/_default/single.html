@@ -8,25 +8,28 @@
 
     <header class="mt4 w-100">
       <p class="f6 b helvetica tracked">
-        {{/* Humanize removes hyphens and capitalizes the first word */}}
-        {{ humanize .Section | upper  }}
+          {{/*
+          CurrentSection allows us to use the section title instead of inferring from the folder.
+          https://gohugo.io/variables/page/#section-variables-and-methods
+          */}}
+        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
       </p>
       <h1 class="f1 athelas mb1">
-        {{ .Title }}
+        {{- .Title -}}
       </h1>
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-        {{ .Date.Format "January 2, 2006" }}
+        {{- .Date.Format "January 2, 2006" -}}
       </time>
     </header>
 
     <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-        {{ .Content }}
-      {{ partial "tags.html" . }}
+        {{- .Content -}}
+      {{- partial "tags.html" . -}}
     </main>
 
     <aside class="w-third-l">
-      {{ partial "menu-contextual.html" . }}
+      {{- partial "menu-contextual.html" . -}}
     </aside>
 
   </article>
