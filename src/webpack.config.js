@@ -1,6 +1,8 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
+var AssetsPlugin = require('assets-webpack-plugin');
+
 module.exports = {
 	entry: {
 		app: './js/main.js'
@@ -14,7 +16,6 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['env']
-						// plugins: [require('babel-plugin-transform-object-rest-spread')]
 					}
 				}
 			},
@@ -38,16 +39,17 @@ module.exports = {
 	},
 
 	plugins: [
+		new AssetsPlugin({
+			filename: 'webpack_assets.json',
+			path: path.join(__dirname, '../data'),
+			prettyPrint: true
+		}),
 		new ExtractTextPlugin({
 			filename: getPath => {
 				return getPath('css/[name].[contenthash].css');
 			},
 			allChunks: true
 		})
-		// new webpack.ProvidePlugin({
-		//         $: "jquery",
-		//         jQuery: "jquery"
-		//     })
 	],
 	watchOptions: {
 		watch: true
