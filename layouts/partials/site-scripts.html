@@ -1,6 +1,4 @@
-{{ $css_path := $.Param "dev.js_path" | default "themes/gohugo-theme-ananke/static/dist/js" }}
-{{ with $css_path }}
-  {{ range readDir . }}
-    <link href='/dist/js/{{ .Name }}' rel='stylesheet' type="text/css" data-turbolinks-track="reload" />
-  {{ end }}
+{{ $script := .Site.Data.webpack_assets.app }}
+{{ with $script.js }}
+  <script src="{{ printf "%s%s" "/dist/" . }}"></script>
 {{ end }}
