@@ -115,6 +115,17 @@ And a list of background colors [here](https://github.com/tachyons-css/tachyons/
 _n.b. in future versions we will likely separate the typeface and other body classes._
 
 
+### Custom CSS
+
+You can override the built-in css by using your own. Just put your own css files in the `static` directory of your website (the one in the theme directory also works but is not recommended) and modify the `custom_css` parameter in your config file. The path referenced in the parameter should be relative to the `static` folder. These css files will be added through the `header` partial after the built-in css file.
+
+For example, if your css files are `static/css/custom.css` and `static/css/custom2.css` then add the following to the config file:
+
+```
+    [params]
+      custom_css = ["css/custom.css","css/custom2.css"]
+```
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
