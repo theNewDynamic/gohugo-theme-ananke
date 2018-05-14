@@ -134,6 +134,13 @@ In order to see your site in action, run Hugo's built-in local server.
 
 Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
 
+## Production
+
+To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
+
+```
+HUGO_ENV=production hugo
+```
 
 ## Contributing
 
