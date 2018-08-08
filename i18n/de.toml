@@ -1,0 +1,20 @@
+[Recent]
+other = "Letzte"
+
+[All]
+other = "Alle"
+
+[More]
+other = "Mehr"
+
+[Whatsinthis]
+other = "Was ist in diesem"
+
+[readmore]
+other = "mehr lesen"
+
+[page]
+other = "Seite"
+
+[Belowyouwillfindpagesthatutilizethetaxonomyterm]
+other = "Seiten zur Taxonomy „{{ .Title }}“"
