@@ -4,6 +4,7 @@
       {{ .Site.Title }}
     </a>
     <div class="flex-l items-center">
+      {{ partial "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
         <ul class="pl0 mr3">
           {{ range .Site.Menus.main }}
