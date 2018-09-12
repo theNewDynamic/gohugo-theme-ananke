@@ -30,3 +30,8 @@
     {{ partial "svg/github.svg" (dict "size" $icon_size) }}
   </a>
 {{ end }}
+{{ with .Param "gitlab" }}
+  <a href="{{ . }}" class="link-transition gitlab link dib z-999 pt3 pt0-l mr2" title="Gitlab link">
+    {{ partial "svg/gitlab.svg" (dict "size" $icon_size) }}
+  </a>
+{{ end }}
