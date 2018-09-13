@@ -1,4 +1,4 @@
-.facebook, .twitter, .instagram, .youtube, .github, .linkedin {
+.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin {
   fill: #BABABA;
 }
 .facebook:hover {
@@ -19,6 +19,10 @@
 
 .github:hover {
   fill: #6cc644;
+}
+
+.gitlab:hover {
+  fill: #FC6D26;
 }
 
 .linkedin:hover {
