@@ -21,6 +21,8 @@
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
       </time>
+      <span class="f6 mv4 dib tracked"> - {{ .ReadingTime}} minutes read</span>
+      <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>
     </header>
 
     <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
