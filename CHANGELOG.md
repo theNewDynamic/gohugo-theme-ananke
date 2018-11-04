@@ -14,3 +14,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ### Changed
 
 - Run Ananke with Hugo v0.50
+- Remove default background image so users can choose to not use one at all. #133 (cdeguise)
