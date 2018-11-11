@@ -3,10 +3,14 @@
   <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
     {{- .Content -}}
   </main>
-    <section class="flex-ns flex-wrap justify-around mt5">
+    <section class="{{ .Site.Params.list_section_class | default "flex-ns flex-wrap justify-around mt5" }}">
       {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          {{- partial "summary.html" . -}}
+        <div class="{{ .Site.Params.list_post_summary_class | default "relative w-100 w-30-l mb4 bg-white" }}">
+          {{ if .Site.Params.list_post_summary_with_image }}
+            {{- partial "summary-with-image.html" . -}}
+          {{ else }}
+            {{- partial "summary.html" . -}}
+          {{ end }}
         </div>
       {{ end }}
     </section>
