@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+  <article class="{{ .Site.Params.list_article_class | default "pa3 pa4-ns nested-copy-line-height nested-img" }}">
+  <main class="{{ .Site.Params.list_main_class | default "cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray" }}">
     {{- .Content -}}
   </main>
     <section class="{{ .Site.Params.list_section_class | default "flex-ns flex-wrap justify-around mt5" }}">
