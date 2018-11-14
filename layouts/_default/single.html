@@ -6,7 +6,7 @@
 {{ define "main" }}
 
   {{ $section := .Site.GetPage "section" .Section }}
-  <article class="{{ .Site.Param.post_article_class  | default "flex-l flex-wrap justify-between mw8 center ph3 ph0-l"}}">
+  <article class="{{ .Site.Params.post_article_class  | default "flex-l flex-wrap justify-between mw8 center ph3 ph0-l"}}">
 
     <header class="mt4 w-100">
       <p class="f6 b helvetica tracked">
@@ -16,14 +16,14 @@
           */}}
         {{with .CurrentSection.Title }}{{. | upper }}{{end}}
       </p>
-      <h1 class="{{ $.Param "post_title_class"  | default "f1 athelas mb1" }}">
+      <h1 class="{{ .Site.Params.post_title_class  | default "f1 athelas mb1" }}">
         {{- .Title -}}
       </h1>
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
-      </time>      
-      {{/*  
+      </time>
+      {{/*
           Show "reading time" and "word count" but only if one of the following are true:
           1) A global config `params` value is set `show_reading_time = true`
           2) A section front matter value is set `show_reading_time = true`
@@ -35,7 +35,7 @@
       {{ end }}
     </header>
 
-    <main class="{{ .Site.Param.post_main_class  | default "nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l" }}">
+    <main class="{{ .Site.Params.post_main_class  | default "nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l" }}">
         {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6">
