@@ -1,16 +1,18 @@
 {{ define "main" }}
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “{{ .Title }}”</p>
-    </div>
-  </article>
-  <div class="mw8 center">    
-    <section class="flex-ns flex-wrap justify-around mt5">
-      {{ range  .Pages }}
-        <div class="relative w-100  mb4 bg-white">
-          {{ partial "summary.html" . }}
-        </div>
-      {{ end }}
-    </section>
-  </div>
+  <article class="{{ .Site.Params.list_article_class | default "cf pa3 pa4-m pa4-l" }}">
+  <main class="{{ .Site.Params.list_main_class | default "cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray" }}">
+    {{ .Site.Params.taxonomy_text_copy | default "Below you will find pages that utilize the taxonomy term" }}  “{{ .Title }}”
+  </main>
+  <section class="{{ .Site.Params.list_section_class | default "flex-ns flex-wrap justify-around mt5" }}">
+    {{ range .Paginator.Pages }}
+      <div class="{{ .Site.Params.list_post_summary_class | default "relative w-100 w-30-l mb4 bg-white" }}">
+        {{ if .Site.Params.list_post_summary_with_image }}
+          {{- partial "summary-with-image.html" . -}}
+        {{ else }}
+          {{- partial "summary.html" . -}}
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+  {{- template "_internal/pagination.html" . -}}
 {{ end }}
