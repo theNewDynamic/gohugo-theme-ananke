@@ -1,8 +1,7 @@
-<div class="bb bt b--black-10 mt5">
-  {{ if $.Param "tag_text_copy" }}
-    <p class="f6 b"> {{ $.Param "tag_text_copy" }} </p>
-  {{ end }}
-  <ul class="pa0 flex flex-wrap">
+{{ if (and .Site.Params.tag_text_copy .Params.tags ) }}
+    <p class="f6 b helvetica tracked"> {{ .Site.Params.tag_text_copy | upper }}</p>
+{{ end }}
+<ul class="pa0 flex flex-wrap">
     {{ range .Params.tags }}
      <li class="list mr2">
        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="{{ $.Param "tag_class" | default "link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif" }}">
@@ -11,4 +10,3 @@
      </li>
     {{ end }}
   </ul>
-</div>
