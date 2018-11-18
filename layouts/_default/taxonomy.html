@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article class="{{ .Site.Params.list_article_class | default "cf pa3 pa4-m pa4-l" }}">
   <main class="{{ .Site.Params.list_main_class | default "cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray" }}">
-    {{ .Site.Params.taxonomy_text_copy | default "Below you will find pages that utilize the taxonomy term" }}  “{{ .Title }}”
+    {{ .Site.Params.taxonomy_text_copy | default "Below you will find pages that utilize the taxonomy term" }}  “{{ .Title | upper }}”
   </main>
   <section class="{{ .Site.Params.list_section_class | default "flex-ns flex-wrap justify-around mt5" }}">
     {{ range .Paginator.Pages }}
