@@ -1,37 +1,42 @@
 <!-- TODO: Add follow intents where available TODO: Revisit color and hover color -->
 {{ $icon_size := "32px" }}
 {{ with .Param "facebook" }}
-  <a href="{{ . }}" class="link-transition facebook link dib z-999 pt3 pt0-l mr2" title="Facebook link">
-    {{ partial "svg/facebook.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition facebook link dib z-999 pt3 pt0-l mr2" title="Facebook link">
+  {{ partial "svg/facebook.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
 {{ with .Param "twitter" }}
-  <a href="{{ . }}" class="link-transition twitter link dib z-999 pt3 pt0-l mr2" title="Twitter link">
-    {{ partial "svg/twitter.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr2" title="Twitter link">
+  {{ partial "svg/twitter.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
 {{ with .Param "instagram" }}
-  <a href="{{ . }}" class="link-transition instagram link dib z-999 pt3 pt0-l mr2" title="Instagram link">
-    {{ partial "svg/instagram.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition instagram link dib z-999 pt3 pt0-l mr2" title="Instagram link">
+  {{ partial "svg/instagram.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
 {{ with .Param "youtube" }}
-  <a href="{{ . }}" class="link-transition youtube link dib z-999 pt3 pt0-l mr2" title="Youtube link">
-    {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition youtube link dib z-999 pt3 pt0-l mr2" title="Youtube link">
+  {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
 {{ with .Param "linkedin" }}
-  <a href="{{ . }}" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
-    {{ partial "svg/linkedin.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+  {{ partial "svg/linkedin.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
 {{ with .Param "github" }}
-  <a href="{{ . }}" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
-    {{ partial "svg/github.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+  {{ partial "svg/github.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
 {{ with .Param "gitlab" }}
-  <a href="{{ . }}" class="link-transition gitlab link dib z-999 pt3 pt0-l mr2" title="Gitlab link">
-    {{ partial "svg/gitlab.svg" (dict "size" $icon_size) }}
-  </a>
+<a href="{{ . }}" target="_blank" class="link-transition gitlab link dib z-999 pt3 pt0-l mr2" title="Gitlab link">
+  {{ partial "svg/gitlab.svg" (dict "size" $icon_size) }}
+</a>
+{{ end }}
+{{ with .Param "medium" }}
+<a href="{{ . }}" target="_blank" class="link-transition medium link dib z-999 pt3 pt0-l mr2" title="Medium link">
+  {{ partial "svg/medium.svg" (dict "size" $icon_size) }}
+</a>
 {{ end }}
