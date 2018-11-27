@@ -5898,6 +5898,16 @@ pre {
   fill: #BABABA;
 }
 
+.new-window {
+  opacity: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.link-transition:hover .new-window{
+  opacity: 1;
+}
+
 .facebook:hover {
   fill: #3b5998;
 }
