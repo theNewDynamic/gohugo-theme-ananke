@@ -1,6 +1,16 @@
-.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin {
+.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin, .medium {
   fill: #BABABA;
 }
+
+.new-window {
+  opacity: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.link-transition:hover .new-window{
+  opacity: 1;
+}
+
 .facebook:hover {
   fill: #3b5998;
 }
@@ -26,5 +36,9 @@
 }
 
 .linkedin:hover {
+  fill: #0077b5
+}
+
+.medium:hover {
   fill: #0077b5
 }
