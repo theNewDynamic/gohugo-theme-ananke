@@ -126,6 +126,11 @@ For example, if your css files are `static/css/custom.css` and `static/css/custo
       custom_css = ["css/custom.css","css/custom2.css"]
 ```
 
+### Show Reading Time and Word Contributing
+
+If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.
+
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
