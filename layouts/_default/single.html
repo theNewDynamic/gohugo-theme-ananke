@@ -23,14 +23,13 @@
         {{- .Date.Format "January 2, 2006" -}}
       </time>      
       {{/*  
-          Show "reading time" and "word count" but only if one of the following are true:
+          Show "reading time" but only if one of the following are true:
           1) A global config `params` value is set `show_reading_time = true`
           2) A section front matter value is set `show_reading_time = true`
           3) A page front matter value is set `show_reading_time = true`
         */}}
       {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
         <span class="f6 mv4 dib tracked"> - {{ .ReadingTime}} minutes read</span>
-        <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>
       {{ end }}
     </header>
 
