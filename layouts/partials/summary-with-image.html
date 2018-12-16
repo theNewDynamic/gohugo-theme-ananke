@@ -6,7 +6,7 @@
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
         {{ $featured_image := (trim $featured_image "/") | absURL }}
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="{{.URL}}" class="db grow">
+          <a href="{{.URL}}" class="db">
             <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
           </a>
         </div>
