@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.37] - 2018-12-26 (@budparr)
+
+- Improve Readme with path to example site #146 
+- Update asset dependencies a99f95ef1f4c1f9b0a278e534ce6ace1b7441fd8
+- Improve social follow link accessibility #147 
 
 ## [2.35] - 2018-11-04 (@budparr)
 
