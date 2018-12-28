@@ -19,9 +19,13 @@
         {{- .Title -}}
       </h1>
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+      {{ if not .Params.nodate }}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
       </time>      
+      {{ else }}
+      <!-- hiding date since nodate = true set in source -->
+      {{ end }}
       {{/*  
           Show "reading time" and "word count" but only if one of the following are true:
           1) A global config `params` value is set `show_reading_time = true`
