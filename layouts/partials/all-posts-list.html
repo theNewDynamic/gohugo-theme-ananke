@@ -1,0 +1,34 @@
+{{ $n_posts := $.Param "recent_posts_number" | default 3 }}
+
+<div class="pa3 pa4-ns w-100 w-70-ns center">
+  <h1 class="flex-none">
+    Últimos posts:
+  </h1>
+
+  <section class="w-100 mw8 center">
+
+    {{ range (first $n_posts .Pages) }}
+      <div class="relative w-100 mb4">
+        {{ partial "summary-with-image.html" . }}
+      </div>
+    {{ end }}
+
+  </section>
+
+  <section class="w-100">
+    <h1 class="f3 dib">
+       Más posts en nuestras secciones:
+    </h1>
+      {{ range .Sections }}
+        {{ $post_count := len (.Pages) }}
+        {{ if ge $post_count 1 }}
+        <h2 class="f4 fw4 mb4 dib ml3">
+          <a href="{{ .URL }}" class="link black dim">
+            {{ .Name }}
+          </a>
+        </h2>
+        {{ end }}
+      {{ end }}
+  </section>
+
+</div>
