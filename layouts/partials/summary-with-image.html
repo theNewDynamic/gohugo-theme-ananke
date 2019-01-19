@@ -1,6 +1,6 @@
 {{ $featured_image := .Params.featured_image }}
 <article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray debug">
     <div class="flex flex-column flex-row-ns">
       {{ if .Params.featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
@@ -12,11 +12,12 @@
         </div>
       {{ end }}
       <div class="blah w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
+        <h1 class="f3 fw1 athelas mv0 lh-title">
           <a href="{{.URL}}" class="color-inherit dim link">
             {{ .Title }}
             </a>
         </h1>
+        {{ partial "date.html" . }}
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
           {{ .Summary }}
         </div>
