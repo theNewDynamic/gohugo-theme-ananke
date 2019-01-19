@@ -8,6 +8,7 @@
       {{ end }}
       <div class="w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
         <h1 class="f3 fw1 athelas mt0 lh-title">{{ .Title }}</h1>
+        {{ partial "date.html" . }}          
         <div class="f6 f5-l lh-copy nested-copy-line-height">
           {{ .Summary }}
         </div>

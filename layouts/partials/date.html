@@ -1,0 +1,7 @@
+
+<time class="f6 mb4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  Publicado el {{ index .Site.Params.weekdays .Date.Weekday }}
+  {{ .Date.Day }} de
+  {{ index .Site.Params.months .Date.Month }},
+  {{ .Date.Year }}
+</time>
