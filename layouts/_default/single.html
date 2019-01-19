@@ -18,10 +18,12 @@
       </p>
       <h1 class="{{ .Site.Params.post_title_class  | default "f1 athelas mb1" }}">
         {{- .Title -}}
+        {{ partial "story-dates.html" . }}
+        <div class="avenir mid-gray normal">
+          {{ partial "date.html" . }}
+        </div>
       </h1>
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-
-      {{ partial "date.html" . }}
 
       {{/*
           Show "reading time" and "word count" but only if one of the following are true:
