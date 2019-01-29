@@ -9,14 +9,14 @@
   <article class="{{ .Site.Params.post_article_class  | default "flex-l flex-wrap justify-between mw8 center ph3 ph0-l"}}">
 
     <header class="mt4 w-100">
-      <p class="f6 b helvetica tracked">
+      <p class="f6 b tracked" style="font-family: 'Krub', sans-serif;">
           {{/*
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
         {{with .CurrentSection.Title }}{{. | upper }}{{end}}
       </p>
-      <h1 class="{{ .Site.Params.post_title_class  | default "f1 athelas mb1" }}">
+      <h1 class="{{ .Site.Params.post_title_class  | default "f1 athelas mb1" }}" style="font-family: 'Krub', sans-serif; letter-spacing: 0.1em">
         {{- .Title -}}
         {{ partial "story-dates.html" . }}
         <div class="avenir mid-gray normal">

@@ -1,7 +1,7 @@
 {{ if (and .Site.Params.tag_text_copy .Params.tags ) }}
-    <p class="f6 b helvetica tracked"> {{ .Site.Params.tag_text_copy | upper }}</p>
+    <p class="f4 b helvetica tracked" style="font-family: 'Krub', sans-serif;"> {{ .Site.Params.tag_text_copy | upper }}</p>
 {{ end }}
-<ul class="pa0 flex flex-wrap">
+<ul class="pa0 flex flex-wrap" style="font-family: 'Krub', sans-serif;">
     {{ range .Params.tags }}
      <li class="list mr2">
        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="{{ $.Param "tag_class" | default "link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif" }}">

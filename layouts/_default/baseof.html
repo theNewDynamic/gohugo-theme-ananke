@@ -35,6 +35,8 @@
       <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
 
+    <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+
     {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/google_news.html" . -}}
