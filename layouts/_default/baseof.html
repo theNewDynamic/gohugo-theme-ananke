@@ -43,6 +43,20 @@
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
 
+
+    {{ with .Site.Params.twitter_site }}
+        <meta name="twitter:site" content="{{ . }}" />
+    {{ end }}
+
+    {{ with .Site.Params.twitter_creator }}
+        <meta name="twitter:creator" content="{{ . }}" />
+    {{ end }}
+
+    {{ with $.Params.featured_image }}
+      <meta property="og:image" content="{{ . | absURL }}" >
+      <meta name="twitter:image" content="{{ . | absURL }}" >
+    {{ end }}
+
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
