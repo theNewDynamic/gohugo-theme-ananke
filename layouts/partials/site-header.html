@@ -9,9 +9,9 @@
         <h1 class="{{ $.Param "header_title_class"  | default "f2 f-subheadline-l fw2 white-90 mb0 lh-title"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
           {{/* Determinate if is a taxonomy page so put the tag is in uppercase  on the title */}}
           {{ if .Data.Singular }}
-            {{ .Title | default .Site.Title | upper }}
+            {{ .Title | upper }}
           {{ else }}
-            {{ .Title | default .Site.Title }}
+            {{ .Title }}
           {{ end }}
         </h1>
         {{ with .Params.description }}
