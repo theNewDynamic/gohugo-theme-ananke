@@ -16,7 +16,7 @@
       {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
        {{ with .Site.GetPage "section" $section_name }}
           <h1 class="flex-none">
-            Recent {{ .Title }}
+            {{$.Param "recent_copy" | default "Recent" }} {{ .Title }}
           </h1>
         {{ end }}
 
