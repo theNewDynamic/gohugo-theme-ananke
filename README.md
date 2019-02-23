@@ -24,6 +24,7 @@ Also includes examples of Hugo Features or Functions:
 - Custom shortcode
 - Related content
 - Hugo built-in menu
+- i18n
 - `with`
 - `HUGO_ENV`
 - `first`
