@@ -5894,7 +5894,7 @@ pre {
   margin-bottom: 1em;
 }
 
-.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin, .medium {
+.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin, .medium, .mastodon {
   fill: #BABABA;
 }
 
@@ -5938,6 +5938,10 @@ pre {
 
 .medium:hover {
   fill: #0077b5
+}
+
+.mastodon:hover {
+  fill: #3088d4;
 }
 
 /* Put your custom styles here and run `npm start` from the "src" directory on */
