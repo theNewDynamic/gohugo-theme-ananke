@@ -27,7 +27,7 @@
     {{ end }}
 
     {{ block "favicon" . }}
-      {{ partial "site-favicon.html" . }}
+      {{ partialCached "site-favicon.html" . }}
     {{ end }}
 
     {{ if .RSSLink }}
@@ -52,7 +52,7 @@
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
-    {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
   </body>
 </html>
