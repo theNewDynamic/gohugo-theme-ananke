@@ -1,0 +1,6 @@
+
+{{ if .Site.Params.link_post }}
+  <a class="f4 color-inherit dim link f5" href="{{ .Site.BaseURL }}{{ .Site.Params.link_post.link }}" style="font-family: 'Krub', sans-serif;" >
+     {{ .Site.Params.link_post.title }}
+  </a>
+{{ end }}
