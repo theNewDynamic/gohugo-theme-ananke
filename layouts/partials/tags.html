@@ -2,11 +2,11 @@
     <p class="f4 b helvetica tracked" style="font-family: 'Krub', sans-serif;"> {{ .Site.Params.tag_text_copy | upper }}</p>
 {{ end }}
 <ul class="pa0 flex flex-wrap" style="font-family: 'Krub', sans-serif;">
-    {{ range .Params.tags }}
-     <li class="list mr2">
-       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="{{ $.Param "tag_class" | default "link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif" }}">
-         {{. | upper }}
-       </a>
-     </li>
-    {{ end }}
-  </ul>
+  {{ range .Params.tags }}
+   <li class="list mr2">
+     <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="{{ $.Param "tag_class" | default "link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif" }}">
+       {{. | upper }}
+     </a>
+   </li>
+  {{ end }}
+</ul>
