@@ -38,9 +38,20 @@
     </header>
 
     <main class="{{ .Site.Params.post_main_class  | default "nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l" }}">
-        {{- .Content -}}
-      {{- partial "tags.html" . -}}
-      <div class="mt6">
+      {{- .Content -}}
+
+      <div class="pv3 bb bt b--black-10 tc">
+          {{ partial "social-follow.html" . }}
+          <br>
+          {{ partial "link-post.html" . }}
+      </div>
+
+      <div class="bb b--black-10">
+        {{- partial "tags.html" . -}}
+      </div>
+
+      <div class="pt3">
+        <p class="f4 b helvetica tracked" style="font-family: 'Krub', sans-serif;"> COMENTARIOS:</p>
         {{ template "_internal/disqus.html" . }}
       </div>
     </main>
