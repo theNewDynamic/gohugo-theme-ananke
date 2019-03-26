@@ -5,7 +5,7 @@
 
 {{- if .Params.toc -}}
   <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">{{ i18n "whatsInThis" humanize .Type }}</p>
+    <p class="f5 b mb3">{{ i18n "whatsInThis" . }}</p>
       {{ .TableOfContents }}
   </div>
 {{- end -}}
