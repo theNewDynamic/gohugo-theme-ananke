@@ -1,5 +1,5 @@
 {{ $featured_image := .Params.featured_image }}
-<article class="bb b--black-10">
+<article class={{ .Site.Params.summary_article_class  | default "bb b--black-10" }}>
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
       {{ if .Params.featured_image }}
@@ -28,8 +28,8 @@
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
           {{ .Summary }}
         </div>
-        <div class="tc pv2">
-          <a href="{{.URL}}" class="color-inherit dim link f5">{{$.Param "read_more_copy" | default "read more" }}</a>
+        <div class="tc pv3">
+          <a href="{{.URL}}" class={{ .Site.Params.read_more_class  | default "color-inherit dim link f5" }}>{{$.Param "read_more_copy" | default "read more" }}</a>
 
 
         </div>
