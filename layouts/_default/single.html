@@ -21,8 +21,8 @@
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
-      </time>      
-      {{/*  
+      </time>
+      {{/*
           Show "reading time" and "word count" but only if one of the following are true:
           1) A global config `params` value is set `show_reading_time = true`
           2) A section front matter value is set `show_reading_time = true`
@@ -38,7 +38,12 @@
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6">
+      {{ if .Site.DisqusShortname }}
         {{ template "_internal/disqus.html" . }}
+      {{ end }}
+      {{ if .Site.Params.commentoEnable }}
+        {{- partial "commento.html" . -}}
+      {{ end }}
       </div>
     </section>
 

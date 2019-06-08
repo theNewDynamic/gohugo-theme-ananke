@@ -10,9 +10,9 @@ Features
 
 - Responsive
 - Accessible
-- Contact form 
+- Contact form
 - Custom Robots.txt (changes values based on environment)
-- Internal templates for meta data, google analytics, and DISQUS comments
+- Internal templates for meta data, google analytics, and DISQUS or COMMENTO comments
 - RSS Discovery
 - Table of Contents (must declare `toc: true` in post parameter)
 
@@ -71,9 +71,10 @@ You may need to delete the line: `themesDir = "../.."`
 
 ### Add comments
 
-To enable DISQUS comments, add `disqusShortname = YOURSHORTNAME` to your config file.
+To enable comments, add following to your config file:
 
-
+- DISQUS: `disqusShortname = YOURSHORTNAME`
+- COMMENTO: `commentoEnable = true`
 
 ### Change the hero background
 
