@@ -74,7 +74,11 @@ You may need to delete the line: `themesDir = "../.."`
 To enable comments, add following to your config file:
 
 - DISQUS: `disqusShortname = YOURSHORTNAME`
-- COMMENTO: `commentoEnable = true`
+- COMMENTO:
+  ```
+  [params]
+    commentoEnable = true`
+  ```
 
 ### Change the hero background
 
