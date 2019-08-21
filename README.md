@@ -27,7 +27,7 @@ Also includes examples of Hugo Features or Functions:
 - Hugo built-in menu
 - i18n
 - `with`
-- `HUGO_ENV`
+- `HUGO_ENVIRONMENT`
 - `first`
 - `after`
 - `sort`
@@ -149,10 +149,10 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 ## Production
 
-To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
+To run in production (e.g. to have Google Analytics show up), either run just `hugo` (without the `server` command), add `HUGO_ENVIRONMENT=production` before your build command or use `hugo server --environment=production`. For example:
 
 ```
-HUGO_ENV=production hugo
+hugo
 ```
 
 ## Contributing

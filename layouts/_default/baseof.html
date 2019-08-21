@@ -6,9 +6,9 @@
     {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    {{ hugo.Generator }}
-    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ .Hugo.Generator }}
+    {{/* NOTE: For Production make sure you add `HUGO_ENVIRONMENT="production"` before your build command */}}
+    {{ if eq hugo.Environment "production" }}
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     {{ else }}
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -39,12 +39,12 @@
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
 
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ if eq hugo.Environment "production" }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with hugo.Environment }} {{ . }}{{ end }}">
 
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
