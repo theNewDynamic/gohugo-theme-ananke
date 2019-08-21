@@ -1,6 +1,6 @@
 User-agent: *
 # robotstxt.org - if environment is not production robots will be disallowed.
-{{ if eq hugo.Environment "production" }}
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq hugo.Environment "production") }}
   Disallow:
 {{ else }}
   Disallow: /

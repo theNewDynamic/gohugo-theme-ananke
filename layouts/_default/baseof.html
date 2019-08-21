@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     {{ .Hugo.Generator }}
     {{/* NOTE: For Production make sure you add `HUGO_ENVIRONMENT="production"` before your build command */}}
-    {{ if eq hugo.Environment "production" }}
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq hugo.Environment "production") }}
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     {{ else }}
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
