@@ -51,7 +51,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 Inside the folder of your Hugo site run:
 
     $ cd themes
-    $ git clone https://github.com/budparr/gohugo-theme-ananke.git
+    $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
