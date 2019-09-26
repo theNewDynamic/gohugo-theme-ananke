@@ -8,19 +8,19 @@ other = "所有 {{.Title }}"
 other = "最近 {{.Title }}"
 
 [readMore]
-other = "繼續閱讀"
+other = "more"
 
 [whatsInThis]
 other = "What's in this {{ .Type }}"
 
 [related]
-other = "相關內容"
+other = "相关內容"
 
 [yourName]
 other = "你的名字"
 
 [emailAddress]
-other = "电邮地址"
+other = "邮件地址"
 
 [message]
 other = "信息"
