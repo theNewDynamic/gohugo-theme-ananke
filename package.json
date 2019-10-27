@@ -8,8 +8,8 @@
     "url": "git+https://github.com/theNewDynamic/thenewdynamic.com.git"
   },
   "scripts": {
-    "version": "auto-changelog -p --template keepachangelog --commit-limit 0 && git add CHANGELOG.md",
-  }
+    "version": "auto-changelog -p --template keepachangelog --commit-limit 0 && git add CHANGELOG.md"
+  },
   "keywords": [
     "hugo",
     "gohugo"
