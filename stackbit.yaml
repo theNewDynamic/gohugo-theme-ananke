@@ -2,7 +2,7 @@ stackbitVersion: ~0.2.39
 ssgName: custom
 publishDir: exampleSite/public
 buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
-uploadDir: exampleSite/static/uploads
+uploadDir: uploads
 staticDir: exampleSite/static
 pagesDir: exampleSite/content
 dataDir: exampleSite
@@ -64,7 +64,8 @@ models:
           - type: string
             name: changefreq
             label: changefreq
-          - type: integer
+          - type: number
+            subtype: float
             name: priority
             label: priority
           - type: string
@@ -173,7 +174,7 @@ models:
         options:
           - label: Main Menu
             value: main
-            type: object       
+            type: object
   section:
     type: page
     label: Section
