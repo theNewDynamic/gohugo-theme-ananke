@@ -2,7 +2,7 @@
   "name": "gohugo-default-theme",
   "version": "1.0.0",
   "description": "Base Theme to start Hugo Sites",
-  "main": "index.js",  
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/theNewDynamic/thenewdynamic.com.git"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/theNewDynamic/thenewdynamic.com/issues"
   },
-  "homepage": "https://github.com/theNewDynamic/thenewdynamic.com#readme"
+  "homepage": "https://github.com/theNewDynamic/thenewdynamic.com#readme",
+  "devDependencies": {
+    "auto-changelog": "^1.16.1"
+  }
 }
