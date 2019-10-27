@@ -5,7 +5,7 @@ buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd 
 uploadDir: images
 staticDir: exampleSite/static
 pagesDir: exampleSite/content
-dataDir: exampleSite/data
+dataDir: exampleSite
 models:
   config:
     type: data
@@ -102,6 +102,7 @@ models:
     file: _index.md
     hideContent: false
     singleInstance: true
+    layout: index.html
     fields:
       - type: string
         name: title
@@ -115,11 +116,15 @@ models:
       - type: string
         name: description
         label: Description
+      - type: string
+        name: layout
+        label: layout  
   basicpage:
     type: page
     label: Basic Page
     match: "*.md"
     exclude: _index.md
+    layout: page/single.html
     fields:
       - type: string
         name: title
@@ -145,6 +150,7 @@ models:
     label: Post
     folder: post
     exclude: _index.md
+    layout: _default/single.html
     fields:
       - type: string
         name: title
