@@ -1,0 +1,164 @@
+stackbitVersion: ~0.2.39
+ssgName: hugo
+publishDir: exampleSite/public
+buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
+uploadDir: images
+staticDir: exampleSite/static
+pagesDir: exampleSite/content
+dataDir: exampleSite/data
+models:
+  config:
+    type: data
+    label: Config
+    file: config.toml
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: baseURL
+        label: Base URL
+        description: Hostname (and path) to the root
+        hidden: false
+      - type: string
+        name: languageCode
+        label: Language Code
+        hidden: true
+      - type: string
+        name: themesDir
+        label: Themes Directory
+        hidden: true
+      - type: string
+        name: theme
+        label: Theme Name
+        hidden: true
+      - type: string
+        name: SectionPagesMenu
+        label: Main Section
+        hidden: false
+      - type: number
+        name: Paginate
+        label: Paginate Per Page
+        hidden: false
+      - type: boolean
+        name: enableRobotsTXT
+        label: Enable Robots
+        hidden: true
+      - type: string
+        name: googleAnalytics
+        label: Google Analytics ID
+      - type: object
+        name: params
+        label: Params
+        description: Site parameters
+        required: true
+        fields:
+          - type: string
+            name: featured_image
+            label: Logo
+          - type: string
+            name: favicon
+            label: Favicon
+          - type: string
+            name: description
+            label: Description
+          - type: string
+            name: description
+            label: Description
+          - type: string
+            name: facebook
+            label: Facebook
+          - type: string
+            name: twitter
+            label: Twitter
+          - type: string
+            name: instagram
+            label: Instagram
+          - type: string
+            name: youtube
+            label: Youtube
+          - type: string
+            name: github
+            label: Github
+          - type: string
+            name: gitlab
+            label: Gitlab
+          - type: string
+            name: linkedin
+            label: Linkedin
+          - type: string
+            name: mastodon
+            label: Mastodon
+          - type: string
+            name: background_color_class
+            label: background_color_class
+          - type: number
+            name: recent_posts_number
+            label: recent_posts_number
+  home:
+    type: page
+    label: Home
+    file: _index.md
+    hideContent: false
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: image
+        name: featured_image
+        label: Featured Image
+        description: Image displayed at in the pages intro section
+      - type: string
+        name: description
+        label: Description
+  basicpage:
+    type: page
+    label: Basic Page
+    match: "*.md"
+    exclude: _index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+      - type: image
+        name: featured_image
+        label: Featured Image
+        description: Image displayed at in the pages intro section
+      - type: string
+        name: description
+        label: Description
+      - type: enum
+        name: menu
+        label: Menu
+        options:
+          - label: Main Menu
+            value: main
+          - label: Footer Menu
+            value: footer
+  post:
+    type: page
+    label: Post
+    folder: post
+    exclude: _index.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: image
+        name: featured_image
+        label: Featured Image
+        description: Image displayed at in the pages intro section
+      - type: string
+        name: description
+        label: Description
+      - type: boolean
+        name: draft
+        label: Draft
