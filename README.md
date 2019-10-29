@@ -77,7 +77,7 @@ To enable comments, add following to your config file:
 - COMMENTO:
   ```
   [params]
-    commentoEnable = true`
+    commentoEnable = true
   ```
 
 ### Change the hero background
