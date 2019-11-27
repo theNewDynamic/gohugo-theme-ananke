@@ -1,4 +1,4 @@
-<svg {{ with .size }} height="{{ . }}" {{ end }} style="enable-background:new 0 0 270 270;" version="1.1" viewBox="0 0 270 270" width="{{ .size }}" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<svg {{ with .size }} height="{{ . }}" {{ end }} style="enable-background:new 65 65 150 135;" version="1.1" viewBox="65 65 150 135" width="{{ .size }}" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
 <style type="text/css">
 	.st0{fill:#BABABA;}
 </style>
