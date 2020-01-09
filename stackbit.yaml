@@ -93,6 +93,9 @@ models:
             name: facebook
             label: Facebook
           - type: string
+            name: stackoverflow
+            label: StackOverflow
+          - type: string
             name: twitter
             label: Twitter
           - type: string
