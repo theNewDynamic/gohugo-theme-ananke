@@ -48,6 +48,12 @@
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
+{{ with .Param "keybase" }}
+<a href="{{ . }}" target="_blank" class="link-transition keybase link dib z-999 pt3 pt0-l mr1" title="Keybase link" rel="noopener" aria-label="follow on Keybase——Opens in a new window">
+  {{ partial "svg/keybase.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
 {{ with .Param "medium" }}
 <a href="{{ . }}" target="_blank" class="link-transition medium link dib z-999 pt3 pt0-l mr1" title="Medium link" rel="noopener" aria-label="follow on Medium——Opens in a new window">
   {{ partial "svg/medium.svg" (dict "size" $icon_size) }}
