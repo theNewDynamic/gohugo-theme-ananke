@@ -2,7 +2,11 @@
   <div class="flex-l justify-between items-center center">
     <a href="{{ .Site.BaseURL }}" class="f3 fw2 hover-white no-underline white-90 dib">
     {{ if .Site.Params.Logo }}
-      <img src="/{{ .Site.Params.Logo }}" alt="{{ .Site.Title }}" />
+      {{ if .Site.Params.LogoHidpi }}
+        <img srcset="{{ .Site.Params.LogoHidpi | relURL }} 2x, {{ .Site.Params.Logo | relURL }} 1x" src="{{ .Site.Params.Logo | relURL }}" alt="{{ .Site.Title }}" />
+      {{ else }}
+        <img src="{{ .Site.Params.Logo | relURL }}" alt="{{ .Site.Title }}" />
+      {{ end }}
     {{ else }}
       {{ .Site.Title }}
     {{ end }}

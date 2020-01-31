@@ -141,11 +141,12 @@ If you add a key of `show_reading_time` true to either the Config Params, a page
 
 ### Logo
 
-You can replace the title of your site in the top left corner of each page with your own logo. To do that put your own logo into the `static` directory of your website, and add the `logo` parameter to the site params in your config file. For example:
+You can replace the title of your site in the top left corner of each page with your own logo. To do that put your own logo into the `static` directory of your website, and add the `logo` parameter to the site params in your config file. You can optionally add a HiDPI version of the logo, too. For example:
 
 ```
 [params]
-  logo = "img/logo.svg"
+  logo = "img/logo.png"
+  logohidpi = "img/logohidpi.png"
 ```
 
 
