@@ -6,15 +6,14 @@
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
-
     <header class="mt4 w-100">
-      <p class="f6 b helvetica tracked">
+      <aside class="instapaper_ignoref b helvetica tracked">
           {{/*
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
         {{with .CurrentSection.Title }}{{. | upper }}{{end}}
-      </p>
+      </aside>
       <h1 class="f1 athelas mb1">
         {{- .Title -}}
       </h1>
@@ -44,8 +43,7 @@
         <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>
       {{ end }}
     </header>
-
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6">
@@ -56,7 +54,7 @@
         {{- partial "commento.html" . -}}
       {{ end }}
       </div>
-    </section>
+    </div>
 
     <aside class="w-30-l mt6-l">
       {{- partial "menu-contextual.html" . -}}
