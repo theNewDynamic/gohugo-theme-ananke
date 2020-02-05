@@ -4,25 +4,19 @@
 {{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
 {{ $icon_size := "32px" }}
 {{ $test_url := printf "%s" "https://www.google.com/" }}
-{{ if .Params.social_share.display_social_share }}
-  {{ $social := .Params.social_share.social_items }}
+
+{{ if not .Params.disable_share }}
   <div id="sharing" class="mt3">
-    {{ with $social.facebook }}
-      <a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="facebook no-underline" aria-label="share on Facebook">
-        {{ partialCached "svg/facebook.svg" (dict "size" $icon_size) $icon_size }}
-      </a>
-    {{ end }}
+    <a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="facebook no-underline" aria-label="share on Facebook">
+      {{ partialCached "svg/facebook.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
 
-    {{ with $social.twitter }}
-      <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with $site.Social.twitter }}{{ . }}{{ end }}" class="twitter no-underline" aria-label="share on Twitter">
-        {{ partialCached "svg/twitter.svg" (dict "size" $icon_size) $icon_size }}
-      </a>
-    {{ end }}
+    <a href="http://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="twitter no-underline" aria-label="share on Twitter">
+      {{ partialCached "svg/twitter.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
 
-    {{ with $social.linkedin }}
-      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ $title }}" class="linkedin no-underline" aria-label="share on LinkedIn">
-        {{ partialCached "svg/linkedin.svg" (dict "size" $icon_size) $icon_size }}
-      </a>
-    {{ end }}
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ $title }}" class="linkedin no-underline" aria-label="share on LinkedIn">
+      {{ partialCached "svg/linkedin.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
   </div>
 {{ end }}
