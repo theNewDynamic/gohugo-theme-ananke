@@ -4,6 +4,12 @@ description: "Pierre Gringoire"
 featured_image: ""
 tags: []
 title: "Chapter II: Pierre Gringoire"
+social_share:
+  display_social_share: true
+  social_items:
+    facebook: true
+    twitter: true
+    linkedin: true
 ---
 
 Nevertheless, as be harangued them, the satisfaction and admiration
