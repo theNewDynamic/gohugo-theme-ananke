@@ -1,0 +1,26 @@
+{{ $title := .Title }}
+{{ $url := printf "%s" .URL | absLangURL }}
+{{ $icon_size := "32px" }}
+
+{{ if not .Params.disable_share }}
+  <div id="sharing" class="mt3">
+
+    {{ $facebook_href := printf "https://www.facebook.com/sharer.php?u=%s" $url }}
+    <a href="{{ $facebook_href }}" class="facebook no-underline" aria-label="share on Facebook">
+      {{ partialCached "svg/facebook.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
+
+    {{ $twitter_href := printf "https://twitter.com/share?url=%s&text=%s" $url $title }}
+    {{ with .Site.Social.twitter }}
+      {{ $twitter_href = printf "%s&via=%s" $twitter_href . }}
+    {{ end }}
+    <a href="{{ $twitter_href }}" class="twitter no-underline" aria-label="share on Twitter">
+      {{ partialCached "svg/twitter.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
+
+    {{ $linkedin_href := printf "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s" $url $title }}
+    <a href="{{ $linkedin_href }}" class="linkedin no-underline" aria-label="share on LinkedIn">
+      {{ partialCached "svg/linkedin.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
+  </div>
+{{ end }}
