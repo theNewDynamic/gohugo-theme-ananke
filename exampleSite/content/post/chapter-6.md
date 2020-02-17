@@ -97,3 +97,7 @@ an apothecary! It is true that Homerus begged through the Greek towns, and
 that Naso died in exile among the Muscovites. But may the devil flay me if
 I understand what they mean with their Esmeralda! What is that word, in
 the first place?—‘tis Egyptian!”
+
+
+
+[https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html](#)
