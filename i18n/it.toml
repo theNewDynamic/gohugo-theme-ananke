@@ -5,7 +5,7 @@ other = "Altro"
 other = "Tutti {{.Title }}"
 
 [recentTitle]
-other = "Recenti {{.Title }}"
+other = "Articoli recenti"
 
 [readMore]
 other = "leggi di più"
