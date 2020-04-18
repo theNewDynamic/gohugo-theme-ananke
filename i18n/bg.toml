@@ -1,0 +1,32 @@
+[more]
+other = "Още"
+
+[allTitle]
+other = "Всички {{.Title }}"
+
+[recentTitle]
+other = "Последни {{.Title }}"
+
+[readMore]
+other = "виж още"
+
+[whatsInThis]
+other = "Съдържание {{ .Type }}"
+
+[related]
+other = "Подобни"
+
+[yourName]
+other = "Вашето име"
+
+[emailAddress]
+other = "Адрес на елекронна поща"
+
+[message]
+other = "Съобщение"
+
+[emailRequiredNote]
+other = "Задължително е да предоставите адрес на електронна поща."
+
+[send]
+other = "Изпрати"
