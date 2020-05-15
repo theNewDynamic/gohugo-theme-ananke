@@ -14,6 +14,11 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
 
+    {{if (.Params.mermaid)}}
+      <!-- MermaidJS support -->
+      <script async src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    {{end}}
+
     {{ $stylesheet := .Site.Data.webpack_assets.app }}
     {{ with $stylesheet.css }}
       <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
