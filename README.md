@@ -160,7 +160,8 @@ HUGO_ENV=production hugo
 Note: The above command will not work on Windows. If you are running a Windows OS, use the below command:
 
 ```
-hugo --environment production
+set HUGO_ENV=production
+hugo
 ```
 
 ## Contributing
