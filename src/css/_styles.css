@@ -14,3 +14,7 @@
   padding-left: 1rem;
 
 }
+
+.nested-links a{
+  overflow-wrap: break-word;
+}
