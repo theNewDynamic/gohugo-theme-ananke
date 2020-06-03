@@ -141,6 +141,11 @@ For example, if your css files are `static/css/custom.css` and `static/css/custo
 If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.
 
 
+### Adding Scripts to the Page Head
+
+Some scripts need to be added within the page head. To add your own scripts to the page head, simply insert them into the `head-additions.html` partial located in the `layouts/partials` folder.
+
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
