@@ -148,11 +148,11 @@ Some scripts need to be added within the page head. To add your own scripts to t
 
 ### Logo
 
-You can replace the title of your site in the top left corner of each page with your own logo. To do that put your own logo into the `static` directory of your website, and add the `logo` parameter to the site params in your config file. For example:
+You can replace the title of your site in the top left corner of each page with your own logo. To do that put your own logo into the `static` directory of your website, and add the `site_logo` parameter to the site params in your config file. For example:
 
 ```
 [params]
-  logo = "img/logo.svg"
+  site_logo = "img/logo.svg"
 ```
 
 
