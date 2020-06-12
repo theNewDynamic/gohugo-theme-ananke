@@ -1,0 +1,94 @@
+.main-menu-button {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+
+  /* hide social media links in mobile view */
+
+  .top-social-container {
+    display: none
+  }
+
+  /* menu */
+
+  .main-menu-list {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  /* menu icon: middle bar */
+
+  .main-menu-icon,
+  .main-menu-icon:before,
+  .main-menu-icon:after {
+    background: lightblue;
+    display: block;
+    width: 30px;
+    content: '';
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  .main-menu-icon {
+    height: 3px;
+    position: relative;
+    transition-property: background;
+  }
+
+  /* menu icon: add one bar below and one above -> hamburger style */
+
+  .main-menu-icon:before,
+  .main-menu-icon:after {
+    height: 100%;
+    position: absolute;
+    transition-property: all;
+  }
+
+  .main-menu-icon:before { top: 10px; }
+  .main-menu-icon:after { top: -10px; }
+
+  /* limit the length of the menu item list */
+
+  .main-menu-button:checked ~ .main-menu-list {
+    max-height: 100%;
+  }
+
+  /* parallel -> crossing transition of hamburger menu icon */
+
+  .main-menu-button:checked ~ .main-menu-label .main-menu-icon { background: transparent; }
+  .main-menu-button:checked ~ .main-menu-label .main-menu-icon:before { transform: rotate(-45deg); }
+  .main-menu-button:checked ~ .main-menu-label .main-menu-icon:after { transform: rotate(45deg); }
+
+  .main-menu-button:checked ~ .main-menu-label:not(.steps) .main-menu-icon:before,
+  .main-menu-button:checked ~ .main-menu-label:not(.steps) .main-menu-icon:after {
+    top: 0;
+  }
+
+  .main-menu-label {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  .main-menu-list {
+    overflow: hidden;
+  }
+
+  .main-menu-list li {
+    display: block;
+    text-align: right;
+    padding: 0.5rem;
+  }
+
+  /* reduce width of logo and place logo and hamburger menu on one line */
+
+  .site-logo { display: inline; }
+  .site-logo img { max-width: 70%; }
+  .main-menu-container { display: inline; }
+}
