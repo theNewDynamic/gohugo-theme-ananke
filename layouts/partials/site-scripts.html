@@ -2,3 +2,9 @@
 {{ with $script.js }}
   <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
 {{ end }}
+{{ range .Params.page_scripts.sync }}
+  <script src="{{ relURL (.) }}"></script>
+{{ end }}
+{{ range .Params.page_scripts.async }}
+  <script async src="{{ relURL (.) }}"></script>
+{{ end }}
