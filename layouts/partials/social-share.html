@@ -22,5 +22,10 @@
     <a href="{{ $linkedin_href }}" class="linkedin no-underline" aria-label="share on LinkedIn">
       {{ partialCached "svg/linkedin.svg" (dict "size" $icon_size) $icon_size }}
     </a>
+    
+     {{ $whatsapp_href := printf "https://api.whatsapp.com/send?text=%s&url=%s" $url}}
+    <a href="{{ $whatsapp_href }}" class="whatsapp no-underline" aria-label="share on Whatsapp">
+      {{ partialCached "svg/whatsapp.svg" (dict "size" $icon_size) $icon_size }}
+    </a>
   </div>
 {{ end }}
