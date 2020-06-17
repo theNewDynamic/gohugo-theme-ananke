@@ -30,3 +30,6 @@ other = "Se requiere una dirección de correo electrónico."
 
 [send]
 other = "Enviar"
+
+[taxonomyPageList]
+other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
