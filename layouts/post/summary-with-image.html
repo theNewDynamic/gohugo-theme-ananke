@@ -1,7 +1,7 @@
 <article class="bb b--black-10">
   <a class="db pv4 ph3 ph0-l no-underline dark-gray dim" href="{{ .Permalink }}">
     <div class="flex flex-column flex-row-ns">
-      {{ $featured_image := partial "featured.html" . }}
+      {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
       {{ if $featured_image }}
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
           <img src="{{ $featured_image }}" class="db" alt="image from {{ .Title }}">
