@@ -20,13 +20,13 @@ other = "Relaterte"
 other = "Ditt navn"
 
 [emailAddress]
-other = "E-postaddresse"
+other = "E-postadresse"
 
 [message]
 other = "beskjed"
 
 [emailRequiredNote]
-other = "E-postaddresse er påkrevd"
+other = "E-postadresse er påkrevd"
 
 [send]
 other = "Sende"
