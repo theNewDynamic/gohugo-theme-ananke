@@ -29,7 +29,7 @@ other = "Сообщение"
 other = "Требуется адрес электронной почты."
 
 [send]
-other = "трансмиссия"
+other = "Отправить"
 
 [taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+other = "Ниже вы найдете страницы, на которых используется термин таксономии “{{ .Title }}”"
