@@ -49,10 +49,22 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ## Installation
 
+### As a Hugo Module (recommanded)
+
+Simply add the repo to your theme option:
+
+```yaml
+theme:
+  - github.com/theNewDynamic/gohugo-theme-ananke
+```
+
+### As Git Submodule
+
 Inside the folder of your Hugo site run:
 
-    $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-
+```
+$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+```
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
 
@@ -64,7 +76,7 @@ After installing the theme successfully it requires a just a few more steps to g
 
 ### The config file
 
-Take a look inside the [`exampleSite`](https://github.com/budparr/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
 You may need to delete the line: `themesDir = "../.."`
 
@@ -181,11 +193,11 @@ hugo
 
 ## Contributing
 
-If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/budparr/gohugo-theme-ananke/issues) to let me know.
+If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
 
 
 
 
 TODO:
 
-- fix hard-coded link to [section](https://github.com/budparr/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
+- fix hard-coded link to [section](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
