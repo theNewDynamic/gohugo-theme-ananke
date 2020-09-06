@@ -1,0 +1,55 @@
+<!-- forestryio: ignore; forestryio: admin -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex" />
+    <title>Admin</title>
+    <meta name="description" content=" " />
+    <meta name="author" content=" " />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- Fort awesome icon kit -->
+    <script src="https://use.fortawesome.com/b6f38602.js"></script>
+
+</head>
+<body>
+<div id="app">
+
+</div>
+<script id="admin-config-script" type="text/javascript">
+  var env = {
+      siteId: "bpnm4nuqu8sr6q",
+      local: false
+  };
+
+  function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  var uuid = uuidv4()
+  var script = document.createElement('script');
+  script.src = "https://app.forestry.io/admin/forestry.min.js?hash=" + uuid
+  script.id = "forestry-admin";
+  document.body.appendChild(script);
+
+  var link = document.createElement("link");
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  link.href = "https://app.forestry.io/admin/main.css?hash=" + uuid
+  document.head.appendChild(link);
+
+</script>
+
+</body>
+</html>
