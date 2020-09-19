@@ -1,6 +1,6 @@
 {
   "name": "gohugo-default-theme",
-  "version": "2.5.6",
+  "version": "2.6.1",
   "description": "Base Theme to start Hugo Sites",
   "main": "index.js",
   "repository": {

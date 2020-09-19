@@ -1,35 +1,35 @@
 [more]
-other = "Meer"
+other = "Mer"
 
 [allTitle]
 other = "Alle {{.Title }}"
 
 [recentTitle]
-other = "Recente {{.Title }}"
+other = "Nyeste {{.Title }}"
 
 [readMore]
-other = "meer lezen"
+other = "Les mer"
 
 [whatsInThis]
-other = "Inhoud van deze {{ .Type }}"
+other = "Innhold av {{ .Type }}"
 
 [related]
-other = "Gerelateerd"
+other = "Relaterte"
 
 [yourName]
-other = "Uw naam"
+other = "Ditt navn"
 
 [emailAddress]
-other = "E-mail adres"
+other = "E-postadresse"
 
 [message]
-other = "Boodschap"
+other = "beskjed"
 
 [emailRequiredNote]
-other = "Een e-mailadres is vereist."
+other = "E-postadresse er påkrevd"
 
 [send]
-other = "Stuur"
+other = "Sende"
 
 [taxonomyPageList]
 other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"

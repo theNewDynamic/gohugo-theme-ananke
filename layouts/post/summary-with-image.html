@@ -1,12 +1,13 @@
 <article class="bb b--black-10">
   <a class="db pv4 ph3 ph0-l no-underline dark-gray dim" href="{{ .Permalink }}">
     <div class="flex flex-column flex-row-ns">
-      {{ if .Params.featured_image }}
+      {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+      {{ if $featured_image }}
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <img src="{{ .Params.featured_image }}" class="db" alt="image from {{ .Title }}">
+          <img src="{{ $featured_image }}" class="db" alt="image from {{ .Title }}">
         </div>
       {{ end }}
-      <div class="w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
+      <div class="w-100{{ if $featured_image }} w-60-ns pl3-ns{{ end }}">
         <h1 class="f3 fw1 athelas mt0 lh-title">{{ .Title }}</h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height">
           {{ .Summary }}

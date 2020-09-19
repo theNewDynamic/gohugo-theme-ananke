@@ -1,4 +1,17 @@
-.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .linkedin, .medium, .mastodon, .slack, .stackoverflow, .strava {
+.facebook,
+.twitter,
+.instagram,
+.youtube,
+.github,
+.gitlab,
+.keybase,
+.linkedin,
+.medium,
+.mastodon,
+.slack,
+.stackoverflow,
+.rss,
+.strava {
   fill: #BABABA;
 }
 
@@ -7,7 +20,8 @@
   display: inline-block;
   vertical-align: top;
 }
-.link-transition:hover .new-window{
+
+.link-transition:hover .new-window {
   opacity: 1;
 }
 
@@ -35,6 +49,10 @@
   fill: #FC6D26;
 }
 
+.keybase:hover {
+  fill: #3d76ff;
+}
+
 .linkedin:hover {
   fill: #0077b5
 }
@@ -57,4 +75,8 @@
 
 .strava:hover {
   fill: #f93a06;
+}
+
+.rss:hover {
+  fill: #ff6f1a;
 }

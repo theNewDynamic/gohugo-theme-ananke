@@ -1,8 +1,8 @@
-{{ $featured_image := .Params.featured_image }}
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 <article class="bb b--black-10">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
-      {{ if .Params.featured_image }}
+      {{ if $featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
         {{ $featured_image := (trim $featured_image "/") | absURL }}
         <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
@@ -11,7 +11,7 @@
           </a>
         </div>
       {{ end }}
-      <div class="blah w-100{{ if .Params.featured_image }} w-60-ns pl3-ns{{ end }}">
+      <div class="blah w-100{{ if $featured_image }} w-60-ns pl3-ns{{ end }}">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="{{.Permalink}}" class="color-inherit dim link">
             {{ .Title }}

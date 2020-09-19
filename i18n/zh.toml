@@ -30,3 +30,6 @@ other = "需要电子邮件地址。"
 
 [send]
 other = "发送"
+
+[taxonomyPageList]
+other = "标签为“{{ .Title }}”的页面如下"
