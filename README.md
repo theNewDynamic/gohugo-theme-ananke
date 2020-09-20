@@ -49,7 +49,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ## Installation
 
-### As a Hugo Module (recommanded)
+### As a Hugo Module (recommended)
 
 Simply add the repo to your theme option:
 
