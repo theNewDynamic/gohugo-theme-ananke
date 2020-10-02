@@ -43,7 +43,7 @@
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
-	{{ block "head" . }}{{ partial "head-additions.html" }}{{ end }}
+	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
