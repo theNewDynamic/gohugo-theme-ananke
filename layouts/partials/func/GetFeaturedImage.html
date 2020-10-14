@@ -18,13 +18,21 @@
 {{/* Declare a new string variable, $linkToCover */}}
 {{ $linkToCover := "" }}
 
+{{/* Declare a new string variable, $img, if this is an image resource */}}
+{{ $img := "" }}
+
 {{/* Use the value from front matter if present */}}
 {{ if .Params.featured_image }}
-    {{ $linkToCover = .Params.featured_image }}
-
+    {{ $img = (.Resources.ByType "image").GetMatch .Params.featured_image }}
+    {{ if not $img }}
+        {{ $linkToCover = .Params.featured_image }}
+    {{ end }}
 {{/* Find the first image with 'cover' in the name in this page bundle. */}}
 {{ else }}
-    {{ $img := (.Resources.ByType "image").GetMatch "*cover*" }}
+    {{ $img = (.Resources.ByType "image").GetMatch "*cover*" }}
+{{ end }}
+
+{{ if not $linkToCover }}
     {{ with $img }}
         {{ $linkToCover = .Permalink }}
     {{ end }}
