@@ -35,7 +35,7 @@ Also includes examples of Hugo Features or Functions:
 - `where`
 - Content Views
 - Partials
-- Template layouts (type "post" uses a special list template, single template,  and a content view)
+- Template layouts (type "post" uses a special list template, single template, and a content view)
 - Tags
 - `len`
 - Conditionals
@@ -51,12 +51,17 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ### As a Hugo Module (recommended)
 
-Simply add the repo to your theme option:
+1. Initiate the hugo module system:
 
-```yaml
-theme:
-  - github.com/theNewDynamic/gohugo-theme-ananke
-```
+   ```
+   $ hugo mod init github.com/<your_user>/<your_project>
+   ```
+
+2. Add the theme in your `config.toml`:
+
+   ```toml
+   theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+   ```
 
 ### As Git Submodule
 
