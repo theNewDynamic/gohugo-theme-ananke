@@ -51,6 +51,10 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ### As a Hugo Module (recommended)
 
+If not already, init your project as Hugo Module:
+
+`$: hugo mod init {project_repo_url}`
+
 Simply add the repo to your theme option:
 
 ```yaml
