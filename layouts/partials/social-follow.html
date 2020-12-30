@@ -5,7 +5,7 @@
 
 {{ range $social_media }}
   {{ $this_key := . }}
-  {{ with $dot_passthrough.Param . }}
+  {{ with $dot_passthrough.Param ( . | lower ) }}
   <a href="{{ . }}" target="_blank" class="link-transition {{ $this_key | lower }} link dib z-999 pt3 pt0-l mr1" title="{{ $this_key }} link" rel="noopener" aria-label="follow on {{ $this_key }}——Opens in a new window">
     {{ partial (print "svg/" ($this_key | lower) ".svg") (dict "size" $icon_size) }}
     {{- partial "new-window-icon.html" . -}}
