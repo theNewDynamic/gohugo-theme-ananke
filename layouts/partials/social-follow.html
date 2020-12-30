@@ -1,13 +1,13 @@
 <!-- TODO: Add follow intents where available TODO: Revisit color and hover color -->
 {{ $icon_size := "32px" }}
-{{ $social_media := slice "stackoverflow" "facebook" "twitter" "instagram" "youtube" "linkedin" "github" "gitlab" "keybase" "medium" "mastodon" "slack" "rss" }}
+{{ $social_media := slice "StackOverflow" "Facebook" "Twitter" "Instagram" "YouTube" "LinkedIn" "GitHub" "GitLab" "Keybase" "Medium" "Mastodon" "Slack" "RSS" }}
 {{ $dot_passthrough := . }}
 
 {{ range $social_media }}
   {{ $this_key := . }}
   {{ with $dot_passthrough.Param . }}
-  <a href="{{ . }}" target="_blank" class="link-transition {{ $this_key }} link dib z-999 pt3 pt0-l mr1" title="{{ $this_key | humanize}} link" rel="noopener" aria-label="follow on {{ $this_key | humanize}}——Opens in a new window">
-    {{ partial (print "svg/" $this_key ".svg") (dict "size" $icon_size) }}
+  <a href="{{ . }}" target="_blank" class="link-transition {{ $this_key | lower }} link dib z-999 pt3 pt0-l mr1" title="{{ $this_key }} link" rel="noopener" aria-label="follow on {{ $this_key }}——Opens in a new window">
+    {{ partial (print "svg/" ($this_key | lower) ".svg") (dict "size" $icon_size) }}
     {{- partial "new-window-icon.html" . -}}
   </a>
   {{ end }}
