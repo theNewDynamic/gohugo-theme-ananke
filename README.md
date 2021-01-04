@@ -51,7 +51,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ### As a Hugo Module (recommended)
 
-1. Initiate the hugo module system:
+1. Initiate the hugo module system if you haven't already:
 
    ```
    $ hugo mod init github.com/<your_user>/<your_project>
