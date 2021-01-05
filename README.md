@@ -57,7 +57,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
    $ hugo mod init github.com/<your_user>/<your_project>
    ```
 
-2. Add the theme in your `config.toml`:
+2. Add the theme's repo to your `config.toml`:
 
    ```toml
    theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
