@@ -1,0 +1,10 @@
+{{ with resources.Get "/ananke/css/main.css" }}
+    {{ $settings := dict "config" "/assets/ananke/css/postcss.config.css" }}
+    {{ $style := . | resources.PostCSS }}
+    {{ with $style }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+{{ end }}
+{{ range .Site.Params.custom_css }}
+  <link rel="stylesheet" href="{{ relURL (.) }}">
+{{ end }}

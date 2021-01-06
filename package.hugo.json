@@ -1,0 +1,34 @@
+{
+  "name": "gohugo-theme-ananke",
+  "version": "2.7.0",
+  "description": "Base Theme to start Hugo Sites",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theNewDynamic/gohugo-theme-ananke.git"
+  },
+  "scripts": {
+    "version": "auto-changelog -p --template keepachangelog --commit-limit 0 && git add CHANGELOG.md"
+  },
+  "keywords": [
+    "hugo",
+    "gohugo"
+  ],
+  "author": "budparr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues"
+  },
+  "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "cssnano": "^3.10.0",
+		"postcss-cli": "^7.1.0",
+		"postcss-import": "^12.0.1",
+    "postcss-cssnext": "^2.10.0",
+    "tachyons": "^4.9.1",
+    "auto-changelog": "^1.16.1"
+  }
+}
