@@ -1,4 +1,5 @@
 {{ $script := .Site.Data.webpack_assets.app }}
-{{ with $script.js }}
-  <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
+{{ with resources.Get "/ananke/js/main.js" }}
+  {{ $js := . | js.Build }}
+  <script src="{{ .RelPermalink }}"></script>
 {{ end }}

@@ -1,10 +1,17 @@
-{{ with resources.Get "/ananke/css/main.css" }}
-    {{ $settings := dict "config" "/assets/ananke/css/postcss.config.css" }}
-    {{ $style := . | resources.PostCSS }}
+{{ if site.Params.ananke_process_css }}
+  {{ with resources.Get "/ananke/css/main.css" }}
+    {{ $options := (dict "targetPath" "/ananke/css/main.css" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
+    {{ $style := . | resources.ToCSS $options | resources.PostCSS (dict "use" "postcss-cssnext") | minify }}
     {{ with $style }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
+      <link rel="stylesheet" href="{{ .RelPermalink }}" >
     {{ end }}
+  {{ end }}
+{{ else }}
+  {{ with resources.GetMatch "/ananke/dist/main.*.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" >
+  {{ end }}
 {{ end }}
+
 {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ relURL (.) }}">
 {{ end }}

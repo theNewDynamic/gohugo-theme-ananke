@@ -7,27 +7,19 @@
   "dependencies": {},
   "devDependencies": {
    "auto-changelog": "project",
-   "babel-core": "project",
-   "babel-loader": "project",
-   "babel-preset-env": "project",
    "cssnano": "project",
    "postcss-cli": "project",
    "postcss-cssnext": "project",
-   "postcss-import": "project",
    "tachyons": "project"
   }
  },
  "dependencies": {},
- "description": "Base Theme to start Hugo Sites",
+ "description": "Theme Ananke",
  "devDependencies": {
   "auto-changelog": "^1.16.1",
-  "babel-core": "^6.24.1",
-  "babel-loader": "^7.0.0",
-  "babel-preset-env": "^1.4.0",
   "cssnano": "^3.10.0",
   "postcss-cli": "^7.1.0",
   "postcss-cssnext": "^2.10.0",
-  "postcss-import": "^12.0.1",
   "tachyons": "^4.9.1"
  },
  "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
@@ -43,7 +35,8 @@
   "url": "git+https://github.com/theNewDynamic/gohugo-theme-ananke.git"
  },
  "scripts": {
-  "version": "auto-changelog -p --template keepachangelog --commit-limit 0 \u0026\u0026 git add CHANGELOG.md"
+  "version": "auto-changelog -p --template keepachangelog --commit-limit 0 \u0026\u0026 git add CHANGELOG.md",
+  "deploy": " cd exampleSite; hugo;"
  },
  "version": "2.7.0"
 }
