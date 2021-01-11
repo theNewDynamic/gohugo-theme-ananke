@@ -2,7 +2,7 @@
 title: Contact
 featured_image: "images/notebook.jpg"
 omit_header_text: true
-description: We'd love to hear from you
+description: Laissez-nous un message!
 type: page
 menu: main
 
