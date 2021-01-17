@@ -33,3 +33,6 @@ other = "Gönder"
 
 [taxonomyPageList]
 other = "Aşağıda, “{{ .Title }}” sınıflandırma terimini kullanan sayfaları bulacaksınız."
+
+[pageTitle]
+other = "{{ .Name }} sayfa"
