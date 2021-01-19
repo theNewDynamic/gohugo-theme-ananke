@@ -1,5 +1,0 @@
-{{ $script := .Site.Data.webpack_assets.app }}
-{{ with resources.Get "/ananke/js/main.js" }}
-  {{ $js := . | js.Build }}
-  <script src="{{ .RelPermalink }}"></script>
-{{ end }}
