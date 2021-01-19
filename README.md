@@ -153,6 +153,30 @@ For example, if your css files are `static/css/custom.css` and `static/css/custo
       custom_css = ["css/custom.css","css/custom2.css"]
 ```
 
+### Processed CSS
+
+By default, Ananke will read a preprocessed stylesheet from `/assets/ananke/dist/main.[hash].css`. If you want to have Hugo process the stylesheet for you thus allowing better customisation using Hugo's unison file system, you need to:
+
+1. From the root of your project: `$ hugo mod npm pack`.  
+This will generate a `package.json` for your project, or append the npm packages required by the theme to your existing `package.json`.
+2. Still from the root of your project: `$ npm install`
+3. Set the following site Parameter to true:
+
+```
+    [params]
+      ananke_process_css = true
+```
+
+You're all set an can run Hugo.
+
+#### Overwrite some imported file
+
+To have your own `_code.css` imported and processed by the theme. Add `/assets/ananke/css/_code.css` to your project.
+
+#### Add a new import
+
+Create your own `/assets/ananke/css/` directory at the root of your project, drop your files in there, and create your own `/main.css` with your own import statements. Don't forget to include the existing import statement from the theme's own `main.css`.
+
 ### Show Reading Time and Word Count
 
 If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.

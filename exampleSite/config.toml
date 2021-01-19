@@ -3,6 +3,7 @@ baseURL = "https://example.com"
 languageCode = "en-us"
 theme = "gohugo-theme-ananke"
 themesDir = "../.."
+resourceDir = "../resources"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
