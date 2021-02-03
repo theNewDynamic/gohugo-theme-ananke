@@ -51,7 +51,13 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ### As a Hugo Module (recommended)
 
-1. Initiate the hugo module system if you haven't already:
+> ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
+> ```
+> $ go version
+> ```
+>  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/). 
+
+1. From your project's root directory, initiate the hugo module system if you haven't already:
 
    ```
    $ hugo mod init github.com/<your_user>/<your_project>
