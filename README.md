@@ -42,6 +42,7 @@ Also includes examples of Hugo Features or Functions:
 - `ge` (greater than or equal to)
 - `.Site.Params.mainSections` to avoid hard-coding "blog," etc. [[release note](https://github.com/spf13/hugo/blob/66ec6305f6cb450ddf9c489854146bac02f7dca1/docs/content/meta/release-notes.md#enhancements)]
 
+
 This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](http://tachyons.io/).
 
 
@@ -62,7 +63,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
    $ hugo mod init github.com/<your_user>/<your_project>
    ```
 
-3. Add the theme's repo to your `config.toml`:
+2. Add the theme's repo to your `config.toml`:
 
    ```toml
    theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
