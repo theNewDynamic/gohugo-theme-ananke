@@ -30,9 +30,11 @@
       </p>
       {{ end }}
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+      {{ if not .Date.IsZero }}
       <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
         {{- .Date.Format "January 2, 2006" -}}
       </time>
+      {{end}}
 
       {{/*
           Show "reading time" and "word count" but only if one of the following are true:
