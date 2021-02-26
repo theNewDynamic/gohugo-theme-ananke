@@ -120,6 +120,9 @@ models:
             name: slack
             label: Slack
           - type: string
+            name: hackernews
+            label: HackerNews
+          - type: string
             name: background_color_class
             label: background_color_class
           - type: number
