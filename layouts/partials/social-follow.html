@@ -72,6 +72,11 @@
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
+{{ with .Param "hackernews" }}
+<a href="{{ . }}" target="_blank" class="link-transition hackernews link dib z-999 pt3 pt0-l mr1" title="Hacker News link" rel="noopener" aria-label="follow on Hacker News——Opens in a new window">
+  {{ partial "svg/hackernews.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
 {{ with .Param "rss" }}
 <a href="{{ . }}" target="_blank" class="link-transition rss link dib z-999 pt3 pt0-l mr1" title="RSS link" rel="noopener" aria-label="RSS——Opens in a new window">
   {{ partial "svg/rss.svg" (dict "size" $icon_size) }}
