@@ -1,4 +1,4 @@
-.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .keybase, .linkedin, .medium, .mastodon, .slack, .stackoverflow, .rss {
+.facebook, .twitter, .instagram, .youtube, .github, .gitlab, .keybase, .linkedin, .medium, .mastodon, .slack, .stackoverflow, .rss, .hackernews {
   fill: #BABABA;
 }
 
@@ -61,4 +61,8 @@
 
 .rss:hover{
   fill: #ff6f1a;
+}
+
+.hackernews:hover{
+  fill: #ff6600;
 }
