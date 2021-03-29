@@ -24,7 +24,7 @@
 
 {{/* Find the first image with 'cover' in the name in this page bundle. */}}
 {{ else }}
-    {{ $img := (.Resources.ByType "image").GetMatch "*cover*" }}
+    {{ $img := (.Resources.ByType "image").GetMatch "**/*cover*" }}
     {{ with $img }}
         {{ $linkToCover = .Permalink }}
     {{ end }}
