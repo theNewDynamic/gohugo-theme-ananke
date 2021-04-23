@@ -30,6 +30,12 @@
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
+{{ with .Param "twitch" }}
+<a href="{{ . }}" target="_blank" class="link-transition twitch link dib z-999 pt3 pt0-l mr1" title="Twitch link" rel="noopener" aria-label="follow on Twitch——Opens in a new window">
+  {{ partial "svg/twitch.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
 {{ with .Param "linkedin" }}
 <a href="{{ . }}" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
   {{ partial "svg/linkedin.svg" (dict "size" $icon_size) }}
