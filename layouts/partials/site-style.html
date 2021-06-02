@@ -9,7 +9,7 @@
     {{ $style := . | resources.ToCSS $options | resources.PostCSS (dict "use" "postcss-cssnext") | minify }}
     {{/* We fingerprint in production to ensure cache busting */}}
     {{ if eq (getenv "HUGO_ENV") "production" }}
-      {{ $style = . | fingerprint }}
+      {{ $style = $style | fingerprint }}
     {{ end }}
     {{ with $style }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" >
