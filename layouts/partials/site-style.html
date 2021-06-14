@@ -6,7 +6,7 @@
     `use` setting allow us to skip the postcss.config file.
      */}}
     {{ $options := (dict "targetPath" "/ananke/css/main.css" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
-    {{ $style := . | resources.ToCSS $options | resources.PostCSS (dict "use" "postcss-cssnext") | minify }}
+    {{ $style := . | resources.ToCSS $options | resources.PostCSS | minify }}
     {{/* We fingerprint in production to ensure cache busting */}}
     {{ if eq (getenv "HUGO_ENV") "production" }}
       {{ $style = . | fingerprint }}

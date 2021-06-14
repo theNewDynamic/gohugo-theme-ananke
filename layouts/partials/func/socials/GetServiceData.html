@@ -1,0 +1,8 @@
+{{ $service_data := dict }}
+{{ $services_data := partialCached "func/socials/GetServicesData" "socials/GetServicesData" }}
+
+{{ with index $services_data $ }}
+  {{ $service_data = . }}
+{{ end }}
+
+{{ return $service_data }}
