@@ -22,6 +22,25 @@
   {{ end }}
 {{ end }}
 
+{{ with partialCached "func/socials/Get" "socials/Get" }}
+  {{ $socials_rules := slice }}
+  {{ range $service := . }}
+    {{ with .color }}
+      {{ $rule := printf `
+        .ananke-socials a.%s:hover {
+          color: %s
+        }` $service.name $service.color }}
+      {{ $socials_rules = $socials_rules | append $rule }}
+    {{ end }}
+  {{ end }}
+  {{ with $socials_rules }}
+    {{ $socials_rules = delimit . "" }}
+    {{ $socials_css := $socials_rules | resources.FromString "ananke/css/generated_socials.css" }}
+    {{ $assets_to_concat = $assets_to_concat | append $socials_css }}
+  {{ end }}
+
+{{ end }}
+
 {{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's 
 css asset directory we add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
