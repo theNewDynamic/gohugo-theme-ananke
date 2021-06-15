@@ -1,27 +1,9 @@
-{{/* We only process CSS if below setting is true */}}
-{{ if site.Params.ananke_process_css }}
-  {{ with resources.Get "/ananke/css/main.css" }}
-    {{/* We use ToCSS on non sass to make sure node_modules paths are included and imported
-    Then we can run PostCSS on the resulting asset.
-    `use` setting allow us to skip the postcss.config file.
-     */}}
-    {{ $options := (dict "targetPath" "/ananke/css/main.css" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
-    {{ $style := . | resources.ToCSS $options | resources.PostCSS (dict "use" "postcss-cssnext") | minify }}
-    {{/* We fingerprint in production to ensure cache busting */}}
-    {{ if eq (getenv "HUGO_ENV") "production" }}
-      {{ $style = . | fingerprint }}
-    {{ end }}
-    {{ with $style }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" >
-    {{ end }}
-  {{ end }}
-{{ else }}
-  {{/* If processing is turned off, we use the assets/dist/main.?.css commited to the repo. */}}
-  {{ with resources.GetMatch "/ananke/dist/main.*.css" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" >
-  {{ end }}
+{{ with partialCached "func/style/GetMainCSS" "style/GetMainCSS" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" >
 {{ end }}
 
-{{ range .Site.Params.custom_css }}
-  <link rel="stylesheet" href="{{ relURL (.) }}">
+{{ range site.Params.custom_css }}
+  {{ with partialCached "func/style/GetResource" . . }}{{ else }}
+    <link rel="stylesheet" href="{{ relURL (.) }}">
+  {{ end }}
 {{ end }}

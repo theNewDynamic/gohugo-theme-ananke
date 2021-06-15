@@ -148,40 +148,29 @@ And a list of background colors [here](https://github.com/tachyons-css/tachyons/
 _n.b. in future versions we will likely separate the typeface and other body classes._
 
 
-### Custom CSS
+### CSS
 
-You can override the built-in css by using your own. Just put your own css files in the `static` directory of your website (the one in the theme directory also works but is not recommended) and modify the `custom_css` parameter in your config file. The path referenced in the parameter should be relative to the `static` folder. These css files will be added through the `header` partial after the built-in css file.
+Ananke stylesheet is built with Hugo Pipes's [Asset Bundling](https://gohugo.io/hugo-pipes/bundling/#readout) alone to maximize compatibiliy. The theme simply bundles its several files into one minified and fingerprinted (in production) CSS file.
 
-For example, if your css files are `static/css/custom.css` and `static/css/custom2.css` then add the following to the config file:
+Ananke uses [Tachyon.io](http://tachyons.io/) utility class library.
 
-```
-    [params]
-      custom_css = ["css/custom.css","css/custom2.css"]
-```
+#### Custom CSS
 
-### Processed CSS
+In order to complement the default CSS with your own, you can add custom css files to the project. 
 
-By default, Ananke will read a preprocessed stylesheet from `/assets/ananke/dist/main.[hash].css`. If you want to have Hugo process the stylesheet for you thus allowing better customisation using Hugo's unison file system, you need to:
+1. Just add a `assets/ananke/css` directory to your project and add the file(s) in it.
+2. Register the files using the `custom_css` key in your site's parameter. The path referenced in the parameter should be relative to the `assets/ananke/css` folder. 
 
-1. From the root of your project: `$ hugo mod npm pack`.  
-This will generate a `package.json` for your project, or append the npm packages required by the theme to your existing `package.json`.
-2. Still from the root of your project: `$ npm install`
-3. Set the following site Parameter to true:
+The css files will be added in their registered order to final `main.css` file.
+
+For example, if your css files are `assets/ananke/css/custom.css` and `assets/ananke/special.css` then add the following to the config file:
 
 ```
-    [params]
-      ananke_process_css = true
+  [params]
+    custom_css = ["custom.css","special.css"]
 ```
 
-You're all set an can run Hugo.
-
-#### Overwrite some imported file
-
-To have your own `_code.css` imported and processed by the theme. Add `/assets/ananke/css/_code.css` to your project.
-
-#### Add a new import
-
-Create your own `/assets/ananke/css/` directory at the root of your project, drop your files in there, and create your own `/main.css` with your own import statements. Don't forget to include the existing import statement from the theme's own `main.css`.
+__Note on retrocompatibiliy for custom css__: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as <link> requests.
 
 ### Show Reading Time and Word Count
 
