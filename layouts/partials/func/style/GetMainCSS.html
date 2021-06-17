@@ -41,7 +41,7 @@ css asset directory we add to aforementioned slice */}}
   {{ $style = $style | resources.ToCSS $options | minify }}
   {{/* We fingerprint in production for cache busting purposes */}}
   {{ if eq (getenv "HUGO_ENV") "production" }}
-    {{ $style = . | fingerprint }}
+    {{ $style = $style | fingerprint }}
   {{ end }}
   {{/* We're ready to set returning variable with resulting resource */}}
   {{ $main_style = $style }}
