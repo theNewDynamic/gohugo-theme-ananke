@@ -192,6 +192,18 @@ You can replace the title of your site in the top left corner of each page with 
 ```
 
 
+### Localize date format
+
+Dates of blog posts and single pages are rendered with the default date format commonly used in the USA and Canada. It is possible to specify a different format.
+
+```
+[params]
+  date_format = "2. January 2006"
+```
+
+See hugo's documentation of the [`dateFormat` function](https://gohugo.io/functions/dateformat/) for more details.
+
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
