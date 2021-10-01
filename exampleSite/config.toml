@@ -3,13 +3,23 @@ baseURL = "https://example.com"
 languageCode = "en-us"
 theme = "gohugo-theme-ananke"
 themesDir = "../.."
+resourceDir = "../resources"
 
-MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
+
+[languages]
+  [languages.en]
+    title = "My blog"
+    weight = 1
+    contentDir = "content/en"
+  [languages.fr]
+    title = "Mon blogue"
+    weight = 2
+    contentDir = "content/fr"
 
 [sitemap]
   changefreq = "monthly"
@@ -17,6 +27,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
+  author = ""
   favicon = ""
   site_logo = ""
   description = "The last theme you'll ever need. Maybe."
