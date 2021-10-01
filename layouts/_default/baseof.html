@@ -15,14 +15,7 @@
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     {{ end }}
 
-    {{ $stylesheet := .Site.Data.webpack_assets.app }}
-    {{ with $stylesheet.css }}
-      <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
-    {{ end }}
-
-    {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ relURL (.) }}">
-    {{ end }}
+    {{ partial "site-style.html" . }}
 
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
@@ -53,6 +46,5 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
-    {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
   </body>
 </html>

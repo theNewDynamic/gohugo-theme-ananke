@@ -41,3 +41,6 @@ other = "{{ .Count }} minutes read"
 [wordCount]
 one = "One word"
 other = "{{ .Count }} words"
+
+[pageTitle]
+other = "{{ .Name }} page"

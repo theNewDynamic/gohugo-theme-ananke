@@ -1,5 +1,5 @@
 <article class="bb b--black-10">
-  <a class="db pv4 ph3 ph0-l no-underline dark-gray dim" href="{{ .Permalink }}">
+  <a class="db pv4 ph3 ph0-l no-underline dark-gray dim" href="{{ .RelPermalink }}">
     <div class="flex flex-column flex-row-ns">
       {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
       {{ if $featured_image }}
