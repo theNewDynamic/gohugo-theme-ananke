@@ -33,3 +33,6 @@ other = "Изпрати"
 
 [taxonomyPageList]
 other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+
+[pageTitle]
+other = "{{ .Name }} страница"
