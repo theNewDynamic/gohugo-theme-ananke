@@ -18,7 +18,7 @@
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
-      {{ with .Params.author }}
+      {{ with .Params.author | default .Site.Params.author }}
       <p class="tracked">
           By <strong>
           {{ if reflect.IsSlice . }}
