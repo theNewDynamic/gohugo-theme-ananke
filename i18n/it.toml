@@ -1,3 +1,4 @@
+
 [more]
 other = "Altro"
 
@@ -5,7 +6,7 @@ other = "Altro"
 other = "Tutti {{.Title }}"
 
 [recentTitle]
-other = "Recenti {{.Title }}"
+other = "Articoli Recenti "
 
 [readMore]
 other = "leggi di più"
@@ -32,7 +33,41 @@ other = "Indirizzo email obbligatorio."
 other = "Invia"
 
 [taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+other = "Sotto trovi tutti gli articoli che utilizzano il termine “{{ .Title }}” nella tassonomia"
 
 [pageTitle]
 other = "{{ .Name }} pagina"
+
+[wordCount]
+one = "{{ .Count }} parola"
+other = "{{ .Count }} parole"
+
+[readingTime]
+one = "{{ .Count }} minuto lettura"
+other = "{{ .Count }} minuti lettura"
+
+[Month]
+[January]
+other = "Gennaio"
+[February]
+other = "Febbraio"
+[March]
+other = "Marzo"
+[April]
+other = "Aprile"
+[May]
+other = "Maggio"
+[June]
+other = "Giugno"
+[July]
+other = "Luglio"
+[Agoust]
+other = "Agosto"
+[September]
+other = "Settembre"
+[October]
+other = "Ottobre"
+[November]
+other = "Novembre"
+[December]
+other = "Dicembre"
