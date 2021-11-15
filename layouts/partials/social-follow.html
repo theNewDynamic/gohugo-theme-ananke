@@ -78,3 +78,9 @@
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
+{{ with .Param "tiktok" }}
+<a href="{{ . }}" target="_blank" class="link-transition tiktok link dib z-999 pt3 pt0-l mr1" title="TikTok link" rel="noopener" aria-label="follow on TikTok——Opens in a new window">
+  {{ partial "svg/tiktok.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
