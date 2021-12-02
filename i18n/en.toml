@@ -33,3 +33,14 @@ other = "Send"
 
 [taxonomyPageList]
 other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+
+[readingTime]
+one = "One minute read"
+other = "{{ .Count }} minutes read"
+
+[wordCount]
+one = "One word"
+other = "{{ .Count }} words"
+
+[pageTitle]
+other = "{{ .Name }} page"

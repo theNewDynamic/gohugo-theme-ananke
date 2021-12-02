@@ -33,3 +33,6 @@ other = "送出"
 
 [taxonomyPageList]
 other = "標籤為 “{{ .Title }}” 的頁面如下"
+
+[pageTitle]
+other = "{{ .Name }} 頁"
