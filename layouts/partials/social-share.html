@@ -1,26 +1,24 @@
 {{ $title := .Title }}
-{{ $url := printf "%s" .RelPermalink | absLangURL }}
-{{ $icon_size := "32px" }}
+{{ $url := printf "%s" .Permalink | absLangURL }}
 
+{{ $facebook_href := printf "https://www.facebook.com/sharer.php?u=%s" $url }}
+{{ $twitter_href := printf "https://twitter.com/share?url=%s&text=%s" $url $title }}
+{{ with site.Social.twitter }}
+  {{ $twitter_href = printf "%s&via=%s" $twitter_href . }}
+{{ end }}
+{{ $linkedin_href := printf "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s" $url $title }}
+{{ $hrefs := dict "facebook" $facebook_href "twitter" $twitter_href "linkedin" $linkedin_href }}
+
+{{ $services := where (partialCached "func/socials/Get" "socials/Get") "share" true }}
 {{ if not .Params.disable_share }}
-  <div id="sharing" class="mt3">
-
-    {{ $facebook_href := printf "https://www.facebook.com/sharer.php?u=%s" $url }}
-    <a href="{{ $facebook_href }}" class="facebook no-underline" aria-label="share on Facebook">
-      {{ partialCached "svg/facebook.svg" (dict "size" $icon_size) $icon_size }}
-    </a>
-
-    {{ $twitter_href := printf "https://twitter.com/share?url=%s&text=%s" $url $title }}
-    {{ with .Site.Social.twitter }}
-      {{ $twitter_href = printf "%s&via=%s" $twitter_href . }}
+  <div id="sharing" class="mt3 ananke-socials">
+    {{ range $service :=  $services }}
+      {{ $href := index $hrefs .name }}
+      <a href="{{ $href }}" class="ananke-social-link {{ .name }} no-underline" aria-label="share on {{ .label }}">
+        {{ with .icon }}
+        <span class="icon"> {{ . }}</span>
+        {{ end }}
+      </a>
     {{ end }}
-    <a href="{{ $twitter_href }}" class="twitter no-underline" aria-label="share on Twitter">
-      {{ partialCached "svg/twitter.svg" (dict "size" $icon_size) $icon_size }}
-    </a>
-
-    {{ $linkedin_href := printf "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s" $url $title }}
-    <a href="{{ $linkedin_href }}" class="linkedin no-underline" aria-label="share on LinkedIn">
-      {{ partialCached "svg/linkedin.svg" (dict "size" $icon_size) $icon_size }}
-    </a>
   </div>
 {{ end }}
