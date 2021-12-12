@@ -1,6 +1,9 @@
 {{ define "main" }}
-
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+  {{ $cpadding := $.Param "home_padding" | default ($.Param "default_padding") | default "ph3 ph5-l pv3 pv4-l" }}  
+  {{ $cscale := $.Param "home_scale" | default ($.Param "default_scale") | default "f4" }}  
+  {{ $calign := $.Param "home_align" | default ($.Param "default_align") | default "tc-l" }}  
+  {{ $ccolor := $.Param "home_color" | default ($.Param "default_color") | default "mid-gray" }}
+  <article class="cf {{ $cpadding }} {{ $cscale }} {{ $calign }} center measure-wide lh-copy {{ $ccolor }}">
     {{ .Content }}
   </article>
   {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}

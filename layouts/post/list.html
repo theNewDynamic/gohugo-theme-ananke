@@ -3,7 +3,11 @@
   This template is the same as the default and is here to demonstrate that if you have a content directory called "post" you can create a layouts directory, just for that section.
    */}}
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    {{ $cpadding := $.Param "list_padding" | default ($.Param "default_padding") | default "ph3 ph5-l pv3 pv4-l" }}  
+    {{ $cscale := $.Param "list_scale" | default ($.Param "default_scale") | default "f4" }}  
+    {{ $calign := $.Param "list_align" | default ($.Param "default_align") | default "tc-l" }}  
+    {{ $ccolor := $.Param "list_color" | default ($.Param "default_color") | default "mid-gray" }}
+    <section class="cf {{ $cpadding }} {{ $cscale }} {{ $calign }} center measure-wide lh-copy {{ $ccolor }}">
       {{ .Content }}
     </section>
     <aside class="flex-ns flex-wrap justify-around mt5">

@@ -1,7 +1,11 @@
 {{ define "main" }}
     {{ $data := .Data }}
   <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+    {{ $cpadding := $.Param "terms_padding" | default ($.Param "default_padding") }}  
+    {{ $cscale := $.Param "terms_scale" | default ($.Param "default_scale") | default "f4" }}  
+    {{ $calign := $.Param "terms_align" | default ($.Param "default_align") }}  
+    {{ $ccolor := $.Param "terms_color" | default ($.Param "default_color") | default "mid-gray" }}
+    <div class="measure-wide-l center {{ $cpadding }} {{ $cscale }} {{ $calign }} lh-copy nested-copy-line-height nested-links nested-img {{ $ccolor }}">
       {{ .Content }}
     </div>
   </article>

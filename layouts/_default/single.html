@@ -47,7 +47,12 @@
         <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+    {{ $cclasses := $.Param "post_content_classes"  | default "serif" }}
+    {{ $cpadding := $.Param "post_padding" | default ($.Param "default_padding") }}  
+    {{ $cscale := $.Param "post_scale" | default ($.Param "default_scale") | default "f4" }}  
+    {{ $calign := $.Param "post_align" | default ($.Param "default_align") }}  
+    {{ $ccolor := $.Param "post_color" | default ($.Param "default_color") | default "mid-gray" }}
+    <div class="nested-copy-line-height lh-copy {{ $cclasses }} {{ $cpadding }} {{ $cscale }} {{ $calign }} nested-links nested-img {{ $ccolor }} pr4-l w-two-thirds-l">
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">

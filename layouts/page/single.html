@@ -10,7 +10,11 @@
           {{ .Title }}
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      {{ $cpadding := $.Param "page_padding" | default ($.Param "default_padding") }}  
+      {{ $cscale := $.Param "page_scale" | default ($.Param "default_scale") | default "f4" }}  
+      {{ $calign := $.Param "page_align" | default ($.Param "default_align") }}  
+      {{ $ccolor := $.Param "page_color" | default ($.Param "default_color") | default "mid-gray" }}
+      <div class="nested-copy-line-height lh-copy {{ $cpadding }} {{ $cscale }} {{ $calign }} nested-links nested-img {{ $ccolor }}">
         {{ .Content }}
       </div>
     </article>
