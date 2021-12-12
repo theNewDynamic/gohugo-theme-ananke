@@ -274,16 +274,23 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 ## Production
 
-To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
+To run in production (e.g. to have Google Analytics show up), the built-in [Hugo variable: Environment (`.Hugo.Environment`)](https://gohugo.io/variables/hugo/) will default to `production` when running `hugo` to build the site (whereas `hugo server` defaults to `development`), or this can be configured explicitly via the CLI-tag via `hugo --environment 'production'`, or run `HUGO_ENV=production` before your build command. For example:
 
 ```
 HUGO_ENV=production hugo
 ```
 
-Note: The above command will not work on Windows. If you are running a Windows OS, use the below command:
+Note: The above command will not work on Windows. If you are running a Windows OS, use the below command if using the command shell:
 
-```
+```bat
 set HUGO_ENV=production
+hugo
+```
+
+...or the following if using PowerShell:
+
+```powershell
+$env:HUGO_ENV='production'
 hugo
 ```
 

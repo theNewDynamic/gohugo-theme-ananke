@@ -9,7 +9,7 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
     {{ hugo.Generator }}
     {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") | or (eq .Hugo.Environment "production") }}
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     {{ else }}
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -33,7 +33,7 @@
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
 
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") | or (eq .Hugo.Environment "production") }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
 	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
