@@ -129,7 +129,7 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 ### Social Follow + Share
 
-The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` site parameter is set to true. Each built-in services sports a label, an icon and a color.
+The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` parameter is set to true either on the site level (site params) or page level (front matter). Each built-in services sports a label, an icon and a color.
 
 In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a 
 - name*: It matches the built-in service reference (Ex: twitter, github)
@@ -219,6 +219,8 @@ Ananke stylesheet is built with Hugo Pipes's [Asset Bundling](https://gohugo.io/
 Ananke uses [Tachyon.io](http://tachyons.io/) utility class library.
 
 #### Custom CSS
+
+WARNING: Pending resolution of this [discussion](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/452#discussioncomment-1865301), Custom CSS only works with Hugo Extended
 
 In order to complement the default CSS with your own, you can add custom css files to the project. 
 
