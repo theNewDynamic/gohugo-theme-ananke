@@ -16,7 +16,7 @@
 {{/* We prepare a slice of resources to be concatenated as one */}}
 {{ $assets_to_concat := slice }}
 {{/* We add locale css files to the slice in the proper order */}}
-{{ range slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles" }}
+{{ range slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
   {{ with partialCached "func/style/GetResource" . . }}
     {{ $assets_to_concat = $assets_to_concat | append . }}
   {{ end }}
