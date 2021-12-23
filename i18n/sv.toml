@@ -30,3 +30,9 @@ other = "En e-postadress krävs."
 
 [send]
 other = "Skicka"
+
+[taxonomyPageList]
+other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+
+[pageTitle]
+other = "{{ .Name }} sida"

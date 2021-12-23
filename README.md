@@ -35,7 +35,7 @@ Also includes examples of Hugo Features or Functions:
 - `where`
 - Content Views
 - Partials
-- Template layouts (type "post" uses a special list template, single template,  and a content view)
+- Template layouts (type "post" uses a special list template, single template, and a content view)
 - Tags
 - `len`
 - Conditionals
@@ -49,10 +49,33 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ## Installation
 
+### As a Hugo Module (recommended)
+
+> ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
+> ```
+> $ go version
+> ```
+>  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/). 
+
+1. From your project's root directory, initiate the hugo module system if you haven't already:
+
+   ```
+   $ hugo mod init github.com/<your_user>/<your_project>
+   ```
+
+2. Add the theme's repo to your `config.toml`:
+
+   ```toml
+   theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+   ```
+
+### As Git Submodule
+
 Inside the folder of your Hugo site run:
 
-    $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-
+```
+$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+```
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
 
@@ -64,7 +87,7 @@ After installing the theme successfully it requires a just a few more steps to g
 
 ### The config file
 
-Take a look inside the [`exampleSite`](https://github.com/budparr/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
 You may need to delete the line: `themesDir = "../.."`
 
@@ -100,6 +123,66 @@ This theme includes a shortcode for a contact form that you can add to any page 
 {{< form-contact action="https://formspree.io/your@email.com" >}}
 ```
 
+### Social Follow + Share
+
+The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` site parameter is set to true. Each built-in services sports a label, an icon and a color.
+
+In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a 
+- name*: It matches the built-in service reference (Ex: twitter, github)
+- url*: The url of the handle's profile on the service (Ex: https://twitter.com/theNewDynamic, https://github.com/
+theNewDynamic)
+
+```yaml
+params:
+  ananke_socials:
+  - name: twitter
+    url: https://twitter.com/theNewDynamic
+  - name: github
+    url: https://github.com/theNewDynamic
+```
+
+If user needs to overwrite default `color` and `label` of the service, they simply need to append the following to the entry:
+- label: The displayed name of the service to be used to popuplate `[title]` attributes and read-only. (Ex: Twitter, GitHub)
+- color: Used for styling purposes. (Ex: '#1da1f2', '#6cc644')
+
+```yaml
+params:
+  ananke_socials:
+  - name: twitter
+    url: https://twitter.com/theNewDynamic
+    label: TND Twitter
+  - name: github
+    url: https://github.com/theNewDynamic
+    label: TND GitHub Account
+    color: '#ff6800'
+```
+
+#### Social Icons Customization
+
+On top of easily customizing the built-in services' label and color, user can overwrite their icon by adding an svg file at `/assets/ananke/socials` with a filename matching the service's name.
+For example, in order to use your own GitHub icon, simply add an svg file at `/assets/ananke/socials/github.svg`
+
+#### Built-in Services
+Here is the list of built-in services. Those marked with an `*` are also part of the "Share" module.
+
+- twitter*
+- instagram
+- youtube
+- github
+- gitlab
+- keybase
+- linkedin*
+- medium
+- mastodon
+- slack
+- stackoverflow
+- facebook*
+- rss
+
+#### Complement
+
+In order to add an unkown service (absent from the list above), you simply need to add all three settings to `ananke_socials`: name, url, label, color, and optionally add an icon file matching the `name` to the `assets/ananke/socials` directory. In the absence of an icon, the theme will print the service's label.
+
 ### Update font or body classes
 
 The theme is set, by default, to use a near-white background color and the "Avenir" or serif typeface. You can change these in your config file with the `body_classes` parameter, like this:
@@ -125,16 +208,29 @@ And a list of background colors [here](https://github.com/tachyons-css/tachyons/
 _n.b. in future versions we will likely separate the typeface and other body classes._
 
 
-### Custom CSS
+### CSS
 
-You can override the built-in css by using your own. Just put your own css files in the `static` directory of your website (the one in the theme directory also works but is not recommended) and modify the `custom_css` parameter in your config file. The path referenced in the parameter should be relative to the `static` folder. These css files will be added through the `header` partial after the built-in css file.
+Ananke stylesheet is built with Hugo Pipes's [Asset Bundling](https://gohugo.io/hugo-pipes/bundling/#readout) alone to maximize compatibiliy. The theme simply bundles its several files into one minified and fingerprinted (in production) CSS file.
 
-For example, if your css files are `static/css/custom.css` and `static/css/custom2.css` then add the following to the config file:
+Ananke uses [Tachyon.io](http://tachyons.io/) utility class library.
+
+#### Custom CSS
+
+In order to complement the default CSS with your own, you can add custom css files to the project. 
+
+1. Just add a `assets/ananke/css` directory to your project and add the file(s) in it.
+2. Register the files using the `custom_css` key in your site's parameter. The path referenced in the parameter should be relative to the `assets/ananke/css` folder. 
+
+The css files will be added in their registered order to final `main.css` file.
+
+For example, if your css files are `assets/ananke/css/custom.css` and `assets/ananke/special.css` then add the following to the config file:
 
 ```
-    [params]
-      custom_css = ["css/custom.css","css/custom2.css"]
+  [params]
+    custom_css = ["custom.css","special.css"]
 ```
+
+__Note on retrocompatibiliy for custom css__: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as <link> requests.
 
 ### Show Reading Time and Word Count
 
@@ -172,6 +268,18 @@ Set the `text_color` param in a page's markdown file front matter.
 note: The value of `text_color` must be a valid tachyons color class. Alist can be found [here](http://tachyons.io/docs/themes/skins/).
 
 
+### Localize date format
+
+Dates of blog posts and single pages are rendered with the default date format commonly used in the USA and Canada. It is possible to specify a different format.
+
+```
+[params]
+  date_format = "2. January 2006"
+```
+
+See hugo's documentation of the [`dateFormat` function](https://gohugo.io/functions/dateformat/) for more details.
+
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
@@ -197,11 +305,11 @@ hugo
 
 ## Contributing
 
-If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/budparr/gohugo-theme-ananke/issues) to let me know.
+If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
 
 
 
 
 TODO:
 
-- fix hard-coded link to [section](https://github.com/budparr/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
+- fix hard-coded link to [section](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
