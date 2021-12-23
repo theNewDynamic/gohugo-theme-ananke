@@ -1,4 +1,4 @@
-  <div class="mb3 pa4 mid-gray overflow-hidden">
+  <div class="mb3 pa4 {{ $.Param "text_color" | default "mid-gray" }} overflow-hidden">
     {{ if .Date }}
       <div class="f6">
         {{ .Date.Format (default "January 2, 2006" .Site.Params.date_format) }}

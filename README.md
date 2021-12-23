@@ -251,6 +251,22 @@ You can replace the title of your site in the top left corner of each page with 
   site_logo = "img/logo.svg"
 ```
 
+### Set Content Font Color
+
+You can set the font color of the main content both globally and on individual pages:
+
+Globally:
+Set the `text_color` param in the `config.toml` file.
+```
+[params]
+  text_color = "green"
+```
+
+Individual Page (prioritized over global):
+Set the `text_color` param in a page's markdown file front matter.
+
+note: The value of `text_color` must be a valid tachyons color class. Alist can be found [here](http://tachyons.io/docs/themes/skins/).
+
 
 ### Localize date format
 

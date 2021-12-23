@@ -27,6 +27,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
+  text_color = ""
   author = ""
   favicon = ""
   site_logo = ""
