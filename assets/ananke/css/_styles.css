@@ -18,3 +18,7 @@
 .nested-links a{
   overflow-wrap: break-word;
 }
+
+.tags li {
+  display: inline;
+}
