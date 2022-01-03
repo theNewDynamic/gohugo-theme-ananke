@@ -296,7 +296,7 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 ## Production
 
-To run in production (e.g. to have Google Analytics show up), you must set the build environment name. The four options for setting the build environment name (ordered by priority) are:
+To run in production (e.g. to have Google Analytics show up), you must set the build environment name to `production`. The three options for setting the build environment name (ordered by priority) are:
 
 1. The `HUGO_ENV` environment variable.
 
@@ -337,8 +337,6 @@ To run in production (e.g. to have Google Analytics show up), you must set the b
     [params]
       useHugoEnv = true
     ```
-
-1. Use the default build environment name.
 
 ## Contributing
 
