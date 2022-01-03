@@ -296,18 +296,49 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 ## Production
 
-To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
+To run in production (e.g. to have Google Analytics show up), you must set the build environment name. The four options for setting the build environment name (ordered by priority) are:
 
-```
-HUGO_ENV=production hugo
-```
+1. The `HUGO_ENV` environment variable.
 
-Note: The above command will not work on Windows. If you are running a Windows OS, use the below command:
+    Examples:
 
-```
-set HUGO_ENV=production
-hugo
-```
+    **macOS/Linux**
+
+    ```bash
+    HUGO_ENV=production hugo
+    ```
+
+    **Windows Command shell**
+
+    ```bat
+    set HUGO_ENV=production
+    hugo
+    ```
+
+    **PowerShell**
+
+    ```powershell
+    $env:HUGO_ENV='production'
+    hugo
+    ```
+
+1. The `env` site config theme parameter, for example:
+
+    ```toml
+    [params]
+      env = "production"
+    ```
+
+1. Setting the `useHugoEnv` site config theme parameter to true, which will use the value of [`.Hugo.Environment`](https://gohugo.io/variables/hugo/) for the build environment name. This option is recommended if using [environment-specific config directories](https://gohugo.io/getting-started/configuration/#configuration-directory), such as for minifying only your production builds.
+
+    The default environment name for the `hugo server` command is `development`, and the default for the `hugo` build command is `production`. The environment name can be configured via the `--environment` flag, such as `hugo --environment test`.
+
+    ```toml
+    [params]
+      useHugoEnv = true
+    ```
+
+1. Use the default build environment name.
 
 ## Contributing
 

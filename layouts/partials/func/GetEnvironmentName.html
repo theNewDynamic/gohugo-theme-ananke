@@ -1,0 +1,35 @@
+{{/*
+  GetEnvironmentName
+
+  This partial returns either the configured or the default build environment
+  name.
+
+  The four options for setting the build environment name (ordered by priority)
+  are:
+  1. The "HUGO_ENV" environment variable.
+  2. The "env" site config theme parameter.
+  3. Setting the "useHugoEnv" site config theme parameter to true, which will
+     use the value of ".Hugo.Environment" for the build environment name.
+
+     The default environment name for the  "hugo server" command is
+     "development", and the default for the "hugo" build command is
+     "production". The environment name can be configured via the
+     "--environment" flag, such as "hugo --environment test".
+  4. Use the default build environment name.
+
+  @return build environment name.
+*/}}
+
+{{ $env := "development" }}
+{{ $site := site }}
+{{ $hugo := hugo }}
+
+{{ if (getenv "HUGO_ENV") }}
+  {{ $env = getenv "HUGO_ENV" }}
+{{ else if $site.Params.env }}
+  {{ $env = $site.Params.env }}
+{{ else if (eq $site.Params.useHugoEnv true) }}
+  {{ $env = $hugo.Environment }}
+{{ end }}
+
+{{ return $env }}

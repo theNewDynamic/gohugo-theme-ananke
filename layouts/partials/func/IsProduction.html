@@ -1,0 +1,15 @@
+{{/*
+  IsProduction
+
+  @return false, unless the build environment is set to production via one of
+  the methods supported in the func/GetEnvironment partial.
+*/}}
+
+{{ $isProduction := false }}
+{{ $env := partial "func/GetEnvironmentName.html" . }}
+
+{{ if eq $env "production" }}
+  {{ $isProduction := true }}
+{{ end }}
+
+{{ return $isProduction }}

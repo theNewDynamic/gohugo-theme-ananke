@@ -59,7 +59,7 @@ css asset directory we add to aforementioned slice */}}
   {{ $options := dict "enableSourceMap" true "precision" 6 }}
   {{ $style = $style | resources.ToCSS $options | minify }}
   {{/* We fingerprint in production for cache busting purposes */}}
-  {{ if eq (getenv "HUGO_ENV") "production" }}
+  {{ if (partial "func/IsProduction.html" .) }}
     {{ $style = $style | fingerprint }}
   {{ end }}
   {{/* We're ready to set returning variable with resulting resource */}}

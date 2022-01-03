@@ -36,6 +36,8 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
   recent_posts_number = 2
+  # Uncomment to use the value of .Hugo.Environment for defining the build environment
+  # useHugoEnv = true
 
 [[params.ananke_socials]]
 name = "twitter"
