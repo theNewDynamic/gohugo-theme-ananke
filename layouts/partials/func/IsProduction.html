@@ -9,7 +9,7 @@
 {{ $env := partial "func/GetEnvironmentName.html" . }}
 
 {{ if eq $env "production" }}
-  {{ $isProduction := true }}
+  {{ $isProduction = true }}
 {{ end }}
 
 {{ return $isProduction }}
