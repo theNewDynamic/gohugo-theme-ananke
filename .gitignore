@@ -30,3 +30,5 @@ npm-debug.log
 /junit.xml
 partials/structure/stylesheet.html
 
+# Hugo
+.hugo_build.lock
