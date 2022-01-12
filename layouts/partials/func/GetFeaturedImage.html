@@ -34,6 +34,13 @@
   {{ end }}
 {{ end }}
 
+{{ if not $linkToCover }}
+  {{/* Use the value from the site config parameter if present */}}
+  {{ with .Site.Params.featured_image }}
+    {{ $linkToCover = . }}
+  {{ end }}
+{{ end }}
+
 {{/* return either a permalink, or an empty string. Note that partials can only have a single
 return statement, so this needs to be at the end of the partial (and not in the if block) */}}
 {{ return $linkToCover }}
