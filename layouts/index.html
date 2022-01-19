@@ -26,7 +26,7 @@
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (first $n_posts $section) }}
           <div class="relative w-100 mb4">
-            {{ partial "summary-with-image.html" . }}
+            {{ .Render "summary-with-image" }}
           </div>
         {{ end }}
       </section>
