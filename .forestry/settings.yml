@@ -8,12 +8,12 @@ sections:
   path: config.toml
   label: Config
 - type: directory
-  path: exampleSite/content
+  path: exampleSite/content/en
   label: Pages
   create: all
   match: "**"
 - type: directory
-  path: exampleSite/content/post
+  path: exampleSite/content/en/post
   label: Posts
   create: all
   match: "**/*"
