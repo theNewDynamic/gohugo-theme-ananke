@@ -3,7 +3,21 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: config.toml
+  label: Config
+  match: "**/*"
+- type: directory
+  path: exampleSite/content
+  label: Pages
+  create: all
+  match: "**"
+- type: directory
+  path: exampleSite/content/post
+  label: Posts
+  create: all
+  match: "**/*"
 upload_dir: exampleSite/static/images
 public_path: "/images"
 front_matter_path: ''
