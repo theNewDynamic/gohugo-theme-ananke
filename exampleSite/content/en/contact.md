@@ -1,14 +1,18 @@
 ---
 title: Contact
-featured_image: "images/notebook.jpg"
-omit_header_text: true
-description: We'd love to hear from you
+description: ''
+featured_image: ''
 type: page
-menu: main
+omit_header_text: true
+menu:
+  main:
+    weight: 3
 
 ---
+You can contact me through [Twitter](https://twitter.com/jslowenmusic), [Facebook](https://www.facebook.com/jslowenmusic) or [SoundCloud](https://soundcloud.com/jslowenmusic).
 
+Or use the form below to get in touch directly.
 
-This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the the shortcode to make it work. Check out [Formspree](https://formspree.io/) for a simple, free form service. 
+You can also download my [press pack](/files/Jessica-Slowen-Press-Pack.zip).
 
-{{< form-contact action="https://example.com"  >}}
+{{< form-contact action="https://formspree.io/f/xqknepga" >}}

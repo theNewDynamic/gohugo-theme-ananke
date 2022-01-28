@@ -1,6 +1,14 @@
 ---
-title: "Ananke: a Hugo Theme"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "The last theme you'll ever need. Maybe."
+title: ''
+featured_image: "/images/keys_1920.jpg"
+description: ''
+omit_header_text: true
+
 ---
-Welcome to my blog with some of my work in progress. I've been working on this book idea. You can read some of the chapters below.
+I’m a songwriter, seeking opportunities to write for or collaborate with artists, and to work with music publishers. 
+
+My music spans various genres, from Pop to Country, Crossover to Latin, Rock to Christmas.
+
+Read more [about me](/about) or listen to [my music](/music)
+
+![J Slowen signature](/images/signature_black_thin.png)
