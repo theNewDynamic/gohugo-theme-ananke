@@ -36,10 +36,10 @@ enableRobotsTXT = true
 [[params.ananke_socials]]
   name = "twitter"
   url = "https://twitter.com/jslowenmusic"
-
+[[params.ananke_socials]]
   name = "facebook"
   url = "https://www.facebook.com/jslowenmusic"
-
+[[params.ananke_socials]]
   name = "soundcloud"
   url = "https://www.soundcloud.com/jslowenmusic"
   label = "soundcloud"
