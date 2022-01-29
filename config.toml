@@ -13,9 +13,9 @@ enableRobotsTXT = true
 
 [languages]
   [languages.en]
-    title = "My blog"
+    title = "J Slowen Music"
     weight = 1
-    contentDir = "content/en"
+    contentDir = "exampleSite/content/en"
 
 [sitemap]
   changefreq = "monthly"
