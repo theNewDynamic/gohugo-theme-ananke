@@ -2,6 +2,7 @@
 title: About
 description: ''
 featured_image: "/images/jessica_1920.jpg"
+omit_header_text: true
 menu:
   main:
     weight: 1
