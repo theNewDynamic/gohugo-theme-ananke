@@ -37,7 +37,7 @@ enableRobotsTXT = true
   name = "soundcloud"
   url = "https://www.soundcloud.com/jslowenmusic"
   label = "soundcloud"
-  color = "#f3f7700"
+  color = "#ff7700"
 [[params.ananke_socials]]
   name = "facebook"
   url = "https://www.facebook.com/jslowenmusic"
