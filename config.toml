@@ -8,7 +8,7 @@ resourceDir = "../resources"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 6 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
+googleAnalytics = "UA-1284818-10"
 enableRobotsTXT = true
 
 [languages]
@@ -34,12 +34,13 @@ enableRobotsTXT = true
   recent_posts_number = 3
 
 [[params.ananke_socials]]
-  name = "twitter"
-  url = "https://twitter.com/jslowenmusic"
+  name = "soundcloud"
+  url = "https://www.soundcloud.com/jslowenmusic"
+  label = "soundcloud"
+  color = "#f3f7700"
 [[params.ananke_socials]]
   name = "facebook"
   url = "https://www.facebook.com/jslowenmusic"
 [[params.ananke_socials]]
-  name = "soundcloud"
-  url = "https://www.soundcloud.com/jslowenmusic"
-  label = "soundcloud"
+  name = "twitter"
+  url = "https://twitter.com/jslowenmusic"
