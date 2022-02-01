@@ -3,16 +3,13 @@ title: Music
 description: ''
 featured_image: ''
 omit_header_text: true
-menu:
-  main:
-    weight: 2
 
 ---
 ## Children's Choir Songs
 
 [![Listen to my children's choir songs on Soundcloud](/images/soundcloud.png)](https://soundcloud.com/jslowenmusic/sets/childrens-choir-songs)
 
-I want the songs I write for younger people (Key Stage 2 upwards) to be up-lifting and inspiring. Most of these songs are upbeat and explore a variety of thoughts, feelings, topics and issues. [Greatest Mistake](https://soundcloud.com/jslowenmusic/greatest-mistake?in=jslowenmusic/sets/childrens-choir-songs) was written for Climate.Sound.Change project.
+I want the songs I write for younger people (Key Stage 2 upwards) to be up-lifting and inspiring. Most of these songs are upbeat and explore a variety of thoughts, feelings, topics and issues. [Greatest Mistake](https://soundcloud.com/jslowenmusic/greatest-mistake?in=jslowenmusic/sets/childrens-choir-songs) was written for the Climate.Sound.Change project.
 
 _"Your song was a triumph!"_ - [@DuncHeather](https://twitter.com/DuncHeather), international vocalist, Creative Director of Slamdunk Entertainment and host of the [Last Choir Singing](http://lastchoirsinging.co.uk) competition
 
