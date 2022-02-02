@@ -1,3 +1,4 @@
+---
 module:
   hugoVersion:
-    min: "0.64.0"
+    min: 0.64.0
