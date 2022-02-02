@@ -11,7 +11,7 @@ other = "最近 {{.Title }}"
 other = "繼續閱讀"
 
 [whatsInThis]
-other = "更多關於 {{ .Type }}"
+other = "這個{{ .Type }}中有"
 
 [related]
 other = "相關內容"

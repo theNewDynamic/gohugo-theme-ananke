@@ -14,7 +14,7 @@
           </a>
         </h2>
         {{ range $value.Pages }}
-          {{ partial "summary.html" . }}
+          {{ .Render "summary" }}
         {{ end }}
       {{ end }}
     </section>
