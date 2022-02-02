@@ -4,9 +4,6 @@ description: ''
 featured_image: ''
 type: page
 omit_header_text: true
-menu:
-  main:
-    weight: 3
 
 ---
 You can contact me through [Twitter](https://twitter.com/jslowenmusic), [Facebook](https://www.facebook.com/jslowenmusic) or [SoundCloud](https://soundcloud.com/jslowenmusic).

@@ -3,9 +3,7 @@ title: Music
 description: ''
 featured_image: ''
 omit_header_text: true
-menu:
-  main:
-    weight: 2
+
 ---
 ## Children's Choir Songs
 

@@ -3,11 +3,9 @@ title: About
 description: ''
 featured_image: "/images/jessica_1920.jpg"
 omit_header_text: true
-menu:
-  main:
-    weight: 1
 
 ---
+
 I am a song-writer and music teacher.
 
 Currently Midlands-based, I was born and raised in Yorkshire, where my interest in music was cultivated.

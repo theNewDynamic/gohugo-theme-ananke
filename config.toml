@@ -44,3 +44,20 @@ enableRobotsTXT = true
 [[params.ananke_socials]]
   name = "twitter"
   url = "https://twitter.com/jslowenmusic"
+
+[[menu.main]]
+  URL = "about"
+  name = "About"
+  weight = 1
+[[menu.main]]
+  URL = "music"
+  name = "Music"
+  weight = 2
+[[menu.main]]
+  URL = "contact"
+  name = "Contact"
+  weight = 3
+[[menu.main]]
+  URL = "post"
+  name = "News"
+  weight = 4
