@@ -187,6 +187,10 @@ Here is the list of built-in services. Those marked with an `*` are also part of
 
 In order to add an unkown service (absent from the list above), you simply need to add all three settings to `ananke_socials`: name, url, label, color, and optionally add an icon file matching the `name` to the `assets/ananke/socials` directory. In the absence of an icon, the theme will print the service's label.
 
+### Content indexing
+
+If the theme is ran in [production](#production), pages will be indexed by search engines. To prevent indexing on some given pages, add `private: true` to its Front Matter.
+
 ### Update font or body classes
 
 The theme is set, by default, to use a near-white background color and the "Avenir" or serif typeface. You can change these in your config file with the `body_classes` parameter, like this:
