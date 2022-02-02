@@ -1,5 +1,5 @@
 title = "J Slowen Music"
-baseURL = "https://jslowen-music.netlify.app"
+baseURL = "https://jslowenmusic.co.uk"
 languageCode = "en-us"
 theme = "github.com/theNewDynamic/gohugo-theme-ananke"
 themesDir = "../.."
