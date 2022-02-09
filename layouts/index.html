@@ -15,7 +15,7 @@
     <div class="pa3 pa4-ns w-100 w-70-ns center">
       {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
        {{ with .Site.GetPage "section" $section_name }}
-          <h1 class="flex-none">
+          <h1 class="flex-none {{ $.Param "secondary_text_color" | default "near-black" }}">
             {{ $.Param "recent_copy" | default (i18n "recentTitle" .) }}
           </h1>
         {{ end }}
