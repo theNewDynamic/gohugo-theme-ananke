@@ -1,8 +1,7 @@
 title = "Notre-Dame de Paris"
 baseURL = "https://example.com"
 languageCode = "en-us"
-theme = "gohugo-theme-ananke"
-themesDir = "../.."
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 resourceDir = "../resources"
 
 DefaultContentLanguage = "en"
@@ -34,7 +33,6 @@ enableRobotsTXT = true
   description = "The last theme you'll ever need. Maybe."
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class = "bg-black"
-  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
   recent_posts_number = 3
 
 [[params.ananke_socials]]
