@@ -13,11 +13,11 @@ enableRobotsTXT = true
 
 [languages]
   [languages.en]
-    title = "My blog"
+    title = "Ananke"
     weight = 1
     contentDir = "content/en"
   [languages.fr]
-    title = "Mon blogue"
+    title = "Ananke Fr"
     weight = 2
     contentDir = "content/fr"
 
@@ -35,7 +35,7 @@ enableRobotsTXT = true
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class = "bg-black"
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
-  recent_posts_number = 2
+  recent_posts_number = 3
 
 [[params.ananke_socials]]
 name = "twitter"

@@ -1,8 +1,8 @@
 ---
 title: "Ananke: Un thème pour Hugo"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "Le dernier thème dont vous aurez besoin. Peut-être"
----
-Bienvenu sur mon blog!
 
-Vous pouvez lire mes idées de publication plus bas.
+description: "Le dernier thème dont vous aurez besoin. Peut-être"
+cascade:
+  featured_image: '/images/gohugo-default-sample-hero-image.jpg'
+---
+Bienvenu sur mon blog à propos de mon travail du moment. Je travail sur une idée de livre. Vous pouvez lire quelques chapitres plus bas.
