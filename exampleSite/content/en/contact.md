@@ -10,6 +10,4 @@ You can contact me through [Twitter](https://twitter.com/jslowenmusic), [Faceboo
 
 Or use the form below to get in touch directly.
 
-You can also download my [press pack](/files/Jessica-Slowen-Press-Pack.zip).
-
 {{< form-contact action="https://formspree.io/f/xqknepga" >}}
