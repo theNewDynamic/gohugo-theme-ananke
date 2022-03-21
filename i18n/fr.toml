@@ -10,6 +10,9 @@ other = "{{.Title }} récents"
 [readMore]
 other = "lire plus"
 
+[by]
+other = "Par"
+
 [whatsInThis]
 other = "Ce qui est dans {{ .Type }}"
 
