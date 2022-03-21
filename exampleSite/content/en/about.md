@@ -5,10 +5,7 @@ featured_image: "/images/jessica_1920.jpg"
 omit_header_text: true
 
 ---
-
 I am a song-writer and music teacher.
-
-Currently Midlands-based, I was born and raised in Yorkshire, where my interest in music was cultivated.
 
 I’ve collaborated with a diverse range of musicians, through song-writing and as a recording vocalist, featuring on several independent albums.
 
@@ -24,4 +21,4 @@ I have a catalogue of songs spanning multiple genres, from Pop to Country, Opera
 
 Check out the [music](/music) page or my [SoundCloud](https://soundcloud.com/jslowenmusic) to hear more.
 
-You can also download my [press pack](/files/Jessica-Slowen-Press-Pack.zip) or [get in touch](/contact).
+You can also [get in touch](/contact).
