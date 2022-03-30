@@ -36,7 +36,7 @@
         <h1 class="f3">{{ i18n "more" }}</h1>
         {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
         {{ range (first 4 (after $n_posts $section))  }}
-          <h2 class="f5 fw4 mb4 dib mr3">
+          <h2 class="f5 fw4 mb4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "ml3" "mr3" }}">
             <a href="{{ .RelPermalink }}" class="link black dim">
               {{ .Title }}
             </a>
