@@ -10,6 +10,9 @@ other = "Nyeste {{.Title }}"
 [readMore]
 other = "Les mer"
 
+[by]
+other = "Av"
+
 [whatsInThis]
 other = "Innhold av {{ .Type }}"
 
