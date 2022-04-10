@@ -287,7 +287,7 @@ Dates of blog posts and single pages are rendered with the default date format c
   date_format = "2. January 2006"
 ```
 
-See hugo's documentation of the [`dateFormat` function](https://gohugo.io/functions/dateformat/) for more details.
+See hugo's documentation of the [`time.Format` function](https://gohugo.io/functions/dateformat/) for more details.
 
 
 ### Nearly finished
