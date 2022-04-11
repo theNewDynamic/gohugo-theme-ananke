@@ -1,0 +1,28 @@
+{{/*
+  GetImageSrcset
+
+  This partial gets a srcset for a given image.
+
+  @return Slice of sources suitable for use in a srcset attribute. May be empty.
+
+*/}}
+
+{{/* Declare a new variable, $srcset */}}
+{{ $srcset := slice }}
+
+{{ with site.Param "breakpoints" }}
+    {{ $scratch := newScratch }}
+    {{ range $breakpoint := . }}
+        {{ $target_width := mul $breakpoint $.target_width }}
+        {{/* Default mobile breakpoint for Tachyons is 480 */}}
+        {{ if and (ge $breakpoint 480) (ge $.original.Width $target_width) }}
+            {{ $breakpoint_image := $.original.Resize (print (math.Round $target_width) "x") }}
+            {{ $breakpoint_image_url := (trim $breakpoint_image.RelPermalink "/") | absURL }}
+            {{ $scratch.Add "srcset" (slice (print $breakpoint_image_url " " (math.Round $target_width) "w")) }}
+        {{ end }}
+    {{ end }}
+    {{ $srcset = $scratch.Get "srcset" }}
+{{ end }}
+
+{{/* Return a srcset. */}}
+{{ return $srcset }}

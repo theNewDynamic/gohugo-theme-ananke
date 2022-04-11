@@ -35,6 +35,8 @@ enableRobotsTXT = true
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class = "bg-black"
   recent_posts_number = 3
+  # Use defaults from tailwindcss, https://tailwindcss.com/docs/responsive-design.
+  breakpoints = [640,768,1024,1280,1536]
 
 [[params.ananke_socials]]
 name = "twitter"

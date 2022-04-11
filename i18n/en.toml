@@ -7,6 +7,9 @@ other = "All {{.Title }}"
 [recentTitle]
 other = "Recent {{.Title }}"
 
+[imgAltFromTitle]
+other = "Image from {{.Title }}"
+
 [readMore]
 other = "read more"
 

@@ -1,0 +1,36 @@
+{{- $original := .Page.Resources.GetMatch (.Get "src") -}}
+{{- /* Trimming the slash and adding absURL make sure the image works no matter where our site lives */ -}}
+{{- $default_image_url := (trim $original.RelPermalink "/") | absURL }}
+{{- /* Standard width of main is 70% (w-70-ns) */ -}}
+{{- $target_width := 0.70 -}}
+{{ $srcset := partial "func/GetImageSrcset" (dict "original" $original "target_width" $target_width) }}
+{{ $class := .Get "class" | default "mh0" }}
+<figure{{ with $class }} class="{{ . }}"{{ end }}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end -}}
+    <img src="{{ $default_image_url }}"
+         {{- if or (.Get "alt") (.Get "caption") }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+         {{- end -}}
+         {{- with $srcset }} srcset="{{ delimit . ", " }}"{{ end -}}
+         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    /><!-- Closing img tag -->
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption class="tc">
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p class="i">
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>

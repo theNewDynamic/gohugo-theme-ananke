@@ -2,6 +2,11 @@
 title: "About"
 description: "A few years ago, while visiting or, rather, rummaging about Notre-Dame, the author of this book found, in an obscure nook of one of the towers, the following word, engraved by hand upon the wall: —ANANKE."
 featured_image: '/images/Victor_Hugo-Hunchback.jpg'
+featured_image_data:
+  # Used as a setting when cropping the featured image for use in the header.
+  # See valid values at https://gohugo.io/content-management/image-processing/#anchor.
+  anchor: "Center"
+  alt: "Illustration from Victor Hugo et son temps (1881). Drawing of the Hunchback of Notre Dame, showing the recently restored galerie des chimères."
 menu:
   main:
     weight: 1

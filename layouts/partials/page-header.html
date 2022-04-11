@@ -1,8 +1,8 @@
-{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
-{{ if $featured_image }}
-  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
+{{- $featured_image := partial "func/GetFeaturedImage.html" . -}}
+{{- if $featured_image -}}
+  {{- .Scratch.Set "featured_image" $featured_image -}}
+  {{- partial "header-image-style.html" . }}
+  <header class="cover bg-top has-header-image">
     <div class="bg-black-60">
       {{ partial "site-navigation.html" . }}
       <div class="tc-l pv6 ph3 ph4-ns">

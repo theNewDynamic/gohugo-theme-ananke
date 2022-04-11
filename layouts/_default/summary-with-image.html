@@ -2,12 +2,20 @@
 <article class="bb b--black-10">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
-      {{ if $featured_image }}
-          {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-        {{ $featured_image := (trim $featured_image "/") | absURL }}
+      {{ if $featured_image -}}
+        {{- /* Trimming the slash and adding absURL make sure the image works no matter where our site lives */ -}}
+        {{- $default_image_url := (trim $featured_image.RelPermalink "/") | absURL }}
         <div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }} mb4 mb0-ns w-100 w-40-ns">
           <a href="{{.RelPermalink}}" class="db grow">
-            <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
+            {{ $alt := .Params.featured_image_data.alt | default (i18n "imgAltFromTitle" .) }}
+            {{- /* Standard width of image div is 40% (w-40-ns) of a 70% container (w-70-ns) */ -}}
+            {{- $target_width := 0.28 -}}
+            {{ $srcset := partial "func/GetImageSrcset" (dict "original" $featured_image "target_width" $target_width) }}
+            {{ with $srcset }}
+              <img src="{{ $default_image_url }}" srcset="{{ delimit $srcset ", " }}" class="img" alt="{{ $alt }}">
+            {{ else }}
+              <img src="{{ $default_image_url }}" class="img" alt="{{ $alt }}">
+            {{- end -}}
           </a>
         </div>
       {{ end }}

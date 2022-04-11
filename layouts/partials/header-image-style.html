@@ -1,0 +1,34 @@
+{{- $featured_image := .Scratch.Get "featured_image" }}
+  <style type="text/css">
+    {{- /* Default to the full size image */ -}}
+    {{- /* Trimming the slash and adding absURL make sure the image works no matter where our site lives */ -}}
+    {{- $default_image_url := (trim $featured_image.RelPermalink "/") | absURL }}
+    .has-header-image {
+      background-image: url('{{ $default_image_url }}');
+    }
+    {{ $scratch := newScratch -}}
+    {{- /* If breakpoints are defined, provide a resized image for each */ -}}
+    {{- $anchor := .Params.featured_image_data.anchor | default "Top" -}}
+    {{- /* Default header image height is approximately 500px */ -}}
+    {{- $height := 500 -}}
+    {{- /* If there's a description, the header is taller */ -}}
+    {{- if .Description -}}
+      {{- $height = add $height 100 -}}
+    {{- end -}}
+    {{- with .Site.Params.breakpoints -}}
+      {{- range $breakpoint := . -}}
+        {{- /* Default mobile breakpoint for Tachyons is 480 */ -}}
+        {{- if and (ge $breakpoint 480) (ge $featured_image.Width $breakpoint) -}}
+          {{- $breakpoint_image := $featured_image.Resize (print $breakpoint "x") -}}
+          {{- $options := print $breakpoint "x" $height " " $anchor -}}
+          {{- $breakpoint_image = $breakpoint_image.Crop ($options) -}}
+          {{- $breakpoint_image_url := (trim $breakpoint_image.RelPermalink "/") | absURL }}
+    @media only screen and (max-width: {{ $breakpoint }}px) {
+      .has-header-image {
+        background-image: url('{{ $breakpoint_image_url }}');
+      }
+    }
+        {{- end -}}
+      {{- end -}}
+    {{- end }}
+  </style>
