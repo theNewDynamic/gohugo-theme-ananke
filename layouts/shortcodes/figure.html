@@ -1,5 +1,6 @@
 {{ $srcset := slice }}
-{{- with .Page.Resources.GetMatch (.Get "src") -}}
+{{/* Matching uses relative paths so strip a leading / character if present. */}}
+{{- with .Page.Resources.GetMatch (trim (.Get "src") "/") -}}
   {{- /* Standard width of main is 70% (w-70-ns) */ -}}
   {{- $target_width := 0.70 -}}
   {{ $srcset = partial "func/GetImageSrcset" (dict "original" . "target_width" $target_width) }}
