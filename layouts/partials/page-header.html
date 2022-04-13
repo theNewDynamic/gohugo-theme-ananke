@@ -1,7 +1,9 @@
 {{- $featured_image := partial "func/GetFeaturedImage.html" . -}}
 {{- if $featured_image -}}
   {{- .Scratch.Set "featured_image" $featured_image -}}
-  {{- partial "header-image-style.html" . }}
+  {{- $sassTemplate := resources.Get "sass/header-image.scss" -}}
+  {{- $style := $sassTemplate | resources.ExecuteAsTemplate (print ($featured_image.RelPermalink | base64Encode) "header-image.scss") . | resources.ToCSS -}}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
   <header class="cover bg-top has-header-image">
     <div class="bg-black-60">
       {{ partial "site-navigation.html" . }}
