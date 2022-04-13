@@ -1,15 +1,15 @@
-{{- $original := .Page.Resources.GetMatch (.Get "src") -}}
-{{- /* Trimming the slash and adding absURL make sure the image works no matter where our site lives */ -}}
-{{- $default_image_url := (trim $original.RelPermalink "/") | absURL }}
-{{- /* Standard width of main is 70% (w-70-ns) */ -}}
-{{- $target_width := 0.70 -}}
-{{ $srcset := partial "func/GetImageSrcset" (dict "original" $original "target_width" $target_width) }}
+{{ $srcset := slice }}
+{{- with .Page.Resources.GetMatch (.Get "src") -}}
+  {{- /* Standard width of main is 70% (w-70-ns) */ -}}
+  {{- $target_width := 0.70 -}}
+  {{ $srcset = partial "func/GetImageSrcset" (dict "original" . "target_width" $target_width) }}
+{{ end }}
 {{ $class := .Get "class" | default "mh0" }}
 <figure{{ with $class }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+        <a href="{{ .Get "src" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
-    <img src="{{ $default_image_url }}"
+    <img src="{{ .Get "src" }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
