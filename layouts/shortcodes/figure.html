@@ -1,11 +1,12 @@
-{{ $srcset := slice }}
-{{/* Matching uses relative paths so strip a leading / character if present. */}}
-{{- with .Page.Resources.GetMatch (trim (.Get "src") "/") -}}
+{{- $srcset := slice -}}
+{{- /* Matching uses relative paths so strip a leading / character if present. */ -}}
+{{- $image := partial "func/GetImageResource" (dict "src" (.Get "src") "pageResources" .Page.Resources) -}}
+{{- with $image -}}
   {{- /* Standard width of main is 70% (w-70-ns) */ -}}
   {{- $target_width := 0.70 -}}
-  {{ $srcset = partial "func/GetImageSrcset" (dict "original" . "target_width" $target_width) }}
-{{ end }}
-{{ $class := .Get "class" | default "mh0" }}
+  {{- $srcset = partial "func/GetImageSrcset" (dict "original" . "target_width" $target_width) -}}
+{{- end -}}
+{{- $class := .Get "class" | default "mh0" -}}
 <figure{{ with $class }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "src" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>

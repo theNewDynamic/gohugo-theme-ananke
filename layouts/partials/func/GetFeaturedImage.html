@@ -11,7 +11,7 @@
 	If no featured_image was set, and there's no "cover" image in page resources, then
 	this partial returns false.
 
-	@return RelPermalink to featured image, or an empty string if not found.
+	@return a featured image resource, or false if not found.
 
 */}}
 
@@ -19,24 +19,8 @@
 {{ $coverImage := false }}
 {{ $matches := "feature,cover" }}
 {{/* Use the value from front matter if present */}}
-{{ with .Params.featured_image }}
-  {{/* If we find a remote global Resource matching the exact value, we use it. */}}
-  {{ if (hasPrefix . "http") }}
-    {{ with resources.GetRemote . }}
-      {{ $coverImage = . }}
-    {{ end }}
-  {{ else }}
-    {{/* If we find a local global Resource matching the exact value, we use it. */}}
-    {{/* Matching uses relative paths so strip a leading / character if present. */}}
-    {{ with resources.GetMatch (trim . "/") }}
-      {{ $coverImage = . }}
-    {{ end }}
-  {{ end }}
-  {{/* If we find a Page Resource matching the exact value, we use it instead. */}}
-  {{/* Matching uses relative paths so strip a leading / character if present. */}}
-  {{ with $.Resources.GetMatch (trim . "/") }}
-    {{ $coverImage = . }}
-  {{ end }}
+{{ if .Params.featured_image }}
+  {{ $coverImage = partial "func/GetImageResource" (dict "src" .Params.featured_image "pageResources" .Resources) }}
 {{/* Find the first image with 'cover' in the name in this page bundle. */}}
 {{ else }}
   {{ with .Resources.ByType "image" }}
