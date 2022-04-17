@@ -1,21 +1,29 @@
+{{- /* Use a featured image resource if available and otherwise a featured_image string */ -}}
 {{- $featured_image := .Scratch.Get "featured_image" }}
+{{- $default_image_url := "" -}}
+{{- with $featured_image -}}
+  {{- $default_image_url = .RelPermalink -}}
+{{- else -}}
+  {{- $default_image_url = .Params.featured_image -}}
+{{- end -}}
 {{- /* Default to the full size image */ -}}
 {{- /* Trimming the slash and adding absURL make sure the image works no matter where our site lives */ -}}
-{{- $default_image_url := (trim $featured_image.RelPermalink "/") | absURL }}
+{{- $default_image_url := (trim $default_image_url "/") | absURL }}
 .has-header-image {
   background-image: url('{{ $default_image_url }}');
 }
-{{ $scratch := newScratch -}}
-{{- /* If breakpoints are defined, provide a resized image for each */ -}}
-{{- $anchor := .Params.featured_image_data.anchor | default "Top" -}}
-{{- /* Default header image height is approximately 500px */ -}}
-{{- $height := 500 -}}
-{{- /* If there's a description, the header is taller */ -}}
-{{- if .Description -}}
-  {{- $height = add $height 100 -}}
-{{- end -}}
-{{- with .Site.Params.breakpoints -}}
-  {{- range $breakpoint := . -}}
+{{- /* Responsive background images require both a featured image resource and breakpoints */ -}}
+{{- if and $featured_image .Site.Params.breakpoints -}}
+  {{- $scratch := newScratch -}}
+  {{- $anchor := .Params.featured_image_data.anchor | default "Top" -}}
+  {{- /* Default header image height is approximately 500px */ -}}
+  {{- $height := 500 -}}
+  {{- /* If there's a description, the header is taller */ -}}
+  {{- if .Description -}}
+    {{- $height = add $height 100 -}}
+  {{- end -}}
+  {{- /* Provide a resized image for each breakpoint */ -}}
+  {{- range $breakpoint := .Site.Params.breakpoints -}}
     {{- /* Default mobile breakpoint for Tachyons is 480 */ -}}
     {{- if and (ge $breakpoint 480) (ge $featured_image.Width $breakpoint) -}}
       {{- $breakpoint_image := $featured_image.Resize (print $breakpoint "x") -}}

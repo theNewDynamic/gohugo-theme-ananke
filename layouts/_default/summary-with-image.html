@@ -1,25 +1,35 @@
-{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+{{- $featured_image := partial "func/GetFeaturedImage.html" . -}}
 <article class="bb b--black-10">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
-      {{ if $featured_image -}}
+      {{- if or $featured_image .Params.featured_image -}}
+        {{- $default_image_url := "" -}}
+        {{- with $featured_image -}}
+          {{- $default_image_url = .RelPermalink -}}
+        {{- else -}}
+          {{- $default_image_url = .Params.featured_image -}}
+        {{- end -}}
         {{- /* Trimming the slash and adding absURL make sure the image works no matter where our site lives */ -}}
-        {{- $default_image_url := (trim $featured_image.RelPermalink "/") | absURL }}
+        {{- $default_image_url := (trim $default_image_url "/") | absURL }}
         <div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }} mb4 mb0-ns w-100 w-40-ns">
           <a href="{{.RelPermalink}}" class="db grow">
-            {{ $alt := .Params.featured_image_data.alt | default (i18n "imgAltFromTitle" .) }}
-            {{- /* Standard width of image div is 40% (w-40-ns) of a 70% container (w-70-ns) */ -}}
-            {{- $target_width := 0.28 -}}
-            {{ $srcset := partial "func/GetImageSrcset" (dict "original" $featured_image "target_width" $target_width) }}
-            {{ with $srcset }}
+            {{- $alt := .Params.featured_image_data.alt | default (i18n "imgAltFromTitle" .) -}}
+            {{- $srcset := slice -}}
+            {{- /* An image srcset requires both a featured image resource and breakpoints */ -}}
+            {{- if and $featured_image .Site.Params.breakpoints -}}
+              {{- /* Standard width of image div is 40% (w-40-ns) of a 70% container (w-70-ns) */ -}}
+              {{- $target_width := 0.28 -}}
+              {{- $srcset = partial "func/GetImageSrcset" (dict "original" $featured_image "target_width" $target_width) -}}
+            {{- end -}}
+            {{- with $srcset }}
               <img src="{{ $default_image_url }}" srcset="{{ delimit $srcset ", " }}" class="img" alt="{{ $alt }}">
-            {{ else }}
+            {{- else }}
               <img src="{{ $default_image_url }}" class="img" alt="{{ $alt }}">
             {{- end -}}
           </a>
         </div>
       {{ end }}
-      <div class="blah w-100{{ if $featured_image }} w-60-ns {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
+      <div class="blah w-100{{ if or $featured_image .Params.featured_image }} w-60-ns {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="{{.RelPermalink}}" class="color-inherit dim link">
             {{ .Title }}
