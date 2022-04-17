@@ -1,3 +1,5 @@
+{{- /* See https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html */ -}}
+
 {{- $srcset := slice -}}
 {{- /* Matching uses relative paths so strip a leading / character if present. */ -}}
 {{- $image := partial "func/GetImageResource" (dict "src" (.Get "src") "pageResources" .Page.Resources) -}}
@@ -6,8 +8,7 @@
   {{- $target_width := 0.70 -}}
   {{- $srcset = partial "func/GetImageSrcset" (dict "original" . "target_width" $target_width) -}}
 {{- end -}}
-{{- $class := .Get "class" | default "mh0" -}}
-<figure{{ with $class }} class="{{ . }}"{{ end }}>
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "src" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
@@ -21,11 +22,11 @@
     /><!-- Closing img tag -->
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-        <figcaption class="tc">
+        <figcaption>
             {{ with (.Get "title") -}}
                 <h4>{{ . }}</h4>
             {{- end -}}
-            {{- if or (.Get "caption") (.Get "attr") -}}<p class="i">
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
                 {{- .Get "caption" | markdownify -}}
                 {{- with .Get "attrlink" }}
                     <a href="{{ . }}">
