@@ -9,6 +9,12 @@
   font-size: .875rem;
   margin-bottom: 2.5em;
 }
+
+[dir="rtl"] .pagination li {
+  margin-left: .375rem;
+  margin-right: 0;
+}
+
 .pagination li a {
   padding: .5rem .625rem;
   background-color: white;

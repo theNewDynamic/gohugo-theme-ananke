@@ -5,13 +5,13 @@
       {{ if $featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
         {{ $featured_image := (trim $featured_image "/") | absURL }}
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+        <div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }} mb4 mb0-ns w-100 w-40-ns">
           <a href="{{.RelPermalink}}" class="db grow">
             <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
           </a>
         </div>
       {{ end }}
-      <div class="blah w-100{{ if $featured_image }} w-60-ns pl3-ns{{ end }}">
+      <div class="blah w-100{{ if $featured_image }} w-60-ns {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="{{.RelPermalink}}" class="color-inherit dim link">
             {{ .Title }}
