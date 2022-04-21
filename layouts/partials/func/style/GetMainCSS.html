@@ -42,11 +42,20 @@
 {{ end }}
 
 {{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's 
-css asset directory we add to aforementioned slice */}}
+css asset directory we (unless condition below) add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
   {{ range . }}
     {{ with partialCached "func/style/GetResource" . . }}
-      {{ $assets_to_concat = $assets_to_concat | append . }}
+      {{ if eq .MediaType.SubType "x-scss" "x-sass" "scss" "sass" }}
+        {{ if hugo.IsExtended }}
+          {{/* as we cannot concatenate styles of different types, we sass/scss to be transformed to css beforehand */}}
+          {{ $assets_to_concat = $assets_to_concat | append (. | resources.ToCSS) }}
+        {{ else }}
+          {{ partial "func/warn" (printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
+        {{ end }}
+      {{ else }}
+        {{ $assets_to_concat = $assets_to_concat | append . }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
