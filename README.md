@@ -161,6 +161,21 @@ params:
     color: '#ff6800'
 ```
 
+#### Limit Follow or Share
+
+If a user needs to control Share and Follow of a service, for example enabling "Share on Facebook" without having a Facebook Page to "follow", they can set `follow: false` one the registered service.
+
+```yaml
+params:
+  ananke_socials:
+  - name: facebook
+    label: Facebook
+    follow: false
+  - name: twitter
+    url: https://twitter.com/theNewDynamic
+    label: TND Twitter
+```
+
 #### Social Icons Customization
 
 On top of easily customizing the built-in services' label and color, user can overwrite their icon by adding an svg file at `/assets/ananke/socials` with a filename matching the service's name.
