@@ -125,6 +125,18 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 ```
 {{< form-contact action="https://formspree.io/your@email.com" >}}
+
+
+## [Add fabform hugo contact form](https://fabform.io/a/hugo-contact-form)
+ 
+  ```
+ <form action="https://fabform.io/f/{form-id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="email" type="email">
+  <button type="submit">Submit</button> 
+ </form>
+```
+
 ```
 
 ### Social Follow + Share
