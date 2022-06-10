@@ -7,7 +7,6 @@ More info here: https://github.com/theNewDynamic/gohugo-theme-ananke/releases/ta
     <div class="flex flex-column flex-row-ns">
       {{ if $featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-        {{ $featured_image := (trim $featured_image "/") | absURL }}
         <div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }} mb4 mb0-ns w-100 w-40-ns">
           <a href="{{.RelPermalink}}" class="db grow">
             <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
