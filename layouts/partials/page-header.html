@@ -1,14 +1,14 @@
 {{- $featured_image := partial "func/GetFeaturedImage.html" . -}}
 {{- if or $featured_image .Params.featured_image -}}
-  {{- $featured_image_link := "" -}}
+  {{- $featured_image_name := "" -}}
   {{- if $featured_image -}}
     {{- .Scratch.Set "featured_image" $featured_image -}}
-    {{- $featured_image_link = $featured_image.RelPermalink -}}
+    {{- $featured_image_name = strings.TrimSuffix (path.Ext $featured_image.Name) $featured_image.Name -}}
   {{- else -}}
-    {{- $featured_image_link = .Params.featured_image -}}
+    {{- $featured_image_name = .Params.featured_image -}}
   {{- end -}}
   {{- $sassTemplate := resources.Get "sass/header-image.scss" -}}
-  {{- $style := $sassTemplate | resources.ExecuteAsTemplate (print ($featured_image_link | base64Encode) "header-image.scss") . | resources.ToCSS -}}
+  {{- $style := $sassTemplate | resources.ExecuteAsTemplate (print (replace $featured_image_name "/" "-") "-header-image.scss") . | resources.ToCSS -}}
   <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
   <header class="cover bg-top has-header-image">
     <div class="bg-black-60">
