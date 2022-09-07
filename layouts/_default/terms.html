@@ -7,13 +7,13 @@
   </article>
   <div class="mw8 center">
     <section class="ph4">
-      {{ range $key, $value := .Data.Terms }}
+      {{ range $term := .Data.Pages }}
         <h2 class="f1">
-          <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}" class="link blue hover-black">
-            {{ $.Data.Singular | humanize }}: {{ $key }}
+          <a href="{{ $term.RelPermalink }}" class="link blue hover-black">
+            {{ $.Data.Singular | humanize }}: {{ $term.LinkTitle }}
           </a>
         </h2>
-        {{ range $value.Pages }}
+        {{ range $term.Pages }}
           {{ .Render "summary" }}
         {{ end }}
       {{ end }}
