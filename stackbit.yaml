@@ -114,6 +114,9 @@ models:
             name: linkedin
             label: Linkedin
           - type: string
+            name: tiktok
+            label: TikTok
+          - type: string
             name: mastodon
             label: Mastodon
           - type: string
