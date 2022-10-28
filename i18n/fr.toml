@@ -5,7 +5,7 @@ other = "Plus"
 other = "Tous les {{.Title }}"
 
 [recentTitle]
-other = "{{.Title }} récents"
+other = "{{.Title }} récentes"
 
 [readMore]
 other = "lire plus"
@@ -35,7 +35,7 @@ other = "Une adresse e-mail est requise."
 other = "Envoyer"
 
 [taxonomyPageList]
-other = "Ci-dessous se trouvent les pages utilisant le terme taxonomique “{{ .Title }}”"
+other = "Ci-dessous se trouvent les formations pour “{{ .Title }}”"
 
 [readingTime]
 one = "Une minute de lecture"
