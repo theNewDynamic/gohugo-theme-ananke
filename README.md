@@ -176,6 +176,20 @@ params:
     label: TND Twitter
 ```
 
+#### RelMe Verification
+
+If a user wants to use their social media links for [RelMeAuth](https://microformats.org/wiki/RelMeAuth) verification, they can set `verify: true` on the registered service.
+This form of social verification is used on platforms like [Mastodon](https://joinmastodon.org/).
+With `verify: true`, the social follow adds `rel="me"` to the generated link.
+
+```yaml
+params:
+  ananke_socials:
+  - name: mastodon
+    url: https://mastodon.social/@theNewDynamic
+    verify: true
+```
+
 #### Social Icons Customization
 
 On top of easily customizing the built-in services' label and color, user can overwrite their icon by adding an svg file at `/assets/ananke/socials` with a filename matching the service's name.
