@@ -181,6 +181,18 @@ params:
 On top of easily customizing the built-in services' label and color, user can overwrite their icon by adding an svg file at `/assets/ananke/socials` with a filename matching the service's name.
 For example, in order to use your own GitHub icon, simply add an svg file at `/assets/ananke/socials/github.svg`
 
+#### Additional relations
+
+You can add extra relations to the social links via the `rel:` property. This can be used to assert ownership of the linked account as described in the [rel="me" mircroformat](https://microformats.org/wiki/rel-me).
+
+```yaml
+params:
+  ananke_socials:
+  - name: twitter
+    url: https://twitter.com/theNewDynamic
+    rel: me
+```
+
 #### Built-in Services
 Here is the list of built-in services. Those marked with an `*` are also part of the "Share" module.
 
