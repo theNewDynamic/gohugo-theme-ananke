@@ -1,8 +1,8 @@
 [more]
-other = "Más"
+other = "Més"
 
 [allTitle]
-other = "Todos los {{.Title }}"
+other = "Tots els {{.Title }}"
 
 [recentTitle]
 other = "{{.Title }} recents"
@@ -35,7 +35,12 @@ other = "És necesari una adreça de correu electrònic."
 other = "Enviar"
 
 [taxonomyPageList]
-other = "A continuació trobarà les pàgines associades a “{{ .Title }}”"
+other = "A continuació trobarà les pàgines associades al terme taxonòmic “{{ .Title }}”"
 
-[pageTitle]
-other = "{{ .Name }} pàgina"
+[readingTime]
+one = "Lectura en un minut"
+other = "Lectura en {{ .Count }} minuts"
+
+[wordCount]
+one = "Una paraula"
+other = "{{ .Count }} paraules"
