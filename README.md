@@ -143,7 +143,7 @@ params:
     url: https://twitter.com/theNewDynamic
   - name: github
     url: https://github.com/theNewDynamic
-  - name: mastondon
+  - name: mastodon
     url: https://social.example.com/@username
     rel: me
 ```
