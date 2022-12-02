@@ -135,7 +135,7 @@ In order to register a service to be used, user must add an `ananke_socials` par
 - name*: It matches the built-in service reference (Ex: twitter, github)
 - url*: The url of the handle's profile on the service (Ex: https://twitter.com/theNewDynamic, https://github.com/
 theNewDynamic)
-- rel: Optional. Allows to add a `rel` attribute to the follow link. Useful for Mastodon verification which requires a `rel="me"` on the link.
+- rel: (default: `noopener`) Controls the `rel` attribute of the "follow" link. Useful for Mastodon verification which requires a `rel="me"` on the link.
 ```yaml
 params:
   ananke_socials:
@@ -145,7 +145,7 @@ params:
     url: https://github.com/theNewDynamic
   - name: mastodon
     url: https://social.example.com/@username
-    rel: me
+    rel: me noopener
 ```
 
 If user needs to overwrite default `color` and `label` of the service, they simply need to append the following to the entry:
