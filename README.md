@@ -127,6 +127,31 @@ This theme includes a shortcode for a contact form that you can add to any page 
 {{< form-contact action="https://formspree.io/your@email.com" >}}
 ```
 
+### Read more link
+
+The homepage and other areas of the site use a `read more` link on the element. You can customize the copy of this link to make it more descriptive with the parameter `read_more_copy` available as a site and front matter parameter.
+
+```
+# config.yaml
+# Globally for all pages:
+params:
+  read_more_copy: Read more about this entry
+# Just for french
+languages:
+  fr:
+    name: Français
+    weight: 2
+    params:
+       read_more_copy: En savoir plus à ce sujet
+```
+Using front matter and cascade, this can be customized for a whole section, or just for one page.
+
+```
+# content/posts/tower-bridge-london.md
+  title: The Tower Bridge of London
+  read_more_copy: Read more about this bridge
+```
+
 ### Social Follow + Share
 
 The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` parameter is set to true either on the site level (site params) or page level (front matter). Each built-in services sports a label, an icon and a color.
