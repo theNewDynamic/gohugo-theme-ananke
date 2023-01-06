@@ -17,6 +17,7 @@ enableRobotsTXT = true
     contentDir = "content/en"
     # languageDirection = 'rtl' for Right-To-Left languages
   [languages.fr]
+    languageCode = "fr"
     title = "Ananke Fr"
     weight = 2
     contentDir = "content/fr"
