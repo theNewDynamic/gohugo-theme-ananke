@@ -35,7 +35,7 @@ other = "Indirizzo email obbligatorio."
 other = "Invia"
 
 [taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+other = "Di seguito troverai le pagine che utilizzano il termine “{{ .Title }}”"
 
 [pageTitle]
 other = "{{ .Name }} pagina"
