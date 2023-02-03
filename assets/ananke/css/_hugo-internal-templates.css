@@ -26,6 +26,7 @@
 .pagination li.disabled {
   display: none;
 }
+.pagination li.active a,
 .pagination li.active a:link,
 .pagination li.active a:active,
 .pagination li.active a:visited {
