@@ -358,6 +358,12 @@ set HUGO_ENV=production
 hugo
 ```
 
+Alternatively, you can also run production build using:
+
+```
+hugo -e production
+```
+
 ## Contributing
 
 If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
