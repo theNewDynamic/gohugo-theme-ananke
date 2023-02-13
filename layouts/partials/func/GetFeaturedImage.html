@@ -19,7 +19,7 @@
 {{ $linkToCover := "" }}
 {{ $matches := "feature,cover" }}
 {{/* Use the value from front matter if present */}}
-{{ with .Site.Params.featured_image }}
+{{ with .Params "featured_image" }}
   {{/* This is the default case, the image lives in the static directory.
     In which case we'll use the static dir */}}
   {{ $linkToCover = trim . "/" | absURL }}
