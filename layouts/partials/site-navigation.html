@@ -10,15 +10,39 @@
     <div class="flex-l items-center">
       {{ partial "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
-        <ul class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
-          {{ range .Site.Menus.main }}
-          <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
+        <nav>
+          <div class="menu-btn">
+            <div class="dib">☰ Menu</div>
+          </div>
+          <div class="nav-links">
+            {{ range .Site.Menus.main }}
+            <a class="link hover-white white-90 no-underline f5 f4-ns {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }} " href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
               {{ .Name }}
             </a>
-          </li>
-          {{ end }}
-        </ul>
+            {{ end }}
+          </div>
+        </nav>
+
+        <script>
+          var navLinks = document.querySelector('.nav-links');
+          document.querySelector('.menu-btn').addEventListener('click', function() {
+            if (navLinks.style.display === 'none') {
+              navLinks.style.display = 'flex';
+            } else {
+              navLinks.style.display = 'none';
+            }
+          });
+       
+          // Adjust menu when window is resized
+          window.addEventListener('resize', function() {
+            if (window.innerWidth > 600) {
+              navLinks.style.display = 'flex';
+            } else {
+              navLinks.style.display = 'none';
+            }
+          });
+        </script>
+
       {{ end }}
       {{ partialCached "social-follow.html" . }}
     </div>

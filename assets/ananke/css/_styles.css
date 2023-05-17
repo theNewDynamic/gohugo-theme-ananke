@@ -18,3 +18,23 @@
 .nested-links a{
   overflow-wrap: break-word;
 }
+
+.menu-btn {
+  display: none; 
+  color: white;
+  font-size: 2em;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
