@@ -55,7 +55,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 > ```
 > $ go version
 > ```
->  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/). 
+>  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/).
 
 1. From your project's root directory, initiate the hugo module system if you haven't already:
 
@@ -108,7 +108,7 @@ To enable comments, add following to your config file:
 For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/_readme.md` file for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
 
 #### Featured image as Page Resources
-If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath incudes either `cover` or `feature` 
+If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath incudes either `cover` or `feature`
 
 #### Other hero settings
 If you would like to hide the header text on the featured image on a page, set `omit_header_text` to `true`. See `exampleSite/content/contact.md` for an example.
@@ -156,7 +156,7 @@ Using front matter and cascade, this can be customized for a whole section, or j
 
 The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` parameter is set to true either on the site level (site params) or page level (front matter). Each built-in services sports a label, an icon and a color.
 
-In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a 
+In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a
 - name*: It matches the built-in service reference (Ex: twitter, github)
 - url*: The url of the handle's profile on the service (Ex: https://twitter.com/theNewDynamic, https://github.com/
 theNewDynamic)
@@ -269,10 +269,10 @@ Ananke uses [Tachyon.io](https://tachyons.io/) utility class library.
 
 WARNING: Pending resolution of this [discussion](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/452#discussioncomment-1865301), Custom CSS only works with Hugo Extended
 
-In order to complement the default CSS with your own, you can add custom css files to the project. 
+In order to complement the default CSS with your own, you can add custom css files to the project.
 
 1. Just add a `assets/ananke/css` directory to your project and add the file(s) in it.
-2. Register the files using the `custom_css` key in your site's parameter. The path referenced in the parameter should be relative to the `assets/ananke/css` folder. 
+2. Register the files using the `custom_css` key in your site's parameter. The path referenced in the parameter should be relative to the `assets/ananke/css` folder.
 
 The css files will be added in their registered order to final `main.css` file.
 
@@ -331,9 +331,17 @@ Dates of blog posts and single pages are rendered with the default date format c
   date_format = "2. January 2006"
 ```
 
-With hugo 0.87.0 and above, you can also use predefined layout, like `:date_full`, and it will output localized dates or times. 
+With hugo 0.87.0 and above, you can also use predefined layout, like `:date_full`, and it will output localized dates or times.
 See hugo's documentation of the [`time.Format` function](https://gohugo.io/functions/dateformat/) for more details.
 
+### Using a canonical url
+
+When you want to publish content that is already published on a different site. You need to reference a canonical url of the original content.
+By defining the `canonicalUrl` in the front matter definition the canonical url is set in the headers.
+
+```
+canonicalUrl: https://mydomain.com/path-to-the-oringinal-content/
+```
 
 ### Nearly finished
 
