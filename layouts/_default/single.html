@@ -51,7 +51,7 @@
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
-      {{ if .Site.DisqusShortname }}
+      {{ if .Site.Config.Services.Disqus.Shortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
