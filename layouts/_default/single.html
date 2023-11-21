@@ -7,12 +7,12 @@
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
     <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
           {{/*
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
-        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
+        {{ .CurrentSection.Title }}
       </aside>
       {{ partial "social-share.html" . }}
       <h1 class="f1 athelas mt3 mb1">
