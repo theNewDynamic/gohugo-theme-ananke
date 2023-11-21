@@ -76,7 +76,7 @@ Inside the folder of your Hugo site run:
 ```
 $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 ```
-For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
+For more information read the official [setup guide](//gohugo.io/getting-started/quick-start/) of Hugo.
 
 
 
