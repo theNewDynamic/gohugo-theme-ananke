@@ -96,9 +96,16 @@ You may need to delete the line: `themesDir = "../.."`
 
 To enable comments, add following to your config file:
 
-- DISQUS: `disqusShortname = YOURSHORTNAME`
-- COMMENTO:
+- DISQUS:
+
+  ```toml
+  [services.disqus]
+    shortname = 'YOURSHORTNAME'
   ```
+
+- COMMENTO:
+
+  ```toml
   [params]
     commentoEnable = true
   ```
