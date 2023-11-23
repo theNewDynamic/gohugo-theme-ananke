@@ -16,6 +16,15 @@
     {{ else }}
       <meta name="robots" content="noindex, nofollow">
     {{ end }}
+    {{ with .Params.author | default .Site.Params.author }}
+      <meta name="author" content = "
+        {{- if reflect.IsSlice . -}}
+          {{ delimit . ", " | plainify }}
+        {{- else -}}
+          {{ . | plainify }}
+        {{- end -}}
+      ">
+    {{ end }}
 
     {{ partial "site-style.html" . }}
     {{ partial "site-scripts.html" . }}
