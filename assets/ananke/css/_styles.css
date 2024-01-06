@@ -18,3 +18,13 @@
 .nested-links a{
   overflow-wrap: break-word;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
