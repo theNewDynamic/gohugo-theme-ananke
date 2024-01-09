@@ -1,3 +1,7 @@
 module:
   hugoVersion:
     min: "0.84.0"
+params:
+  custom_css:
+    - custom.css
+  text_color: black
