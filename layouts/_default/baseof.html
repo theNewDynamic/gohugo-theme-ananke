@@ -14,9 +14,7 @@
        */}}
     {{ with .AllTranslations }}
       {{ range . }}
-        {{ if not (eq .Lang $.Page.Lang) }}
-          <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
-        {{ end }}
+        <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
       {{ end }}
     {{ end }}
 	  
