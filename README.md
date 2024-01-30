@@ -232,6 +232,7 @@ Here is the list of built-in services. Those marked with an `*` are also part of
 - stackoverflow
 - facebook*
 - rss
+- discord
 
 #### Complement
 
