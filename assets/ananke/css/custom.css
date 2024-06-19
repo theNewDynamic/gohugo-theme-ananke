@@ -1,0 +1,25 @@
+.jump-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white !important;
+    background-color: #ff6347; /* Tomato color */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.jump-button:hover {
+    background-color: #ff4500; /* Darker tomato color */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.jump-button:active {
+    background-color: #e03d0b; /* Even darker tomato color */
+}
+
+.jump-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.5);
+}
