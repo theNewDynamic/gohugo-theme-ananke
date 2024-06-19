@@ -9,7 +9,7 @@
     <section class="ph4">
       {{ range $term := .Data.Pages }}
         <h2 class="f1">
-          <a href="{{ $term.RelPermalink }}" class="link blue hover-black">
+          <a href="{{ $term.RelPermalink }}" class="link black hover-gray">
             {{/*  {{ $.Data.Singular | humanize }}: {{ $term.LinkTitle }}  */}}
             {{ $term.LinkTitle }}
           </a>

@@ -22,7 +22,7 @@
 theNewDynamic) and them to the list with key as .name and value as .url */}}
 {{ $user_using_legacy := false }}
 
-{{ $legacy_api_services := slice "facebook" "twitter" "instagram" "youtube" "github" "gitlab" "keybase" "linkedin" "medium" "mastodon" "slack" "stackoverflow" "rss" }}
+{{ $legacy_api_services := slice "facebook" "twitter" "instagram" "youtube" "github" "gitlab" "keybase" "linkedin" "medium" "mastodon" "slack" "stackoverflow" "rss" "x" "pinterest"}}
 {{ range $name := $legacy_api_services }}
   {{ with $url := index site.Params . }}
     {{/* If we can find a parameter matching the key with a set value, we add it with proper name and url */}}
