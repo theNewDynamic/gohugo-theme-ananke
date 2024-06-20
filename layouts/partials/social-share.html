@@ -14,7 +14,7 @@
 
 {{ $services := where (partialCached "func/socials/Get" "socials/Get") "share" true }}
 {{ if not ($.Param "disable_share") }}
-  <div id="sharing" class="mt3 ananke-socials">
+  {{/*  <div id="sharing" class="mt3 ananke-socials">
     {{ range $service :=  $services }}
       {{ $href := index $hrefs .name }}
       <a href="{{ $href }}" class="ananke-social-link {{ .name }} no-underline" aria-label="share on {{ .label }}">
@@ -23,5 +23,17 @@
         {{ end }}
       </a>
     {{ end }}
+  </div>  */}}
+  <div id="sharing" class="share-buttons" class="mt3 ananke-socials">
+    {{ range $service :=  $services }}
+      {{ $href := index $hrefs .name }}
+      <a href="{{ $href }}" class="share-btn ananke-social-link {{ .name }}-share no-underline" aria-label="share on {{ .label }}">
+      {{ with .icon }}
+        <span class="icon"> {{ . }}</span>
+      {{ end }}
+      </a>
+    {{ end }}
   </div>
-{{ end }}
+
+
+  {{ end }}
