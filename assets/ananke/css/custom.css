@@ -23,3 +23,37 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.5);
 }
+
+
+.share-buttons {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.share-btn {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.share-btn:hover {
+    background-color: #555;
+}
+
+.icon svg {
+    height: 50px;
+    width: 50px
+}
+
+.facebook-share { background-color: #3b5998; }
+.pinterest-share { background-color: #bd081c; }
+.x-share { background-color: #333; }
