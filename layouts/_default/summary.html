@@ -1,6 +1,12 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     {{with .CurrentSection.Title }}<span class="f6 db">{{ . }}</span>{{end}}
+    {{ if $featured_image }}
+    <a href="{{ .RelPermalink }}" class="link black dim">
+      <div class="featured_image" style="background: url(&quot;{{ $featured_image }}&quot;) center center / cover no-repeat; height: 200px;"></div>
+    </a>
+    {{ end }}
     <h1 class="f3 near-black">
       <a href="{{ .RelPermalink }}" class="link black dim">
         {{ .Title }}
