@@ -26,7 +26,8 @@
 
 
 .share-buttons {
-    position: fixed;
+    position: sticky;
+    width: 50px;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -49,11 +50,6 @@
     background-color: #555;
 }
 
-.icon svg {
-    height: 50px;
-    width: 50px
-}
-
 .facebook-share { background-color: #3b5998; }
 .pinterest-share { background-color: #bd081c; }
-.x-share { background-color: #333; }
+.x-share { background-color: #000000; }

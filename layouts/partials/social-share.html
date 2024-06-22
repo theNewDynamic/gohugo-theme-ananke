@@ -24,12 +24,13 @@
       </a>
     {{ end }}
   </div>  */}}
-  <div id="sharing" class="share-buttons" class="mt3 ananke-socials">
+  <div id="sharing" class="ananke-socials share-buttons">
+    <span class="i">Share!<span>
     {{ range $service :=  $services }}
       {{ $href := index $hrefs .name }}
-      <a href="{{ $href }}" class="share-btn ananke-social-link {{ .name }}-share no-underline" aria-label="share on {{ .label }}">
+      <a href="{{ $href }}" class="share-btn ananke-social-link {{ .name }}-share no-underline" title="Share on {{ .label }}" aria-label="share on {{ .label }}">
       {{ with .icon }}
-        <span class="icon"> {{ . }}</span>
+        <span class="icon">{{ . }}</span>
       {{ end }}
       </a>
     {{ end }}

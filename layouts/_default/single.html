@@ -14,7 +14,6 @@
           */}}
         {{ .CurrentSection.Title }}
       </aside>
-      {{ partial "social-share.html" . }}
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
@@ -62,6 +61,7 @@
     </div>
 
     <aside class="w-30-l mt6-l">
+      {{ partial "social-share.html" . }}
       {{- partial "menu-contextual.html" . -}}
     </aside>
 
