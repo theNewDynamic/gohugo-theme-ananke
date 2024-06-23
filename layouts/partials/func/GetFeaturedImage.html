@@ -20,8 +20,9 @@
 {{ $matches := "feature,cover" }}
 {{/* Use the value from front matter if present */}}
 {{ with .Params.featured_image }}
+{{ $filter := images.AutoOrient }}
 {{ $original := resources.Get . }}
-{{ with $original }}
+{{ with $original | images.Filter $filter }}
     {{ $processed := .Process "webp" }}
     {{ $linkToCover = $processed.RelPermalink }}
 {{ end }}
