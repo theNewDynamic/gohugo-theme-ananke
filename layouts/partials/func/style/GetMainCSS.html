@@ -27,7 +27,7 @@
   {{ range $service := . }}
     {{ with .color }}
       {{ $rule := printf `
-        .ananke-socials a.%s:hover {
+        .socials a.%s:hover {
           color: %s
         }` $service.name $service.color }}
       {{ $socials_rules = $socials_rules | append $rule }}

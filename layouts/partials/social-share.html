@@ -6,34 +6,38 @@
 {{ $twitter_href := printf "https://twitter.com/intent/tweet?url=%s&text=%s" $url $title }}
 {{ $x_href := printf "https://x.com/intent/tweet?url=%s&text=%s" $url $title }}
 {{ $pinterest_href := printf "https://pinterest.com/pin/create/button/?url=%s&media=%s&description=%s" $url $featured_image $title }}
-{{ with site.Social.twitter }}
-  {{ $twitter_href = printf "%s&via=%s" $twitter_href . }}
-{{ end }}
+{{ $twitter_href = printf "%s&via=%s" $twitter_href . }}
 {{ $linkedin_href := printf "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s" $url $title }}
 {{ $hrefs := dict "facebook" $facebook_href "twitter" $twitter_href "linkedin" $linkedin_href "pinterest" $pinterest_href "x" $x_href}}
 
 {{ $services := where (partialCached "func/socials/Get" "socials/Get") "share" true }}
 {{ if not ($.Param "disable_share") }}
-  {{/*  <div id="sharing" class="mt3 ananke-socials">
+  <div id="sharing" class="mt3 socials {{ $.Param "text_color_dark" | default "dark-gray" }} share-buttons">
+    <span class="i">Share!</span>
     {{ range $service :=  $services }}
       {{ $href := index $hrefs .name }}
-      <a href="{{ $href }}" class="ananke-social-link {{ .name }} no-underline" aria-label="share on {{ .label }}">
-        {{ with .icon }}
-        <span class="icon"> {{ . }}</span>
-        {{ end }}
-      </a>
-    {{ end }}
-  </div>  */}}
-  <div id="sharing" class="ananke-socials share-buttons">
-    <span class="i">Share!<span>
-    {{ range $service :=  $services }}
-      {{ $href := index $hrefs .name }}
-      <a href="{{ $href }}" class="share-btn ananke-social-link {{ .name }}-share no-underline" title="Share on {{ .label }}" aria-label="share on {{ .label }}">
+      <a href="{{ $href }}" class="share-btn social-link {{ .name }}-share no-underline" title="Share on {{ .label }}" aria-label="share on {{ .label }}">
       {{ with .icon }}
         <span class="icon">{{ . }}</span>
       {{ end }}
       </a>
     {{ end }}
+    {{/*  email sharing  */}}
+    <a class="email-share-button share-btn social-link no-underline" title="Share with email" aria-label="share with email" href="mailto:?subject=Check out this recipe: {{ .Title }} &body=I found this great recipe and thought you might like it: {{ .Permalink }}">
+      <span class="icon">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 772 5380 1638">
+          <path d="M1300 2035 l1245 -1245 1237 1237 c681 681 1238 1241 1238 1245 0 5
+          -1117 8 -2482 8 l-2483 0 1245 -1245z"/>
+          <path d="M4395 2410 l-720 -720 723 -723 722 -722 0 1443 c0 793 -1 1442 -3
+          1442 -1 0 -326 -324 -722 -720z"/>
+          <path d="M0 1695 l0 -1320 655 655 c360 360 655 659 655 663 0 5 -295 304
+          -655 665 l-654 657 -1 -1320z"/>
+          <path d="M767 772 c-416 -416 -757 -760 -757 -765 0 -4 1141 -7 2535 -7 1394
+          0 2535 3 2535 8 0 11 -1514 1522 -1525 1522 -6 0 -235 -225 -510 -500 l-500
+          -500 -500 500 c-275 275 -505 500 -510 500 -6 0 -351 -341 -768 -758z"/>
+        </svg>
+      </span>
+    </a>
   </div>
 
 

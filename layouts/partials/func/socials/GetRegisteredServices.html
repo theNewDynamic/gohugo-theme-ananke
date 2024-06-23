@@ -33,7 +33,7 @@ theNewDynamic) and them to the list with key as .name and value as .url */}}
 {{ end }}
 
 {{/* Then we go through the current way of registering services as per referenced in README */}}
-{{ with site.Params.ananke_socials }}
+{{ with site.Params.socials }}
   {{ range $service := . }}
     {{/* Only if the service has a .name, we add it all its keys to the slice of registered services */}}
     {{ with .name }}

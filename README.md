@@ -163,14 +163,14 @@ Using front matter and cascade, this can be customized for a whole section, or j
 
 The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` parameter is set to true either on the site level (site params) or page level (front matter). Each built-in services sports a label, an icon and a color.
 
-In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a
+In order to register a service to be used, user must add an `socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a
 - name*: It matches the built-in service reference (Ex: twitter, github)
 - url*: The url of the handle's profile on the service (Ex: https://twitter.com/theNewDynamic, https://github.com/
 theNewDynamic)
 - rel: (default: `noopener`) Controls the `rel` attribute of the "follow" link. Useful for Mastodon verification which requires a `rel="me"` on the link.
 ```yaml
 params:
-  ananke_socials:
+  socials:
   - name: twitter
     url: https://twitter.com/theNewDynamic
   - name: github
@@ -186,7 +186,7 @@ If user needs to overwrite default `color` and `label` of the service, they simp
 
 ```yaml
 params:
-  ananke_socials:
+  socials:
   - name: twitter
     url: https://twitter.com/theNewDynamic
     label: TND Twitter
@@ -202,7 +202,7 @@ If a user needs to control Share and Follow of a service, for example enabling "
 
 ```yaml
 params:
-  ananke_socials:
+  socials:
   - name: facebook
     label: Facebook
     follow: false
@@ -235,7 +235,7 @@ Here is the list of built-in services. Those marked with an `*` are also part of
 
 #### Complement
 
-In order to add an unkown service (absent from the list above), you simply need to add all three settings to `ananke_socials`: name, url, label, color, and optionally add an icon file matching the `name` to the `assets/ananke/socials` directory. In the absence of an icon, the theme will print the service's label.
+In order to add an unkown service (absent from the list above), you simply need to add all three settings to `socials`: name, url, label, color, and optionally add an icon file matching the `name` to the `assets/ananke/socials` directory. In the absence of an icon, the theme will print the service's label.
 
 ### Content indexing
 
