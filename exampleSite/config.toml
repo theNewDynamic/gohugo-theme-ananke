@@ -36,6 +36,9 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   recent_posts_number = 3
 
+  # Sort sections by date (oldest first)
+  #order_sections_by_date = true
+
 [[params.ananke_socials]]
 name = "twitter"
 url = "https://twitter.com/GoHugoIO"

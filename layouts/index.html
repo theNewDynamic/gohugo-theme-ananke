@@ -11,6 +11,11 @@
     {{ $section_name := . }}
     {{/* Create a variable with that section to use in multiple places. */}}
     {{ $section := where $.Site.RegularPages "Section" "in" $section_name }}
+
+    {{ if $.Site.Params.order_sections_by_date | default false }}
+    {{ $section = $section.ByDate }}
+    {{ end }}
+    
     {{ $section_count := len $section }}
     {{ if ge $section_count 1 }}
       <div class="pa3 pa4-ns w-100 w-70-ns center">
