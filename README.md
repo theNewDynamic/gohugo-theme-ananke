@@ -112,7 +112,7 @@ To enable comments, add following to your config file:
 
 ### Change the hero background
 
-For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/en/_index.md` file for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
+For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/en/_index.md` file for examples): `featured_image = '/images/gohugo-default-sample-hero-image.jpg'`
 
 #### Featured image as Page Resources
 If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath incudes either `cover` or `feature`
