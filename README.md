@@ -108,7 +108,7 @@ To enable comments, add following to your config file:
 
 ### Change the hero background
 
-For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/_readme.md` file for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
+For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/_readme.md` file for examples): `featured_image = '/images/gohugo-default-sample-hero-image.jpg'`
 
 #### Featured image as Page Resources
 
