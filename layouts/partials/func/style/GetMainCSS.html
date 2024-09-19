@@ -41,7 +41,7 @@
 
 {{ end }}
 
-{{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's 
+{{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's
 css asset directory we (unless condition below) add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
   {{ range . }}
@@ -49,7 +49,7 @@ css asset directory we (unless condition below) add to aforementioned slice */}}
       {{ if eq .MediaType.SubType "x-scss" "x-sass" "scss" "sass" }}
         {{ if hugo.IsExtended }}
           {{/* as we cannot concatenate styles of different types, we sass/scss to be transformed to css beforehand */}}
-          {{ $assets_to_concat = $assets_to_concat | append (. | resources.ToCSS) }}
+          {{ $assets_to_concat = $assets_to_concat | append (. | css.Sass) }}
         {{ else }}
           {{ partial "func/warn" (printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
         {{ end }}
@@ -66,7 +66,7 @@ css asset directory we (unless condition below) add to aforementioned slice */}}
 
   {{/* We then use toCSS to add sourceMap and minify */}}
   {{ $options := dict "enableSourceMap" true "precision" 6 }}
-  {{ $style = $style | resources.ToCSS $options | minify }}
+  {{ $style = $style | css.Sass $options | minify }}
   {{/* We fingerprint in production for cache busting purposes */}}
   {{ if eq (getenv "HUGO_ENV") "production" }}
     {{ $style = $style | fingerprint }}
