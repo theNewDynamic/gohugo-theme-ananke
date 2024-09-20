@@ -108,7 +108,7 @@ To enable comments, add following to your config file:
 
 ### Change the hero background
 
-For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/_readme.md` file for examples): `featured_image = '/images/gohugo-default-sample-hero-image.jpg'`
+For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/en/_readme.md` file for examples): `featured_image = '/images/gohugo-default-sample-hero-image.jpg'`
 
 #### Featured image as Page Resources
 
@@ -116,7 +116,7 @@ If user is using [Page Resources](https://gohugo.io/content-management/page-reso
 
 #### Other hero settings
 
-If you would like to hide the header text on the featured image on a page, set `omit_header_text` to `true`. See `exampleSite/content/contact.md` for an example.
+If you would like to hide the header text on the featured image on a page, set `omit_header_text` to `true`. See `exampleSite/content/en/contact.md` for an example.
 
 You don't need an image though. The default background color is black, but you can change the color, by changing the default color class in the config.toml file. Choose a background color from any on the [Tachyons](https://tachyons.io/docs/themes/skins/) library site, and preface it with "bg-"
 
