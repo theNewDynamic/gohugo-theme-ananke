@@ -1,7 +1,7 @@
 {
   "name": "@thenewdynamic/gohugo-theme-ananke",
   "description": "Ananke: A theme for Hugo Sites",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "license": "MIT",
   "repository": "thenewdynamic/gohugo-theme-ananke",
   "author": "Bud Parr (https://github.com/budparr)",
@@ -31,15 +31,27 @@
     "hugo-module",
     "gohugo-module"
   ],
-  "devDependencies": {
-    "auto-changelog": "2.5.0",
+  "dependencies": {
     "cssnano": "7.0.6",
     "postcss": "8.4.47",
     "postcss-preset-env": "10.0.5",
     "tachyons": "4.12.0"
   },
+  "devDependencies": {
+    "@davidsneighbour/release-config": "2024.3.46",
+    "@davidsneighbour/tools": "2024.3.46"
+  },
   "scripts": {
     "deploy": " cd exampleSite; hugo;",
-    "version": "auto-changelog -p --template keepachangelog --commit-limit 0 && git add CHANGELOG.md"
+    "release": "wireit",
+    "release:pre": "wireit"
+  },
+  "wireit": {
+    "release": {
+      "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" -- --no-verify"
+    },
+    "release:pre": {
+      "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" -- --no-verify"
+    }
   }
 }
