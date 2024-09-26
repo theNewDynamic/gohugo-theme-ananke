@@ -1,0 +1,11 @@
+p {
+  text-align: left !important;
+}
+body {
+  max-width: none; /* Removes the maximum width constraint */
+}
+
+article {
+  max-width: 100%; /* Use the full width of the parent container */
+  margin: 0 auto; /* Center the content if needed */
+}
