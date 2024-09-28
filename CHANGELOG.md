@@ -1,4 +1,6 @@
 # Changelog
+## [2.10.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.0-prerelease.0...v2.10.0) (2024-09-28)
+
 ## [2.10.0-prerelease.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.9.1...v2.10.0-prerelease.0) (2024-09-26)
 
 
