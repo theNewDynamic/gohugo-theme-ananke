@@ -207,6 +207,7 @@ params:
     label: Facebook
     follow: false
   - name: twitter
+    username: theNewDynamic
     url: https://twitter.com/theNewDynamic
     label: TND Twitter
 ```
