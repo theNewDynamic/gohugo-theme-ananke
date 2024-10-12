@@ -38,6 +38,8 @@ description = "The last theme you'll ever need. Maybe."
 background_color_class = "bg-black"
 # choose an fitting and alignment style for the featured image using tachyons classes such as "cover|contain" for fitting and "bg-top|bg-center|bg-bottom" for alignment, or add any other class space-separated to customize further
 featured_image_class = "cover bg-top"
+# choose a color dimming class for the page or size header from any on this page: https://tachyons.io/docs/themes/skins/, preface it with "bg-" and add the value such as "-X0" where X is in [1,9]
+cover_dimming_class = "bg-black-60"
 recent_posts_number = 3
 
 [ananke.social.follow]
