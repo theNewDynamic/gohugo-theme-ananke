@@ -122,6 +122,10 @@ You don't need an image though. The default background color is black, but you c
 
 example: `background_color_class = "bg-blue"` or `background_color_class = "bg-gray"`
 
+The default fitting and alignment for th featured image is `cover bg-top`, but can be changed using the `featured_image_class`.  Choose an fitting and alignment style for the featured image using tachyons classes such as "cover|contain" for fitting and "bg-top|bg-center|bg-bottom" for alignment.
+
+example: `featured_image_class = "cover bg-center"` or `featured_image_class = "contain bg-top"`
+
 ### Activate the contact form
 
 This theme includes a shortcode for a contact form that you can add to any page (there is an example on the contact page in the exampleSite folder). One option is to use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Visit the Formspree site to get the "action" link and add it to your shortcode like this:
