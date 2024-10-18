@@ -50,7 +50,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 > ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
 >
-> ```
+> ```bash
 > go version
 > ```
 >
@@ -58,7 +58,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 1. From your project's root directory, initiate the hugo module system if you haven't already:
 
-   ```
+   ```bash
    hugo mod init github.com/<your_user>/<your_project>
    ```
 
@@ -72,7 +72,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 Inside the folder of your Hugo site run:
 
-```
+```bash
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 ```
 
@@ -126,7 +126,7 @@ example: `background_color_class = "bg-blue"` or `background_color_class = "bg-g
 
 This theme includes a shortcode for a contact form that you can add to any page (there is an example on the contact page in the exampleSite folder). One option is to use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Visit the Formspree site to get the "action" link and add it to your shortcode like this:
 
-```
+```go
 {{< form-contact action="https://formspree.io/your@email.com" >}}
 ```
 
@@ -134,23 +134,24 @@ This theme includes a shortcode for a contact form that you can add to any page 
 
 The homepage and other areas of the site use a `read more` link on the element. You can customize the copy of this link to make it more descriptive with the parameter `read_more_copy` available as a site and front matter parameter.
 
-```
-# config.yaml
+```toml
+# config.toml
 # Globally for all pages:
-params:
-  read_more_copy: Read more about this entry
+[params]
+read_more_copy = "Read more about this entry"
+
 # Just for french
-languages:
-  fr:
-    name: Français
-    weight: 2
-    params:
-       read_more_copy: En savoir plus à ce sujet
+[languages.fr]
+name = "Français"
+weight = 2
+
+[languages.fr.params]
+read_more_copy = "En savoir plus à ce sujet"
 ```
 
 Using front matter and cascade, this can be customized for a whole section, or just for one page.
 
-```
+```yaml
 # content/posts/tower-bridge-london.md
   title: The Tower Bridge of London
   read_more_copy: Read more about this bridge
@@ -246,14 +247,14 @@ If the theme is ran in [production](#production), pages will be indexed by searc
 
 The theme is set, by default, to use a near-white background color and the "Avenir" or serif typeface. You can change these in your config file with the `body_classes` parameter, like this:
 
-```
+```toml
 [params]
   body_classes = "avenir bg-near-white"
 ```
 
 which will give you a body class like this:
 
-```
+```go
 <body class="avenir bg-near-white">
 ```
 
@@ -284,9 +285,9 @@ The css files will be added in their registered order to final `main.css` file.
 
 For example, if your css files are `assets/ananke/css/custom.css` and `assets/ananke/special.css` then add the following to the config file:
 
-```
-  [params]
-    custom_css = ["custom.css","special.css"]
+```toml
+[params]
+custom_css = ["custom.css","special.css"]
 ```
 
 __IMPORTANT__: Files registered through the `custom_css` array, while unlimited in number, must be of the same type (Ex: all `scss` or all `css`)
@@ -305,9 +306,9 @@ Some scripts need to be added within the page head. To add your own scripts to t
 
 You can replace the title of your site in the top left corner of each page with your own logo. To do that put your own logo into the `static` directory of your website, and add the `site_logo` parameter to the site params in your config file. For example:
 
-```
+```toml
 [params]
-  site_logo = "img/logo.svg"
+site_logo = "img/logo.svg"
 ```
 
 ### Set Content Font Color
@@ -317,9 +318,9 @@ You can set the font color of the main content both globally and on individual p
 Globally:
 Set the `text_color` param in the `config.toml` file.
 
-```
+```toml
 [params]
-  text_color = "green"
+text_color = "green"
 ```
 
 Individual Page (prioritized over global):
@@ -331,9 +332,9 @@ note: The value of `text_color` must be a valid tachyons color class. A list can
 
 Dates of blog posts and single pages are rendered with the default date format commonly used in the USA and Canada. It is possible to specify a different format.
 
-```
+```toml
 [params]
-  date_format = "2. January 2006"
+date_format = "2. January 2006"
 ```
 
 With hugo 0.87.0 and above, you can also use predefined layout, like `:date_full`, and it will output localized dates or times.
@@ -344,7 +345,7 @@ See hugo's documentation of the [`time.Format` function](https://gohugo.io/funct
 When you want to publish content that is already published on a different site. You need to reference a canonical url of the original content.
 By defining the `canonicalUrl` in the front matter definition the canonical url is set in the headers.
 
-```
+```yaml
 canonicalUrl: https://mydomain.com/path-to-the-oringinal-content/
 ```
 
@@ -352,7 +353,9 @@ canonicalUrl: https://mydomain.com/path-to-the-oringinal-content/
 
 In order to see your site in action, run Hugo's built-in local server.
 
-`$ hugo server`
+```bash
+hugo server
+```
 
 Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
 
@@ -360,20 +363,20 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
 
-```
+```bash
 HUGO_ENV=production hugo
 ```
 
 Note: The above command will not work on Windows. If you are running a Windows OS, use the below command:
 
-```
+```bash
 set HUGO_ENV=production
 hugo
 ```
 
 Or in Powershell:
 
-```
+```bash
 $ENV:HUGO_ENV = 'production'
 hugo
 ```
