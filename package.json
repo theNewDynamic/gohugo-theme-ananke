@@ -38,7 +38,7 @@
     "tachyons": "4.12.0"
   },
   "devDependencies": {
-    "@davidsneighbour/release-config": "2024.3.46",
+    "@davidsneighbour/release-config": "2024.4.5",
     "@davidsneighbour/tools": "2024.4.5"
   },
   "scripts": {
