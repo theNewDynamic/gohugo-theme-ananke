@@ -42,7 +42,7 @@
     "@davidsneighbour/tools": "2024.4.5"
   },
   "scripts": {
-    "deploy": " cd exampleSite; hugo;",
+    "deploy": "cd exampleSite; hugo;",
     "release": "wireit",
     "release:pre": "wireit"
   },
