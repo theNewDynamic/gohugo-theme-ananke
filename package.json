@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@davidsneighbour/release-config": "2024.3.46",
-    "@davidsneighbour/tools": "2024.3.46"
+    "@davidsneighbour/tools": "2024.4.5"
   },
   "scripts": {
     "deploy": " cd exampleSite; hugo;",
