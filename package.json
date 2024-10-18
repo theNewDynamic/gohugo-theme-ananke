@@ -44,7 +44,8 @@
   "scripts": {
     "deploy": "cd exampleSite; hugo;",
     "release": "wireit",
-    "release:pre": "wireit"
+    "release:pre": "wireit",
+    "server": "wireit"
   },
   "wireit": {
     "release": {
@@ -52,6 +53,9 @@
     },
     "release:pre": {
       "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
+    },
+    "server": {
+      "command": "cd exampleSite; rm -rf public; hugo server -D -E -F --disableFastRender --verbose --logLevel debug --debug --tlsAuto --panicOnWarning"
     }
   }
 }
