@@ -7,6 +7,18 @@
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+
+    {{/* 
+	  Multilingual site support
+	  * https://gohugo.io/methods/page/alltranslations/
+	  * https://developers.google.com/search/docs/specialty/international/localized-versions
+       */}}
+    {{ with .AllTranslations }}
+      {{ range . }}
+        <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+      {{ end }}
+    {{ end }}
+	  
     {{ hugo.Generator }}
     {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
     {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
