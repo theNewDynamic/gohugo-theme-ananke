@@ -1,7 +1,11 @@
 {{- $context := . -}}
-{{- $enabled := $context.Params.disable_share | default "true" -}}
+{{- $disabled := $context.Params.disable_share | default "false" -}}
+{{- $config := site.Params.ananke.social -}}
+{{- with $config.share.disable_share -}}
+  {{- $disabled := . -}}
+{{- end -}}
 
-{{- if eq "true" $enabled -}}
+{{- if eq "false" $disabled -}}
 
   {{- $title := $context.Title -}}
   {{- $url := printf "%s" $context.Permalink | absLangURL -}}
@@ -55,7 +59,7 @@
     {{- end -}}
   </div>
 
-{{- end -}} {{/* if eq "true" $enabled */}}
+{{- end -}} {{/* if eq "true" $disabled */}}
 
 {{ define "partials/func/getShareLink.html" }}
   {{- $context := .context -}}
