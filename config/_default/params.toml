@@ -1,75 +1,83 @@
 [ananke.social]
 icon_path = "ananke/socials/%s.svg"
 
-# [ananke.social.follow]
-# new_window_icon = false # show a little "opens in new window" icon next to the link
-# networks = [
-#   "facebook",
-#   "bluesky",
-#   "linkedin"
-# ]
+[ananke.social.follow]
+new_window_icon = false # show a little "opens in new window" icon next to the link
+networks = [
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
 
 # social media network setups
 [[ananke.social.networks]]
 slug = "bluesky"
+label = "Bluesky"
 profile = "https://bsky.app/profile/%s"
 icon = "bluesky" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "email"
+label = "Email"
 profile = false
 icon = "envelope" # font awesome free icon name
 
 [[ananke.social.networks]]
 slug = "facebook"
+label = "Facebook"
 profile = "https://www.facebook.com/%s"
 icon = "facebook" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "hackernews"
+label = "Hacker News"
 profile = "https://news.ycombinator.com/user?id=%s"
 icon = "hacker-news" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "linkedin"
+label = "LinkedIn"
 profile = "http://linkedin.com/in/%s"
 icon = "linkedin" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "pinterest"
+label = "Pinterest"
 profile = "https://www.pinterest.com/%s/"
 icon = "pinterest" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "reddit"
+label = "Reddit"
 profile = "https://www.reddit.com/user/%s/"
 icon = "reddit" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "telegram"
+label = "Telegram"
 profile = "https://t.me/%s"
 icon = "telegram" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "tumblr"
+label = "Tumblr"
 profile = "https://www.tumblr.com/blog/%s"
 icon = "tumblr" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "twitter"
+label = "Twitter"
 profile = "https://twitter.com/%s"
 icon = "twitter" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "whatsapp"
+label = "WhatsApp"
 profile = false
 icon = "whatsapp" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "xing"
+label = "Xing"
 profile = "https://www.xing.com/profile/%s"
 icon = "xing" # font awesome brand icon name
-
-# optional config parameters
-# [[ananke.social.networks]]
-# rel = "noopener" # set to noopener by default, could contain `me` and other values

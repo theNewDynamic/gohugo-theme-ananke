@@ -49,6 +49,7 @@ networks = [
 [params.ananke.social]
 [params.ananke.social.facebook]
 username = "patrick.kollitsch"
+# profilelink = "https://www.facebook.com/patrick.kollitsch"
 
 [params.ananke.social.linkedin]
 username = "patrickkollitsch"
