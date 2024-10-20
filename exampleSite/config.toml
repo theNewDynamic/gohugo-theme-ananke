@@ -38,6 +38,14 @@ description = "The last theme you'll ever need. Maybe."
 background_color_class = "bg-black"
 recent_posts_number = 3
 
+[ananke.social.follow]
+new_window_icon = false # show a little "opens in new window" icon next to the link
+networks = [
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
 [params.ananke.social]
 [params.ananke.social.facebook]
 username = "patrick.kollitsch"

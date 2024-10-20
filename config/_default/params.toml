@@ -1,13 +1,13 @@
 [ananke.social]
 icon_path = "ananke/socials/%s.svg"
 
-[ananke.social.follow]
-new_window_icon = false # show a little "opens in new window" icon next to the link
-networks = [
-  "facebook",
-  "bluesky",
-  "linkedin"
-]
+# [ananke.social.follow]
+# new_window_icon = false # show a little "opens in new window" icon next to the link
+# networks = [
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
 
 # social media network setups
 [[ananke.social.networks]]
@@ -59,6 +59,11 @@ icon = "tumblr" # font awesome brand icon name
 slug = "twitter"
 profile = "https://twitter.com/%s"
 icon = "twitter" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "whatsapp"
+profile = false
+icon = "whatsapp" # font awesome brand icon name
 
 [[ananke.social.networks]]
 slug = "xing"
