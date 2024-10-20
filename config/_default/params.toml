@@ -9,75 +9,180 @@ networks = [
   "linkedin"
 ]
 
+[ananke.social.share]
+icons = true
+sharetext = true
+networks = [
+  "email",
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
 # social media network setups
 [[ananke.social.networks]]
 slug = "bluesky"
 label = "Bluesky"
 profile = "https://bsky.app/profile/%s"
 icon = "bluesky" # font awesome brand icon name
+link = "https://bsky.app/intent/compose"
+[ananke.social.networks.particles]
+text = "permalink"
 
 [[ananke.social.networks]]
 slug = "email"
 label = "Email"
 profile = false
 icon = "envelope" # font awesome free icon name
+link = "mailto:"
+[ananke.social.networks.particles]
+body = "permalink"
+subject = "title"
 
 [[ananke.social.networks]]
 slug = "facebook"
 label = "Facebook"
+color = "#3b5998"
 profile = "https://www.facebook.com/%s"
 icon = "facebook" # font awesome brand icon name
+link = "https://facebook.com/sharer/sharer.php"
+[ananke.social.networks.particles]
+u = "permalink"
 
 [[ananke.social.networks]]
 slug = "hackernews"
 label = "Hacker News"
 profile = "https://news.ycombinator.com/user?id=%s"
 icon = "hacker-news" # font awesome brand icon name
+link = "https://news.ycombinator.com/submitlink"
+[ananke.social.networks.particles]
+u = "permalink"
+t = "description"
 
 [[ananke.social.networks]]
 slug = "linkedin"
 label = "LinkedIn"
+color = "#0077b5"
 profile = "http://linkedin.com/in/%s"
 icon = "linkedin" # font awesome brand icon name
+link = "https://www.linkedin.com/shareArticle"
+[ananke.social.networks.particles]
+url = "permalink"
+title = "title"
+summary = "description"
+source = "permalink"
+params = "mini=true"
 
 [[ananke.social.networks]]
 slug = "pinterest"
 label = "Pinterest"
 profile = "https://www.pinterest.com/%s/"
 icon = "pinterest" # font awesome brand icon name
+link = "https://pinterest.com/pin/create/button/"
+[ananke.social.networks.particles]
+url = "permalink"
+media = "permalink"
+description = "description"
 
 [[ananke.social.networks]]
 slug = "reddit"
 label = "Reddit"
 profile = "https://www.reddit.com/user/%s/"
 icon = "reddit" # font awesome brand icon name
+link = "https://reddit.com/submit/"
+[ananke.social.networks.particles]
+url = "permalink"
+title = "title"
+params = "resubmit=true"
 
 [[ananke.social.networks]]
 slug = "telegram"
 label = "Telegram"
 profile = "https://t.me/%s"
 icon = "telegram" # font awesome brand icon name
+link = "https://telegram.me/share/url"
+[ananke.social.networks.particles]
+text = "description"
+url = "permalink"
 
 [[ananke.social.networks]]
 slug = "tumblr"
 label = "Tumblr"
 profile = "https://www.tumblr.com/blog/%s"
 icon = "tumblr" # font awesome brand icon name
+link = "https://www.tumblr.com/widgets/share/tool"
+[ananke.social.networks.particles]
+canonicalUrl = "permalink"
+shareSource = "source"
+title = "title"
+caption = "description"
+content = "description"
+params = "posttype=link"
 
 [[ananke.social.networks]]
 slug = "twitter"
 label = "Twitter"
+color = "#1da1f2"
 profile = "https://twitter.com/%s"
 icon = "twitter" # font awesome brand icon name
+link = "https://twitter.com/intent/tweet/"
+[ananke.social.networks.particles]
+text = "description"
+url = "permalink"
 
 [[ananke.social.networks]]
 slug = "whatsapp"
 label = "WhatsApp"
 profile = false
 icon = "whatsapp" # font awesome brand icon name
+link = "whatsapp://send"
+linkintext = true
+[ananke.social.networks.particles]
+text = "description"
 
 [[ananke.social.networks]]
 slug = "xing"
 label = "Xing"
 profile = "https://www.xing.com/profile/%s"
 icon = "xing" # font awesome brand icon name
+link = "https://www.xing.com/app/user"
+separator = ";"
+[ananke.social.networks.particles]
+url = "permalink"
+title = "title"
+params = "op=share"
+
+# @TODO add more networks
+# instagram:
+# label = "Instagram"
+# color = "#e1306c"
+# youtube:
+# label = "YouTube"
+# color = "#cd201f"
+# github:
+# label = "GitHub"
+# color = "#6cc644"
+# gitlab:
+# label = "GitLab"
+# color = "#FC6D26"
+# keybase:
+# label = "Keybase"
+# color = "#3d76ff"
+# medium:
+# label = "Medium"
+# color = "#0077b5"
+# mastodon:
+# label = "Mastodon"
+# color = "#6364FF"
+# slack:
+# label = "Slack"
+# color = "#E01E5A"
+# stackoverflow:
+# label = "Stack Overflow"
+# color = "#f48024"
+# rss:
+# label = "RSS"
+# color = "#ff6f1a"
+# tiktok:
+# label = "TikTok"
+# color = "#fe2c55"
