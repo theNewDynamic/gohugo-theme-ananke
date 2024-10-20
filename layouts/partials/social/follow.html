@@ -23,7 +23,7 @@
 
     {{- $languageDirection := cond (eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" -}}
     <a href="{{ $link }}" target="_blank" rel="noopener{{- with $rel }} {{ . -}}{{- end -}}"
-        class="{{ .name }} ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l {{ $languageDirection }}"
+        class="ananke-social-link link-transition {{ $network }} link dib z-999 pt3 pt0-l {{ $languageDirection }}"
         title="follow on {{ $label }} - Opens in a new window"
         aria-label="follow on {{ $label }} - Opens in a new window">
       {{/* @todo add the following lines to a partial, reused in social/share.html */}}

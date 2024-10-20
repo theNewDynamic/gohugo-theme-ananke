@@ -32,7 +32,7 @@
       {{- $options := (dict "context" page "setup" $setup) }}
       {{- $href := partialCached "func/getShareLink.html" $options $options -}}
       <a href="{{ $href }}"
-        class="ananke-social-link {{ .slug }} no-underline"
+        class="ananke-social-link {{ $setup.slug }} no-underline"
         title="{{ $label }}" aria-label="{{ $label }}"
         target="_blank" rel="nofollow noopener noreferrer">
         {{ with $config.share.icons -}}
