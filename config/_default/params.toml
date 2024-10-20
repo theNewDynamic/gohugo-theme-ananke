@@ -11,22 +11,59 @@ networks = [
 
 # social media network setups
 [[ananke.social.networks]]
-slug = "facebook"
-label = "Facebook"
-profile = "https://www.facebook.com/%s"
-icon = "facebook" # font awesome brand icon name
-
-[[ananke.social.networks]]
 slug = "bluesky"
-label = "Bluesky"
 profile = "https://bsky.app/profile/%s"
 icon = "bluesky" # font awesome brand icon name
 
 [[ananke.social.networks]]
+slug = "email"
+profile = false
+icon = "envelope" # font awesome free icon name
+
+[[ananke.social.networks]]
+slug = "facebook"
+profile = "https://www.facebook.com/%s"
+icon = "facebook" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "hackernews"
+profile = "https://news.ycombinator.com/user?id=%s"
+icon = "hacker-news" # font awesome brand icon name
+
+[[ananke.social.networks]]
 slug = "linkedin"
-label = "LinkedIn"
 profile = "http://linkedin.com/in/%s"
 icon = "linkedin" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "pinterest"
+profile = "https://www.pinterest.com/%s/"
+icon = "pinterest" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "reddit"
+profile = "https://www.reddit.com/user/%s/"
+icon = "reddit" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "telegram"
+profile = "https://t.me/%s"
+icon = "telegram" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "tumblr"
+profile = "https://www.tumblr.com/blog/%s"
+icon = "tumblr" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "twitter"
+profile = "https://twitter.com/%s"
+icon = "twitter" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "xing"
+profile = "https://www.xing.com/profile/%s"
+icon = "xing" # font awesome brand icon name
 
 # optional config parameters
 # [[ananke.social.networks]]
