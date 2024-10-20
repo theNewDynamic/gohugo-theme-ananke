@@ -55,7 +55,7 @@
       "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
     },
     "server": {
-      "command": "cd exampleSite; rm -rf public; hugo server -D -E -F --disableFastRender --verbose --logLevel debug --debug --tlsAuto --panicOnWarning"
+      "command": "cd exampleSite; rm -rf public; hugo server -D -E -F --environment gargulus --disableFastRender --verbose --logLevel debug --debug --tlsAuto --panicOnWarning"
     }
   }
 }

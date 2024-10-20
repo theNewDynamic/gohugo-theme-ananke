@@ -38,3 +38,4 @@ resources/_gen/
 .wireit
 .favorites.json
 *.code-workspace
+config/gargulus

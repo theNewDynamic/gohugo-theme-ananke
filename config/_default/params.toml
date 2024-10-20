@@ -1,0 +1,33 @@
+[ananke.social]
+icon_path = "ananke/socials/%s.svg"
+
+[ananke.social.follow]
+new_window_icon = false # show a little "opens in new window" icon next to the link
+networks = [
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
+# social media network setups
+[[ananke.social.networks]]
+slug = "facebook"
+label = "Facebook"
+profile = "https://www.facebook.com/%s"
+icon = "facebook" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "bluesky"
+label = "Bluesky"
+profile = "https://bsky.app/profile/%s"
+icon = "bluesky" # font awesome brand icon name
+
+[[ananke.social.networks]]
+slug = "linkedin"
+label = "LinkedIn"
+profile = "http://linkedin.com/in/%s"
+icon = "linkedin" # font awesome brand icon name
+
+# optional config parameters
+# [[ananke.social.networks]]
+# rel = "noopener" # set to noopener by default, could contain `me` and other values

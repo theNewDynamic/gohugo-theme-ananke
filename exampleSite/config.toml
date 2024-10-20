@@ -38,6 +38,12 @@ description = "The last theme you'll ever need. Maybe."
 background_color_class = "bg-black"
 recent_posts_number = 3
 
-[[params.ananke_socials]]
-name = "twitter"
-url = "https://twitter.com/GoHugoIO"
+[params.ananke.social]
+[params.ananke.social.facebook]
+username = "patrick.kollitsch"
+
+[params.ananke.social.linkedin]
+username = "patrickkollitsch"
+
+[params.ananke.social.bluesky]
+username = "kollitsch.dev"

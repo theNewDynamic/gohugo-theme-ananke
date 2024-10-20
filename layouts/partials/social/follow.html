@@ -1,0 +1,65 @@
+{{- $context := . -}}
+
+{{- $config := site.Params.ananke.social -}}
+{{- $networks := $config.follow.networks -}}
+{{- $setups := (collections.Where $config.networks  "slug" "in" $networks) -}}
+{{/* This here is an ugly workaround for GoHugo's missing sortByArray feature.
+   Let's cache it so it does not take away too much time.
+   PS: It's also a couple of years old, so maybe there is a better solution by now. */}}
+{{- $setups = partials.IncludeCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) "social-follow" -}}
+
+<div class="ananke-socials">
+  {{- range $setups -}}
+    {{- $setup := . -}}
+    {{- $network := $setup.slug -}}
+    {{- $profile := index $config $network -}}
+    {{- $rel := $setup.rel | default "noopener" -}}
+    {{- $link := (printf $setup.profile $profile.username) -}}
+    {{- $languageDirection := cond (eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" -}}
+    <a href="{{ $link }}" target="_blank" rel="{{ $rel }}"
+        class="{{ .name }} ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l {{ $languageDirection }}"
+        title="follow on {{ .label }} - Opens in a new window"
+        aria-label="follow on {{ .label }} - Opens in a new window">
+      {{- with .icon -}}
+        {{- $icon := resources.Get (printf "ananke/socials/%s.svg" .) -}}
+        {{- with $icon -}}
+          <span class="icon">
+            {{ .Content | safeHTML }}
+            {{/* @todo indicator for missing or misconfigured icon */}}
+          </span>
+        {{- end -}}
+      {{- else -}}
+        {{- .label -}}
+      {{- end -}}
+      {{- with $config.follow.new_window_icon -}}
+        {{- partial "new-window-icon.html" . -}}
+      {{- end -}}
+    </a>
+  {{- end -}}
+</div>
+
+{{ define "partials/func/sortNetworks.html" }}
+  {{- /*
+
+  Sorting a list of social networks defined by the order in `networks`.
+  Only networks present in both `networks` and `setups` will be included. Items missing from `networks` are ignored.
+  Use `networks` to setup the order of the networks and which network to enable.
+
+  Usage: {{ $setups = partials.IncludeCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) }}
+
+  See also `config/_default/params.toml` > `ananke.social` for details.
+
+  */ -}}
+  {{- $networks := .networks -}}
+  {{- $setups := .setups -}}
+  {{- $output := collections.Slice -}}
+  {{- range $networks -}}
+    {{- $network := . -}}
+    {{- range $setups -}}
+      {{- if compare.Eq .slug $network -}}
+        {{- $output = $output | collections.Append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- return $output -}}
+{{- end -}}
