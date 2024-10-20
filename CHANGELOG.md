@@ -1,4 +1,60 @@
 # Changelog
+## [2.10.1-prerelease.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.0...v2.10.1-prerelease.0) (2024-10-20)
+
+
+### Content
+
+* **fix:** remove default value from front matter ([d866e89](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d866e892032c84d57f766b51f8e087f311fe3da4))
+
+
+### Documentation
+
+* changelog fixes ([33178c0](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/33178c0d498edb18634bfe0f906ca191796ce307))
+* update README.md with markup changes ([#739](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/739)) ([d4898fb](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d4898fb4cf5a9bd2cd778b6b92f9bcf28258968c)), closes [#735](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/735)
+
+
+### Theme
+
+* **feat:** social media follow links ([4f3e709](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/4f3e709d8334f7f2634efa91450db96433c550d5))
+* **feat:** social share links (wip) ([d9f9cb5](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d9f9cb513f78fc48467b95c6f24a49542087b815))
+* **fix:** add configs for various networks ([e2360e7](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e2360e7ce7f657f426dc5ad8142f0032f4976911))
+* **fix:** add labels and label override functionality ([7913086](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/7913086a0f255a8c3a7878a152471270d0b15805))
+* **fix:** cleanup unused functions ([825ea52](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/825ea52af92555f0f0aaff912afdc179f2a80aaf))
+* **fix:** hover color for social icons ([14eeb65](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/14eeb655ce9dacaa93bcc4e5fc4f3359cc9ef719))
+* **fix:** making sure the noopener rel attribute stays even with other configurations ([8762f56](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/8762f563f9bf0d35a1c3ece6bf8bdd1fc63b054c))
+* **fix:** override profile link generation with full link ([9254c45](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/9254c455c97b59963af6bf2d1c791cc6cb6c10df))
+* **fix:** smaller config fixes for social media integration ([ef4a6a0](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/ef4a6a0cfef5bdd2550512b1aa5499f036b8e8b2))
+
+
+### Refactors
+
+* removed a space ([c018578](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/c018578ca098da4e86b2b9a83bdc9a5055247f90))
+* Simplify lang attribute in html element ([0b0fe2f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0b0fe2fd451a1737df8ecd0e748a384de7de78cc))
+
+
+### Chore
+
+* **config:** update workspace configuration ([0608f9f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0608f9f9fcd782c74335c557ee08d6f1106c75e2))
+* **deps:** update go module configuration ([dcc979b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/dcc979b66db3dec4fe3bf63cf339e8e4f5497941))
+* **git:** merge pull request [#738](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/738) from jmooring:simplify-lang-attribute ([773f06c](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/773f06c207bf99a02b4c43d9bd46137ef556eb8b))
+* **git:** merge pull request [#740](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/740) from theNewDynamic/fix/netlify-config ([8e1a6dc](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/8e1a6dc21313d3a765f122c2bd76bdc8ad174e67))
+* **git:** revert last commit ([1ff3417](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1ff34173399dad9822fc904c470a344b7b633c3b))
+
+
+### Configuration
+
+* **fix:** move paginate to pagination.pagerSize (deprecation) ([363bd2e](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/363bd2e656f0bcb60176204073844dcf45b1aefd)), closes [#746](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/746)
+
+
+### Build System
+
+* add netlify.toml for Netlify deploy ([ad80eb2](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/ad80eb217f9760054ec368bb00ca28c731dd5157))
+* **deps-dev:** bump @davidsneighbour/release-config from 2024.3.46 to 2024.4.5 ([#742](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/742)) ([37f11f0](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/37f11f0dbcb255e199b681ef59663b83e59006d8)), closes [#1602](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1602) [#1603](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1603) [#1601](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1601)
+* **deps-dev:** bump @davidsneighbour/tools from 2024.3.46 to 2024.4.5 ([4637675](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/46376750ccbd2f562e573879d85eb1f584298c39))
+* **deps-dev:** bump @davidsneighbour/tools from 2024.3.46 to 2024.4.5 ([#744](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/744)) ([73eaa77](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/73eaa774a60b72206caa894e5f0d458ea2ac0513)), closes [#1602](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1602) [#1603](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1603) [#1601](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1601)
+* **deps:** bump postcss-preset-env from 10.0.5 to 10.0.7 ([#743](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/743)) ([d240de7](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d240de7419c0869cc410f19fd23b933e60d61915)), closes [/github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media/CHANGELOG.md#1103](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media/CHANGELOG.md/issues/1103) [/github.com/csstools/postcss-plugins/tree/main/packages/media-query-list-parser/CHANGELOG.md#400](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/media-query-list-parser/CHANGELOG.md/issues/400) [/github.com/csstools/postcss-plugins/tree/main/packages/css-tokenizer/CHANGELOG.md#302](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/css-tokenizer/CHANGELOG.md/issues/302) [/github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media/CHANGELOG.md#1102](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media/CHANGELOG.md/issues/1102)
+* **feat:** add proper npm run server script ([6e46565](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/6e465653ec8d8a55c6425c9b7129ac62706f042c))
+* **fix:** proper configuration for netlify ([db073d6](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/db073d61a0a28bdfdb06871908e90c27254d4dd0))
 
 ## [2.10.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.0-prerelease.0...v2.10.0) (2024-09-28)
 
