@@ -20,16 +20,16 @@ other = "Was ist in dieser {{ .Type }}"
 other = "Ähnliches"
 
 [yourName]
-other = "Dein Name"
+other = "Ihr Name"
 
 [emailAddress]
-other = "Email Adresse"
+other = "E-Mail-Adresse"
 
 [message]
 other = "Nachricht"
 
 [emailRequiredNote]
-other = "Eine Email Adresse wird benötigt."
+other = "Eine E-Mail-Adresse wird benötigt."
 
 [send]
 other = "Senden"
