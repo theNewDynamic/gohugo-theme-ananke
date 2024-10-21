@@ -86,8 +86,6 @@ After installing the theme successfully it requires a just a few more steps to g
 
 Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
-You may need to delete the line: `themesDir = "../.."`
-
 ### Add comments
 
 To enable comments, add following to your config file:
