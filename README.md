@@ -308,3 +308,5 @@ hugo
 ## Contributing
 
 If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
+
+Join me on my [ananke-theme Discord channel](https://discord.gg/MykHvyU5P3) for direct support.
