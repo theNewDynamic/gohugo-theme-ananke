@@ -1,6 +1,6 @@
 User-agent: *
-{{/* robotstxt.org - if ENV production variable is false robots will be disallowed. */ -}}
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  -}}
+{{/* robotstxt.org - if we are in production, allow access, else deny */ -}}
+{{ if hugo.IsProduction -}}
 Allow: /
 Sitemap: {{ "/sitemap.xml" | absURL }}
 {{ else -}}
