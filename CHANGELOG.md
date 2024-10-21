@@ -1,4 +1,36 @@
 # Changelog
+## [2.10.1-prerelease.3](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.0...v2.10.1-prerelease.3) (2024-10-21)
+
+
+### Documentation
+
+* add fontawesome license remark to README.md ([d7a12f3](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d7a12f353aa1906bf66a6d12e064194596093a1a))
+* **fix:** add discord link ([a41140e](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a41140e4dfd1931c860e7c7082845062a1624978))
+* **fix:** remove obsolete docs ([e7f28b0](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e7f28b0de4effbb8f20760611873d226f833b278))
+* typo ([e38869b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e38869bc383e27ca10c4f09e2f3be170b0745284))
+* typo ([f68e6ff](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/f68e6ff4c3905323545ee4260766ed3b124929e3))
+* update LICENSE.md ([0aec28f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0aec28fef66a40e9ff619520d4d98c757b046790))
+
+
+### Theme
+
+* **fix:** bring some logic into /disabled sharing ([a9cd70d](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a9cd70d1e6b0dbec55c9ee8597add754a0a68893))
+* **fix:** header image positioning ([#731](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/731)) ([9fc4b73](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/9fc4b73a36721caeea48455b2c089dd476a00ecf)), closes [#729](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/729)
+* **fix:** proper configuration for all networks ([9df0c0a](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/9df0c0a8789feb7a2d6d3163fdeea68cdd321b76))
+* **fix:** use internal methods to evaluate environment ([cc6da23](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/cc6da237ea3e659a19be8faaa0f365898b5b878f)), closes [#625](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/625) [#733](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/733) [#453](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/453) [#574](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/574)
+
+
+### Chore
+
+* **config:** add markdownlint configuration ([65c8a11](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/65c8a115e1e823697afd446c2990850e05934128))
+* **release:** v2.10.1-prerelease.1 ([5afb33c](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/5afb33c5c1a17c4a8c3de9b5fb8c420c92c327d5))
+* **release:** v2.10.1-prerelease.2 ([9332bad](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/9332bad76670f87a45f7f2f065ac491401aa81d2))
+
+
+### Build System
+
+* **fix:** proper replacement path ([e8f39dd](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e8f39dd2ed953c6120e554888287f78a0fb3e00f))
+
 ## [2.10.1-prerelease.2](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.0...v2.10.1-prerelease.2) (2024-10-21)
 
 
