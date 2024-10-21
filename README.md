@@ -165,7 +165,7 @@ Read the documentation for [social follow](https://github.com/theNewDynamic/gohu
 
 ### Content indexing
 
-If the theme is ran in [production](#production), pages will be indexed by search engines. To prevent indexing on some given pages, add `private: true` to its Front Matter.
+If the theme is run in [production](#production), pages will be indexed by search engines. To prevent indexing on some given pages, add `private: true` to its Front Matter.
 
 ### Update font or body classes
 
