@@ -165,7 +165,7 @@ Using front matter and cascade, this can be customized for a whole section, or j
 
 ### Social Follow + Share
 
-Read the documentation for [social follow](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Social-media-network-setup#configure-social-media-follow-links) and [social share](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Social-media-network-setup#configure-social-media-follow-links) in our wiki.
+Read the documentation for [social follow](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Social-media-network-setup#configure-social-media-follow-links) and [social share](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Social-media-network-setup#configure-social-media-share-links) in our wiki.
 
 > This project uses Font Awesome brand icons, which are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt). For more information, visit [Font Awesome](https://fontawesome.com/).
 
