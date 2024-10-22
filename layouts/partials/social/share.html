@@ -34,7 +34,7 @@
         {{/* @todo notification into CLI that a network is configured but not supported */}}
       {{- end -}}
       {{- $options := (dict "context" page "setup" $setup) }}
-      {{- $href := partial "func/getShareLink.html" $options $options -}}
+      {{- $href := partial "func/getShareLink.html" $options -}}
       <a href="{{ $href }}"
         class="ananke-social-link {{ $setup.slug }} no-underline"
         title="{{ $label }}" aria-label="{{ $label }}"
