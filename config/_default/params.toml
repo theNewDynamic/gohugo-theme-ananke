@@ -197,11 +197,11 @@ params = "posttype=link"
 
 [[ananke.social.networks]]
 slug = "twitter"
-label = "Twitter"
+label = "X"
 color = "#1da1f2"
-profile = "https://twitter.com/%s"
+profile = "https://x.com/%s"
 icon = "twitter" # font awesome brand icon name
-link = "https://twitter.com/intent/tweet/"
+link = "https://x.com/intent/post/"
 [ananke.social.networks.particles]
 text = "description"
 url = "permalink"
