@@ -38,9 +38,9 @@
     "tachyons": "4.12.0"
   },
   "devDependencies": {
-    "@davidsneighbour/markdownlint-config": "^2024.3.12",
-    "@davidsneighbour/release-config": "2024.4.5",
-    "@davidsneighbour/tools": "2024.4.5"
+    "@davidsneighbour/markdownlint-config": "^2024.4.6",
+    "@davidsneighbour/release-config": "2024.4.6",
+    "@davidsneighbour/tools": "2024.4.6"
   },
   "scripts": {
     "deploy": "cd exampleSite; hugo;",
