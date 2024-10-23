@@ -1,4 +1,22 @@
 # Changelog
+## [2.10.1-prerelease.4](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.3...v2.10.1-prerelease.4) (2024-10-23)
+
+
+### Documentation
+
+* **fix:** add note about WIP on the README.md ([0a307d7](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0a307d7521bfd1e41daa3567a692f036351324a1))
+* **fix:** update link to demo ([e22c428](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e22c42896a9222d94de69fffa752954aa969f8df))
+
+
+### Chore
+
+* **deps:** update dependencies ([088c3e7](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/088c3e7a577c90c85080447341e4af962c3f4a53))
+
+
+### Build System
+
+* **fix:** revert to go 1.22 ([d544d76](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d544d76af70ba83a5bdce2b58a1fc2fc79d03882))
+
 ## [2.10.1-prerelease.3](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.0...v2.10.1-prerelease.3) (2024-10-21)
 
 
