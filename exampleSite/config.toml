@@ -42,8 +42,15 @@ featured_image_class = "cover bg-top"
 cover_dimming_class = "bg-black-60"
 recent_posts_number = 3
 
+[params.ananke.social.share]
+networks = [
+  "email",
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
 [params.ananke.social.follow]
-new_window_icon = false # show a little "opens in new window" icon next to the link
 networks = [
   "facebook",
   "bluesky",
