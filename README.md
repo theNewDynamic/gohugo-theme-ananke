@@ -203,7 +203,7 @@ _n.b. in future versions we will likely separate the typeface and other body cla
 
 Ananke stylesheet is built with Hugo Pipes's [Asset Bundling](https://gohugo.io/hugo-pipes/bundling/#readout) alone to maximize compatibiliy. The theme simply bundles its several files into one minified and fingerprinted (in production) CSS file.
 
-Ananke uses [Tachyon.io](https://tachyons.io/) utility class library.
+Ananke uses [Tachyons.io](https://tachyons.io/) utility class library.
 
 #### Custom CSS
 
