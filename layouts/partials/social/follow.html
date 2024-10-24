@@ -6,7 +6,7 @@
 {{/* This here is an ugly workaround for GoHugo's missing sortByArray feature.
    Let's cache it so it does not take away too much time.
    PS: It's also a couple of years old, so maybe there is a better solution by now. */}}
-{{- $setups = partials.IncludeCached "func/sortNetworks.html" (dict "networks" $networks "setups" $setups) "social-follow" -}}
+{{- $setups = partials.IncludeCached "func/social/sortNetworks.html" (dict "networks" $networks "setups" $setups) "social-follow" -}}
 
 <div class="ananke-socials">
   {{- range $setups -}}
