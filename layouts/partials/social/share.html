@@ -33,7 +33,7 @@
         {{- continue -}}
         {{/* @todo notification into CLI that a network is configured but not supported */}}
       {{- end -}}
-      {{- $options := (dict "context" page "setup" $setup) }}
+      {{- $options := (dict "context" $context "setup" $setup) }}
       {{- $href := partialCached "func/getShareLink.html" $options $options -}}
       <a href="{{ $href }}"
         class="ananke-social-link {{ $setup.slug }} no-underline"
@@ -60,30 +60,3 @@
   </div>
 
 {{- end -}} {{/* if eq "true" $disabled */}}
-
-{{ define "partials/func/getShareLink.html" }}
-  {{- $context := .context -}}
-  {{- $setup := .setup -}}
-  {{- $separator := "&" -}}
-  {{- $title := $context.Title | transform.HTMLEscape -}}
-  {{- $description := $context.Summary | transform.Plainify | transform.HTMLEscape -}}
-  {{- $permalink := $context.Permalink | transform.HTMLEscape -}}
-  {{- with $setup.separator -}}
-    {{- $separator = . -}}
-  {{- end -}}
-  {{- $link := fmt.Printf "%s%s" $setup.link "?" -}}
-  {{- range $key, $value := $setup.particles -}}
-    {{- if compare.Eq $key "params" -}}
-      {{- $link = fmt.Printf "%s%s%s" $permalink $separator $value -}}
-    {{- else -}}
-      {{- if compare.Eq $value "description" -}}
-        {{- $link = fmt.Printf "%s%s%s" $link $separator (collections.Querify $key $description) -}}
-      {{- else if compare.Eq $value "title" -}}
-        {{- $link = fmt.Printf "%s%s%s" $link $separator (collections.Querify $key $title) -}}
-      {{- else if compare.Eq $value "permalink" -}}
-        {{- $link = fmt.Printf "%s%s%s" $link $separator (collections.Querify $key $permalink) -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-  {{- return $link -}}
-{{ end }}
