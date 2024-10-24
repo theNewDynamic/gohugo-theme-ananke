@@ -1,4 +1,22 @@
 # Changelog
+## [2.10.1-prerelease.5](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.4...v2.10.1-prerelease.5) (2024-10-24)
+
+
+### Documentation
+
+* **fix:** update theme.toml with min version and authors ([ae14ccf](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/ae14ccf4072c13069e1f28e3c5f39bce4b917885))
+
+
+### Theme
+
+* **fix:** add transform.Plainify to the summary body content of the share links ([#758](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/758)) ([2cfb09e](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/2cfb09e9a3aa720b902535a5bdf3641bcd8a903f))
+* **fix:** paths to social func partials ([1bcc471](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1bcc471e003643c5b72a2fad6c1024b16e829233))
+
+
+### Configuration
+
+* **fix:** no default networks, move networks config to exampleSite ([396d013](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/396d0138ace7c53a6378711dcd5570099bfa0b95))
+
 ## [2.10.1-prerelease.4](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.3...v2.10.1-prerelease.4) (2024-10-23)
 
 
