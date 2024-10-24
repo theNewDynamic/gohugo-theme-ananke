@@ -3,21 +3,23 @@ icon_path = "ananke/socials/%s.svg"
 
 [ananke.social.follow]
 new_window_icon = false # show a little "opens in new window" icon next to the link
-networks = [
-  "facebook",
-  "bluesky",
-  "linkedin"
-]
+# add networks to this list in your local config to enable them, remove them to disable them.
+# networks = [
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
 
 [ananke.social.share]
-icons = true
-sharetext = true
-networks = [
-  "email",
-  "facebook",
-  "bluesky",
-  "linkedin"
-]
+icons = true # show icons for each share link
+sharetext = true # show the share text
+# add networks to this list in your local config to enable them, remove them to disable them.
+# networks = [
+#   "email",
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
 
 # social media network setups
 [[ananke.social.networks]]

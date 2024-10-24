@@ -1,10 +1,13 @@
 # Ananke, A theme for [Hugo](https://gohugo.io/), a framework for building websites
 
+> [!WARNING]  
+> Parts of this documentation, such as the sections related to the production environment, are currently a work in progress. This is due to recent changes and updates in the theme. We are actively working on providing complete and up-to-date guidance. Thank you for your patience.
+
 The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
 
 ![screenshot](https://raw.githubusercontent.com/budparr/gohugo-theme-ananke/master/images/screenshot.png)
 
-[DEMO](https://gohugo-ananke-theme-demo.netlify.app/)
+[DEMO](https://ananke-theme.netlify.app/)
 
 Features
 
