@@ -10,7 +10,7 @@
 {{- $link := fmt.Printf "%s%s" $setup.link "?" -}}
 {{- range $key, $value := $setup.particles -}}
   {{- if compare.Eq $key "params" -}}
-    {{- $link = fmt.Printf "%s%s%s" $permalink $separator $value -}}
+    {{- $link = fmt.Printf "%s%s%s" $link $separator $value -}}
   {{- else -}}
     {{- if compare.Eq $value "description" -}}
       {{- $link = fmt.Printf "%s%s%s" $link $separator (collections.Querify $key $description) -}}
