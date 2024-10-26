@@ -1,40 +1,96 @@
 ---
 name: Report a bug
 about: Use this template to report a bug.
-title: "bug: ###"
+title: "bug: "
 labels: status:unconfirmed
 assignees: davidsneighbour
 ---
 
-Issue tracker is **ONLY** used for reporting bugs. New features should be discussed on our slack channel. Please use [stackoverflow](https://stackoverflow.com) for supporting issues.
+<!---
 
-<!--- Provide a general summary of the issue in the Title above -->
+This issue tracker is **ONLY** used for reporting bugs. New features should be discussed on [our discussion forum](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/categories/3-ideas).
+
+Could you please read through these comments and add your responses? Could you remove the comments when you are done?
+
+Provide a general summary of the issue in the Title above and prefix it with `bug: `
+
+-->
 
 ## Expected Behavior
-<!--- Tell us what should happen -->
+
+<!---
+
+Could you tell us what you did and what you expected to happen?
+
+-->
 
 ## Current Behavior
-<!--- Tell us what happens instead of the expected behavior -->
+
+<!---
+
+Could you tell us what happens instead of the expected behavior?
+
+-->
 
 ## Possible Solution
-<!--- Not obligatory, but suggest a fix/reason for the bug, -->
+
+<!---
+
+It's not mandatory, but please let us know if you know the reason for this issue or if you see a fix.
+
+-->
 
 ## Steps to Reproduce
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
-<!--- reproduce this bug. Include code to reproduce, if relevant -->
+
+<!---
+
+Provide a link to a live example or an unambiguous set of steps to reproduce this bug.
+Include code to reproduce, if relevant.
+Could you add screenshots if they help?
+Could you make us understand what is going on?
+
+-->
+
 1.
 2.
 3.
 4.
 
-## Context (Environment)
-<!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Providing context helps us come up with a solution that is most useful in the real world -->
+## The bigger picture (we need context)
 
-<!--- Provide a general summary of the issue in the Title above -->
+<!---
 
-## Detailed Description
-<!--- Provide a detailed description of the change or addition you are proposing -->
+What is your operating system (Name, Version, is everything up to date?)
 
-## Possible Implementation
-<!--- Not obligatory, but suggest an idea for implementing addition or change -->
+-->
+
+<!---
+
+What is the output of the following commands:
+
+- `hugo version`
+- `go version`
+- `git submodule status` (if you are running Ananke as a submodule)
+- `hugo mod graph` (if you are running Ananke as a module)
+
+-->
+
+<!---
+
+Keep the following HTML
+
+-->
+
+<details><summary>Hugo Config</summary>
+<p>
+
+<!---
+
+Run `hugo config --format toml` inside of your repository (where you would
+run `hugo server`) and copy the _complete_ output right after this closing
+comment tag, between <p> and </p>.
+
+-->
+
+</p>
+</details>
