@@ -1,4 +1,11 @@
 # Changelog
+## [2.11.2](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.11.1...v2.11.2) (2024-10-27)
+
+
+### Chore
+
+* **release:** v2.11.1 ([065de4e](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/065de4e1963100ab7c4241adab64d9e6647124a0))
+
 ## [2.11.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.10.1-prerelease.6...v2.11.0) (2024-10-24)
 
 
