@@ -113,7 +113,7 @@ For any page or post you can add a featured image by including the local path in
 
 #### Featured image as Page Resources
 
-If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath incudes either `cover` or `feature`
+If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath includes either `cover` or `feature`
 
 #### Other hero settings
 
@@ -123,11 +123,11 @@ You don't need an image though. The default background color is black, but you c
 
 example: `background_color_class = "bg-blue"` or `background_color_class = "bg-gray"`
 
-The default fitting and alignment for th featured image is `cover bg-top`, but can be changed using the `featured_image_class`.  Choose an fitting and alignment style for the featured image using tachyons classes such as "cover|contain" for fitting and "bg-top|bg-center|bg-bottom" for alignment.
+The default fitting and alignment for the featured image is `cover bg-top`, but can be changed using the `featured_image_class`.  Choose a fitting and alignment style for the featured image using Tachyons classes such as "cover|contain" for fitting and "bg-top|bg-center|bg-bottom" for alignment.
 
 example: `featured_image_class = "cover bg-center"` or `featured_image_class = "contain bg-top"`
 
-The default cover backdrop for the featured image is `bg-black-60`, but can be changed using the `cover_dimming_class`.  Choose a color dimming class for the page or size header from any on the [Tachyons](https://tachyons.io/docs/themes/skins/) library site, preface it with "bg-" and add the value such as "-X0" where X is in [1,9]
+The default cover backdrop for the featured image is `bg-black-60`, but can be changed using the `cover_dimming_class`.  Choose a color dimming class for the page or site header from any on the [Tachyons](https://tachyons.io/docs/themes/skins/) library site, preface it with "bg-" and add the value such as "-X0" where X is in [1,9]
 
 example: `cover_dimming_class = "bg-black-20"` or `cover_dimming_class = "bg-white-40"`
 
@@ -201,7 +201,7 @@ _n.b. in future versions we will likely separate the typeface and other body cla
 
 ### CSS
 
-Ananke stylesheet is built with Hugo Pipes's [Asset Bundling](https://gohugo.io/hugo-pipes/bundling/#readout) alone to maximize compatibiliy. The theme simply bundles its several files into one minified and fingerprinted (in production) CSS file.
+Ananke stylesheet is built with Hugo Pipes's [Asset Bundling](https://gohugo.io/hugo-pipes/bundling/#readout) alone to maximize compatibility. The theme simply bundles its several files into one minified and fingerprinted (in production) CSS file.
 
 Ananke uses [Tachyons.io](https://tachyons.io/) utility class library.
 
