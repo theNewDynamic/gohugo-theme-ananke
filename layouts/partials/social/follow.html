@@ -13,7 +13,7 @@
     {{- $setup := . -}}
     {{- $network := $setup.slug -}}
     {{- $profile := index $config $network -}}
-    {{- $rel := $setup.rel | default "" -}}
+    {{- $rel := $profile.rel | default "" -}}
     {{- $label := $profile.label | default $setup.label -}}
 
     {{- $link := (printf $setup.profile $profile.username) -}}
