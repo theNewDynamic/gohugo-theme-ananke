@@ -1,25 +1,28 @@
-**IMPORTANT: Please do not create a Pull Request without creating an issue first.**
+<!---
 
-*Any change needs to be discussed before proceeding. Not doing so may result in the rejection of the pull request without much notice.*
+Add the issue number that is discussed and fixed by this PR (In the form
+`Closes #123`). If this PR doesn't fix an issue, remove the line below. This will
+also lead to us not treating this PR as an important one. It might be closed
+without a review.
 
-Please provide enough information so that others can review your pull request:
+If there is no issue associated with this PR and you are not a maintainer of
+this repository, your PR might be closed without a review.
 
-<!-- You can skip this if you're fixing a typo or adding an app to the Showcase. -->
+-->
 
-Explain the **details** for making this change. What existing problem does the pull request solve?
+Closes ####
 
-<!-- Example: When "Adding a function to do X", explain why it is necessary to have a way to do X. -->
+<!---
 
-**Test plan (required)**
+Explain what this PR does and what existing problem it solves. If this PR is a
+work in progress, please prefix the title with [WIP].
 
-Demonstrate the code is solid. Example: The exact commands you ran and their output, screenshots / videos if the pull request changes UI.
+-->
 
-<!-- Make sure tests pass on both Travis and Circle CI. -->
+<!--
 
-**Code formatting**
+Make sure that the code is readable and well-documented. If you have added new
+functionality, please add the necessary documentation.
+If testing of the new functionality is possible, please add tests.
 
-<!-- See the simple style guide. -->
-
-**Closing issues**
-
-Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes.
+-->
