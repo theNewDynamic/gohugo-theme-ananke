@@ -1,6 +1,6 @@
 # Ananke, A theme for [Hugo](https://gohugo.io/), a framework for building websites
 
-> [!WARNING]  
+> [!WARNING]
 > Parts of this documentation, such as the sections related to the production environment, are currently a work in progress. This is due to recent changes and updates in the theme. We are actively working on providing complete and up-to-date guidance. Thank you for your patience.
 
 The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
@@ -30,7 +30,6 @@ Also includes examples of Hugo Features or Functions:
 - Hugo built-in menu
 - i18n
 - `with`
-- `HUGO_ENV`
 - `first`
 - `after`
 - `sort`
@@ -291,28 +290,6 @@ hugo server
 ```
 
 Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
-
-## Production
-
-To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
-
-```bash
-HUGO_ENV=production hugo
-```
-
-Note: The above command will not work on Windows. If you are running a Windows OS, use the below command:
-
-```bash
-set HUGO_ENV=production
-hugo
-```
-
-Or in Powershell:
-
-```bash
-$ENV:HUGO_ENV = 'production'
-hugo
-```
 
 ## Contributing
 
