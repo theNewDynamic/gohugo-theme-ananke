@@ -1,27 +1,30 @@
 title = "Notre-Dame de Paris"
 baseURL = "https://gohugo-theme-ananke.pages.dev"
-languageCode = "en-us"
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 resourceDir = "../resources"
 
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-googleAnalytics = ""
+defaultContentLanguage = "en"
+sectionPagesMenu = "main"
 enableRobotsTXT = true
+
+[services.googleAnalytics]
+id = ''
 
 [pagination]
 pagerSize = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 
-[languages]
 [languages.en]
-title = "Ananke"
-weight = 1
 contentDir = "content/en"
+languageCode = 'en-US'
+weight = 1
+title = "Ananke"
 # languageDirection = 'rtl' for Right-To-Left languages
+
 [languages.fr]
-title = "Ananke Fr"
-weight = 2
 contentDir = "content/fr"
+languageCode = 'fr-FR'
+weight = 2
+title = "Ananke Fr"
 
 [sitemap]
 changefreq = "monthly"
@@ -57,7 +60,6 @@ networks = [
   "linkedin"
 ]
 
-[params.ananke.social]
 [params.ananke.social.facebook]
 username = "patrick.kollitsch"
 # profilelink = "https://www.facebook.com/patrick.kollitsch"
