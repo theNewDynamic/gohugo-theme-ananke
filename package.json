@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@davidsneighbour/markdownlint-config": "^2024.4.6",
-    "@davidsneighbour/release-config": "2024.4.6",
+    "@davidsneighbour/release-config": "2024.4.8",
     "@davidsneighbour/tools": "2024.4.6"
   },
   "scripts": {
