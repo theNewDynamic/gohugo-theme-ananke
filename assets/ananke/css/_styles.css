@@ -1,4 +1,13 @@
 /* Put your custom styles here and run `npm start` from the "src" directory on */
+img.max400 {
+  display: block;
+  max-height: 500px;
+}
+
+em {
+  display: block;
+  text-align: center;
+}
 
 #TableOfContents ul li {
   margin-bottom: 1em;
@@ -15,6 +24,6 @@
 
 }
 
-.nested-links a{
+.nested-links a {
   overflow-wrap: break-word;
 }
