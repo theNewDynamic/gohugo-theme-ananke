@@ -1,6 +1,7 @@
 # OS
 .DS_Store
 Thumbs.db
+.env
 
 # IDEs
 .buildpath
@@ -26,6 +27,7 @@ npm-debug.log
 /src/client.config.json
 /styleguide/
 /docs/
+cache
 
 /junit.xml
 partials/structure/stylesheet.html
