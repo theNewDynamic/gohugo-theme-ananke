@@ -4,6 +4,7 @@
     </article>
     {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
     {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+    {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
     
     {{/* Check to see if the section is defined for ranging through it */}}
     {{range ($mainSections)}}
@@ -12,7 +13,7 @@
     {{/* Create a variable with that section to use in multiple places. */}}
     {{ $section := where $.Site.RegularPages "Section" "in" $section_name }}
     {{ $section_count := len $section }}
-    {{ if ge $section_count 1 }}
+    {{ if and ($show_recent_posts) (ge $section_count 1) }}
       <div class="pa3 pa4-ns w-100 w-70-ns center">
         {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
         {{ with $.Site.GetPage "section" $section_name }}

@@ -1,3 +1,6 @@
+[ananke]
+show_recent_posts = true # show recent posts on the homepage
+
 [ananke.social]
 icon_path = "ananke/socials/%s.svg"
 
