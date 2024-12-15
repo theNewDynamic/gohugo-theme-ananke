@@ -24,7 +24,7 @@
 
 {{- $config := site.Params.ananke.social -}}
 {{- $networks := $config.follow.networks -}}
-{{- $setups := (collections.Where $config.networks  "slug" "in" $networks) }}
+{{- $setups := (collections.Where $config.networks "slug" "in" $networks) }}
 {{ with $setups }}
   {{ $socials_rules := slice }}
   {{ range $service := . }}

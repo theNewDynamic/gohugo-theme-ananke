@@ -10,11 +10,10 @@
   {{- $title := $context.Title -}}
   {{- $url := printf "%s" $context.Permalink | absLangURL -}}
 
-  {{- $config := site.Params.ananke.social -}}
   {{- $networks := $config.share.networks -}}
   {{- $hasLabel := $config.share.sharetext | default "true" -}}
   {{- $hasIcon := $config.share.icons | default "true" -}}
-  {{- $setups := (collections.Where $config.networks  "slug" "in" $networks) -}}
+  {{- $setups := (collections.Where $config.networks "slug" "in" $networks) -}}
 
   {{/* This here is an ugly workaround for GoHugo's missing sortByArray feature.
     Let's cache it so it does not take away too much time.

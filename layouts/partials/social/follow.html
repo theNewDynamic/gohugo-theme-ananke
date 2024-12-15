@@ -2,7 +2,7 @@
 
 {{- $config := site.Params.ananke.social -}}
 {{- $networks := $config.follow.networks -}}
-{{- $setups := (collections.Where $config.networks  "slug" "in" $networks) -}}
+{{- $setups := (collections.Where $config.networks "slug" "in" $networks) -}}
 {{/* This here is an ugly workaround for GoHugo's missing sortByArray feature.
    Let's cache it so it does not take away too much time.
    PS: It's also a couple of years old, so maybe there is a better solution by now. */}}
