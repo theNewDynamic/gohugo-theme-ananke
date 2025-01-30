@@ -1,0 +1,37 @@
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+# These owners will be the default owners for everything in the repo.
+# * <@insert_github_username>
+#
+# Order is important. The last matching pattern has the most precedence.
+
+# This file is also being managed automatically by the gitown tool.
+* @davidsneighbour
+
+# i18n - automatically created
+/i18n/ca.toml @mrodriguezestivill
+/i18n/es.toml @eddex @hello @jerryzihye @regisphilibert @melvinsalasrivera @mrodriguezestivill @sarahrhgrefalda
+/i18n/pl.toml @izikeros
+/i18n/cs.toml @petr.vala
+/i18n/bg.toml @foxbg @jerryzihye @sarahrhgrefalda
+/i18n/he.toml @MeirKriheli
+/i18n/hi.toml @neerajsharma.9
+/i18n/fi.toml @github
+/i18n/ru.toml @365029+uonick @agrrh @eddex @jerryzihye @sarahrhgrefalda
+/i18n/tr.toml @sarahrhgrefalda @yagizhan49
+/i18n/en.toml @eddex @jan.steinke @jerryzihye @kinski @regisphilibert @sarahrhgrefalda
+/i18n/zh-tw.toml @peter-jerry-ye @s104213083 @sarahrhgrefalda
+/i18n/uk.toml @jerryzihye @mivanchenko @sarahrhgrefalda
+/i18n/nl.toml @eddex @jerryzihye @johan.vervloet @sarahrhgrefalda
+/i18n/fr.toml @charles @eddex @jerryzihye @login @manu @sarahrhgrefalda
+/i18n/oc.toml @59049879+ensag-dev
+/i18n/sv.toml @36725726+besynnerlig @jerryzihye @sarahrhgrefalda @thenajnth
+/i18n/it.toml @alainpoeta @jerryzihye @login @sarahrhgrefalda
+/i18n/no.toml @login @sarahrhgrefalda @sh @xaner4
+/i18n/pt.toml @37813631+eriicf @eddex @jerryzihye @lazarodm @login @sarahrhgrefalda
+/i18n/de.toml @46083627+thomham @dominik.infuehr @eddex @jan.steinke @jerryzihye @kinski @login @sarahrhgrefalda
+/i18n/hu.toml @73439774+winux1 @sarahrhgrefalda
+/i18n/ja.toml @86867075+ssatosays
+/i18n/zh.toml @435878393 @eddex @jerryzihye @jerryzihye @o18382 @sarahrhgrefalda
+/i18n/id.toml @63356065+fitrarhm
+# i18n - end
