@@ -1,5 +1,6 @@
 # local ignored files
 cache/
+.wireit
 
 # Created by https://www.toptal.com/developers/gitignore/api/hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode,go
 # Edit at https://www.toptal.com/developers/gitignore?templates=hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode,go
