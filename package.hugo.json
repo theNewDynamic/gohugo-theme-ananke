@@ -29,7 +29,7 @@
  ],
  "license": "MIT",
  "main": "index.js",
- "name": "gohugo-theme-ananke",
+ "name": "@thenewdynamic/gohugo-theme-ananke",
  "repository": {
   "type": "git",
   "url": "git+https://github.com/theNewDynamic/gohugo-theme-ananke.git"

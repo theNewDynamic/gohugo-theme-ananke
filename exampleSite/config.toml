@@ -1,6 +1,6 @@
 title = "Notre-Dame de Paris"
 baseURL = "https://gohugo-theme-ananke.pages.dev"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
 resourceDir = "../resources"
 
 defaultContentLanguage = "en"
@@ -57,7 +57,8 @@ networks = [
 networks = [
   "facebook",
   "bluesky",
-  "linkedin"
+  "linkedin",
+  "wikipedia"
 ]
 
 [params.ananke.social.facebook]
@@ -69,3 +70,13 @@ username = "patrickkollitsch"
 
 [params.ananke.social.bluesky]
 username = "kollitsch.dev"
+
+[params.ananke.social.wikipedia]
+username = "wikipedia_article"
+
+[params.ananke.social.networks.wikipedia]
+slug = "wikipedia"
+label = "Wikipedia"
+color = "#0645ad"
+profile = "https://en.wikipedia.org/wiki/%s"
+icon = "wikipedia-w"

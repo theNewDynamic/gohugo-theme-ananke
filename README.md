@@ -5,7 +5,7 @@
 
 The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
 
-![screenshot](https://raw.githubusercontent.com/budparr/gohugo-theme-ananke/master/images/screenshot.png)
+![screenshot](images/screenshot.png)
 
 [DEMO](https://ananke-theme.netlify.app/)
 
@@ -67,7 +67,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 2. Add the theme's repo to your `config.toml`:
 
    ```toml
-   theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+   theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
    ```
 
 ### As Git Submodule
