@@ -20,7 +20,9 @@
       </h1>
       {{ with .Params.author | default .Site.Params.author }}
       <p class="tracked">
-        {{ $.Render "by" }} <strong>
+        {{- if eq .Lang "de" "en" "es" "fr" "it" "no" "pt" -}}
+          {{- i18n "by" -}}
+        {{ end -}} <strong>
         {{- if reflect.IsSlice . -}}
             {{ delimit . ", " | markdownify }}
         {{- else -}}
