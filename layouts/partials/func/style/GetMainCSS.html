@@ -17,7 +17,7 @@
 {{ $assets_to_concat := slice }}
 {{/* We add locale css files to the slice in the proper order */}}
 {{ range slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
-  {{ with partialCached "func/style/GetResource" . . }}
+  {{ with partialCached "func/style/GetResource.html" . . }}
     {{ $assets_to_concat = $assets_to_concat | append . }}
   {{ end }}
 {{ end }}
@@ -47,13 +47,13 @@
 css asset directory we (unless condition below) add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
   {{ range . }}
-    {{ with partialCached "func/style/GetResource" . . }}
+    {{ with partialCached "func/style/GetResource.html" . . }}
       {{ if eq .MediaType.SubType "x-scss" "x-sass" "scss" "sass" }}
         {{ if hugo.IsExtended }}
           {{/* as we cannot concatenate styles of different types, we sass/scss to be transformed to css beforehand */}}
           {{ $assets_to_concat = $assets_to_concat | append (. | css.Sass) }}
         {{ else }}
-          {{ partial "func/warn" (printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
+          {{ partial "func/warn.html" (printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
         {{ end }}
       {{ else }}
         {{ $assets_to_concat = $assets_to_concat | append . }}
