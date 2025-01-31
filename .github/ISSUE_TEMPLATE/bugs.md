@@ -8,9 +8,13 @@ assignees: davidsneighbour
 
 <!---
 
-This issue tracker is **ONLY** used for reporting bugs. New features should be discussed on [our discussion forum](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/categories/3-ideas).
+This issue tracker is **ONLY** used for reporting bugs.
 
-Could you please read through these comments and add your responses? Could you remove the comments when you are done?
+New features should be discussed [in the ideas section of our discussion forum](/discussions/categories/3-ideas).
+
+Build and deploy issues should be discussed [in the Q&A section of our discussion forum](/discussions/categories/2-q-a-support).
+
+Please read through these comments and add your responses and remove the comments when you are done.
 
 Provide a general summary of the issue in the Title above and prefix it with `bug: `
 
