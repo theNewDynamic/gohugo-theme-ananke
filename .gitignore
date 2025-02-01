@@ -1,9 +1,11 @@
 # local ignored files
-cache/
+cache
 .wireit
+public
+.hugo_build.lock
 
-# Created by https://www.toptal.com/developers/gitignore/api/hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode,go
-# Edit at https://www.toptal.com/developers/gitignore?templates=hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode,go
+# Created by https://www.toptal.com/developers/gitignore/api/go,hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=go,hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode
 
 ### Go ###
 # If you prefer the allow list template instead of the deny list, see community template:
@@ -66,6 +68,7 @@ hugo.linux
 
 # Icon must end with two \r
 Icon
+
 
 # Thumbnails
 ._*
@@ -363,7 +366,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode,go
-
-public/
-.hugo_build.lock
+# End of https://www.toptal.com/developers/gitignore/api/go,hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode
