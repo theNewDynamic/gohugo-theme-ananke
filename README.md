@@ -11,38 +11,38 @@ The intent of this theme is to provide a solid starting place for Hugo sites wit
 
 Features
 
-- Responsive
-- Accessible
-- Contact form
-- Custom Robots.txt (changes values based on environment)
-- Internal templates for meta data, google analytics, and DISQUS or COMMENTO comments
-- RSS Discovery
-- Table of Contents (must declare `toc: true` in post parameter)
-- Stackbit configuration ([Stackbit](https://www.stackbit.com))
+* Responsive
+* Accessible
+* Contact form
+* Custom Robots.txt (changes values based on environment)
+* Internal templates for meta data, google analytics, and DISQUS or COMMENTO comments
+* RSS Discovery
+* Table of Contents (must declare `toc: true` in post parameter)
+* Stackbit configuration ([Stackbit](https://www.stackbit.com))
 
 Also includes examples of Hugo Features or Functions:
 
-- Pagination (internal template)
-- Taxonomies
-- Archetypes
-- Custom shortcode
-- Related content
-- Hugo built-in menu
-- i18n
-- `with`
-- `first`
-- `after`
-- `sort`
-- Site LanguageCode
-- `where`
-- Content Views
-- Partials
-- Template layouts (type "post" uses a special list template, single template, and a content view)
-- Tags
-- `len`
-- Conditionals
-- `ge` (greater than or equal to)
-- `.Site.Params.mainSections` to avoid hard-coding "blog," etc. [[release note](https://github.com/gohugoio/hugo/blob/66ec6305f6cb450ddf9c489854146bac02f7dca1/docs/content/meta/release-notes.md#enhancements)]
+* Pagination (internal template)
+* Taxonomies
+* Archetypes
+* Custom shortcode
+* Related content
+* Hugo built-in menu
+* i18n
+* `with`
+* `first`
+* `after`
+* `sort`
+* Site LanguageCode
+* `where`
+* Content Views
+* Partials
+* Template layouts (type "post" uses a special list template, single template, and a content view)
+* Tags
+* `len`
+* Conditionals
+* `ge` (greater than or equal to)
+* `.Site.Params.mainSections` to avoid hard-coding "blog," etc. [[release note](https://github.com/gohugoio/hugo/blob/66ec6305f6cb450ddf9c489854146bac02f7dca1/docs/content/meta/release-notes.md#enhancements)]
 
 This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](https://tachyons.io/).
 
@@ -92,14 +92,14 @@ Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-t
 
 To enable comments, add following to your config file:
 
-- DISQUS:
+* DISQUS:
 
   ```toml
   [services.disqus]
     shortname = 'YOURSHORTNAME'
   ```
 
-- COMMENTO:
+* COMMENTO:
 
   ```toml
   [params]
@@ -224,7 +224,7 @@ custom_css = ["custom.css","special.css"]
 
 __IMPORTANT__: Files registered through the `custom_css` array, while unlimited in number, must be of the same type (Ex: all `scss` or all `css`)
 
-__Note on retrocompatibiliy for custom css__: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as <link> requests.
+__Note on retrocompatibiliy for custom css__: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as `<link>` requests.
 
 ### Show Reading Time and Word Count
 
@@ -293,6 +293,6 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 ## Contributing
 
-If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
+If you find a bug feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know. If you are having issues setting up your site with the theme, or have an idea for a feature, please use the [discussions](https://github.com/theNewDynamic/gohugo-theme-ananke/discussion) for support.
 
 Join me on my [ananke-theme Discord channel](https://discord.gg/MykHvyU5P3) for direct support.
