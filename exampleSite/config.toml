@@ -72,7 +72,7 @@ username = "patrickkollitsch"
 username = "kollitsch.dev"
 
 [params.ananke.social.wikipedia]
-username = "wikipedia_article"
+username = "Hugo_(software)"
 
 [params.ananke.social.networks.wikipedia]
 slug = "wikipedia"
