@@ -1,4 +1,11 @@
 # Changelog
+## [2.12.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.11.3...v2.12.0) (2025-02-09)
+
+
+### Build System
+
+* **fix:** add release:minor script ([0e25604](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0e25604ceb6b8c69f5e21280927691e6b06bf41b))
+
 ## [2.11.3](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.11.2...v2.11.3) (2025-02-09)
 
 
