@@ -4,6 +4,7 @@
 {{ end }}
 
 {{ define "main" }}
+  {{ $page := .}}
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
     <header class="mt4 w-100">
@@ -20,7 +21,7 @@
       </h1>
       {{ with .Params.author | default .Site.Params.author }}
       <p class="tracked">
-        {{- if eq .Lang "de" "en" "es" "fr" "it" "no" "pt" -}}
+        {{- if eq $page.Language "de" "en" "es" "fr" "it" "no" "pt" -}}
           {{- i18n "by" -}}
         {{ end -}} <strong>
         {{- if reflect.IsSlice . -}}

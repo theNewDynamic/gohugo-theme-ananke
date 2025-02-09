@@ -4,6 +4,7 @@ description: "Esmeralda"
 featured_image: "/images/esmeralda.jpg"
 tags: []
 title: "Chapter VI: Esmeralda"
+author: "Victor Hugo"
 ---
 We are delighted to be able to inform the reader, that during the whole of
 this scene, Gringoire and his piece had stood firm. His actors, spurred on

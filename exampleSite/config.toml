@@ -33,7 +33,7 @@ filename = "sitemap.xml"
 
 [params]
 text_color = ""
-author = ""
+author = "Victor Hugo" # default author, override via `author` in a posts front matter
 favicon = ""
 site_logo = ""
 description = "The last theme you'll ever need. Maybe."
