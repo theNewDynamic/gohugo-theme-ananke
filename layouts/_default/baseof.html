@@ -16,13 +16,11 @@
       <meta name="robots" content="noindex, nofollow">
     {{ end }}
     {{ with .Params.author | default .Site.Params.author }}
-      <meta name="author" content = "
-        {{- if reflect.IsSlice . -}}
-          {{ delimit . ", " | plainify }}
-        {{- else -}}
-          {{ . | plainify }}
-        {{- end -}}
-      ">
+      {{- $author := . -}}
+      {{- if reflect.IsSlice . -}}
+        {{- $author = delimit . ", " | plainify -}}
+      {{- end -}}
+      <meta name="author" content="{{ $author }}">
     {{ end }}
 
     {{ partial "site-style.html" . }}
