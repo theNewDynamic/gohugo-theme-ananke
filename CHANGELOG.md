@@ -1,4 +1,83 @@
 # Changelog
+## [2.11.3](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.11.2...v2.11.3) (2025-02-09)
+
+
+### Content
+
+* **fix:** add Netlify demo site to theme.toml ([33e51d6](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/33e51d6b58f0a932dc6f0c1cb3ae2ec687c359c8))
+* **fix:** use Hugo page on Wikipedia for sample link ([50996e8](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/50996e875fc4e9f3a6110e3863357689f4f9cb90))
+
+
+### Documentation
+
+* **fix:** fix Formspree free plan description ([#774](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/774)) ([f5a5599](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/f5a55994e27657525ec4b7d795700b16b16145fe))
+* **fix:** fix markdown in README.md ([6454183](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/64541839631299339912c6f364705693d781f940))
+* **fix:** remove ref to 'Production' section in README ([#778](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/778)) ([2247bc5](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/2247bc582ccda9babd13d5db52a91ebe55458fb0))
+* **fix:** typos ([#775](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/775)) ([61c3ec6](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/61c3ec6fd4664b516c9955ef359649791c0701bc))
+* **fix:** update wording in README.md ([324da65](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/324da65cca35b864a7f1619a7cfb6f748a05aa29))
+* remove comments about HUGO_ENV ([e726c8b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e726c8b70f6a84812d998da4436765827483e602))
+
+
+### Theme
+
+* **fix:** add author bylines and fix author generation ([3fc0dba](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/3fc0dba4012108749f433da017d9e02cf64b6503)), closes [#623](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/623)
+* **fix:** add show_recent_posts parameter to stop showing recent posts on index ([#795](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/795)) ([b06949e](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/b06949eb2d8c8196527aab93fe92898fa56c9bc1)), closes [#123](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/123) [#794](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/794)
+* **fix:** move by.html into single.html ([f672979](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/f6729791492796b322ae57b62f8047f3963c1bdf))
+* **fix:** remove additional config load and some refactoring ([1f4ac20](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1f4ac20f4f5be825c0cb4f79d90ab6c8539224f3))
+* **fix:** rework of the way the main sections for index.html are calculated ([40fea59](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/40fea59c8b5474ccc60750bed159032b2a55ca28)), closes [#686](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/686)
+* **fix:** social follow/share using new config ([#821](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/821)) ([e64f74c](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e64f74c4929edbd8336d66fd81bdd36aa79828ee)), closes [#808](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/808)
+* **fix:** update module paths to v2 ([4c02c19](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/4c02c19e519fbe75e8de1c51f07274a68eacefe6))
+
+
+### Refactors
+
+* **codestyle:** rewrite author meta tag generation ([2bd232b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/2bd232b5ec387fc5375e47ea942aec1444e69388))
+* using full file names for partials ([5ab0adb](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/5ab0adb0e1c5ec37b82419aeac7eecd6c2612a68))
+
+
+### Chore
+
+* cleanup workspace configuration ([d6ef8f2](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d6ef8f2b758d8f8bf24d51257dcea46a2c0e671a))
+* **config:** update dependabot to monthly runs ([6a77b14](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/6a77b14638ca18d48f87d311a0de276d16f4156f))
+* **config:** update gitignore ([1839b4f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1839b4fe3fa370dfa8c7f1eb84faa55079a4954f))
+* **fix:** update PR template ([02994de](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/02994de6b0f66560c9586415d88c4b2b4243dd1c))
+* remove go.sum from exampleSite ([1f83746](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1f8374642fe62573cbf0f98b4e9ceef68f039daa))
+* **setup:** set GO_VERSION to 1.21 ([0ba75ea](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0ba75ea1e50ad5ddcaeb25f02bef64448ad42891))
+* **setup:** update gitignore file ([799886d](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/799886d396100695c11168b83c253d5d6ebc678f))
+* **setup:** update issue template ([b119a21](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/b119a21663b0df4688ceb5d18a2eed30c2d88974))
+* **setup:** update issue templates ([294ab0b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/294ab0b04b37506713bb776d70634010e95c875a))
+
+
+### Configuration
+
+* improve configuration for example site ([#786](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/786)) ([8d55b50](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/8d55b508d3811e07d5fa5dfae08387537cf8e2d0))
+
+
+### Build System
+
+* **config:** add .nvmrc ([78d6b6f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/78d6b6fd331fd3681ddf84de71b7b48f6fbe9fac))
+* **config:** update gitignore with Hugo generated files ([a276493](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a2764932a6bb756b565f02fc559dd61144881b3c))
+* **deps-dev:** bump @davidsneighbour/markdownlint-config from 2024.4.6 to 2024.4.8 ([#788](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/788)) ([c708f0d](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/c708f0d15eafb163f289d7c50d99f7fd24ca4aea))
+* **deps-dev:** bump @davidsneighbour/release-config from 2024.4.6 to 2024.4.8 ([#787](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/787)) ([dfbaa52](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/dfbaa5289f85503532f8f77d555c59906ce0d7de)), closes [#1676](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1676) [#1670](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1670) [#1658](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1658) [#1657](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1657) [#1656](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1656)
+* **deps-dev:** bump @davidsneighbour/tools from 2024.4.6 to 2024.4.8 ([#789](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/789)) ([bedc2ec](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/bedc2ec05f02a102207afcac34adb54f84d27d0e))
+* **deps:** bump postcss from 8.4.47 to 8.4.49 ([#793](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/793)) ([40c8d5f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/40c8d5f5eea3034ce80b7c86d705da1027b638c4)), closes [#1983](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1983) [#1980](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1980)
+* **deps:** bump postcss-preset-env from 10.0.8 to 10.0.9 ([#790](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/790)) ([5ddbcd3](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/5ddbcd3da9c649ceda29796f601cf550339424d6)), closes [/github.com/csstools/postcss-plugins/tree/main/packages/css-tokenizer/CHANGELOG.md#303](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/css-tokenizer/CHANGELOG.md/issues/303)
+* **deps:** bump postcss-preset-env from 10.0.9 to 10.1.0 ([#792](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/792)) ([8031d99](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/8031d999a4ef2b0dfc260d4ee789270a3c4e80d0)), closes [/github.com/csstools/postcss-plugins/tree/main/packages/css-calc/CHANGELOG.md#210](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/css-calc/CHANGELOG.md/issues/210)
+* **deps:** update dependencies ([891147f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/891147fc3108a08c64af30dd8085a2df818832b4))
+* **deps:** update dependencies ([600bdda](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/600bddab7cd7dc6e4032b531c65779ae249dfd5b))
+* **deps:** update dependencies ([9c30c19](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/9c30c1974e7b219cc598381ed93a974ad696b02e))
+* **feat:** add discord notification for new releases ([819f673](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/819f6730370988d3e0524a4f000550d153b2f534))
+* **fix:** log server output into log file ([f5eaa5f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/f5eaa5f8f79ff8d942a2cbcc0ac59d13a4665f4b))
+* **fix:** remove obsolete CLI parameters from server commands ([1e84edf](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1e84edf23bd9abecd1181bb97f0d0d7dcac705c9))
+* **setup:** add .wireit to gitignore ([d67f061](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/d67f0616584d28b60931e1a51f20db74f88ca1c8))
+* **setup:** more verbose server command ([907f158](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/907f15826dff69fff10a2bf39179872e41b7c18f))
+
+
+### CI
+
+* **fix:** remove CODEOWNERS structure ([e8ccda0](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e8ccda023c3621b19d23a9cde52526361a402347))
+* **workflow:** add CODEOWNERS for i18n ([649eb22](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/649eb224b7fc81a06d69a6a2eb9849496271fa4d))
+
 ## [2.11.2](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.11.1...v2.11.2) (2024-10-27)
 
 
