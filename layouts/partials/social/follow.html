@@ -2,16 +2,11 @@
 
 {{- $config := site.Params.ananke.social -}}
 {{- $networks := $config.follow.networks -}}
-{{- $setups := (collections.Where $config.networks "slug" "in" $networks) -}}
-{{/* This here is an ugly workaround for GoHugo's missing sortByArray feature.
-   Let's cache it so it does not take away too much time.
-   PS: It's also a couple of years old, so maybe there is a better solution by now. */}}
-{{- $setups = partials.IncludeCached "func/social/sortNetworks.html" (dict "networks" $networks "setups" $setups) "social-follow" -}}
 
 <div class="ananke-socials">
-  {{- range $setups -}}
-    {{- $setup := . -}}
-    {{- $network := $setup.slug -}}
+  {{- range $networks -}}
+    {{- $network := . -}}
+    {{- $setup := index $config.networks $network -}}
     {{- $profile := index $config $network -}}
     {{- $rel := $profile.rel | default "" -}}
     {{- $label := $profile.label | default $setup.label -}}
@@ -27,7 +22,7 @@
         title="follow on {{ $label }} - Opens in a new window"
         aria-label="follow on {{ $label }} - Opens in a new window">
       {{/* @todo add the following lines to a partial, reused in social/share.html */}}
-      {{- with .icon -}}
+      {{- with $setup.icon -}}
         {{- $icon := resources.Get (printf "ananke/socials/%s.svg" .) -}}
         {{- with $icon -}}
           <span class="icon">
