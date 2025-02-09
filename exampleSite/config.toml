@@ -7,6 +7,7 @@ defaultContentLanguage = "en"
 sectionPagesMenu = "main"
 enableRobotsTXT = true
 
+
 [services.googleAnalytics]
 id = ''
 
@@ -32,6 +33,7 @@ priority = 0.5
 filename = "sitemap.xml"
 
 [params]
+mainSections = ["post"]
 text_color = ""
 author = "Victor Hugo" # default author, override via `author` in a posts front matter
 favicon = ""
