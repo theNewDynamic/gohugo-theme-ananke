@@ -45,11 +45,9 @@
     "dotenv": "16.4.7"
   },
   "scripts": {
-    "deploy": "cd exampleSite; hugo;",
     "release": "wireit",
     "release:minor": "wireit",
-    "release:pre": "wireit",
-    "server": "wireit"
+    "release:pre": "wireit"
   },
   "wireit": {
     "release": {
@@ -60,12 +58,6 @@
     },
     "release:pre": {
       "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
-    },
-    "server": {
-      "command": "cd exampleSite; rm -rf public; hugo server -D -E -F --environment gargulus --navigateToChanged --disableFastRender --forceSyncStatic --logLevel debug --tlsAuto --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints 2>&1 | tee -a hugo.log"
-    },
-    "server:fail": {
-      "command": "cd exampleSite; rm -rf public; hugo server -D -E -F --environment gargulus --navigateToChanged --disableFastRender --forceSyncStatic --logLevel debug --tlsAuto --panicOnWarning --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints 2>&1 | tee -a hugo.log"
     }
   }
 }
