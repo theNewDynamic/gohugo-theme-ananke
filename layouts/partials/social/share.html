@@ -1,45 +1,45 @@
 {{- $context := . -}}
-{{- $disabled := $context.Params.disable_share | default "false" -}}
+{{- $disabled := $context.Params.disable_share | compare.Default "false" -}}
 {{- $config := site.Params.ananke.social -}}
 {{- with $config.share.disable_share -}}
   {{- $disabled := . -}}
 {{- end -}}
 
-{{- if eq "false" $disabled -}}
+{{- if compare.Eq "false" $disabled -}}
 
   {{- $title := $context.Title -}}
-  {{- $url := printf "%s" $context.Permalink | absLangURL -}}
+  {{- $url := fmt.Printf "%s" $context.Permalink | urls.AbsLangURL -}}
 
   {{- $networks := $config.share.networks -}}
-  {{- $hasLabel := $config.share.sharetext | default "true" -}}
-  {{- $hasIcon := $config.share.icons | default "true" -}}
+  {{- $hasLabel := $config.share.sharetext | compare.Default "true" -}}
+  {{- $hasIcon := $config.share.icons | compare.Default "true" -}}
 
   <div id="sharing" class="mt3 ananke-socials">
     {{- range $networks -}}
       {{- $network := . -}}
-      {{- $setup := index $config.networks $network -}}
-      {{/* @todo i18n $sharetext := lang.Translate (fmt.Printf "share_on_%s" $setup.slug) */}}
+      {{- $setup := collections.Index $config.networks $network -}}
+      {{/* @todo lang.Translate $sharetext := lang.Translate (fmt.Printf "share_on_%s" $setup.slug) */}}
       {{- $label := "" -}}
       {{ with $config.share.sharetext -}}
-        {{- $label = printf "Share on %s" $setup.label -}}
+        {{- $label = fmt.Printf "Share on %s" $setup.label -}}
       {{- end -}}
-      {{ if eq $setup.share "false" | default "true" -}}
+      {{ if compare.Eq $setup.share "false" | compare.Default "true" -}}
         {{- continue -}}
         {{/* @todo notification into CLI that a network is configured but not supported */}}
       {{- end -}}
       {{- $options := (dict "context" page "setup" $setup) }}
-      {{- $href := partial "func/social/getShareLink.html" $options -}}
+      {{- $href := partials.Include "func/social/getShareLink.html" $options -}}
       <a href="{{ $href }}"
         class="ananke-social-link {{ $setup.slug }} no-underline"
         title="{{ $label }}" aria-label="{{ $label }}"
         target="_blank" rel="nofollow noopener noreferrer">
         {{ with $config.share.icons -}}
-          {{/* @todo add the following lines to a partial, reused in social/follow.html */}}
+          {{/* @todo add the following lines to a partial, reused collections.In social/follow.html */}}
           {{- with $setup.icon -}}
-            {{- $icon := resources.Get (printf "ananke/socials/%s.svg" .) -}}
+            {{- $icon := resources.Get (fmt.Printf "ananke/socials/%s.svg" .) -}}
             {{- with $icon -}}
               <span class="icon">
-                {{ .Content | safeHTML }}
+                {{ .Content | safe.HTML }}
                 {{/* @todo indicator for missing or misconfigured icon */}}
               </span>
             {{- end -}}
@@ -53,4 +53,4 @@
     {{- end -}}
   </div>
 
-{{- end -}} {{/* if eq "true" $disabled */}}
+{{- end -}} {{/* if compare.Eq "true" $disabled */}}

@@ -6,27 +6,27 @@
 <div class="ananke-socials">
   {{- range $networks -}}
     {{- $network := . -}}
-    {{- $setup := index $config.networks $network -}}
-    {{- $profile := index $config $network -}}
-    {{- $rel := $profile.rel | default "" -}}
-    {{- $label := $profile.label | default $setup.label -}}
+    {{- $setup := collections.Index $config.networks $network -}}
+    {{- $profile := collections.Index $config $network -}}
+    {{- $rel := $profile.rel | compare.Default "" -}}
+    {{- $label := $profile.label | compare.Default $setup.label -}}
 
-    {{- $link := (printf $setup.profile $profile.username) -}}
+    {{- $link := (fmt.Printf $setup.profile $profile.username) -}}
     {{- with $profile.profilelink -}}
       {{- $link = $profile.profilelink -}}
     {{- end -}}
 
-    {{- $languageDirection := cond (eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" -}}
+    {{- $languageDirection := compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" -}}
     <a href="{{ $link }}" target="_blank" rel="noopener{{- with $rel }} {{ . -}}{{- end -}}"
         class="ananke-social-link link-transition {{ $network }} link dib z-999 pt3 pt0-l {{ $languageDirection }}"
         title="follow on {{ $label }} - Opens in a new window"
         aria-label="follow on {{ $label }} - Opens in a new window">
       {{/* @todo add the following lines to a partial, reused in social/share.html */}}
       {{- with $setup.icon -}}
-        {{- $icon := resources.Get (printf "ananke/socials/%s.svg" .) -}}
+        {{- $icon := resources.Get (fmt.Printf "ananke/socials/%s.svg" .) -}}
         {{- with $icon -}}
           <span class="icon">
-            {{ .Content | safeHTML }}
+            {{ .Content | safe.HTML }}
             {{/* @todo indicator for missing or misconfigured icon */}}
           </span>
         {{- end -}}
@@ -34,7 +34,7 @@
         {{- $label -}}
       {{- end -}}
       {{- with $config.follow.new_window_icon -}}
-        {{- partial "new-window-icon.html" . -}}
+        {{- partials.Include "new-window-icon.html" . -}}
       {{- end -}}
     </a>
   {{- end -}}

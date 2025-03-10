@@ -12,7 +12,7 @@
 
 */}}
 {{ $resource := dict }}
-{{ with resources.Get (print "/ananke/css/" .) }}
+{{ with resources.Get (fmt.Print "/ananke/css/" .) }}
   {{ $resource = . }}
 {{ end }}
 

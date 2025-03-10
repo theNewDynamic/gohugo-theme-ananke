@@ -1,33 +1,33 @@
 {{ define "main" }}
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | compare.Default "mid-gray" }}">
     {{ .Content }}
   </article>
 
   {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
-  {{ $mainSections := site.Params.mainSections | default (slice "post") }}
+  {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
   {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
-  {{ $section := where $.Site.RegularPages "Section" "in" $mainSections }}
+  {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
   {{ $section_count := len $section }}
 
-  {{ if and ($show_recent_posts) (ge $section_count 1) }}
+  {{ if and ($show_recent_posts) (compare.Ge $section_count 1) }}
     <div class="pa3 pa4-ns w-100 w-70-ns center">
-      {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
+      {{ $n_posts := $.Param "recent_posts_number" | compare.Default 3 }}
 
       <section class="w-100 mw8">
         {{/* Range through the first $n_posts items of the section */}}
-        {{ range (first $n_posts $section) }}
+        {{ range (collections.First $n_posts $section) }}
           <div class="relative w-100 mb4">
             {{ .Render "summary-with-image" }}
           </div>
         {{ end }}
       </section>
 
-      {{ if ge $section_count (add $n_posts 1) }}
+      {{ if compare.Ge $section_count (math.Add $n_posts 1) }}
         <section class="w-100">
-          <h1 class="f3">{{ i18n "more" }}</h1>
+          <h1 class="f3">{{ lang.Translate "more" }}</h1>
           {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
-          {{ range (first 4 (after $n_posts $section))  }}
-            <h2 class="f5 fw4 mb4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "ml3" "mr3" }}">
+          {{ range (collections.First 4 (collections.After $n_posts $section))  }}
+            <h2 class="f5 fw4 mb4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml3" "mr3" }}">
               <a href="{{ .RelPermalink }}" class="link black dim">
                 {{ .Title }}
               </a>
