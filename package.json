@@ -38,9 +38,10 @@
     "tachyons": "4.12.0"
   },
   "devDependencies": {
-    "@davidsneighbour/markdownlint-config": "2025.0.2",
-    "@davidsneighbour/release-config": "2025.0.2",
-    "@davidsneighbour/tools": "2025.0.2",
+    "@biomejs/biome": "1.9.4",
+    "@davidsneighbour/markdownlint-config": "2025.1.1",
+    "@davidsneighbour/release-config": "2025.1.1",
+    "@davidsneighbour/tools": "2025.1.1",
     "dotenv": "16.4.7"
   },
   "scripts": {
