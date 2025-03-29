@@ -44,41 +44,11 @@ Also includes examples of Hugo Features or Functions:
 * `ge` (greater than or equal to)
 * `.Site.Params.mainSections` to avoid hard-coding "blog," etc. [[release note](https://github.com/gohugoio/hugo/blob/66ec6305f6cb450ddf9c489854146bac02f7dca1/docs/content/meta/release-notes.md#enhancements)]
 
-This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](https://tachyons.io/).
+This theme uses the [Tachyons CSS library](https://tachyons.io/). This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files.
 
 ## Installation
 
-### As a Hugo Module (recommended)
-
-> ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
->
-> ```bash
-> go version
-> ```
->
-> Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/).
-
-1. From your project's root directory, initiate the hugo module system if you haven't already:
-
-   ```bash
-   hugo mod init github.com/<your_user>/<your_project>
-   ```
-
-2. Add the theme's repo to your `config.toml`:
-
-   ```toml
-   theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
-   ```
-
-### As Git Submodule
-
-Inside the folder of your Hugo site run:
-
-```bash
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-```
-
-For more information read the official [setup guide](//gohugo.io/getting-started/quick-start/) of Hugo.
+Dive into our [documentation on installing the theme as GoHugo Module or Git Submodule](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Installation). [The official setup guide](https://gohugo.io/getting-started/quick-start/) of GoHugo covers the installation of the theme as Git Submodule.
 
 ## Getting started
 
