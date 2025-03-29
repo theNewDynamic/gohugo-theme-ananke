@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
     {{ .Content }}
   </article>
 
@@ -16,7 +16,7 @@
       <section class="w-100 mw8">
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (collections.First $n_posts $section) }}
-          <div class="relative w-100 mb4">
+          <div class="w-100 mb4 relative">
             {{ .Render "summary-with-image" }}
           </div>
         {{ end }}
