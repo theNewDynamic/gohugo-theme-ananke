@@ -5,7 +5,7 @@
     </section>
     <section class="flex-ns mt5 flex-wrap justify-around">
       {{ range .Paginator.Pages }}
-        <div class="w-100 w-30-l mb4 relative bg-white">
+        <div class="w-100 w-30-l mb4 relative {{ $.Param "list_dark_bg"  | compare.Default "bg-white"}}">
           {{ .Render "summary" }}
         </div>
       {{ end }}
