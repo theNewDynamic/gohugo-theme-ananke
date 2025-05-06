@@ -1,14 +1,14 @@
-<div class="w-100 mb4 nested-copy-line-height relative bg-white">
-  <div class="mb3 pa4 gray overflow-hidden bg-white">
+<div class="w-100 mb4 nested-copy-line-height relative {{ $.Param "summary_dark_bg" | compare.Default "bg-white"}}">
+  <div class="mb3 pa4 {{ $.Param "text_color" | compare.Default "gray" }} overflow-hidden {{ $.Param "summary_dark_bg"  | compare.Default "bg-white"}}">
     {{with .CurrentSection.Title }}<span class="f6 db">{{ . }}</span>{{end}}
-    <h1 class="f3 near-black">
-      <a href="{{ .RelPermalink }}" class="link black dim">
+    <h1 class="f3 {{ $.Param "text_color" | compare.Default "near-black" }}">
+      <a href="{{ .RelPermalink }}" class="link {{ $.Param "text_color" | compare.Default "black" }} dim">
         {{ .Title }}
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       {{ .Summary }}
     </div>
-    <a href="{{.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
+    <a href="{{.RelPermalink}}" class="ba b--moon-gray {{ $.Param "summary_more_bg" | compare.Default "bg-light-gray"}} br2 color-inherit dib f7 {{ $.Param "summary_more_hover" | compare.Default "hover-bg-moon-gray" }} link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
   </div>
 </div>
