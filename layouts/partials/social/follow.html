@@ -11,7 +11,10 @@
     {{- $rel := $profile.rel | compare.Default "" -}}
     {{- $label := $profile.label | compare.Default $setup.label -}}
 
-    {{- $link := (fmt.Printf $setup.profile $profile.username) -}}
+    {{- $link := $setup.profile -}}
+    {{- with $profile.username -}}
+      {{- $link = printf $link . -}}
+    {{- end -}}
     {{- with $profile.profilelink -}}
       {{- $link = $profile.profilelink -}}
     {{- end -}}
