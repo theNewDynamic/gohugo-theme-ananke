@@ -4,7 +4,7 @@ licenselink = "https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/
 description = "A Base theme for building full featured Hugo sites"
 homepage = "https://github.com/theNewDynamic/gohugo-theme-ananke"
 demosite = "https://ananke-theme.netlify.app/"
-tags = ["website", "starter", "responsive", "Disqus", "blog", "Tachyons", "Multilingual", "Stackbit"]
+tags = ["website", "starter", "responsive", "Disqus", "blog", "Tachyons", "Multilingual"]
 features = ["posts", "shortcodes", "related content", "comments"]
 min_version = "0.128.0"
 

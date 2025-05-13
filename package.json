@@ -1,7 +1,7 @@
 {
   "name": "@thenewdynamic/gohugo-theme-ananke",
   "description": "Ananke: A theme for Hugo Sites",
-  "version": "2.12.0",
+  "version": "2.12.1",
   "license": "MIT",
   "repository": "thenewdynamic/gohugo-theme-ananke",
   "author": "Bud Parr (https://github.com/budparr)",
@@ -32,17 +32,17 @@
     "gohugo-module"
   ],
   "dependencies": {
-    "cssnano": "7.0.6",
+    "cssnano": "7.0.7",
     "postcss": "8.5.3",
-    "postcss-preset-env": "10.1.5",
+    "postcss-preset-env": "10.1.6",
     "tachyons": "4.12.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@davidsneighbour/markdownlint-config": "2025.1.1",
-    "@davidsneighbour/release-config": "2025.1.1",
-    "@davidsneighbour/tools": "2025.1.1",
-    "dotenv": "16.4.7"
+    "@davidsneighbour/markdownlint-config": "2025.1.5",
+    "@davidsneighbour/release-config": "2025.1.5",
+    "@davidsneighbour/tools": "2025.1.5",
+    "dotenv": "16.5.0"
   },
   "scripts": {
     "release": "wireit",
