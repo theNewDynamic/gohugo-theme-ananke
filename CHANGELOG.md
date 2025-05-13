@@ -1,4 +1,37 @@
 # Changelog
+## [2.12.1](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.12.0...v2.12.1) (2025-05-13)
+
+
+### Documentation
+
+* update README.md ([a001981](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a0019812ff62d978781392c765addbaee1c1eddf))
+
+
+### Theme
+
+* **fix:** hyperlink text color on home different from other pages ([cd83033](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/cd830339f0dc4734236438aaeb03707c64d2c8de))
+* **fix:** hyperlink text color on home different from other pages (on more layouts) ([c789473](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/c78947380207ee002825c5ee58e48757f13605b8))
+* **fix:** replace username only when given ([1027ebf](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/1027ebf14686d2a0a3829d66b79c694dc6afbc0d)), closes [#843](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/843)
+* **fix:** use html.dir attribute configured in language setup ([92ee7ad](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/92ee7adbb8717c2788b047d9a94d4513ee75c02c))
+
+
+### Refactors
+
+* move all template methods to proper GoHugo methods ([1804711](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/180471112e2ccc50150a90cab1684f70ea635390))
+* sort css classes ([36503c4](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/36503c4f9dabcb4aad8a5bd25f17af8341eec7a2))
+
+
+### Build System
+
+* **deps-dev:** bump @davidsneighbour/markdownlint-config from 2025.0.1 to 2025.0.2 ([#824](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/824)) ([348b858](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/348b85867822f2086f753ed0941b44b4f9a1617b)), closes [#1795](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1795) [#1794](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1794) [#1793](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1793) [#1777](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1777)
+* **deps-dev:** bump @davidsneighbour/release-config from 2025.0.1 to 2025.0.2 ([#825](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/825)) ([3f0b2aa](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/3f0b2aa33feefe18b76cb1b64fced8ae800fac5d))
+* **deps-dev:** bump @davidsneighbour/tools from 2025.0.1 to 2025.0.2 ([#828](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/828)) ([6ed950b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/6ed950bd9bdb298367f4102a995c04e83206cbea)), closes [#1795](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1795) [#1794](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1794) [#1793](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1793) [#1777](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/1777)
+* **deps:** bump postcss from 8.5.1 to 8.5.3 ([#826](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/826)) ([f6facde](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/f6facde5b3451727970a0ab47303d15fc7197779)), closes [#2016](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/2016) [#2012](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/2012)
+* **deps:** bump postcss-preset-env from 10.1.3 to 10.1.5 ([#827](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/827)) ([3754523](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/3754523882d384b0a9176996304a45f9dca0bec1)), closes [/github.com/csstools/postcss-plugins/tree/main/plugins/postcss-logical/CHANGELOG.md#810](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/plugins/postcss-logical/CHANGELOG.md/issues/810) [/github.com/csstools/postcss-plugins/tree/main/packages/color-helpers/CHANGELOG.md#502](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/color-helpers/CHANGELOG.md/issues/502) [/github.com/csstools/postcss-plugins/tree/main/packages/css-calc/CHANGELOG.md#212](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/css-calc/CHANGELOG.md/issues/212) [/github.com/csstools/postcss-plugins/tree/main/packages/css-color-parser/CHANGELOG.md#308](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/packages/css-color-parser/CHANGELOG.md/issues/308) [/github.com/csstools/postcss-plugins/tree/main/plugins/postcss-initial/CHANGELOG.md#201](https://github.com/thenewdynamic//github.com/csstools/postcss-plugins/tree/main/plugins/postcss-initial/CHANGELOG.md/issues/201)
+* **deps:** update dependencies ([7e80c50](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/7e80c50deea0002bf053eb623c46bf2561511e06))
+* **deps:** update dependencies ([b96a6dd](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/b96a6dd562fac9b8ab245345ffb7477a7d6cb101))
+* **fix:** remove exampleSite from setup ([7a7de28](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/7a7de28a52e105c6be1e833b0cb926336eb0003b))
+
 ## [2.12.0](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.11.3...v2.12.0) (2025-02-09)
 
 
