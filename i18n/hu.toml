@@ -20,13 +20,13 @@ other = "Ajánlott cikkek"
 other = "Név"
 
 [emailAddress]
-other = "E-mail cím"
+other = "E-mail-cím"
 
 [message]
 other = "Üzenet"
 
 [emailRequiredNote]
-other = "E-mail cím megadása kötelező."
+other = "E-mail-cím megadása kötelező."
 
 [send]
 other = "Küldés"
