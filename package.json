@@ -41,7 +41,7 @@
     "@biomejs/biome": "1.9.4",
     "@davidsneighbour/markdownlint-config": "2025.1.5",
     "@davidsneighbour/release-config": "2025.1.5",
-    "@davidsneighbour/tools": "2025.1.5",
+    "@davidsneighbour/tools": "2025.2.3",
     "dotenv": "16.5.0"
   },
   "scripts": {
