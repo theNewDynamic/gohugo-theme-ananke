@@ -1,16 +1,9 @@
 {
-  "name": "@thenewdynamic/gohugo-theme-ananke",
-  "description": "Ananke: A theme for Hugo Sites",
-  "version": "2.12.1",
-  "license": "MIT",
-  "repository": "thenewdynamic/gohugo-theme-ananke",
   "author": "Bud Parr (https://github.com/budparr)",
-  "maintainers": [
-    {
-      "name": "Patrick Kollitsch",
-      "url": "https://github.com/davidsneighbour"
-    }
-  ],
+  "bugs": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues",
+  "build": {
+    "command": "npm install --prefix themes/ananke && hugo --gc --minify"
+  },
   "contributors": [
     {
       "name": "Regis Philibert",
@@ -21,7 +14,20 @@
       "url": "https://github.com/davidsneighbour"
     }
   ],
-  "bugs": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues",
+  "dependencies": {
+    "cssnano": "7.0.7",
+    "postcss": "8.5.6",
+    "postcss-preset-env": "10.1.6",
+    "tachyons": "4.12.0"
+  },
+  "description": "Ananke: A theme for Hugo Sites",
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@davidsneighbour/markdownlint-config": "2025.1.5",
+    "@davidsneighbour/release-config": "2025.1.5",
+    "@davidsneighbour/tools": "2025.1.5",
+    "dotenv": "16.5.0"
+  },
   "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
   "keywords": [
     "hugo",
@@ -31,24 +37,21 @@
     "hugo-module",
     "gohugo-module"
   ],
-  "dependencies": {
-    "cssnano": "7.0.7",
-    "postcss": "8.5.6",
-    "postcss-preset-env": "10.1.6",
-    "tachyons": "4.12.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.0.6",
-    "@davidsneighbour/markdownlint-config": "2025.1.5",
-    "@davidsneighbour/release-config": "2025.1.5",
-    "@davidsneighbour/tools": "2025.1.5",
-    "dotenv": "16.5.0"
-  },
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Patrick Kollitsch",
+      "url": "https://github.com/davidsneighbour"
+    }
+  ],
+  "name": "@thenewdynamic/gohugo-theme-ananke",
+  "repository": "thenewdynamic/gohugo-theme-ananke",
   "scripts": {
     "release": "wireit",
     "release:minor": "wireit",
     "release:pre": "wireit"
   },
+  "version": "2.12.1",
   "wireit": {
     "release": {
       "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" -- --no-verify"
