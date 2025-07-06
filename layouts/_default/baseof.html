@@ -1,65 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default .Site.LanguageCode | default "en-US" }}"{{- if eq .Site.Language.Direction "rtl" }} dir="rtl"{{- end }}>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-    {{ hugo.Generator }}
-    {{ $production := hugo.IsProduction }}
-    {{ $public := not .Params.private }}
-    {{ if and $production $public }}
-      <meta name="robots" content="index, follow">
-    {{ else }}
-      <meta name="robots" content="noindex, nofollow">
-    {{ end }}
-    {{ with .Params.author | compare.Default .Site.Params.author }}
-      {{- $author := . -}}
-      {{- if reflect.IsSlice . -}}
-        {{- $author = collections.Delimit . ", " | transform.Plainify -}}
-      {{- end -}}
-      <meta name="author" content="{{ $author }}">
-    {{ end }}
-
-    {{ partials.Include "site-style.html" . }}
-    {{ partials.Include "site-scripts.html" . }}
-
-    {{ block "favicon" . }}
-      {{ partials.IncludeCached "site-favicon.html" . }}
-    {{ end }}
-
-    {{ if .OutputFormats.Get "RSS" }}
-    {{ with .OutputFormats.Get "RSS" }}
-      <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-      <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
-      {{ end }}
-    {{ end }}
-
-    {{ if .Params.canonicalUrl }}
-      <link rel="canonical" href="{{ .Params.canonicalUrl }}">
-    {{ else }}
-      <link rel="canonical" href="{{ .Permalink }}">
-    {{ end }}
-
-    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
-    {{- template "_internal/opengraph.html" . -}}
-    {{- template "_internal/schema.html" . -}}
-    {{- template "_internal/twitter_cards.html" . -}}
-
-    {{ if hugo.IsProduction }}
-      {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
-    {{ block "head" . }}{{ partials.Include "head-additions.html" . }}{{ end }}
-  </head>
-
-  {{- $environment := hugo.Environment | compare.Default "production" -}}
-  <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
-
-    {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
-    <main class="pb7" role="main">
-      {{ block "main" . }}{{ end }}
-    </main>
-    {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
-  </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ .Title | default site.Title }}</title>
+</head>
+<body>
+	{{ block "main" . }}{{ end }}
+</body>
 </html>
