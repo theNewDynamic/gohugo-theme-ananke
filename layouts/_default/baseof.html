@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default .Site.Language.Lang | default "en-US" }}"{{- if eq .Site.Language.Direction "rtl" }} dir="rtl"{{- end }}>
+<html lang="{{ .Site.Language.Lang | default .Site.LanguageCode | default "en-US" }}"{{- if eq .Site.Language.Direction "rtl" }} dir="rtl"{{- end }}>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
