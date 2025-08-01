@@ -40,7 +40,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "@davidsneighbour/markdownlint-config": "2025.1.5",
-    "@davidsneighbour/release-config": "2025.1.5",
+    "@davidsneighbour/release-config": "2025.3.1",
     "@davidsneighbour/tools": "2025.1.5",
     "dotenv": "16.5.0"
   },
