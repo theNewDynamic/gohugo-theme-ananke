@@ -1,2 +1,7 @@
+{{ if or .Site.Params.commentoEnable .Site.Params.commentoUrl }}
 <div id="commento"></div>
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
+<script
+  defer
+  src="{{ with .Site.Params.commentoUrl }}{{ . }}{{ else }}https://cdn.commento.io{{ end }}/js/commento.js"
+></script>
+{{ end }}
