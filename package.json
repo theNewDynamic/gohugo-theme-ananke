@@ -32,17 +32,17 @@
     "gohugo-module"
   ],
   "dependencies": {
-    "cssnano": "7.0.7",
+    "cssnano": "7.1.1",
     "postcss": "8.5.6",
-    "postcss-preset-env": "10.1.6",
+    "postcss-preset-env": "10.4.0",
     "tachyons": "4.12.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
-    "@davidsneighbour/markdownlint-config": "2025.1.5",
-    "@davidsneighbour/release-config": "2025.1.5",
-    "@davidsneighbour/tools": "2025.1.5",
-    "dotenv": "16.5.0"
+    "@biomejs/biome": "2.2.4",
+    "@davidsneighbour/markdownlint-config": "2025.3.2",
+    "@davidsneighbour/release-config": "2025.3.6",
+    "@davidsneighbour/tools": "2025.3.6",
+    "dotenv": "17.2.2"
   },
   "scripts": {
     "release": "wireit",
