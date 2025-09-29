@@ -59,21 +59,7 @@ Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-t
 
 ### Add comments
 
-To enable comments, add following to your config file:
-
-* DISQUS:
-
-  ```toml
-  [services.disqus]
-    shortname = 'YOURSHORTNAME'
-  ```
-
-* COMMENTO:
-
-  ```toml
-  [params]
-    commentoEnable = true
-  ```
+[see Wiki > Customization Comments](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Customization-Comments)
 
 ### Change the hero background
 
