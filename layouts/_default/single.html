@@ -46,7 +46,13 @@
           3) A page front matter value is set `show_reading_time = true`
         */}}
       {{ if (or (compare.Eq (.Param "show_reading_time") true) (compare.Eq $section.Params.show_reading_time true) )}}
-        <span class="f6 mv4 dib tracked"> - {{ lang.Translate "readingTime" .ReadingTime }} </span>
+        {{ $readingTime := .ReadingTime }}
+        {{ with .Site.Params.reading_speed }}
+          {{ $readingTime = div (float $.WordCount) . }}
+          {{ $readingTime = math.Ceil $readingTime }}
+          {{ $readingTime = int $readingTime }}
+        {{ end }}
+        <span class="f6 mv4 dib tracked"> - {{ lang.Translate "readingTime" $readingTime }} </span>
         <span class="f6 mv4 dib tracked"> - {{ lang.Translate "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
