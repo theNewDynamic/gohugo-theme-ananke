@@ -42,7 +42,7 @@
     "@davidsneighbour/markdownlint-config": "2025.3.2",
     "@davidsneighbour/release-config": "2025.3.6",
     "@davidsneighbour/tools": "2025.3.6",
-    "dotenv": "17.2.2"
+    "dotenv": "17.2.3"
   },
   "scripts": {
     "release": "wireit",
