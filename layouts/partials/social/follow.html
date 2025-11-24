@@ -1,0 +1,44 @@
+{{- $context := . -}}
+
+{{- $config := site.Params.ananke.social -}}
+{{- $networks := $config.follow.networks -}}
+
+<div class="ananke-socials">
+  {{- range $networks -}}
+    {{- $network := . -}}
+    {{- $setup := collections.Index $config.networks $network -}}
+    {{- $profile := collections.Index $config $network -}}
+    {{- $rel := $profile.rel | compare.Default "" -}}
+    {{- $label := $profile.label | compare.Default $setup.label -}}
+
+    {{- $link := $setup.profile -}}
+    {{- with $profile.username -}}
+      {{- $link = printf $link . -}}
+    {{- end -}}
+    {{- with $profile.profilelink -}}
+      {{- $link = $profile.profilelink -}}
+    {{- end -}}
+
+    {{- $languageDirection := compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" -}}
+    <a href="{{ $link }}" target="_blank" rel="noopener{{- with $rel }} {{ . -}}{{- end -}}"
+        class="ananke-social-link link-transition {{ $network }} link dib z-999 pt3 pt0-l {{ $languageDirection }}"
+        title="follow on {{ $label }} - Opens in a new window"
+        aria-label="follow on {{ $label }} - Opens in a new window">
+      {{/* @todo add the following lines to a partial, reused in social/share.html */}}
+      {{- with $setup.icon -}}
+        {{- $icon := resources.Get (fmt.Printf "ananke/socials/%s.svg" .) -}}
+        {{- with $icon -}}
+          <span class="icon">
+            {{ .Content | safe.HTML }}
+            {{/* @todo indicator for missing or misconfigured icon */}}
+          </span>
+        {{- end -}}
+      {{- else -}}
+        {{- $label -}}
+      {{- end -}}
+      {{- with $config.follow.new_window_icon -}}
+        {{- partials.Include "new-window-icon.html" . -}}
+      {{- end -}}
+    </a>
+  {{- end -}}
+</div>

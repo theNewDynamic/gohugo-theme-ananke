@@ -1,0 +1,49 @@
+[more]
+other = "Mai"
+
+[allTitle]
+other = "Tot {{.Title }}"
+
+[recentTitle]
+other = "Recent {{.Title }}"
+
+[readMore]
+other = "ne legir mai"
+
+[by]
+other = "Per"
+
+[whatsInThis]
+other = "De qué i a dins {{ .Type }}"
+
+[related]
+other = "Ligats"
+
+[yourName]
+other = "Vòstre nom"
+
+[emailAddress]
+other = "Adreça electronica"
+
+[message]
+other = "Messatge"
+
+[emailRequiredNote]
+other = "Una adreça electronica es requerida."
+
+[send]
+other = "Enviar"
+
+[taxonomyPageList]
+other = "Trapatz çai jos las paginas qu'utilizan los tèrmes “{{ .Title }}”"
+
+[readingTime]
+one = "Una minuta de lectura"
+other = "{{ .Count }} minutas de lectura"
+
+[wordCount]
+one = "Un mot"
+other = "{{ .Count }} mots"
+
+[pageTitle]
+other = "pagina {{ .Name }}"

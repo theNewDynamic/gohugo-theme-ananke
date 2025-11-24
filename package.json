@@ -1,42 +1,63 @@
 {
- "author": "budparr",
- "bugs": {
-  "url": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues"
- },
- "comments": {
-  "dependencies": {},
+  "name": "@thenewdynamic/gohugo-theme-ananke",
+  "description": "Ananke: A theme for Hugo Sites",
+  "version": "2.12.1",
+  "license": "MIT",
+  "repository": "thenewdynamic/gohugo-theme-ananke",
+  "author": "Bud Parr (https://github.com/budparr)",
+  "maintainers": [
+    {
+      "name": "Patrick Kollitsch",
+      "url": "https://github.com/davidsneighbour"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Regis Philibert",
+      "url": "https://github.com/regisphilibert"
+    },
+    {
+      "name": "Patrick Kollitsch",
+      "url": "https://github.com/davidsneighbour"
+    }
+  ],
+  "bugs": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues",
+  "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
+  "keywords": [
+    "hugo",
+    "gohugo",
+    "hugo-theme",
+    "gohugo-theme",
+    "hugo-module",
+    "gohugo-module"
+  ],
+  "dependencies": {
+    "cssnano": "7.1.1",
+    "postcss": "8.5.6",
+    "postcss-preset-env": "10.4.0",
+    "tachyons": "4.12.0"
+  },
   "devDependencies": {
-   "auto-changelog": "project",
-   "cssnano": "project",
-   "postcss-cli": "project",
-   "postcss-cssnext": "project",
-   "tachyons": "project"
+    "@biomejs/biome": "2.2.4",
+    "@davidsneighbour/markdownlint-config": "2025.3.2",
+    "@davidsneighbour/release-config": "2025.3.6",
+    "@davidsneighbour/tools": "2025.3.6",
+    "dotenv": "17.2.2"
+  },
+  "scripts": {
+    "release": "wireit",
+    "release:minor": "wireit",
+    "release:pre": "wireit"
+  },
+  "wireit": {
+    "release": {
+      "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" -- --no-verify"
+    },
+    "release:minor": {
+      "command": "commit-and-tag-version --release-as minor --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" -- --no-verify"
+    },
+    "release:pre": {
+      "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
+    }
   }
- },
- "dependencies": {},
- "description": "Theme Ananke",
- "devDependencies": {
-  "auto-changelog": "^1.16.1",
-  "cssnano": "^3.10.0",
-  "postcss-cli": "^7.1.0",
-  "postcss-cssnext": "^2.10.0",
-  "tachyons": "^4.9.1"
- },
- "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
- "keywords": [
-  "hugo",
-  "gohugo"
- ],
- "license": "MIT",
- "main": "index.js",
- "name": "gohugo-theme-ananke",
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/theNewDynamic/gohugo-theme-ananke.git"
- },
- "scripts": {
-  "version": "auto-changelog -p --template keepachangelog --commit-limit 0 \u0026\u0026 git add CHANGELOG.md",
-  "deploy": " cd exampleSite; hugo;"
- },
- "version": "2.7.0"
 }

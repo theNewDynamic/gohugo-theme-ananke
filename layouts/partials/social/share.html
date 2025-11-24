@@ -1,0 +1,56 @@
+{{- $context := . -}}
+{{- $disabled := $context.Params.disable_share | compare.Default "false" -}}
+{{- $config := site.Params.ananke.social -}}
+{{- with $config.share.disable_share -}}
+  {{- $disabled := . -}}
+{{- end -}}
+
+{{- if compare.Eq "false" $disabled -}}
+
+  {{- $title := $context.Title -}}
+  {{- $url := fmt.Printf "%s" $context.Permalink | urls.AbsLangURL -}}
+
+  {{- $networks := $config.share.networks -}}
+  {{- $hasLabel := $config.share.sharetext | compare.Default "true" -}}
+  {{- $hasIcon := $config.share.icons | compare.Default "true" -}}
+
+  <div id="sharing" class="mt3 ananke-socials">
+    {{- range $networks -}}
+      {{- $network := . -}}
+      {{- $setup := collections.Index $config.networks $network -}}
+      {{/* @todo lang.Translate $sharetext := lang.Translate (fmt.Printf "share_on_%s" $setup.slug) */}}
+      {{- $label := "" -}}
+      {{ with $config.share.sharetext -}}
+        {{- $label = fmt.Printf "Share on %s" $setup.label -}}
+      {{- end -}}
+      {{ if compare.Eq $setup.share "false" | compare.Default "true" -}}
+        {{- continue -}}
+        {{/* @todo notification into CLI that a network is configured but not supported */}}
+      {{- end -}}
+      {{- $options := (dict "context" page "setup" $setup) }}
+      {{- $href := partials.Include "func/social/getShareLink.html" $options -}}
+      <a href="{{ $href }}"
+        class="ananke-social-link {{ $setup.slug }} no-underline"
+        title="{{ $label }}" aria-label="{{ $label }}"
+        target="_blank" rel="nofollow noopener noreferrer">
+        {{ with $config.share.icons -}}
+          {{/* @todo add the following lines to a partial, reused collections.In social/follow.html */}}
+          {{- with $setup.icon -}}
+            {{- $icon := resources.Get (fmt.Printf "ananke/socials/%s.svg" .) -}}
+            {{- with $icon -}}
+              <span class="icon">
+                {{ .Content | safe.HTML }}
+                {{/* @todo indicator for missing or misconfigured icon */}}
+              </span>
+            {{- end -}}
+          {{- else -}}
+            {{- $label -}}
+          {{- end -}}
+        {{- else -}}
+          {{- $label -}}
+        {{- end -}}
+      </a>
+    {{- end -}}
+  </div>
+
+{{- end -}} {{/* if compare.Eq "true" $disabled */}}

@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ $data := .Data }}
   <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
       {{ .Content }}
     </div>
   </article>
@@ -10,7 +10,7 @@
       {{ range $term := .Data.Pages }}
         <h2 class="f1">
           <a href="{{ $term.RelPermalink }}" class="link blue hover-black">
-            {{ $.Data.Singular | humanize }}: {{ $term.LinkTitle }}
+            {{ $.Data.Singular | inflect.Humanize }}: {{ $term.LinkTitle }}
           </a>
         </h2>
         {{ range $term.Pages }}

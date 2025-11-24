@@ -1,0 +1,254 @@
+[ananke]
+show_recent_posts = true # show recent posts on the homepage
+
+[ananke.social]
+icon_path = "ananke/socials/%s.svg"
+
+[ananke.social.follow]
+new_window_icon = false # show a little "opens in new window" icon next to the link
+# add networks to this list in your local config to enable them, remove them to disable them.
+# networks = [
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
+
+[ananke.social.share]
+icons = true # show icons for each share link
+sharetext = true # show the share text
+# add networks to this list in your local config to enable them, remove them to disable them.
+# networks = [
+#   "email",
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
+
+# social media network setups
+[ananke.social.networks.bluesky]
+slug = "bluesky"
+label = "Bluesky"
+color = "#1185fe"
+profile = "https://bsky.app/profile/%s"
+icon = "bluesky" # font awesome brand icon name
+link = "https://bsky.app/intent/compose"
+[ananke.social.networks.bluesky.particles]
+text = "permalink"
+
+[ananke.social.networks.email]
+slug = "email"
+label = "Email"
+profile = false
+icon = "envelope" # font awesome free icon name
+link = "mailto:"
+[ananke.social.networks.email.particles]
+body = "permalink"
+subject = "title"
+
+[ananke.social.networks.facebook]
+slug = "facebook"
+label = "Facebook"
+color = "#3b5998"
+profile = "https://www.facebook.com/%s"
+icon = "facebook" # font awesome brand icon name
+link = "https://facebook.com/sharer/sharer.php"
+[ananke.social.networks.facebook.particles]
+u = "permalink"
+
+[ananke.social.networks.github]
+slug = "github"
+label = "GitHub"
+color = "#6cc644"
+profile = "https://github.com/%s/"
+icon = "github" # font awesome brand icon name
+
+[ananke.social.networks.gitlab]
+slug = "gitlab"
+label = "GitLab"
+color = "#FC6D26"
+profile = "https://gitlab.com/%s/"
+icon = "gitlab" # font awesome brand icon name
+
+[ananke.social.networks.hackernews]
+slug = "hackernews"
+label = "Hacker News"
+color = "#ff4000"
+profile = "https://news.ycombinator.com/user?id=%s"
+icon = "hacker-news" # font awesome brand icon name
+link = "https://news.ycombinator.com/submitlink"
+[ananke.social.networks.hackernews.particles]
+u = "permalink"
+t = "description"
+
+[ananke.social.networks.instagram]
+slug = "instagram"
+label = "Instagram"
+color = "#e1306c"
+profile = "https://www.instagram.com/%s/"
+icon = "instagram" # font awesome brand icon name
+
+[ananke.social.networks.keybase]
+slug = "keybase"
+label = "Keybase"
+color = "#3d76ff"
+profile = "https://keybase.io/%s"
+icon = "keybase" # font awesome brand icon name
+
+[ananke.social.networks.linkedin]
+slug = "linkedin"
+label = "LinkedIn"
+color = "#0077b5"
+profile = "http://linkedin.com/in/%s"
+icon = "linkedin" # font awesome brand icon name
+link = "https://www.linkedin.com/shareArticle"
+[ananke.social.networks.linkedin.particles]
+url = "permalink"
+title = "title"
+summary = "description"
+source = "permalink"
+params = "mini=true"
+
+[ananke.social.networks.medium]
+slug = "medium"
+label = "Medium"
+color = "#0077b5"
+profile = "https://medium.com/@%s/"
+icon = "medium" # font awesome brand icon name
+
+[ananke.social.networks.mastodon]
+slug = "mastodon"
+label = "Mastodon"
+color = "#6364FF"
+profile = ""
+icon = "mastodon" # font awesome brand icon name
+
+[ananke.social.networks.pinterest]
+slug = "pinterest"
+label = "Pinterest"
+color = "#e60023"
+profile = "https://www.pinterest.com/%s/"
+icon = "pinterest" # font awesome brand icon name
+link = "https://pinterest.com/pin/create/button/"
+[ananke.social.networks.pinterest.particles]
+url = "permalink"
+media = "permalink"
+description = "description"
+
+[ananke.social.networks.reddit]
+slug = "reddit"
+label = "Reddit"
+color = "#ff4500"
+profile = "https://www.reddit.com/user/%s/"
+icon = "reddit" # font awesome brand icon name
+link = "https://reddit.com/submit/"
+[ananke.social.networks.reddit.particles]
+url = "permalink"
+title = "title"
+params = "resubmit=true"
+
+[ananke.social.networks.rss]
+slug = "rss"
+label = "RSS"
+color = "#ff6f1a"
+profile = ""
+icon = "rss" # font awesome free icon name
+
+[ananke.social.networks.slack]
+slug = "slack"
+label = "Slack"
+color = "#E01E5A"
+profile = ""
+icon = "slack" # font awesome brand icon name
+
+[ananke.social.networks.stackoverflow]
+slug = "stackoverflow"
+label = "Stack Overflow"
+color = "#f48024"
+profile = "https://stackoverflow.com/users/%s"
+icon = "stack-overflow" # font awesome brand icon name
+
+[ananke.social.networks.telegram]
+slug = "telegram"
+label = "Telegram"
+color = "#0088cc"
+profile = "https://t.me/%s"
+icon = "telegram" # font awesome brand icon name
+link = "https://telegram.me/share/url"
+[ananke.social.networks.telegram.particles]
+text = "description"
+url = "permalink"
+
+[ananke.social.networks.tiktok]
+slug = "tiktok"
+label = "TikTok"
+color = "#fe2c55"
+profile = "https://www.tiktok.com/@%s"
+icon = "tiktok" # font awesome brand icon name
+
+[ananke.social.networks.tumblr]
+slug = "tumblr"
+label = "Tumblr"
+color = "#35465c"
+profile = "https://www.tumblr.com/blog/%s"
+icon = "tumblr" # font awesome brand icon name
+link = "https://www.tumblr.com/widgets/share/tool"
+[ananke.social.networks.tumblr.particles]
+canonicalUrl = "permalink"
+shareSource = "source"
+title = "title"
+caption = "description"
+content = "description"
+params = "posttype=link"
+
+[ananke.social.networks.twitter]
+slug = "twitter"
+label = "Twitter"
+color = "#1da1f2"
+profile = "https://twitter.com/%s"
+icon = "twitter" # font awesome brand icon name
+link = "https://twitter.com/intent/tweet/"
+[ananke.social.networks.twitter.particles]
+text = "description"
+url = "permalink"
+
+[ananke.social.networks.whatsapp]
+slug = "whatsapp"
+label = "WhatsApp"
+color = "#25d366"
+profile = false
+icon = "whatsapp" # font awesome brand icon name
+link = "whatsapp://send"
+linkintext = true
+[ananke.social.networks.whatsapp.particles]
+text = "description"
+
+[ananke.social.networks.xing]
+slug = "xing"
+label = "Xing"
+color = "#026466"
+profile = "https://www.xing.com/profile/%s"
+icon = "xing" # font awesome brand icon name
+link = "https://www.xing.com/app/user"
+separator = ";"
+[ananke.social.networks.xing.particles]
+url = "permalink"
+title = "title"
+params = "op=share"
+
+[ananke.social.networks.x-twitter]
+slug = "x-twitter"
+label = "X"
+color = "#000000"
+profile = "https://x.com/%s"
+icon = "x-twitter" # font awesome brand icon name
+link = "https://twitter.com/intent/tweet/"
+[ananke.social.networks.x-twitter.particles]
+text = "description"
+url = "permalink"
+
+[ananke.social.networks.youtube]
+slug = "youtube"
+label = "YouTube"
+color = "#cd201f"
+profile = "https://www.youtube.com/@%s"
+icon = "youtube" # font awesome brand icon name

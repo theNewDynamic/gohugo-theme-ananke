@@ -1,0 +1,69 @@
+# cy.toml — Welsh i18n translations for Ananke theme
+[readMore]
+other = "Darllen mwy"
+
+[recentPosts]
+other = "Cofnodion Diweddar"
+
+[languageSwitcher]
+other = "Newid Iaith"
+
+[pageNotFound]
+other = "Tudalen Heb Ei Ddarganfod"
+
+[oops]
+other = "Wps!"
+
+[noContent]
+other = "Does dim cynnwys i'w ddangos yma eto."
+
+[minuteRead]
+other = "{{ .Count }} munud darllen"
+
+[by]
+other = "gan"
+
+[on]
+other = "ar"
+
+[translations]
+other = "Cyfieithiadau"
+
+[backToHome]
+other = "Yn ôl i'r Hafan"
+
+[tags]
+other = "Tagiau"
+
+[categories]
+other = "Categorïau"
+
+[sitemap]
+other = "Map y Wefan"
+
+[author]
+other = "Awdur"
+
+[search]
+other = "Chwilio"
+
+[searchPlaceholder]
+other = "Teipiwch i chwilio..."
+
+[published]
+other = "Wedi’i gyhoeddi"
+
+[updated]
+other = "Diweddarwyd"
+
+[readingTime]
+other = "{{ .Count }} munud"
+
+[share]
+other = "Rhannu"
+
+[comments]
+other = "Sylwadau"
+
+[footerText]
+other = "Hawlfraint © {{ .Year }} {{ .Site.Title }}. Cedwir pob hawl."
