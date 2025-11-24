@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Build and deployment issues
+    url: https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/categories/2-q-a-support
+    about: Please ask and answer questions here. Open a bug report only if you are sure it is a bug.
+  - name: Feature requests and problem solutions
+    url: https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/categories/3-ideas
+    about: Please ask and answer questions here. Open a bug report only if you are sure it is a bug.

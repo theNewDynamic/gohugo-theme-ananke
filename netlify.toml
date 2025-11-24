@@ -1,0 +1,8 @@
+[build]
+publish = "./exampleSite/public/"
+command = "npm run deploy"
+[build.environment]
+HUGO_VERSION = "0.128.0"
+HUGO_ENV = "production"
+GO_VERSION = "1.23"
+NODE_ENV = "development"

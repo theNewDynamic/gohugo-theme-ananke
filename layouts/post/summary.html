@@ -1,7 +1,7 @@
-  <div class="mb3 pa4 {{ $.Param "text_color" | default "mid-gray" }} overflow-hidden">
+  <div class="mb3 pa4 {{ $.Param "text_color" | compare.Default "mid-gray" }} overflow-hidden">
     {{ if .Date }}
       <div class="f6">
-        {{ .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) }}
+        {{ .Date | time.Format (compare.Default "January 2, 2006" .Site.Params.date_format) }}
       </div>
     {{ end }}
     <h1 class="f3 near-black">
@@ -12,5 +12,5 @@
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       {{ .Summary  }}
     </div>
-  <a href="{{.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a>
+  <a href="{{.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
   </div>

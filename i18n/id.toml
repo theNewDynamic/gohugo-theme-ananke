@@ -1,0 +1,49 @@
+[more]
+other = "Lagi"
+
+[allTitle]
+other = "Semua {{.Title }}"
+
+[recentTitle]
+other = "Terbaru {{.Title }}"
+
+[readMore]
+other = "Baca selengkapnya"
+
+[by]
+other = "Oleh"
+
+[whatsInThis]
+other = "Apa isinya? {{ .Type }}"
+
+[related]
+other = "Terkait"
+
+[yourName]
+other = "Nama Anda"
+
+[emailAddress]
+other = "Alamat Email"
+
+[message]
+other = "Pesan"
+
+[emailRequiredNote]
+other = "Alamat email diperlukan."
+
+[send]
+other = "Kirim"
+
+[taxonomyPageList]
+other = "Di bawah ini Anda akan menemukan halaman yang menggunakan istilah taksonomi “{{ .Title }}”"
+
+[readingTime]
+one = "Satu menit dibaca"
+other = "{{ .Count }} menit dibaca"
+
+[wordCount]
+one = "Satu kata"
+other = "{{ .Count }} kata"
+
+[pageTitle]
+other = "{{ .Name }} halaman"

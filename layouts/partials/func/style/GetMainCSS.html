@@ -14,47 +14,49 @@
 {{ $main_style := dict }}
 
 {{/* We prepare a slice of resources to be concatenated as one */}}
-{{ $assets_to_concat := slice }}
+{{ $assets_to_concat := collections.Slice }}
 {{/* We add locale css files to the slice in the proper order */}}
-{{ range slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
-  {{ with partialCached "func/style/GetResource" . . }}
-    {{ $assets_to_concat = $assets_to_concat | append . }}
+{{ range collections.Slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
+  {{ with partials.IncludeCached "func/style/GetResource.html" . . }}
+    {{ $assets_to_concat = $assets_to_concat | collections.Append . }}
   {{ end }}
 {{ end }}
 
-{{ with partialCached "func/socials/Get" "socials/Get" }}
-  {{ $socials_rules := slice }}
+{{- $config := site.Params.ananke.social -}}
+{{- $networks := $config.follow.networks -}}
+{{- $setups := (collections.Where $config.networks "slug" "in" $networks) }}
+{{ with $setups }}
+  {{ $socials_rules := collections.Slice }}
   {{ range $service := . }}
     {{ with .color }}
-      {{ $rule := printf `
+      {{ $rule := fmt.Printf `
         .ananke-socials a.%s:hover {
-          color: %s
-        }` $service.name $service.color }}
-      {{ $socials_rules = $socials_rules | append $rule }}
+          color: %s !important;
+        }` $service.slug . }}
+      {{ $socials_rules = $socials_rules | collections.Append $rule }}
     {{ end }}
   {{ end }}
   {{ with $socials_rules }}
-    {{ $socials_rules = delimit . "" }}
+    {{ $socials_rules = collections.Delimit . " " }}
     {{ $socials_css := $socials_rules | resources.FromString "ananke/css/generated_socials.css" }}
-    {{ $assets_to_concat = $assets_to_concat | append $socials_css }}
+    {{ $assets_to_concat = $assets_to_concat | collections.Append $socials_css }}
   {{ end }}
-
 {{ end }}
 
-{{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's 
+{{/* We look for any custom css files registered by the user under `site.params.custom_css and if found in the theme's
 css asset directory we (unless condition below) add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
   {{ range . }}
-    {{ with partialCached "func/style/GetResource" . . }}
-      {{ if eq .MediaType.SubType "x-scss" "x-sass" "scss" "sass" }}
+    {{ with partials.IncludeCached "func/style/GetResource.html" . . }}
+      {{ if compare.Eq .MediaType.SubType "x-scss" "x-sass" "scss" "sass" }}
         {{ if hugo.IsExtended }}
           {{/* as we cannot concatenate styles of different types, we sass/scss to be transformed to css beforehand */}}
-          {{ $assets_to_concat = $assets_to_concat | append (. | resources.ToCSS) }}
+          {{ $assets_to_concat = $assets_to_concat | collections.Append (. | css.Sass) }}
         {{ else }}
-          {{ partial "func/warn" (printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
+          {{ partials.Include "func/warn.html" (fmt.Printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
         {{ end }}
       {{ else }}
-        {{ $assets_to_concat = $assets_to_concat | append . }}
+        {{ $assets_to_concat = $assets_to_concat | collections.Append . }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -66,10 +68,10 @@ css asset directory we (unless condition below) add to aforementioned slice */}}
 
   {{/* We then use toCSS to add sourceMap and minify */}}
   {{ $options := dict "enableSourceMap" true "precision" 6 }}
-  {{ $style = $style | resources.ToCSS $options | minify }}
+  {{ $style = $style | css.Sass $options | resources.Minify }}
   {{/* We fingerprint in production for cache busting purposes */}}
-  {{ if eq (getenv "HUGO_ENV") "production" }}
-    {{ $style = $style | fingerprint }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | resources.Fingerprint }}
   {{ end }}
   {{/* We're ready to set returning variable with resulting resource */}}
   {{ $main_style = $style }}
