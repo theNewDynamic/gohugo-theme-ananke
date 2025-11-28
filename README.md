@@ -1,5 +1,8 @@
 # Ananke, a starter theme for GoHugo
 
+> [!WARNING]
+> If you are experiencing issues with recent Hugo versions please check the [Discussion about the layout changes](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/886) and add your issues there. Thank you!
+
 The intent of this theme is to provide a solid starting place for [GoHugo](https://gohugo.io/) sites with basic features and include best practices for performance, accessibility, and rapid development.
 
 ![screenshot](images/screenshot.png)
