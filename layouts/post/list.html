@@ -13,6 +13,7 @@
         </div>
       {{ end }}
     </aside>
-    {{ template "_internal/pagination.html" . }}
+    {{/* former internal template */}}
+    {{ partial "pagination.html" . }}
   </article>
 {{ end }}

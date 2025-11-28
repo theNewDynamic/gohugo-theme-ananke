@@ -9,7 +9,7 @@
           {{ .Render "summary" }}
         </div>
       {{ end }}
-    </section>
-    {{- template "_internal/pagination.html" . -}}
+    </section>{{/* former internal template */}}
+    {{ partial "pagination.html" . -}}
   </article>
 {{ end }}
