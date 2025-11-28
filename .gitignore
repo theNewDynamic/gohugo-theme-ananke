@@ -1,9 +1,3 @@
-# local ignored files
-cache
-.wireit
-public
-.hugo_build.lock
-
 # Created by https://www.toptal.com/developers/gitignore/api/go,hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=go,hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode
 
