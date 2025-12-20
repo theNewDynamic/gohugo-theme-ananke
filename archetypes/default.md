@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
-tags: []
+tags: ['post']
 featured_image: ""
 description: ""
 ---
