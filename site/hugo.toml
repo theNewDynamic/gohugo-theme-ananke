@@ -1,0 +1,13 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Ananke Wiki Demo"
+contentDir = "../docs"
+enableRobotsTXT = true
+
+[module]
+  replacements = ["github.com/theNewDynamic/gohugo-theme-ananke -> ../"]
+  [[module.imports]]
+    path = "github.com/theNewDynamic/gohugo-theme-ananke"
+
+[params]
+  description = "Demo site rendering the Ananke wiki content with the Ananke theme."
