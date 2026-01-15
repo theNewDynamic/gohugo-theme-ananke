@@ -1,0 +1,25 @@
+---
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+# see https://docs.coderabbit.ai/reference/configuration for details
+language: "en"
+early_access: false
+
+enable_free_tier: true
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: true
+  high_level_summary: true
+  high_level_summary_in_walkthrough: true
+  poem: false
+  review_status: false
+  collapse_walkthrough: true
+  auto_review:
+    enabled: true
+    drafts: false
+
+chat:
+  auto_reply: true
+
+# validate at https://docs.coderabbit.ai/configuration/yaml-validator
