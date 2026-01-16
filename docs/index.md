@@ -1,3 +1,8 @@
+---
+title: test
+date: 2026-01-16T00:21:51.300Z
+---
+
 ## Installation and update
 
 Ananke can be installed in two possible ways.

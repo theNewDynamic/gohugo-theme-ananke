@@ -1,3 +1,8 @@
+---
+title: General Configuration
+date: 2026-01-16T00:21:51.300Z
+---
+
 > [!IMPORTANT]
 > Please note that GoHugo is extensible configurable with more generic or more specific configuration. Please read the documentation about [configuration files](https://gohugo.io/configuration/introduction/#configuration-file) and [configuration directories](https://gohugo.io/configuration/introduction/#configuration-directory) to learn more about this topic. Whenever Ananke's documentation refers to the configuration file it refers to any of these posible locations.
 >
@@ -11,7 +16,7 @@
 This theme includes a shortcode for a contact form that you can add to any page (there is an example on the contact page in the exampleSite folder). One option is to use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to fifty emails without incurring extra charges. Visit the Formspree site to get the "action" link and add it to your shortcode like this:
 
 ```go
-{{< form-contact action="https://formspree.io/your@email.com" >}}
+{{/*< form-contact action="https://formspree.io/your@email.com" >*/}}
 ```
 
 ### Logo

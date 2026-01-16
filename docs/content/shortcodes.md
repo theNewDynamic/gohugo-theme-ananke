@@ -1,3 +1,8 @@
+---
+title: Shortcodes
+date: 2026-01-16T00:21:51.300Z
+---
+
 > [!NOTE]
 > Work in progress. The information on this page is a copy paste result from old notes and documentation. Needs rewrite.
 
@@ -8,7 +13,7 @@
 
 Shortcodes are reusable content snippets that simplify complex HTML structures in Markdown files.
 
-Use shortcodes with the `{{< >}}` or `{{% %}}` syntax in your content files.
+Use shortcodes with the `{{/*< >*/}}` or `{{/*% %*/}}` syntax in your content files.
 
 ---
 
@@ -16,9 +21,9 @@ Use shortcodes with the `{{< >}}` or `{{% %}}` syntax in your content files.
 
 | Name      | Purpose                       | Example Usage                             |
 |-----------|-------------------------------|--------------------------------------------|
-| `figure`  | Responsive image with caption | `{{< figure src="/img/example.jpg" caption="An image" >}}` |
-| `button`  | Renders a styled button       | `{{< button href="/contact" >}}Say Hello{{< /button >}}` |
-| `highlight` | Syntax highlighting (fallback) | `{{< highlight html >}}...{{< /highlight >}}` |
+| `figure`  | Responsive image with caption | `{{/*< figure src="/img/example.jpg" caption="An image" >*/}}` |
+| `button`  | Renders a styled button       | `{{/*< button href="/contact" */>}}Say Hello{{/*< /button >*/}}` |
+| `highlight` | Syntax highlighting (fallback) | `{{/*< highlight html >*/}}...{{/*< /highlight >*/}}` |
 
 > 💡 These shortcodes can be extended or replaced in your own project. Place overrides under `layouts/shortcodes/`.
 

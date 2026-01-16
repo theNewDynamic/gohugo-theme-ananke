@@ -1,3 +1,3 @@
-module github.com/theNewDynamic/gohugo-theme-ananke-site
+module github.com/davidsneighbour/gohugo-theme-ananke
 
 go 1.20

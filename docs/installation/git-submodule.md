@@ -1,3 +1,8 @@
+---
+title: Installation as Git Submodule
+date: 2026-01-16T00:21:51.300Z
+---
+
 # Installation as a Git Submodule (outdated)
 
 Git Submodule based installation for the [Ananke theme](https://github.com/theNewDynamic/gohugo-theme-ananke) for [GoHugo](https://gohugo.io/).

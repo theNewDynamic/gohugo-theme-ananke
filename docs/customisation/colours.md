@@ -1,3 +1,8 @@
+---
+title: Colours
+date: 2026-01-16T00:21:51.300Z
+---
+
 > [!NOTE]
 > Work in progress. The information on this page is a copy paste result from old notes and documentation. Needs rewrite.
 

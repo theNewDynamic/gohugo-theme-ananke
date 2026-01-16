@@ -1,3 +1,8 @@
+---
+title: Installation
+date: 2026-01-16T00:21:51.300Z
+---
+
 ## Installing the Ananke Theme for Hugo
 
 <!-- > [!NOTE]
