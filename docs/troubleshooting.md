@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-date: 2026-01-16T00:21:51.300Z
+date: 2026-01-16T08:00:00.000+0700
 ---
 
 ## Sorry, but "$FEATURE does not work" doesn't work for us

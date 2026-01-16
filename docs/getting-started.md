@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-date: 2026-01-16T00:21:51.300Z
+date: 2026-01-16T08:00:00.000+0700
 ---
 
 _**Work in Progress! **_

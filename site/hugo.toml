@@ -8,7 +8,7 @@ enableRobotsTXT = true
 description = "Documentation for the GoHugo Ananke theme."
 
 [module]
-replacements = ["github.com/theNewDynamic/gohugo-theme-ananke -> ../"]
+replacements = ["github.com/theNewDynamic/gohugo-theme-ananke/v2 -> /home/patrick/github.com/davidsneighbour/gohugo-theme-ananke/"]
 
 [[module.imports]]
 path = "github.com/theNewDynamic/gohugo-theme-ananke/v2"
