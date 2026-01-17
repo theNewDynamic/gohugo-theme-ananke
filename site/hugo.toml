@@ -7,6 +7,9 @@ enableRobotsTXT = true
 [params]
 description = "Documentation for the GoHugo Ananke theme."
 
+[params.ananke.home]
+content_alignment = "left" #options: left, center, right
+
 [module]
 replacements = ["github.com/theNewDynamic/gohugo-theme-ananke/v2 -> /home/patrick/github.com/davidsneighbour/gohugo-theme-ananke/"]
 
