@@ -47,7 +47,8 @@
   "scripts": {
     "release": "wireit",
     "release:minor": "wireit",
-    "release:pre": "wireit"
+    "release:pre": "wireit",
+    "server": "wireit"
   },
   "wireit": {
     "release": {
@@ -58,6 +59,9 @@
     },
     "release:pre": {
       "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
+    },
+    "server": {
+      "command": "cd site && HUGO_MODULE_REPLACEMENTS=\"github.com/theNewDynamic/gohugo-theme-ananke/v2 -> /home/patrick/github.com/davidsneighbour/gohugo-theme-ananke/\" hugo server"
     }
   }
 }
