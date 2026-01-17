@@ -1,5 +1,14 @@
 {{ define "main" }}
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+
+  {{- $config := site.Params.ananke.home -}}
+  {{- $text_alignment := "tc-l" -}}
+  {{- if eq $config.content_alignment "left" -}}
+    {{- $text_alignment = "tl-l" -}}
+  {{- else if eq $config.content_alignment "right" -}}
+    {{- $text_alignment = "tr-l" -}}
+  {{- end -}}
+
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
     {{ .Content }}
   </article>
 
