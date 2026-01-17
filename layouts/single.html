@@ -64,7 +64,7 @@
       {{ if .Site.Config.Services.Disqus.Shortname }}
       <div class="mt6 instapaper_ignoref">
         {{/* former internal template */}}
-        {{ template "disqus.html" . }}
+        {{ partials.Include "disqus.html" . }}
       </div>
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
