@@ -11,7 +11,7 @@ date: 2026-01-16T08:00:00.000+0700
 If you want to publish content that is already published on a different site you need to reference a canonical URL of the original content. By defining the `canonicalUrl` in the front matter definition the canonical url is set in the headers.
 
 ```yaml
-canonicalUrl: https://mydomain.com/path-to-the-oringinal-content/
+canonicalUrl: https://mydomain.com/path-to-the-original-content/
 ```
 
 ## Common Options

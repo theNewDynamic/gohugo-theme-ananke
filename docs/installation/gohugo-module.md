@@ -86,4 +86,4 @@ hugo server
 
 Running this command will start the development server and you can see your website at <http://localhost:1313/>. To stop the development server press `Ctrl + C`.
 
-So set up details like comment system follow the steps in the [Ananke theme's getting started guide](https://github.com/theNewDynamic/gohugo-theme-ananke#getting-started).
+To set up details like the comment system, follow the steps in the [Ananke theme's getting started guide](https://github.com/theNewDynamic/gohugo-theme-ananke#getting-started).

@@ -113,7 +113,7 @@ networks = [
 
 #### Disable sharing partially or globally
 
-By default shareing links on each single page are enabled. To disable this behaviour set `disable_share` in your pages front matter to `true`:
+By default sharing links on each single page are enabled. To disable this behaviour set `disable_share` in your pages front matter to `true`:
 
 ```yaml
 ---
@@ -187,7 +187,7 @@ Long story short: on the the label on the left is included as is, followed by `=
 * `permalink` is replaced with the permalink of the page (urlencoded)
 * `title` is replaced with the title of the page (urlencoded)
 * `description` is replaced with the frontmatter description
-* `username` is replaced with the configurad `username` for that network (under the `ananke.social.$NETWORKSLUG` section)
+* `username` is replaced with the configured `username` for that network (under the `ananke.social.$NETWORKSLUG` section)
 
 Adding to that everything in `params` is added blindly to the resulting link.
 
