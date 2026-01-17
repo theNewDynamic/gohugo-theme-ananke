@@ -61,15 +61,17 @@
     <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | compare.Default "serif"}} f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} {{ if $needs_aside }}w-two-thirds-l{{ else }}w-100-l{{ end }}">
       {{- .Content -}}
       {{- partials.Include "tags.html" . -}}
-      <div class="mt6 instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
+      <div class="mt6 instapaper_ignoref">
         {{/* former internal template */}}
-        {{ partial "disqus.html" . }}
+        {{ template "disqus.html" . }}
+      </div>
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
+      <div class="mt6 instapaper_ignoref">
         {{- partials.Include "commento.html" . -}}
-      {{ end }}
       </div>
+      {{ end }}
     </div>
     {{- if $needs_aside -}}
     <aside class="w-30-l mt6-l">
