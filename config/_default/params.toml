@@ -1,6 +1,9 @@
 [ananke]
 show_recent_posts = true # show recent posts on the homepage
 
+[ananke.home]
+content_alignment = "center" #options: left, center, right
+
 [ananke.social]
 icon_path = "ananke/socials/%s.svg"
 
