@@ -17,7 +17,7 @@ The theme is set, by default, to use a near-white background color and the "Aven
 
 which will give you a body class like this:
 
-```go
+```html
 <body class="avenir bg-near-white">
 ```
 
