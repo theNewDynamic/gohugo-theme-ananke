@@ -1,0 +1,5 @@
+description = "Documentation for the GoHugo Ananke theme."
+custom_css = ["fixes.css", "highlighting.css"]
+
+[ananke.home]
+content_alignment = "left" # options: left, center, right

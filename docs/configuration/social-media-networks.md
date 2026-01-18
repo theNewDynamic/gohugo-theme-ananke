@@ -213,32 +213,32 @@ To override the icon for a network add your own copy to your local `assets/anank
 
 This is a list of slugs for already configured networks in the theme. You can add missing networks without much hassle (see [Configure social media follow links](https://github.com/theNewDynamic/gohugo-theme-ananke/wiki/Social-media-network-setup#configure-social-media-follow-links)). If you experience issue doing that [feel free to reach out in our Forum](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions).
 
-| Slug | profile | share | Notes |
-| --- | :---: | :---: | --- |
-| bluesky | ✅ | ✅ | Read notes about [configuring networks with multiple hosts](#configuring-networks-with-multiple-hosts) |
-| email | ❌ |✅ | |
-| facebook | ✅ | ✅ | |
-| github | ✅ | ❌ |  |
-| gitlab | ✅ | ❌ |  |
-| hackernews | ✅ | ✅ | |
-| instagram | ✅ | ❔ |  |
-| keybase | ✅ | ❌ |  |
-| linkedin | ✅ | ✅ | |
-| medium | ✅ | ❔ |  |
-| mastodon | ✅ | ❌ | Read notes about [configuring networks with multiple hosts](#configuring-networks-with-multiple-hosts) |
-| pinterest | ✅ | ✅ | |
-| reddit | ✅ | ✅ | |
-| rss | ✅ | ❌ | add `profilelink` to link to your RSS feed |
-| slack | ✅ | ❔ | add `profilelink` to your slack channel |
-| stackoverflow | ✅ | ❌ | your `username` is your profile's ID |
-| telegram | ✅ | ✅ | |
-| tiktok | ✅ | ✅ | |
-| tumblr | ✅ | ✅ | |
-| twitter | ✅ | ✅ | |
-| whatsapp | ❌ | ✅ | |
-| xing | ✅ | ✅ | |
-| x-twitter | ✅ | ✅ |  |
-| youtube | ✅ | ❔ |  |
+| Slug          | profile | share | Notes                                                                                                  |
+| ------------- | :-----: | :---: | ------------------------------------------------------------------------------------------------------ |
+| bluesky       |    ✅    |   ✅   | Read notes about [configuring networks with multiple hosts](#configuring-networks-with-multiple-hosts) |
+| email         |    ❌    |   ✅   |                                                                                                        |
+| facebook      |    ✅    |   ✅   |                                                                                                        |
+| github        |    ✅    |   ❌   |                                                                                                        |
+| gitlab        |    ✅    |   ❌   |                                                                                                        |
+| hackernews    |    ✅    |   ✅   |                                                                                                        |
+| instagram     |    ✅    |   ❔   |                                                                                                        |
+| keybase       |    ✅    |   ❌   |                                                                                                        |
+| linkedin      |    ✅    |   ✅   |                                                                                                        |
+| medium        |    ✅    |   ❔   |                                                                                                        |
+| mastodon      |    ✅    |   ❌   | Read notes about [configuring networks with multiple hosts](#configuring-networks-with-multiple-hosts) |
+| pinterest     |    ✅    |   ✅   |                                                                                                        |
+| reddit        |    ✅    |   ✅   |                                                                                                        |
+| rss           |    ✅    |   ❌   | add `profilelink` to link to your RSS feed                                                             |
+| slack         |    ✅    |   ❔   | add `profilelink` to your slack channel                                                                |
+| stackoverflow |    ✅    |   ❌   | your `username` is your profile's ID                                                                   |
+| telegram      |    ✅    |   ✅   |                                                                                                        |
+| tiktok        |    ✅    |   ✅   |                                                                                                        |
+| tumblr        |    ✅    |   ✅   |                                                                                                        |
+| twitter       |    ✅    |   ✅   |                                                                                                        |
+| whatsapp      |    ❌    |   ✅   |                                                                                                        |
+| xing          |    ✅    |   ✅   |                                                                                                        |
+| x-twitter     |    ✅    |   ✅   |                                                                                                        |
+| youtube       |    ✅    |   ❔   |                                                                                                        |
 
 Legend:
 ✅ --- feature configured
@@ -278,14 +278,14 @@ profilelink = "https://twitter.com/theNewDynamic" # (optional, this would be cov
 * all functions in `partial/func/socials` are removed
 * If you were using the following partials anywhere:
 
-  ```go
+  ```go-html-template
   {{ partial "social-follow.html" . }}
   {{ partial "social-share.html" . }}
   ```
 
   you should be able to replace the functionality with this change
 
-  ```go
+  ```go-html-template
   {{ partial "social/follow.html" . }}
   {{ partial "social/share.html" . }}
   ```
