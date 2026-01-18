@@ -56,9 +56,22 @@
 	{{ block "head" . }}{{ partials.Include "head-additions.html" . }}{{ end }}
   </head>
 
-  {{- $environment := hugo.Environment | compare.Default "production" -}}
-  <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
+  {{- $environment := hugo.Environment | default "production" -}}
 
+  {{/* Generate dynamic classes for the body tag */}}
+  {{- $body_classes := slice "ma0" ($.Param "body_classes" | default "avenir bg-near-white") $environment -}}
+  {{- $body_classes = $body_classes | append (printf "is-%s" .Kind) -}}
+
+  {{- if .IsPage -}}
+    {{- $body_classes = $body_classes | append "is-page" -}}
+    {{- with .File -}}
+      {{- $body_classes = $body_classes | append (printf "page-%s" .ContentBaseName) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if .IsSection -}}{{- $body_classes = $body_classes | append "is-section" -}}{{- end -}}
+
+  <body class="{{ delimit $body_classes " " }}">
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}

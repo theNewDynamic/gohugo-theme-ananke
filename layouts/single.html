@@ -8,7 +8,14 @@
   {{- $needs_aside := or .Params.toc $related_content -}}
   {{ $page := .}}
   {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l {{ if $needs_aside }}mw8{{ else }}mw7{{ end }} center ph3 flex-wrap justify-between">
+
+  {{/* Calculate a unique class for this post */}}
+  {{- $post_class := "" -}}
+  {{- with .File -}}
+    {{- $post_class = printf "page-%s" .ContentBaseName -}}
+  {{- end -}}
+
+  <article class="{{ $post_class }} flex-l {{ if $needs_aside }}mw8{{ else }}mw7{{ end }} center ph3 flex-wrap justify-between">
     <header class="mt4 w-100">
       <aside class="instapaper_ignoref b helvetica tracked ttu">
           {{/*
