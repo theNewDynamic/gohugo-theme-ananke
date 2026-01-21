@@ -1,0 +1,31 @@
+# 站点基础配置（必填）
+baseURL = "https://gohugo-theme-ananke-ruby.vercel.app/"  # 你的 Vercel 域名，末尾必须带 /
+languageCode = "en-us"  # 语言（中文可改为 zh-CN）
+title = "My Ananke Site"  # 你的站点标题（任意填写）
+theme = "ananke"  # 指定使用 ananke 主题（必须正确）
+
+# ananke 主题自定义配置（可选，按需修改）
+[params]
+  description = "A Hugo site using the Ananke theme"  # 站点描述
+  author = "Your Name"  # 作者名
+  twitter = "yourtwitter"  # 推特账号（可选）
+  facebook = "yourfacebook"  # 脸书账号（可选）
+  github = "13556547"  # 你的 GitHub 用户名（可选）
+  showReadingTime = true  # 显示文章阅读时间
+  mainSections = ["posts"]  # 主要内容板块
+
+# 菜单配置（可选，默认主题会自动生成）
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 3
