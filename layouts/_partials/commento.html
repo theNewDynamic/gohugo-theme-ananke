@@ -1,3 +1,7 @@
-{{ $url := site.Params.commentoPath | compare.Default "https://cdn.commento.io/js/commento.js" }}
+{{- $url := "https://cdn.commento.io/js/commento.js" -}}
+{{- with .Site.Params.commentoFrontend -}}
+  {{- $url = printf "%s/js/commento.js" . -}}
+{{- end -}}
+{{- $url = .Site.Params.commentoPath | default $url -}}
 <div id="commento"></div>
 <script defer src="{{- $url -}}"></script>
