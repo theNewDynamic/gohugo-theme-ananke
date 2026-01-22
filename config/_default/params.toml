@@ -134,8 +134,8 @@ icon = "pinterest" # font awesome brand icon name
 link = "https://pinterest.com/pin/create/button/"
 [ananke.social.networks.pinterest.particles]
 url = "permalink"
-media = "permalink"
-description = "description"
+media = "featured_image"
+description = "title"
 
 [ananke.social.networks.reddit]
 slug = "reddit"
