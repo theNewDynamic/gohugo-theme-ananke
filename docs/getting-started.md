@@ -50,7 +50,7 @@ example: `cover_dimming_class = "bg-black-20"` or `cover_dimming_class = "bg-whi
 This theme includes a shortcode for a contact form that you can add to any page (there is an example on the contact page in the exampleSite folder). One option is to use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to fifty emails without incurring extra charges. Visit the Formspree site to get the "action" link and add it to your shortcode like this:
 
 ```go-html-template
-{{/*< form-contact action="https://formspree.io/your@email.com" >*/}}
+{{</* form-contact action="https://formspree.io/your@email.com" */>}}
 ```
 
 ### Read more link

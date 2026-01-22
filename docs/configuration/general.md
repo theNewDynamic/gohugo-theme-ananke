@@ -15,7 +15,7 @@ date: 2026-01-16T08:00:00.000+0700
 
 This theme includes a shortcode for a contact form that you can add to any page (there is an example on the contact page in the exampleSite folder). One option is to use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to fifty emails without incurring extra charges. Visit the Formspree site to get the "action" link and add it to your shortcode like this:
 
-```markdown
+```go-html-template
 {{</* form-contact action="https://formspree.io/your@email.com" */>}}
 ```
 
