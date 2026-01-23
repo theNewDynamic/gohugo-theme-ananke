@@ -1,7 +1,7 @@
 baseURL = "http://localhost/"
 languageCode = "en-us"
 title = "Ananke Documentation"
-contentDir = "../docs/"
+contentDir = "../docs"
 enableRobotsTXT = true
 
 [markup]
