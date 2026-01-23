@@ -187,6 +187,7 @@ Long story short: on the the label on the left is included as is, followed by `=
 * `permalink` is replaced with the permalink of the page (urlencoded)
 * `title` is replaced with the title of the page (urlencoded)
 * `description` is replaced with the frontmatter description
+* `featured_image` is replaced with the featured image URL of the page (urlencoded)
 * `username` is replaced with the configured `username` for that network (under the `ananke.social.$NETWORKSLUG` section)
 
 Adding to that everything in `params` is added blindly to the resulting link.
