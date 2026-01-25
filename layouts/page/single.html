@@ -1,7 +1,13 @@
 {{ define "header" }}{{ partials.Include "page-header.html" . }}{{ end }}
 {{ define "main" }}
   <div class="flex-l mt2 mw8 center">
-    <article class="center cf pv5 ph3 ph4-ns mw7">
+    {{/* Calculate a unique class for this page */}}
+    {{- $post_class := "" -}}
+    {{- with .File -}}
+      {{- $post_class = printf "page-%s" .ContentBaseName -}}
+    {{- end -}}
+
+    <article class="{{ $post_class }} center cf pv5 ph3 ph4-ns mw7">
       <header>
         <h1 class="f1">
           {{ .Title }}

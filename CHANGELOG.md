@@ -1,4 +1,38 @@
 # Changelog
+## [2.12.2](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.12.1...v2.12.2) (2026-01-18)
+
+
+### Documentation
+
+* add documentation pages ([#897](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/897)) ([db85438](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/db854384305e8ff3f54400631e8787af30aafd98))
+* **fix:** remove kitchensink ([#901](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/901)) ([a23edc5](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a23edc50ae692db0aa696f953f67144b40a47cbe))
+* update README.md ([a4c2f7d](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a4c2f7d07d0bef27f54991febefe07a10331987e))
+* update README.md with a hint about the layout discussion ([0cb0c55](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/0cb0c552290ca8eb6236877d1f13a599e0a606a5))
+
+
+### Theme
+
+* **fix:** add configurability to reading time display ([39e2145](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/39e2145985954eac07dd343a456f5696c8f9e9d6)), closes [#801](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/801)
+* **fix:** enable selfhosted commento.io URL ([a1ed47c](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/a1ed47cf971e3074eb16a8b1b0d365fd258ef97a)), closes [#873](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/873)
+
+
+### Chore
+
+* add CONTRIBUTING.md ([e47cfff](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/e47cfff436be61d062b350211c935cc6224a5db6))
+* **config:** add coderabbit configuration ([#894](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/894)) ([83da004](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/83da004fec39981eb49b9574873642205408f883))
+* **deps:** update dependencies ([98a904b](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/98a904b10f23dd7b06bed616d18ce71b4fd00906))
+* remove outdated package.hugo.json ([#902](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/902)) ([f305bb1](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/f305bb129fac9d7cac53cd21e0efceeee9371eaf))
+* remove release:minor script ([#903](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/903)) ([98ca867](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/98ca8675c580eeb7c8f549c61c4b5044cd6c3c61))
+* update gitignore file ([eb38100](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/eb3810017443656a8a71ef6e4b3e6131c39092d1))
+
+
+### Build System
+
+* **deps-dev:** bump @biomejs/biome from 1.9.4 to 2.0.6 ([#855](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/855)) ([9b3d106](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/9b3d1069f83789487640f75348ce9dffd42a0097)), closes [#6557](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6557) [#6511](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6511) [#6492](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6492) [#6557](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6557) [#6287](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6287) [#6551](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6551) [#6536](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6536) [#6503](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6503) [#6482](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6482) [#6565](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6565) [#4677](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/4677) [#6166](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6166) [#6553](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6553) [#6547](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6547) [#6557](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6557) [#6511](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6511) [#6492](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6492) [#6557](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6557) [#6287](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6287) [#6551](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6551) [#6536](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6536) [#6503](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6503) [#6482](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6482) [#6565](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6565) [#4677](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/4677) [#6166](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6166) [#6553](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6553) [#6547](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6547) [#6507](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6507) [#6558](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6558) [#6395](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6395) [#6355](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6355) [#6320](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6320) [#6219](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6219) [#6166](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6166) [#6467](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6467) [#6468](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/6468)
+* **deps:** bump postcss from 8.5.3 to 8.5.6 ([#856](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/856)) ([ff04bf8](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/ff04bf8ba23e3deeeca7c030bca0f0a8537cacfc)), closes [#2052](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/2052)
+* **deps:** update dependencies ([3d41b3f](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/3d41b3fa555b347f401fa17cc48f9a89b2d5bc61))
+* **deps:** update dependencies ([#895](https://github.com/thenewdynamic/gohugo-theme-ananke/issues/895)) ([4a50edd](https://github.com/thenewdynamic/gohugo-theme-ananke/commit/4a50edda116e3249598622414abd256ef5d59aeb))
+
 ## [2.12.1](https://github.com/thenewdynamic/gohugo-theme-ananke/compare/v2.12.0...v2.12.1) (2025-05-13)
 
 

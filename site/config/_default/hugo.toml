@@ -1,0 +1,15 @@
+baseURL = "http://localhost/"
+languageCode = "en-us"
+title = "Ananke Documentation"
+contentDir = "../docs"
+enableRobotsTXT = true
+
+[markup]
+[markup.highlight]
+style = 'tokyonight-day'
+
+[module]
+replacements = ["github.com/theNewDynamic/gohugo-theme-ananke/v2 -> ../../"]
+
+[[module.imports]]
+path = "github.com/theNewDynamic/gohugo-theme-ananke/v2"
