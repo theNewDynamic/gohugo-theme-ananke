@@ -1,5 +1,7 @@
 description = "Documentation for the GoHugo Ananke theme."
 custom_css = ["fixes.css", "highlighting.css"]
 
+# commentoFrontend = "https://commento.io" # if you use a selfhosted version of commento, uncomment this line and set your path
+
 [ananke.home]
 content_alignment = "left" # options: left, center, right
