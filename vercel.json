@@ -27,3 +27,32 @@
     }
   ]
 }
+{
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.128.0",
+      "HUGO_ENV": "production",
+      "NODE_ENV": "production"
+    },
+    "command": "hugo --gc --minify",
+    "outputDirectory": "public"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1",
+      "status": 200
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=31536000, stale-while-revalidate"
+        }
+      ]
+    }
+  ]
+}

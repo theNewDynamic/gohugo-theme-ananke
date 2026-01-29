@@ -8,7 +8,11 @@
 {{- if eq "false" $disabled -}}
 
   {{- $title := $context.Title -}}
+<<<<<<< Updated upstream
   {{- $url := printf "%s" $context.Permalink | absLangURL -}}
+=======
+  {{- $url := printf "%s" $context.Permalink | urls.AbsLangURL -}}
+>>>>>>> Stashed changes
 
   {{- $networks := $config.share.networks -}}
   {{- $hasLabel := $config.share.sharetext | default "true" -}}
