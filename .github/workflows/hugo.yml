@@ -1,0 +1,88 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+  # Allows manual trigger from Actions tab
+  workflow_dispatch:
+
+# Permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Concurrent deployment settings
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # 👉 关键修改：统一 Hugo 版本为 0.153.0（与 Vercel 一致）
+      HUGO_VERSION: 0.153.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          # 安装对应版本的 Hugo Extended（支持主题样式编译）
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          # 验证版本是否安装成功
+          hugo version
+
+      - name: Install Dart Sass（主题样式依赖）
+        run: sudo snap install dart-sass
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # 拉取子模块（若主题放在子模块中）
+
+      - name: Setup GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      # 👉 关键添加：安装 Hugo Modules 依赖（解决 ananke 主题找不到的问题）
+      - name: Install Hugo Modules
+        run: |
+          hugo mod get
+          hugo mod tidy  # 清理多余依赖
+
+      - name: Install Node.js dependencies（若项目有 npm 依赖）
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+      - name: Build Hugo site
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --minify \
+            # 👉 关键：使用 GitHub Pages 自动生成的 baseURL，避免路径冲突
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload build artifact（上传构建产物）
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build  # 依赖 build  job 成功后执行
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

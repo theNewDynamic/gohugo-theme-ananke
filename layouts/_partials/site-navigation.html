@@ -2,25 +2,25 @@
   <div class="flex-l center items-center justify-between">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
-        <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+        <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
       {{ else }}
         {{ .Site.Title }}
       {{ end }}
     </a>
     <div class="flex-l items-center">
-      {{ partials.Include "i18nlist.html" . }}
+      {{ partial "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
-        <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+        <ul class="{{ if eq $.Site.Language.LanguageDirection "rtl" }}pr0 ml3{{ else }}pl0 mr3{{ end }}">
           {{ range .Site.Menus.main }}
-          <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+          <li class="list f5 f4-ns fw4 dib {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl3{{ else }}pr3{{ end }}">
+            <a class="hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .URL }}" title="{{ .Name }} page">
               {{ .Name }}
             </a>
           </li>
           {{ end }}
         </ul>
       {{ end }}
-      {{ partials.IncludeCached "social/follow.html" . }}
+      {{ partialCached "social/follow.html" . }}
     </div>
   </div>
 </nav>

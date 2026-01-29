@@ -1,0 +1,8 @@
+baseURL = "https://13556547.github.io/gohugo-theme-ananke/"
+languageCode = "en-us"
+title = "My Ananke Site"
+theme = "ananke"
+
+# 如果使用 Hugo Modules 引入主题，添加以下内容
+[[module.imports]]
+path = "github.com/theNewDynamic/gohugo-theme-ananke"

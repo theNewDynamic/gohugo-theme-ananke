@@ -1,0 +1,35 @@
+# 站点基础配置
+baseURL = "https://hugo.135.lol"  # 网站的实际域名
+languageCode = "zh-CN"  # 中文站点
+title = "我的 Hugo 博客"  # 你的站点标题
+theme = "."  # 使用当前目录作为主题
+
+# ananke 主题自定义配置（可选，根据需要修改）
+[params]
+  description = "这是用 Hugo + ananke 搭建的博客"  # 站点描述
+  author = "你的名字"
+  favicon = "favicon.ico"  # 图标（后续可在 static 目录添加）
+  twitter = ""  # 可选，Twitter 账号
+  github = "你的 GitHub 用户名"  # 可选，显示 GitHub 链接
+
+# ananke 主题特定配置
+[params.ananke]
+  show_recent_posts = true
+
+[params.ananke.social]
+  follow.networks = []
+  share.networks = []
+
+# 菜单配置（顶部导航栏）
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 2
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 3

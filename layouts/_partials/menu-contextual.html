@@ -15,7 +15,7 @@
   https://gohugo.io/content-management/related/
 */}}
 
-{{ $related := .Site.RegularPages.Related . | collections.First 15 }}
+{{ $related := .Site.RegularPages.Related . | first 15 }}
 
 {{ with $related }}
   <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">

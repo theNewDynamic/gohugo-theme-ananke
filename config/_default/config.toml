@@ -1,0 +1,4 @@
+baseURL = "https://hugo.135.lol"
+languageCode = "zh-CN"
+title = "我的 Hugo 博客"
+theme = "."
