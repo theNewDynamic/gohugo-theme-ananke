@@ -2,7 +2,7 @@ User-agent: *
 {{/* robotstxt.org - if we are in production, allow access, else deny */ -}}
 {{ if hugo.IsProduction -}}
 Allow: /
-Sitemap: {{ "/sitemap.xml" | urls.AbsURL }}
+Sitemap: {{ "/sitemap.xml" | absURL }}
 {{ else -}}
 Disallow: /
 {{ end -}}

@@ -9,7 +9,7 @@
   @access private
 
   @example - Go Template
-  {{ partials.Include "func/warn.html" $message }}
+  {{ partial "func/warn.html" $message }}
 */}}
 {{ $header := "Ananke Theme Warning" }}
-{{ fmt.Warnf "\n%s:\n%s" $header . }}
+{{ warnf "\n%s:\n%s" $header . }}

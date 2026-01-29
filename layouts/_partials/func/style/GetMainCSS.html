@@ -14,32 +14,32 @@
 {{ $main_style := dict }}
 
 {{/* We prepare a slice of resources to be concatenated as one */}}
-{{ $assets_to_concat := collections.Slice }}
+{{ $assets_to_concat := slice }}
 {{/* We add locale css files to the slice in the proper order */}}
-{{ range collections.Slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
-  {{ with partials.IncludeCached "func/style/GetResource.html" . . }}
-    {{ $assets_to_concat = $assets_to_concat | collections.Append . }}
+{{ range slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
+  {{ with partialCached "func/style/GetResource.html" . . }}
+    {{ $assets_to_concat = $assets_to_concat | append . }}
   {{ end }}
 {{ end }}
 
 {{- $config := site.Params.ananke.social -}}
 {{- $networks := $config.follow.networks -}}
-{{- $setups := (collections.Where $config.networks "slug" "in" $networks) }}
+{{- $setups := where $config.networks "slug" "in" $networks }}
 {{ with $setups }}
-  {{ $socials_rules := collections.Slice }}
+  {{ $socials_rules := slice }}
   {{ range $service := . }}
     {{ with .color }}
-      {{ $rule := fmt.Printf `
+      {{ $rule := printf `
         .ananke-socials a.%s:hover {
           color: %s !important;
         }` $service.slug . }}
-      {{ $socials_rules = $socials_rules | collections.Append $rule }}
+      {{ $socials_rules = $socials_rules | append $rule }}
     {{ end }}
   {{ end }}
   {{ with $socials_rules }}
-    {{ $socials_rules = collections.Delimit . " " }}
+    {{ $socials_rules = delimit . " " }}
     {{ $socials_css := $socials_rules | resources.FromString "ananke/css/generated_socials.css" }}
-    {{ $assets_to_concat = $assets_to_concat | collections.Append $socials_css }}
+    {{ $assets_to_concat = $assets_to_concat | append $socials_css }}
   {{ end }}
 {{ end }}
 
@@ -47,17 +47,8 @@
 css asset directory we (unless condition below) add to aforementioned slice */}}
 {{ with site.Params.custom_css }}
   {{ range . }}
-    {{ with partials.IncludeCached "func/style/GetResource.html" . . }}
-      {{ if compare.Eq .MediaType.SubType "x-scss" "x-sass" "scss" "sass" }}
-        {{ if hugo.IsExtended }}
-          {{/* as we cannot concatenate styles of different types, we sass/scss to be transformed to css beforehand */}}
-          {{ $assets_to_concat = $assets_to_concat | collections.Append (. | css.Sass) }}
-        {{ else }}
-          {{ partials.Include "func/warn.html" (fmt.Printf "Processing of stylesheet %s of type %s has been skipped. You need Hugo Extended to process such files." .Name .MediaType.SubType) }}
-        {{ end }}
-      {{ else }}
-        {{ $assets_to_concat = $assets_to_concat | collections.Append . }}
-      {{ end }}
+    {{ with partialCached "func/style/GetResource.html" . . }}
+      {{ $assets_to_concat = $assets_to_concat | append . }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -66,14 +57,21 @@ css asset directory we (unless condition below) add to aforementioned slice */}}
   {{/* We proceed to concatenate the $assets_to_concat */}}
   {{ $style := . | resources.Concat "ananke/css/main.css" }}
 
-  {{/* We then use toCSS to add sourceMap and minify */}}
-  {{ $options := dict "enableSourceMap" true "precision" 6 }}
-  {{ $style = $style | css.Sass $options | resources.Minify }}
+  {{/* We then minify the CSS */}}
+  {{ $style = $style | resources.Minify }}
   {{/* We fingerprint in production for cache busting purposes */}}
   {{ if hugo.IsProduction }}
     {{ $style = $style | resources.Fingerprint }}
   {{ end }}
   {{/* We're ready to set returning variable with resulting resource */}}
+  {{ $main_style = $style }}
+{{ else }}
+  {{/* If no CSS files were found, create an empty CSS file */}}
+  {{ $style := "" | resources.FromString "ananke/css/main.css" }}
+  {{ $style = $style | resources.Minify }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | resources.Fingerprint }}
+  {{ end }}
   {{ $main_style = $style }}
 {{ end }}
 

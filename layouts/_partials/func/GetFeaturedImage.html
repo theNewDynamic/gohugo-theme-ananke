@@ -22,7 +22,7 @@
 {{ with .Params.featured_image }}
   {{/* This is the default case, the image lives in the static directory.
     In which case we'll use the static dir */}}
-  {{ $linkToCover = strings.Trim . "/" | urls.AbsURL }}
+  {{ $linkToCover = trim . "/" | absURL }}
   {{/* If we find a Page Resource matching the exact value, we use it instead. */}}
   {{ with $.Resources.GetMatch . }}
     {{ $linkToCover = .RelPermalink }}
@@ -30,7 +30,7 @@
 {{/* Find the first image with 'cover' in the name in this page bundle. */}}
 {{ else }}
   {{ with .Resources.ByType "image" }}
-    {{ with .GetMatch (fmt.Printf "**{%s}*" $matches) }}
+    {{ with .GetMatch (printf "**{%s}*" $matches) }}
       {{ $linkToCover = .RelPermalink }}
     {{ end }}
   {{ end }}

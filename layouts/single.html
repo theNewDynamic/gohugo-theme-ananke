@@ -1,6 +1,6 @@
 {{ define "header" }}
    {{/* We can override any block in the baseof file be defining it in the template */}}
-  {{ partials.Include "page-header.html" . }}
+  {{ partial "page-header.html" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -24,27 +24,27 @@
           */}}
         {{ .CurrentSection.Title }}
       </aside>
-      {{- partials.IncludeCached "social/share.html" . . -}}
+      {{- partialCached "social/share.html" . . -}}
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
-      {{ with .Params.author | compare.Default .Site.Params.author }}
+      {{ with .Params.author | default .Site.Params.author }}
       <p class="tracked">
-        {{- if compare.Eq $page.Language "de" "en" "es" "fr" "it" "no" "pt" -}}
+        {{- if eq $page.Language.Lang "de" "en" "es" "fr" "it" "no" "pt" -}}
           {{- lang.Translate "by" -}}
         {{ end -}} <strong>
         {{- if reflect.IsSlice . -}}
-            {{ collections.Delimit . ", " | transform.Markdownify }}
+            {{ delimit . ", " | markdownify }}
         {{- else -}}
-            {{ . | transform.Markdownify }}
+            {{ . | markdownify }}
         {{- end -}}
         </strong>
       </p>
       {{ end }}
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       {{ if not .Date.IsZero }}
-      <time class="f6 mv4 dib tracked" {{ fmt.Printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safe.HTMLAttr }}>
-        {{- .Date | time.Format (compare.Default "January 2, 2006" .Site.Params.date_format) -}}
+      <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safe.HTMLAttr }}>
+        {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
       </time>
       {{end}}
 
@@ -54,7 +54,7 @@
           2) A section front matter value is set `show_reading_time = true`
           3) A page front matter value is set `show_reading_time = true`
         */}}
-      {{ if (or (compare.Eq (.Param "show_reading_time") true) (compare.Eq $section.Params.show_reading_time true) )}}
+      {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
         {{ $readingTime := .ReadingTime }}
         {{ with .Site.Params.reading_speed }}
           {{ $readingTime = div (float $.WordCount) . }}
@@ -65,24 +65,25 @@
         <span class="f6 mv4 dib tracked"> - {{ lang.Translate "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | compare.Default "serif"}} f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} {{ if $needs_aside }}w-two-thirds-l{{ else }}w-100-l{{ end }}">
+    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl4-l{{ else }}pr4-l{{ end }} {{ if $needs_aside }}w-two-thirds-l{{ else }}w-100-l{{ end }}">
       {{- .Content -}}
-      {{- partials.Include "tags.html" . -}}
+      {{- partial "tags.html" . -}}
+      <div class="mt6 instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
       <div class="mt6 instapaper_ignoref">
         {{/* former internal template */}}
-        {{ partials.Include "disqus.html" . }}
+        {{ partial "disqus.html" . }}
       </div>
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
-      <div class="mt6 instapaper_ignoref">
-        {{- partials.Include "commento.html" . -}}
+        {{- partial "commento.html" . -}}
+      {{ end }}
       </div>
       {{ end }}
     </div>
     {{- if $needs_aside -}}
     <aside class="w-30-l mt6-l">
-      {{- partials.Include "menu-contextual.html" . -}}
+      {{- partial "menu-contextual.html" . -}}
     </aside>
     {{- end -}}
 
