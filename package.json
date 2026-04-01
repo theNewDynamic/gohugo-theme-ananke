@@ -32,7 +32,7 @@
     "gohugo-module"
   ],
   "dependencies": {
-    "cssnano": "7.1.2",
+    "cssnano": "7.1.4",
     "postcss": "8.5.6",
     "postcss-preset-env": "11.1.1",
     "tachyons": "4.12.0"
