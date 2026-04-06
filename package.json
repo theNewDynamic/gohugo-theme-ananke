@@ -32,6 +32,7 @@
     "gohugo-module"
   ],
   "dependencies": {
+    "@github/markdownlint-github": "0.8.0",
     "cssnano": "7.1.4",
     "postcss": "8.5.8",
     "postcss-preset-env": "11.2.0",
@@ -39,12 +40,20 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.10",
-    "@davidsneighbour/markdownlint-config": "2026.0.3",
     "@davidsneighbour/release-config": "2026.0.4",
     "@davidsneighbour/tools": "2026.0.4",
-    "dotenv": "17.4.1"
+    "dotenv": "17.4.1",
+    "markdownlint": "0.40.0",
+    "markdownlint-cli2": "0.22.0",
+    "markdownlint-rule-extended-ascii": "0.2.1",
+    "markdownlint-rule-list-duplicates": "0.0.1",
+    "markdownlint-rule-relative-links": "5.1.0",
+    "markdownlint-rule-search-replace": "1.2.0",
+    "markdownlint-rule-title-case-style": "0.4.3"
   },
   "scripts": {
+    "lint:markdown": "markdownlint-cli2 **/*.{md,mdx}",
+    "lint:markdown:fix": "markdownlint-cli2 --fix **/*.{md,mdx}",
     "release": "wireit",
     "release:pre": "wireit",
     "server": "wireit"
