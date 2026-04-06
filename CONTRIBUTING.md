@@ -1,57 +1,67 @@
 # Contributing to Ananke
 
-Thank you for your interest in improving the Ananke Hugo theme! Contributions of all kinds help keep the theme useful for the community. This document explains how to get started, what kinds of contributions we welcome, and how to collaborate effectively.
+Thanks for helping improve Ananke. This document describes the current contribution workflow for this repository.
 
-## Types of Contributions
+## Ways to Contribute
 
-We welcome many forms of help, including:
+* Report bugs
+* Suggest enhancements
+* Improve documentation
+* Improve templates, styles, or assets
+* Improve translations in `i18n/*.toml`
 
-* **Bug reports**: Tell us about problems you encounter and steps to reproduce them.
-* **Feature requests**: Propose new capabilities or improvements to existing features.
-* **Code contributions**: Fix bugs, add features, or improve build tooling.
-* **Documentation updates**: Improve explanations, examples, or add missing details.
-* **Translations**: Enhance or correct strings in the `i18n/` directory.
+## Before You Start
 
-## Getting Started
+1. Use a compatible Hugo version (see [`config/_default/hugo.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/config/_default/module.toml](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/config/_default/module.toml)) for the current state).
+2. Install dependencies:
 
-1. Install [Hugo](https://gohugo.io/getting-started/installing/) extended version and ensure `hugo version` matches the version in `config/_default/hugo.toml` > `min_version`.
-2. Install Node.js dependencies for asset building: `npm install`.
-3. Run the development server with `hugo server` and open the served URL.
+   ```bash
+   npm install
+   ```
 
-## Contribution Process
+3. Run a local preview via `npm run` instead of just calling `hugo server`:
 
-### Reporting Issues and Requesting Features
+   ```bash
+   npm run server
+   ```
 
-* Use [GitHub Issues](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to report bugs or [GitHub Discussions](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions) to suggest enhancements.
-* Include clear steps to reproduce, expected versus actual behavior, and environment details (e.g., Hugo version (the output of `hugo version`), OS, browser).
-* Share screenshots or logs when relevant, but keep in mind to avoid sensitive information in public issues places.
+   This runs the documentation site from `site/` using contents from `docs/` with local configuration.
 
-### Submitting Code Changes
+## Reporting Bugs and Requesting Features
 
-* Fork the repository and create a descriptive branch name (e.g., `fix/menu-alignment`).
-* Keep changes focused and prefer smaller, reviewable pull requests.
-* Create one pull request per logical change. 
-* Follow the existing code style and structure; mirror patterns you see in `layouts/`, `assets/`, and `static/` (this will be updated with a link to coding standards as soon as we have them).
-* Add or update documentation for any user-facing change.
-* Write or update tests where applicable, then run them locally before opening a PR. Common commands:
-  * `npm test` for JavaScript-related checks.
-  * `hugo server` and `hugo` to verify the site builds without errors.
-* Ensure commits have clear messages describing the intent. If your PR addresses an issue, reference it in the description (e.g., "Fixes #123").
+* Open bugs in [GitHub Issues](https://github.com/theNewDynamic/gohugo-theme-ananke/issues).
+* Start feature or idea discussions in [GitHub Discussions](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions).
+* Include clear reproduction steps, expected behavior, actual behavior, and versions (`hugo version`, OS, browser if relevant).
 
-### Documentation Contributions
+## Pull Request Workflow
 
-* Update markdown files in `README.md`, `config/`, or relevant component docs to reflect your changes.
-* Keep examples minimal but complete, and prefer showing the final output or screenshot references when helpful.
+1. Fork the repository and create a focused branch.
+2. Keep the change set small and cohesive (which means, DO NOT introduce multiple changes in a single PR).
+3. Update docs for all user-facing changes.
+4. Run quality checks locally:
 
-## Code of Conduct
+   ```bash
+   npm run lint:markdown
+   ```
 
-Please review and follow the principles in the project's Code of Conduct (to be implemented). If you see behavior that violates these guidelines, report it through the project issue tracker or contact a maintainer privately.
+5. If your change affects behavior, validate with Hugo locally (for example `hugo` or `hugo server` in the relevant project).
+6. Open a pull request with:
+   * a clear summary,
+   * motivation/context,
+   * screenshots when UI/visual output changes,
+   * linked issues (for example: `Fixes #123`).
 
-## Communication and Support
+## Documentation Contributions
 
-* For general questions, open a discussion or issue on the repository.
-* For security concerns, please avoid public issues and reach out to a maintainer directly when possible.
+Documentation lives in multiple places:
 
-## Licensing
+* Main project overview: `README.md`
+* Contributor docs: `CONTRIBUTING.md`
+* Theme docs content: `docs/`
+* Docs site wrapper: `site/`
 
-By contributing, you agree that your contributions will be licensed under the same terms as the project, as detailed in [LICENSE.md](LICENSE.md).
+Please keep links relative where possible and remove stale references when updating pages.
+
+## License
+
+By contributing, you agree that your contributions are provided under the repository license in [LICENSE.md](LICENSE.md).
