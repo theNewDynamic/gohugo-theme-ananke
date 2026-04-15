@@ -46,8 +46,8 @@
   },
   "scripts": {
     "lint:links": "lychee --config lychee.toml public",
-    "lint:markdown": "markdownlint-cli2 **/*.{md,mdx}",
-    "lint:markdown:fix": "markdownlint-cli2 --fix **/*.{md,mdx}",
+    "lint:markdown": "markdownlint-cli2 docs/**/*.{md,mdx}",
+    "lint:markdown:fix": "markdownlint-cli2 --fix docs/**/*.{md,mdx}",
     "release": "wireit",
     "release:pre": "wireit",
     "server": "wireit",
