@@ -1,0 +1,19 @@
+{{ $pagesBySection := site.RegularPages.GroupBy "Section" }}
+{{ $sortedSections := slice }}
+
+{{ range $pagesBySection }}
+  {{ $sectionPage := page.GetPage .Key }}
+  {{ $sortedSections = $sortedSections | append (dict "sectionPage" $sectionPage "pages" .Pages) }}
+{{ end }}
+
+{{ range sort $sortedSections "sectionPage.Weight" }}
+  <h3>{{ .sectionPage.Title }}</h3>
+
+  <ul>
+      {{ range .pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+  </ul>
+{{ end }}
