@@ -1,8 +1,8 @@
 [build]
-publish = "./exampleSite/public/"
-command = "npm run deploy"
+publish = "public"
+command = "hugo --gc --minify"
 [build.environment]
-HUGO_VERSION = "0.128.0"
-HUGO_ENV = "production"
+HUGO_VERSION = "0.160.0"
+HUGO_ENV = "documentation"
 GO_VERSION = "1.23"
 NODE_ENV = "development"
