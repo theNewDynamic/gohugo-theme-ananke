@@ -1,5 +1,11 @@
 description = "Documentation for the GoHugo Ananke theme."
 custom_css = ["fixes.css", "highlighting.css"]
 
+[ananke]
+show_recent_posts = false
+
 [ananke.home]
 content_alignment = "left" # options: left, center, right
+
+[ananke.pages]
+show_date = false

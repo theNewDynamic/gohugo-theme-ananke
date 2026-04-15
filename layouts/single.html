@@ -42,7 +42,19 @@
       </p>
       {{ end }}
       {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-      {{ if and (not .Date.IsZero) (not (eq false .Params.ananke.show_date)) }}
+      {{ if and 
+          (not .Date.IsZero)
+          (or
+              (and
+                  (not (eq false site.Params.ananke.pages.show_date))
+                  (not (eq false .Params.ananke.show_date))
+              )
+              (and
+                  (eq false site.Params.ananke.pages.show_date)
+                  (eq true .Params.ananke.show_date)
+              )
+          )
+      }}
       <time class="f6 mv4 dib tracked" {{ fmt.Printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safe.HTMLAttr }}>
         {{- .Date | time.Format (compare.Default "January 2, 2006" .Site.Params.date_format) -}}
       </time>
