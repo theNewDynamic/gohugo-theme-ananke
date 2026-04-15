@@ -31,7 +31,7 @@ Thanks for helping improve Ananke. This document describes the current contribut
 
 * Open bugs in [GitHub Issues](https://github.com/theNewDynamic/gohugo-theme-ananke/issues).
 * Start feature or idea discussions in [GitHub Discussions](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions).
-* Include clear reproduction steps, expected behavior, actual behavior, and versions (`hugo version`, OS, browser if relevant).
+* Include clear reproduction steps, expected behaviour, actual behaviour, and versions (`hugo version`, OS, browser if relevant).
 
 ## Pull Request Workflow
 
@@ -44,7 +44,7 @@ Thanks for helping improve Ananke. This document describes the current contribut
    npm run lint:markdown
    ```
 
-5. If your change affects behavior, validate with Hugo locally (for example `hugo` or `hugo server` in the relevant project).
+5. If your change affects behaviour, validate with Hugo locally (for example `hugo` or `hugo server` in the relevant project).
 6. Open a pull request with:
    * a clear summary,
    * motivation/context,

@@ -68,5 +68,14 @@
     "server": {
       "command": "cd site && hugo server"
     }
+  },
+  "cspell": {
+    "version": "0.2",
+    "language": "en-GB",
+    "ignorePaths": [
+      "CHANGELOG.md",
+      "public",
+      "node_modules"
+    ]
   }
 }

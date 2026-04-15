@@ -11,7 +11,7 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 ## Features
 
 * Responsive layouts and accessible markup
-* Configurable hero/header behavior
+* Configurable hero/header behaviour
 * Configurable social follow/share links
 * Optional contact form shortcode
 * Localized i18n strings in many languages

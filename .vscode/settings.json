@@ -1,10 +1,14 @@
 {
-	"cSpell.words": [
-		"Ananke",
-		"demosite",
-		"Disqus",
-		"Kitchensink",
-		"licenselink",
-		"Philibert"
-	]
+	"editor.formatOnSave": true,
+	"files.autoSave": "afterDelay",
+	"files.autoSaveWhenNoErrors": true,
+	"files.autoSaveWorkspaceFilesOnly": true,
+	"cSpell.customDictionaries": {
+		"custom-dictionary-workspace": {
+			"name": "custom-dictionary-workspace",
+			"path": "${workspaceFolder:gohugo-theme-ananke}/.vscode/custom-dictionary.txt",
+			"addWords": true,
+			"scope": "workspace"
+		}
+	}
 }
