@@ -1,0 +1,5 @@
+# Accepts log level: "error", "warn", "info", "debug", "trace"
+verbose = "info"
+format = "detailed"
+mode = "emoji"
+
