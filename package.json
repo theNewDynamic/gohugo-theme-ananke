@@ -35,6 +35,7 @@
     "@davidsneighbour/release-config": "2026.0.4",
     "@davidsneighbour/tools": "2026.0.4",
     "@github/markdownlint-github": "0.8.0",
+    "@types/node": "25.6.0",
     "dotenv": "17.4.2",
     "markdownlint": "0.40.0",
     "markdownlint-cli2": "0.22.0",
@@ -71,5 +72,6 @@
       "public",
       "node_modules"
     ]
-  }
+  },
+  "type": "module"
 }
