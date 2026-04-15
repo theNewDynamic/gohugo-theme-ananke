@@ -1,0 +1,17 @@
+[hugoVersion]
+min = "0.160.0"
+# see below
+replacements = ["github.com/theNewDynamic/gohugo-theme-ananke/v2 -> ../../"]
+
+[[mounts]]
+source = 'node_modules'
+target = 'assets'
+
+[[mounts]]
+source = 'assets'
+target = 'assets'
+
+[[imports]]
+# @todo I have the feeling that this is not required when we run the site inside 
+# of the theme itself. Test and remove if not required.
+path = "github.com/theNewDynamic/gohugo-theme-ananke/v2"

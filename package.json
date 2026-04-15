@@ -60,7 +60,7 @@
       "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
     },
     "server": {
-      "command": "cd site && hugo server"
+      "command": "hugo server --environment documentation"
     }
   },
   "cspell": {

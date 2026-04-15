@@ -1,0 +1,4 @@
+[en]
+contentDir = 'docs/en'
+label = 'English'
+weight = 10
