@@ -33,16 +33,16 @@
   ],
   "dependencies": {
     "@github/markdownlint-github": "0.8.0",
-    "cssnano": "7.1.4",
-    "postcss": "8.5.8",
-    "postcss-preset-env": "11.2.0",
+    "cssnano": "7.1.5",
+    "postcss": "8.5.9",
+    "postcss-preset-env": "11.2.1",
     "tachyons": "4.12.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.10",
+    "@biomejs/biome": "2.4.12",
     "@davidsneighbour/release-config": "2026.0.4",
     "@davidsneighbour/tools": "2026.0.4",
-    "dotenv": "17.4.1",
+    "dotenv": "17.4.2",
     "markdownlint": "0.40.0",
     "markdownlint-cli2": "0.22.0",
     "markdownlint-rule-extended-ascii": "0.2.1",
