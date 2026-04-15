@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Anton Regular";
+    src:
+        url("/assets/webfonts/anton/anton-regular.woff2") format("woff2"),
+        url("/assets/webfonts/anton/anton-regular.woff") format("woff"),
+        url("/assets/webfonts/anton/anton-regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/assets/webfonts/rubik/rubik-v31-latin_latin-ext-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src:
+        url("/assets/webfonts/monaspace-krypton/monaspace-krypton-var.woff2") format("woff2"),
+        url("/assets/webfonts/monaspace-krypton/monaspace-krypton-var.woff") format("woff");
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+}
+
+:root {
+    --font-monaspace-krypton: "Monaspace Krypton", monospace;
+    --font-anton: "Anton Regular", sans-serif;
+    --font-weight-headlines: 400;
+    --font-rubik: "Rubik", sans-serif;
+}
+
+html,
+body {
+    font-family: var(--font-rubik);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.headline {
+    font-family: var(--font-anton);
+    font-weight: var(--font-weight-headlines);
+}
+
+.code-font,
+pre,
+code,
+kbd,
+samp {
+    font-size: 1.25rem;
+    font-family: var(--font-monaspace-krypton);
+    font-variant-ligatures: contextual;
+    font-feature-settings: "calt" 1;
+    font-variation-settings: 'wght' 350, 'wdth' 100, 'slnt' 0;
+    font-feature-settings:
+        "ss01" 1,
+        "ss02" 1,
+        "ss03" 1,
+        "ss04" 1,
+        "ss05" 1,
+        "ss06" 1,
+        "ss07" 1,
+        "ss08" 1,
+        "ss09" 1,
+        "ss10" 1,
+        "liga" 1;
+}

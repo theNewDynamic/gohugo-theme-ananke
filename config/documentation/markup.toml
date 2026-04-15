@@ -1,2 +1,4 @@
 [highlight]
-style = 'tokyonight-day'
+anchorLineNos = true
+codeFences = true
+noClasses = false

@@ -1,5 +1,5 @@
 description = "Documentation for the GoHugo Ananke theme."
-custom_css = ["fixes.css", "highlighting.css"]
+custom_css = ["fixes.css", "highlighting.css", "fonts.css"]
 
 [ananke]
 show_recent_posts = false
