@@ -31,8 +31,8 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 
 Ananke supports both installation methods:
 
-* [Install as Hugo Module (recommended)](docs/installation/gohugo-module.md)
-* [Install as Git Submodule](docs/installation/git-submodule.md)
+* [Install as Hugo Module (recommended)](docs/en/installation/gohugo-module.md)
+* [Install as Git Submodule](docs/en/installation/git-submodule.md)
 
 If you are new to Hugo, see Hugo's official quick start: [gohugo.io/getting-started/quick-start](https://gohugo.io/getting-started/quick-start/).
 
@@ -40,10 +40,10 @@ If you are new to Hugo, see Hugo's official quick start: [gohugo.io/getting-star
 
 After installation, use these guides to configure your site:
 
-* [Getting Started](docs/getting-started.md)
-* [Configuration](docs/configuration/_index.md)
-* [Customisation](docs/customisation/_index.md)
-* [Troubleshooting](docs/troubleshooting.md)
+* [Getting Started](docs/en/getting-started.md)
+* [Configuration](docs/en/configuration/_index.md)
+* [Customisation](docs/en/customisation/_index.md)
+* [Troubleshooting](docs/en/troubleshooting.md)
 
 ## Support and Contributions
 

@@ -12,7 +12,7 @@ Thanks for helping improve Ananke. This document describes the current contribut
 
 ## Before You Start
 
-1. Use a compatible Hugo version (see [`config/_default/hugo.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/config/_default/module.toml](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/config/_default/module.toml)) for the current state).
+1. Use a compatible Hugo version (see [`config/_default/module.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/config/_default/module.toml) for the current state).
 2. Install dependencies:
 
    ```bash
@@ -58,7 +58,6 @@ Documentation lives in multiple places:
 * Main project overview: `README.md`
 * Contributor docs: `CONTRIBUTING.md`
 * Theme docs content: `docs/`
-* Docs site wrapper: `site/`
 
 Please keep links relative where possible and remove stale references when updating pages.
 
