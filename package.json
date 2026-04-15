@@ -45,12 +45,13 @@
     "markdownlint-rule-title-case-style": "0.4.3"
   },
   "scripts": {
-    "lint:links": "lychee --config lychee.toml http://localhost:1313/",
+    "lint:links": "lychee --config lychee.toml public",
     "lint:markdown": "markdownlint-cli2 **/*.{md,mdx}",
     "lint:markdown:fix": "markdownlint-cli2 --fix **/*.{md,mdx}",
     "release": "wireit",
     "release:pre": "wireit",
-    "server": "wireit"
+    "server": "wireit",
+    "update:docs": "wireit"
   },
   "wireit": {
     "release": {
@@ -61,6 +62,9 @@
     },
     "server": {
       "command": "hugo server --environment documentation"
+    },
+    "update:docs": {
+      "command": "git add docs/ && (git diff --cached --quiet || git commit -m \"chore(git): update documentation submodule\")"
     }
   },
   "cspell": {

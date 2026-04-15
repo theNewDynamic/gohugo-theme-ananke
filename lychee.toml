@@ -3,3 +3,5 @@ verbose = "info"
 format = "detailed"
 mode = "emoji"
 
+# Base URL or website root directory to check relative URLs.
+base_url = "http://localhost:1313"
