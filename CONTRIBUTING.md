@@ -27,6 +27,16 @@ Thanks for helping improve Ananke. This document describes the current contribut
 
    This runs the documentation site from `site/` using contents from `docs/` with local configuration.
 
+4. Follow the coding style and format commit messages as described in the conventional commits specification (for example: `docs: add troubleshooting section` or `fix: correct hero image path`).
+
+5. Make sure to install git hooks for linting and testing before you push changes:
+
+   ```bash
+   npm run prepare
+   ```
+
+   This command is run automatically after `npm install` but you can run it manually to set up hooks in an existing clone or update changed hooks. It uses `simple-git-hooks` to install a commit hook that runs `lint-staged` for markdown files, which in turn runs linting tasks on staged files.
+
 ## Reporting Bugs and Requesting Features
 
 * Open bugs in [GitHub Issues](https://github.com/theNewDynamic/gohugo-theme-ananke/issues).

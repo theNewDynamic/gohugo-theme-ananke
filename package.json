@@ -37,23 +37,29 @@
     "@github/markdownlint-github": "0.8.0",
     "@types/node": "25.6.0",
     "dotenv": "17.4.2",
+    "lint-staged": "16.4.0",
     "markdownlint": "0.40.0",
     "markdownlint-cli2": "0.22.0",
     "markdownlint-rule-extended-ascii": "0.2.1",
     "markdownlint-rule-list-duplicates": "0.0.1",
     "markdownlint-rule-relative-links": "5.1.0",
     "markdownlint-rule-search-replace": "1.2.0",
-    "markdownlint-rule-title-case-style": "0.4.3"
+    "markdownlint-rule-title-case-style": "0.4.3",
+    "simple-git-hooks": "2.13.1"
   },
   "scripts": {
+    "hook:commit": "lint-staged --config .lintstagedrc.js",
+    "hook:push": "node scripts/test-hugo-quickstart.ts",
     "lint:links": "lychee --config lychee.toml public",
     "lint:markdown": "markdownlint-cli2 docs/**/*.{md,mdx}",
     "lint:markdown:fix": "markdownlint-cli2 --fix docs/**/*.{md,mdx}",
     "release": "wireit",
     "release:pre": "wireit",
     "server": "wireit",
+    "test:quickstart": "node scripts/test-hugo-quickstart.ts",
     "update:docs": "wireit",
-    "test:quickstart": "node scripts/test-hugo-quickstart.ts"
+    "test": "node scripts/test-hugo-quickstart.ts",
+    "prepare": "simple-git-hooks install"
   },
   "wireit": {
     "release": {
@@ -77,6 +83,10 @@
       "public",
       "node_modules"
     ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run hook:commit",
+    "pre-push": "npm run hook:push"
   },
   "type": "module"
 }
