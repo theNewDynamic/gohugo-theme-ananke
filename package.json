@@ -77,5 +77,6 @@
       "public",
       "node_modules"
     ]
-  }
+  },
+  "type": "module"
 }
