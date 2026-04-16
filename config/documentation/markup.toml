@@ -1,7 +1,0 @@
-[highlight]
-anchorLineNos = true
-codeFences = true
-noClasses = false
-
-[goldmark.renderer]
-unsafe = true # meh, no like, but required for contributors list

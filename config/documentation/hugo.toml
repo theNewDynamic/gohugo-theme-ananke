@@ -1,5 +1,0 @@
-baseURL = "https://ananke-documentation.netlify.app/"
-languageCode = "en-us"
-title = "Ananke Documentation"
-contentDir = "../docs"
-enableRobotsTXT = true
