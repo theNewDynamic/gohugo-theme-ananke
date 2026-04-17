@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.12",
-    "@davidsneighbour/tools": "2026.0.4",
     "@github/markdownlint-github": "0.8.0",
     "@release-it/conventional-changelog": "10.0.6",
     "@types/node": "25.6.0",
@@ -56,26 +55,12 @@
     "lint:markdown": "markdownlint-cli2 docs/**/*.{md,mdx}",
     "lint:markdown:fix": "markdownlint-cli2 --fix docs/**/*.{md,mdx}",
     "prepare": "simple-git-hooks install",
-    "release": "wireit",
-    "release:pre": "wireit",
-    "server": "wireit",
+    "release": "release-it --config .release-it.ts",
+    "release:pre": "release-it --preRelease=prerelease --config .release-it.ts",
+    "server": "hugo server --environment documentation",
     "test": "node scripts/test-hugo-quickstart.ts",
     "test:quickstart": "node scripts/test-hugo-quickstart.ts",
-    "update:docs": "wireit"
-  },
-  "wireit": {
-    "release": {
-      "command": "release-it"
-    },
-    "release:pre": {
-      "command": "release-it --preRelease=pre"
-    },
-    "server": {
-      "command": "hugo server --environment documentation"
-    },
-    "update:docs": {
-      "command": "git add docs/ && (git diff --cached --quiet || git commit -m \"chore(git): update documentation submodule\")"
-    }
+    "update:docs": "git add docs/ && (git diff --cached --quiet || git commit -m \"chore(git): update documentation submodule\")"
   },
   "cspell": {
     "version": "0.2",
