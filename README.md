@@ -19,14 +19,6 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 * Reading time/word count support
 * Robots.txt handling by environment
 
-## Compatibility
-
-> [!IMPORTANT]
-> The `main` branch is maintained for Hugo **v0.146.0+**.
->
-> * For Hugo **v0.128.1 to v0.145.0**, use branch [`release/v2.12`](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/release/v2.12).
-> * For older Hugo versions, use a matching tag from the [releases page](https://github.com/theNewDynamic/gohugo-theme-ananke/tags).
-
 ## Installation
 
 Ananke supports both installation methods:

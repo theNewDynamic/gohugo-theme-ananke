@@ -2,6 +2,16 @@
 
 Thanks for helping improve Ananke. This document describes the current contribution workflow for this repository.
 
+* [Ways to Contribute](#ways-to-contribute)
+* [Release Process](#release-process)
+* [Before You Start](#before-you-start)
+* [Reporting Bugs and Requesting Features](#reporting-bugs-and-requesting-features)
+* [Pull Request Workflow](#pull-request-workflow)
+* [Circumventing Git Hooks](#circumventing-git-hooks)
+* [Documentation Contributions](#documentation-contributions)
+* [Attribution](#attribution)
+* [License](#license)
+
 ## Ways to Contribute
 
 * Report bugs
@@ -9,6 +19,12 @@ Thanks for helping improve Ananke. This document describes the current contribut
 * Improve documentation
 * Improve templates, styles, or assets
 * Improve translations in `i18n/*.toml`
+
+## Release Process
+
+The project follows a structured release workflow based on conventional commits, staging branches, and automated versioning.
+
+For details, see [RELEASES.md](./RELEASES.md).
 
 ## Before You Start
 
