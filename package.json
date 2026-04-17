@@ -1,79 +1,80 @@
 {
-  "name": "@thenewdynamic/gohugo-theme-ananke",
-  "description": "Ananke: A theme for Hugo Sites",
-  "version": "2.13.0-prerelease.1",
-  "license": "MIT",
-  "repository": "thenewdynamic/gohugo-theme-ananke",
-  "author": "Bud Parr (https://github.com/budparr)",
-  "maintainers": [
-    {
-      "name": "Patrick Kollitsch",
-      "url": "https://github.com/davidsneighbour"
-    }
-  ],
-  "contributors": [
-    {
-      "name": "Regis Philibert",
-      "url": "https://github.com/regisphilibert"
-    }
-  ],
-  "bugs": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues",
-  "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
-  "keywords": [
-    "hugo",
-    "hugo-theme",
-    "hugo-module"
-  ],
-  "dependencies": {
-    "cssnano": "7.1.5",
-    "postcss": "8.5.10",
-    "postcss-preset-env": "11.2.1",
-    "tachyons": "4.12.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.4.12",
-    "@github/markdownlint-github": "0.8.0",
-    "@release-it/conventional-changelog": "10.0.6",
-    "@types/node": "25.6.0",
-    "dotenv": "17.4.2",
-    "lint-staged": "16.4.0",
-    "markdownlint": "0.40.0",
-    "markdownlint-cli2": "0.22.0",
-    "markdownlint-rule-extended-ascii": "0.2.1",
-    "markdownlint-rule-list-duplicates": "0.0.1",
-    "markdownlint-rule-relative-links": "5.1.0",
-    "markdownlint-rule-search-replace": "1.2.0",
-    "markdownlint-rule-title-case-style": "0.4.3",
-    "release-it": "19.2.4",
-    "simple-git-hooks": "2.13.1",
-    "typescript": "6.0.3"
-  },
-  "scripts": {
-    "hook:commit": "lint-staged --config .lintstagedrc.js",
-    "hook:push": "node scripts/test-hugo-quickstart.ts",
-    "lint:links": "lychee --config lychee.toml public",
-    "lint:markdown": "markdownlint-cli2 docs/**/*.{md,mdx}",
-    "lint:markdown:fix": "markdownlint-cli2 --fix docs/**/*.{md,mdx}",
-    "prepare": "simple-git-hooks install",
-    "release": "release-it --config .release-it.ts",
-    "release:pre": "release-it --preRelease=prerelease --config .release-it.ts",
-    "server": "hugo server --environment documentation",
-    "test": "node scripts/test-hugo-quickstart.ts",
-    "test:quickstart": "node scripts/test-hugo-quickstart.ts",
-    "update:docs": "git add docs/ && (git diff --cached --quiet || git commit -m \"chore(git): update documentation submodule\")"
-  },
-  "cspell": {
-    "version": "0.2",
-    "language": "en-GB",
-    "ignorePaths": [
-      "CHANGELOG.md",
-      "public",
-      "node_modules"
-    ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npm run hook:commit",
-    "pre-push": "npm run hook:push"
-  },
-  "type": "module"
+	"name": "@thenewdynamic/gohugo-theme-ananke",
+	"description": "Ananke: A theme for Hugo Sites",
+	"version": "2.13.0-prerelease.1",
+	"license": "MIT",
+	"repository": "thenewdynamic/gohugo-theme-ananke",
+	"author": "Bud Parr (https://github.com/budparr)",
+	"maintainers": [
+		{
+			"name": "Patrick Kollitsch",
+			"url": "https://github.com/davidsneighbour"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Regis Philibert",
+			"url": "https://github.com/regisphilibert"
+		}
+	],
+	"bugs": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues",
+	"homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
+	"keywords": [
+		"hugo",
+		"hugo-theme",
+		"hugo-module"
+	],
+	"dependencies": {
+		"cssnano": "7.1.5",
+		"postcss": "8.5.10",
+		"postcss-preset-env": "11.2.1",
+		"tachyons": "4.12.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.12",
+		"@github/markdownlint-github": "0.8.0",
+		"@release-it/conventional-changelog": "10.0.6",
+		"@types/node": "25.6.0",
+		"dotenv": "17.4.2",
+		"lint-staged": "16.4.0",
+		"lockfile-lint": "5.0.0",
+		"markdownlint": "0.40.0",
+		"markdownlint-cli2": "0.22.0",
+		"markdownlint-rule-extended-ascii": "0.2.1",
+		"markdownlint-rule-list-duplicates": "0.0.1",
+		"markdownlint-rule-relative-links": "5.1.0",
+		"markdownlint-rule-search-replace": "1.2.0",
+		"markdownlint-rule-title-case-style": "0.4.3",
+		"release-it": "19.2.4",
+		"simple-git-hooks": "2.13.1",
+		"typescript": "6.0.3"
+	},
+	"scripts": {
+		"hook:commit": "lint-staged --config .lintstagedrc.js",
+		"hook:push": "node scripts/test-hugo-quickstart.ts",
+		"lint:links": "lychee --config lychee.toml public",
+		"lint:markdown": "markdownlint-cli2 docs/**/*.{md,mdx}",
+		"lint:markdown:fix": "markdownlint-cli2 --fix docs/**/*.{md,mdx}",
+		"prepare": "simple-git-hooks install",
+		"release": "release-it --config .release-it.ts",
+		"release:pre": "release-it --preRelease=prerelease --config .release-it.ts",
+		"server": "hugo server --environment documentation",
+		"test": "node scripts/test-hugo-quickstart.ts",
+		"test:quickstart": "node scripts/test-hugo-quickstart.ts",
+		"update:docs": "git add docs/ && (git diff --cached --quiet || git commit -m \"chore(git): update documentation submodule\")"
+	},
+	"cspell": {
+		"version": "0.2",
+		"language": "en-GB",
+		"ignorePaths": [
+			"CHANGELOG.md",
+			"public",
+			"node_modules"
+		]
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npm run hook:commit",
+		"pre-push": "npm run hook:push"
+	},
+	"type": "module"
 }
