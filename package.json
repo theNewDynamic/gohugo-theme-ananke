@@ -1,7 +1,7 @@
 {
   "name": "@thenewdynamic/gohugo-theme-ananke",
   "description": "Ananke: A theme for Hugo Sites",
-  "version": "2.12.2",
+  "version": "2.13.0-0",
   "license": "MIT",
   "repository": "thenewdynamic/gohugo-theme-ananke",
   "author": "Bud Parr (https://github.com/budparr)",
@@ -26,15 +26,15 @@
   ],
   "dependencies": {
     "cssnano": "7.1.5",
-    "postcss": "8.5.9",
+    "postcss": "8.5.10",
     "postcss-preset-env": "11.2.1",
     "tachyons": "4.12.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.12",
-    "@davidsneighbour/release-config": "2026.0.4",
     "@davidsneighbour/tools": "2026.0.4",
     "@github/markdownlint-github": "0.8.0",
+    "@release-it/conventional-changelog": "10.0.6",
     "@types/node": "25.6.0",
     "dotenv": "17.4.2",
     "lint-staged": "16.4.0",
@@ -45,6 +45,7 @@
     "markdownlint-rule-relative-links": "5.1.0",
     "markdownlint-rule-search-replace": "1.2.0",
     "markdownlint-rule-title-case-style": "0.4.3",
+    "release-it": "19.2.4",
     "simple-git-hooks": "2.13.1",
     "typescript": "6.0.3"
   },
@@ -64,10 +65,10 @@
   },
   "wireit": {
     "release": {
-      "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" -- --no-verify"
+      "command": "release-it"
     },
     "release:pre": {
-      "command": "commit-and-tag-version --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" --prerelease prerelease -- --no-verify"
+      "command": "release-it --preRelease=pre"
     },
     "server": {
       "command": "hugo server --environment documentation"
