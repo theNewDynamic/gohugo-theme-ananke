@@ -61,6 +61,17 @@ Thanks for helping improve Ananke. This document describes the current contribut
    * screenshots when UI/visual output changes,
    * linked issues (for example: `Fixes #123`).
 
+## Circumventing Git Hooks
+
+To prevent `git commit` and `git push` from running hooks you can use the `--no-verify` flag:
+
+```bash
+git commit --no-verify -m "docs: update README"
+git push --no-verify origin my-feature-branch
+```
+
+This should be used sparingly and only when you have a good reason to bypass checks. If you find yourself needing to use `--no-verify` frequently, please consider improving the hooks or contributing fixes to reduce false positives.
+
 ## Documentation Contributions
 
 Documentation lives in multiple places:
