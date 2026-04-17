@@ -13,7 +13,7 @@ export default {
   //   'lockfile-lint --path package-lock.json --validate-https --allowed-hosts npm',
   // ],
   '*.{ts,tsx,(m|c)js,jsx}': (/** @type {string[]} */ files) => {
-    return [`biome check --no-errors-on-unmatched ${files.join(' ')}`]
+    return [`biome check --write --no-errors-on-unmatched ${files.join(' ')}`]
   },
   // '*.yaml': ['yamllint -c .yamllint.yml'],
   // '*.{scss,css}': ['stylelint --fix', "prettier --write"],
