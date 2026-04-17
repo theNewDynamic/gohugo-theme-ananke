@@ -93,7 +93,7 @@
   },
   // table style must be compact (single spaces around cell content)
   "MD060": {
-    "style": "compact"
+    "style": "aligned"
   },
   // @see https://www.npmjs.com/package/@github/markdownlint-github
   // images should not contain default alternate texts

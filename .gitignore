@@ -1,5 +1,4 @@
 node_modules
 public
-.wireit
 .hugo_build.lock
 resources/_gen

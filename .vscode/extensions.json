@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "pkief.material-icon-theme"
+        "pkief.material-icon-theme",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint"
     ]
 }
