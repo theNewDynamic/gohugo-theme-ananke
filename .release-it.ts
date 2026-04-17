@@ -15,10 +15,7 @@ const config = {
 		pushArgs: ["--follow-tags"],
 	},
 	github: {
-		release: true,
-		releaseName: "v${version}",
-		skipChecks: true,
-		tokenRef: "GITHUB_TOKEN_CONTENT_PRIVATE",
+		release: false,
 	},
 	plugins: {
 		"@release-it/conventional-changelog": {
@@ -26,9 +23,9 @@ const config = {
 			preset: {
 				name: "conventionalcommits",
 				commitUrlFormat:
-					"https://github.com/davidsneighbour/kollitsch.dev/commit/{{hash}}",
+					"https://github.com/theNewDynamic/gohugo-theme-ananke/commit/{{hash}}",
 				compareUrlFormat:
-					"https://github.com/davidsneighbour/kollitsch.dev/compare/{{previousTag}}...{{currentTag}}",
+					"https://github.com/theNewDynamic/gohugo-theme-ananke/compare/{{previousTag}}...{{currentTag}}",
 				types: [
 					{ type: "feat", section: "Features" },
 					{ type: "fix", section: "Bug Fixes" },
