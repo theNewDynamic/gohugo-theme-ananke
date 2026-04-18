@@ -8,6 +8,26 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 * Documentation: [docs directory](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/main/docs)
 * Changelog: [CHANGELOG.md](CHANGELOG.md)
 
+> [!IMPORTANT]
+>
+> Ananke moved to its own organisation on April 18, 2026. Please update your references from `github.com/theNewDynamic/gohugo-theme-ananke` to `github.com/gohugo-ananke/theme`. Bear with us as we update all documentation and links to reflect this change. Until then, both URLs will continue to work as links as well as in the `git` operations for cloning and submodules.
+>
+> The following steps should suffice to update your references if you have not changed the setup:
+>
+> **For Hugo Modules:** search and replace all instances of `theNewDynamic/gohugo-theme-ananke` with `gohugo-ananke/theme` in your site's configuration and run `hugo mod tidy` to update the module dependencies.
+>
+> **For Git Submodules:** To change the remote URL for your existing submodule, run:
+>
+> ```bash
+> cd path/to/your/repo/themes/ananke # <-- adjust path as needed, keep the 'themes/ananke' part
+> git remote set-url origin https://github.com/gohugo-ananke/theme.git
+> ```
+>
+> Then find `.gitmodules` in the root of your repository and replace all instances of `theNewDynamic/gohugo-theme-ananke` with `gohugo-ananke/theme` in that file as well.
+> Finally, run `git submodule sync` to update the submodule configuration.
+>
+> **Issues?** Get in touch via [GitHub Discussions](https://github.com/gohugo-ananke/theme/discussions).
+
 ## Features
 
 * Responsive layouts and accessible markup
