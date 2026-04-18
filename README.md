@@ -14,7 +14,7 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 >
 > The following steps should suffice to update your references if you have not changed the setup:
 >
-> **For Hugo Modules:** search and replace all instances of `theNewDynamic/gohugo-theme-ananke` with `gohugo-ananke/theme` in your site's configuration and run `hugo mod tidy` to update the module dependencies.
+> **For Hugo Modules:** search and replace all instances of `github.com/theNewDynamic/gohugo-theme-ananke/v2` with `github.com/gohugo-ananke/theme/v2` in your site's configuration and run `hugo mod tidy` to update the module dependencies.
 >
 > **For Git Submodules:** To change the remote URL for your existing submodule, run:
 >
