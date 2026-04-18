@@ -5,7 +5,7 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 ![Ananke screenshot](images/screenshot.png)
 
 * Demo: [ananke-theme.netlify.app](https://ananke-theme.netlify.app/)
-* Documentation: [docs directory](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/main/docs)
+* Documentation: [docs directory](https://github.com/gohugo-ananke/theme/tree/main/docs)
 * Changelog: [CHANGELOG.md](CHANGELOG.md)
 
 > [!IMPORTANT]
@@ -59,6 +59,6 @@ After installation, use these guides to configure your site:
 
 ## Support and Contributions
 
-* Bug reports: [GitHub Issues](https://github.com/theNewDynamic/gohugo-theme-ananke/issues)
-* Questions and feature ideas: [GitHub Discussions](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions)
+* Bug reports: [GitHub Issues](https://github.com/gohugo-ananke/theme/issues)
+* Questions and feature ideas: [GitHub Discussions](https://github.com/gohugo-ananke/theme/discussions)
 * Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
