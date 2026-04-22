@@ -3,7 +3,7 @@
 	"description": "Ananke: A theme for Hugo Sites",
 	"version": "2.13.0-prerelease.1",
 	"license": "MIT",
-	"repository": "thenewdynamic/gohugo-theme-ananke",
+	"repository": "gohugo-ananke/theme",
 	"author": "Bud Parr (https://github.com/budparr)",
 	"maintainers": [
 		{
