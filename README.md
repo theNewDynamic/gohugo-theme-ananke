@@ -10,7 +10,7 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 
 > [!IMPORTANT]
 >
-> Ananke moved to its own organisation on April 18, 2026. Please update your references from `github.com/theNewDynamic/gohugo-theme-ananke` to `github.com/gohugo-ananke/theme`. Bear with us as we update all documentation and links to reflect this change. Until then, both URLs will continue to work as links as well as in the `git` operations for cloning and submodules.
+> Ananke moved to its own organisation on April 23, 2026. Please update your references from `github.com/theNewDynamic/gohugo-theme-ananke` to `github.com/gohugo-ananke/theme`. Bear with us as we update all documentation and links to reflect this change. Until then, both URLs will continue to work as links as well as in the `git` operations for cloning and submodules.
 >
 > The following steps should suffice to update your references if you have not changed the setup:
 >
