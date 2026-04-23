@@ -28,7 +28,7 @@ For details, see [RELEASES.md](./RELEASES.md).
 
 ## Before You Start
 
-1. Use a compatible Hugo version (see [`config/_default/module.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/config/_default/module.toml) for the current state).
+1. Use a compatible Hugo version (see [`config/_default/module.toml`](https://github.com/gohugo-ananke/theme/blob/main/config/_default/module.toml) for the current state).
 2. Install dependencies:
 
    ```bash
@@ -55,8 +55,8 @@ For details, see [RELEASES.md](./RELEASES.md).
 
 ## Reporting Bugs and Requesting Features
 
-* Open bugs in [GitHub Issues](https://github.com/theNewDynamic/gohugo-theme-ananke/issues).
-* Start feature or idea discussions in [GitHub Discussions](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions).
+* Open bugs in [GitHub Issues](https://github.com/gohugo-ananke/theme/issues).
+* Start feature or idea discussions in [GitHub Discussions](https://github.com/gohugo-ananke/theme/discussions).
 * Include clear reproduction steps, expected behaviour, actual behaviour, and versions (`hugo version`, OS, browser if relevant).
 
 ## Pull Request Workflow

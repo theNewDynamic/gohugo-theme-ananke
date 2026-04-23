@@ -1,5 +1,5 @@
 {
-	"name": "@thenewdynamic/gohugo-theme-ananke",
+	"name": "@gohugo-ananke/theme",
 	"description": "Ananke: A theme for Hugo Sites",
 	"version": "2.13.0-prerelease.1",
 	"license": "MIT",
@@ -17,8 +17,8 @@
 			"url": "https://github.com/regisphilibert"
 		}
 	],
-	"bugs": "https://github.com/theNewDynamic/gohugo-theme-ananke/issues",
-	"homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
+	"bugs": "https://github.com/gohugo-ananke/theme/issues",
+	"homepage": "https://github.com/gohugo-ananke/theme#readme",
 	"keywords": [
 		"hugo",
 		"hugo-theme",
