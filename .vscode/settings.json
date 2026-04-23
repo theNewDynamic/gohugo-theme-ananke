@@ -10,5 +10,12 @@
 			"addWords": true,
 			"scope": "workspace"
 		}
-	}
+	},
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": "package-lock.json, netlify.toml, .lintstagedrc.js, .release-it.ts, .markdownlint*, .nvmrc, lychee.toml, tsconfig.json, .coderabbit.yaml",
+		"theme.toml": "go.mod, go.sum",
+		"README.md": "CHANGELOG.md, LICENSE.md, CONTRIBUTING.md, RELEASES.md"
+	},
+	"window.autoDetectColorScheme": false
 }
