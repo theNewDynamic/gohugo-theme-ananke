@@ -26,7 +26,7 @@ Ananke is a flexible, production-ready starter theme for [Hugo](https://gohugo.i
 > Then find `.gitmodules` in the root of your repository and replace all instances of `theNewDynamic/gohugo-theme-ananke` with `gohugo-ananke/theme` in that file as well.
 > Finally, run `git submodule sync` to update the submodule configuration.
 >
-> **Issues?** Get in touch via [GitHub Discussions](https://github.com/gohugo-ananke/theme/discussions).
+> **Issues?** Get in touch via [GitHub Discussions](https://github.com/orgs/gohugo-ananke/discussions/944).
 
 ## Features
 
