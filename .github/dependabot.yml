@@ -14,7 +14,7 @@ updates:
       - davidsneighbour
     reviewers:
       - davidsneighbour
-    target-branch: main
+    target-branch: development
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: /
@@ -32,7 +32,7 @@ updates:
       - davidsneighbour
     reviewers:
       - davidsneighbour
-    target-branch: main
+    target-branch: development
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: /
@@ -50,7 +50,7 @@ updates:
       - davidsneighbour
     reviewers:
       - davidsneighbour
-    target-branch: main
+    target-branch: development
     open-pull-requests-limit: 999
     pull-request-branch-name:
       separator: /

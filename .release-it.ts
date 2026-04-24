@@ -12,14 +12,14 @@ function getCurrentBranch(): string {
 			encoding: "utf8",
 			stdio: ["ignore", "pipe", "pipe"],
 		}).trim();
-	} catch (error: unknown) {
+	} catch (error) {
 		console.error("Failed to determine the current Git branch.");
 		console.error(error);
 		process.exit(1);
 	}
 }
 
-function isPreReleaseRun(argv: string[]): boolean {
+function hasPreReleaseFlag(argv: string[]): boolean {
 	return argv.some((argument) => {
 		return (
 			argument === "--preRelease" ||
@@ -30,30 +30,29 @@ function isPreReleaseRun(argv: string[]): boolean {
 	});
 }
 
-const currentBranch = getCurrentBranch();
-const preReleaseRun = isPreReleaseRun(process.argv);
+const branch = getCurrentBranch();
+const isPreRelease = hasPreReleaseFlag(process.argv);
 
-if (preReleaseRun && currentBranch !== "development") {
+if (isPreRelease && branch !== "development") {
 	console.error(
-		`Pre-releases are only allowed on "development". Current branch: "${currentBranch}".`,
+		`Pre-releases are only allowed from "development". Current branch: "${branch}".`,
 	);
 	process.exit(1);
 }
 
-if (!preReleaseRun && currentBranch !== "main") {
+if (!isPreRelease && branch !== "main") {
 	console.error(
-		`Stable releases are only allowed on "main". Current branch: "${currentBranch}".`,
+		`Stable releases are only allowed from "main". Current branch: "${branch}".`,
 	);
 	process.exit(1);
 }
 
-const config = {
-	npm: {
-		publish: false,
-	},
+const config: Config = {
 	git: {
 		requireCleanWorkingDir: true,
-		requireBranch: currentBranch,
+		requireUpstream: true,
+		requireCommits: true,
+		requireBranch: branch,
 		commit: true,
 		commitMessage: "chore(release): v${version}",
 		commitArgs: ["--no-verify"],
@@ -63,7 +62,13 @@ const config = {
 		pushArgs: ["--follow-tags"],
 	},
 	github: {
-		release: false,
+		release: true,
+		releaseName: "v${version}",
+		skipChecks: true,
+		tokenRef: "GITHUB_TOKEN_CONTENT_PRIVATE",
+	},
+	npm: {
+		publish: false,
 	},
 	plugins: {
 		"@release-it/conventional-changelog": {

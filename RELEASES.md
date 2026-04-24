@@ -25,13 +25,40 @@ Examples:
 
 ## Branching Model
 
-### main
+```mermaid
+flowchart LR
+    %% Columns
+    subgraph C1["Release"]
+        MAIN["main"]
+    end
+
+    subgraph C2["Staging"]
+        DEV["development"]
+    end
+
+    subgraph C3["Features, Fixes, Chores"]
+        F1["fix/issue123"]
+        F2["feat/foobar"]
+        F3["chore/dependencies"]
+        FMORE["..."]
+    end
+
+    %% Flow
+    DEV -->|rebase| MAIN
+
+    F1 -->|squash| DEV
+    F2 -->|squash| DEV
+    F3 -->|squash| DEV
+    FMORE --> DEV
+```
+
+### `main`
 
 * Contains only stable, released code
 * Updated **only via rebase from `development`**
 * Tagged for official releases
 
-### development
+### `development`
 
 * Acts as staging environment
 * Receives all feature and fix changes
