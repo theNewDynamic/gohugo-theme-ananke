@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.13.0](https://github.com/gohugo-ananke/ananke/compare/v2.13.0-prerelease.2...v2.13.0) (2026-04-24)
+
 ## [2.13.0-prerelease.2](https://github.com/gohugo-ananke/ananke/compare/v2.13.0-prerelease.1...v2.13.0-prerelease.2) (2026-04-24)
 
 ### Bug Fixes
