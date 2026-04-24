@@ -48,7 +48,7 @@ interface HtmlAssertion {
 
 const DEFAULT_OPTIONS: RoutineOptions = {
 	projectName: "quickstart",
-	themeRepo: "https://github.com/theNewDynamic/gohugo-theme-ananke.git",
+	themeRepo: "https://github.com/gohugo-ananke/ananke.git",
 	themeDir: "themes/ananke",
 	themeName: "ananke",
 	configFile: "hugo.toml",

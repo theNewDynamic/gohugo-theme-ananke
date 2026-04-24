@@ -2,15 +2,15 @@
 
 Thanks for helping improve Ananke. This document describes the current contribution workflow for this repository.
 
-* [Ways to Contribute](#ways-to-contribute)
-* [Release Process](#release-process)
-* [Before You Start](#before-you-start)
-* [Reporting Bugs and Requesting Features](#reporting-bugs-and-requesting-features)
-* [Pull Request Workflow](#pull-request-workflow)
-* [Circumventing Git Hooks](#circumventing-git-hooks)
-* [Documentation Contributions](#documentation-contributions)
-* [Attribution](#attribution)
-* [License](#license)
+- [Ways to Contribute](#ways-to-contribute)
+- [Release Process](#release-process)
+- [Before You Start](#before-you-start)
+- [Reporting Bugs and Requesting Features](#reporting-bugs-and-requesting-features)
+- [Pull Request Workflow](#pull-request-workflow)
+- [Circumventing Git Hooks](#circumventing-git-hooks)
+- [Documentation Contributions](#documentation-contributions)
+- [Attribution](#attribution)
+- [License](#license)
 
 ## Ways to Contribute
 
@@ -28,7 +28,7 @@ For details, see [RELEASES.md](./RELEASES.md).
 
 ## Before You Start
 
-1. Use a compatible Hugo version (see [`config/_default/module.toml`](https://github.com/gohugo-ananke/theme/blob/main/config/_default/module.toml) for the current state).
+1. Use a compatible Hugo version (see [`config/_default/module.toml`](https://github.com/gohugo-ananke/ananke/blob/main/config/_default/module.toml) for the current state).
 2. Install dependencies:
 
    ```bash
@@ -55,8 +55,8 @@ For details, see [RELEASES.md](./RELEASES.md).
 
 ## Reporting Bugs and Requesting Features
 
-* Open bugs in [GitHub Issues](https://github.com/gohugo-ananke/theme/issues).
-* Start feature or idea discussions in [GitHub Discussions](https://github.com/gohugo-ananke/theme/discussions).
+* Open bugs in [GitHub Issues](https://github.com/gohugo-ananke/ananke/issues).
+* Start feature or idea discussions in [GitHub Discussions](https://github.com/gohugo-ananke/ananke/discussions).
 * Include clear reproduction steps, expected behaviour, actual behaviour, and versions (`hugo version`, OS, browser if relevant).
 
 ## Pull Request Workflow

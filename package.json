@@ -1,9 +1,9 @@
 {
-	"name": "@gohugo-ananke/theme",
+	"name": "@gohugo-ananke/ananke",
 	"description": "Ananke: A theme for Hugo Sites",
 	"version": "2.13.0-prerelease.1",
 	"license": "MIT",
-	"repository": "gohugo-ananke/theme",
+	"repository": "gohugo-ananke/ananke",
 	"author": "Bud Parr (https://github.com/budparr)",
 	"maintainers": [
 		{
@@ -17,21 +17,21 @@
 			"url": "https://github.com/regisphilibert"
 		}
 	],
-	"bugs": "https://github.com/gohugo-ananke/theme/issues",
-	"homepage": "https://github.com/gohugo-ananke/theme#readme",
+	"bugs": "https://github.com/gohugo-ananke/ananke/issues",
+	"homepage": "https://github.com/gohugo-ananke/ananke#readme",
 	"keywords": [
 		"hugo",
 		"hugo-theme",
 		"hugo-module"
 	],
 	"dependencies": {
-		"cssnano": "7.1.5",
+		"cssnano": "7.1.7",
 		"postcss": "8.5.10",
 		"postcss-preset-env": "11.2.1",
 		"tachyons": "4.12.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.12",
+		"@biomejs/biome": "2.4.13",
 		"@github/markdownlint-github": "0.8.0",
 		"@release-it/conventional-changelog": "10.0.6",
 		"@types/node": "25.6.0",
@@ -39,7 +39,7 @@
 		"lint-staged": "16.4.0",
 		"lockfile-lint": "5.0.0",
 		"markdownlint": "0.40.0",
-		"markdownlint-cli2": "0.22.0",
+		"markdownlint-cli2": "0.22.1",
 		"markdownlint-rule-extended-ascii": "0.2.1",
 		"markdownlint-rule-list-duplicates": "0.0.1",
 		"markdownlint-rule-relative-links": "5.1.0",

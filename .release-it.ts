@@ -71,9 +71,9 @@ const config = {
 			preset: {
 				name: "conventionalcommits",
 				commitUrlFormat:
-					"https://github.com/gohugo-ananke/theme/commit/{{hash}}",
+					"https://github.com/gohugo-ananke/ananke/commit/{{hash}}",
 				compareUrlFormat:
-					"https://github.com/gohugo-ananke/theme/compare/{{previousTag}}...{{currentTag}}",
+					"https://github.com/gohugo-ananke/ananke/compare/{{previousTag}}...{{currentTag}}",
 				types: [
 					{ type: "feat", section: "Features" },
 					{ type: "fix", section: "Bug Fixes" },

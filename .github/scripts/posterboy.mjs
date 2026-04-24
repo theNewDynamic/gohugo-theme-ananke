@@ -30,7 +30,7 @@ process.env = { ...globalEnv, ...process.env, ...localEnv };
 // Configurable values
 const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK || '';
 const GITHUB_DEV_TOKEN = process.env.GITHUB_DEV_TOKEN || '';
-const GITHUB_REPO = process.env.GITHUB_REPO || 'theNewDynamic/gohugo-theme-ananke';
+const GITHUB_REPO = process.env.GITHUB_REPO || 'gohugo-ananke/ananke';
 const DEFAULT_MESSAGE_TEMPLATE = 'New release: {{tag_name}} - {{html_url}}';
 const MESSAGE_TEMPLATE = process.env.MESSAGE_TEMPLATE || DEFAULT_MESSAGE_TEMPLATE;
 const CACHE_DIR = './cache';
