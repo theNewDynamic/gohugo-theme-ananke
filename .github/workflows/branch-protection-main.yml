@@ -1,0 +1,25 @@
+name: Validate main branch source
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate-source-branch:
+    name: Require development as source branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate source branch
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          if [ "${HEAD_REF}" != "development" ]; then
+            echo "::error::Pull requests into main must come from development. Current source branch: ${HEAD_REF}"
+            exit 1
+          fi

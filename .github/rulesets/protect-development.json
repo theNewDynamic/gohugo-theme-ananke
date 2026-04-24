@@ -1,0 +1,41 @@
+{
+	"id": 15502619,
+	"name": "protect-development",
+	"target": "branch",
+	"source_type": "Repository",
+	"source": "gohugo-ananke/ananke",
+	"enforcement": "active",
+	"conditions": {
+		"ref_name": {
+			"exclude": [],
+			"include": ["refs/heads/development"]
+		}
+	},
+	"rules": [
+		{
+			"type": "deletion"
+		},
+		{
+			"type": "non_fast_forward"
+		},
+		{
+			"type": "pull_request",
+			"parameters": {
+				"required_approving_review_count": 0,
+				"dismiss_stale_reviews_on_push": true,
+				"required_reviewers": [],
+				"require_code_owner_review": false,
+				"require_last_push_approval": false,
+				"required_review_thread_resolution": true,
+				"allowed_merge_methods": ["squash"]
+			}
+		}
+	],
+	"bypass_actors": [
+		{
+			"actor_id": 17174680,
+			"actor_type": "Team",
+			"bypass_mode": "always"
+		}
+	]
+}
