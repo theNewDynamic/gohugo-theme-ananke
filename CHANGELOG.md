@@ -1,5 +1,43 @@
 # Changelog
 
+## [2.13.0-prerelease.2](https://github.com/gohugo-ananke/ananke/compare/v2.13.0-prerelease.1...v2.13.0-prerelease.2) (2026-04-24)
+
+### Bug Fixes
+
+* change ananke theme paths to organisation path ([e6ba1e9](https://github.com/gohugo-ananke/ananke/commit/e6ba1e9ea04f2a1c900947053ae5a777ed4201fc))
+
+### Build
+
+* **fix:** add RELEASES.md and fix existing docs to reflect reality ([d63de44](https://github.com/gohugo-ananke/ananke/commit/d63de44d9e73c735fbcc5b1239f284d12debdd9f))
+* **fix:** changed repo paths ([fc7a580](https://github.com/gohugo-ananke/ananke/commit/fc7a58090ced2be234d2178f438f3d829c6f7e34))
+* **fix:** proper repository path ([982fea0](https://github.com/gohugo-ananke/ananke/commit/982fea003835be8f4fc4359b3f0f2dda1b87b3dd))
+* **fix:** update workspace setup ([1bf4684](https://github.com/gohugo-ananke/ananke/commit/1bf468408e9bea4d8e4582890e32d89e5ce367f9))
+* **vscode:** update workspace setup ([1a5c6f8](https://github.com/gohugo-ananke/ananke/commit/1a5c6f8790b30522d02a41c37e700819845bf348))
+
+### Chores
+
+* delete old release configuration ([838ed40](https://github.com/gohugo-ananke/ananke/commit/838ed401c017c4896bef70ae07d6118e3fc49796))
+* **fix:** various paths changed to new org layout ([b5ac529](https://github.com/gohugo-ananke/ananke/commit/b5ac5297dc30be632f64d9e4c18645df8e2b77fd))
+* remove docs site setup ([fa18bca](https://github.com/gohugo-ananke/ananke/commit/fa18bca9a2be107b15f61030ea41ca347013a87e))
+* remove docs submodule ([e861c03](https://github.com/gohugo-ananke/ananke/commit/e861c031e269334006abb736331d6a51c4d05413))
+* update module name in go.mod ([45cc10e](https://github.com/gohugo-ananke/ananke/commit/45cc10e7bbf17aa4ed125f42946a8fdbb70349ba))
+
+### CI
+
+* lintstaged changes ([2baed34](https://github.com/gohugo-ananke/ananke/commit/2baed34a6ad7a638e373f2d9451c92de6129eb64))
+
+### Documentation
+
+* add link to repo-change discussion ([238b8e3](https://github.com/gohugo-ananke/ananke/commit/238b8e35350884580449b37325e712d675292003))
+* **fix:** add v2 to Hugo module replacement ([4547572](https://github.com/gohugo-ananke/ananke/commit/45475720a621b24c12fc2fd176e20a0462d8e5fc))
+* **fix:** discussion and issue links ([14349f4](https://github.com/gohugo-ananke/ananke/commit/14349f4f0e8ba90b478490808437ca3371cce282))
+* **fix:** typo ([cd6d1f8](https://github.com/gohugo-ananke/ananke/commit/cd6d1f85e0409e95de92eb65b424a26ea1ddae39))
+* update README.md with notice about organisation move ([dabe904](https://github.com/gohugo-ananke/ananke/commit/dabe904322f65274f54a2eec09ebae349c023ee6))
+
+### AI Instruction Files
+
+* move files around ([9b05e7d](https://github.com/gohugo-ananke/ananke/commit/9b05e7df232574d0a35638311a1b83608d48d70d))
+
 ## [2.13.0-prerelease.1](https://github.com/theNewDynamic/gohugo-theme-ananke/compare/v2.12.1...v2.13.0-prerelease.1) (2026-04-17)
 
 ### Features
