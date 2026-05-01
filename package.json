@@ -26,7 +26,7 @@
 	],
 	"dependencies": {
 		"cssnano": "7.1.7",
-		"postcss": "8.5.10",
+		"postcss": "8.5.13",
 		"postcss-preset-env": "11.2.1",
 		"tachyons": "4.12.0"
 	},
