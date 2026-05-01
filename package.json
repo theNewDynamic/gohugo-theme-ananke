@@ -45,7 +45,7 @@
 		"markdownlint-rule-relative-links": "5.1.0",
 		"markdownlint-rule-search-replace": "1.2.0",
 		"markdownlint-rule-title-case-style": "0.4.3",
-		"release-it": "19.2.4",
+		"release-it": "20.0.1",
 		"simple-git-hooks": "2.13.1",
 		"typescript": "6.0.3"
 	},
